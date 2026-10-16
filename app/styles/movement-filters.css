@@ -1,0 +1,123 @@
+/* CF3-ui: movement search in the Overview `toolbar` slot (the designer's .activity-toolbar row). */
+.movement-filters {
+  display: block;
+  min-width: 0;
+}
+.movement-filters form {
+  display: grid;
+  gap: 8px;
+}
+.filters-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 8px 12px;
+}
+.filter-search {
+  flex: 1 1 140px;
+  min-width: 0;
+}
+.movement-filters input,
+.movement-filters select {
+  width: 100%;
+  min-width: 0;
+  height: 36px;
+  padding: 0 12px;
+  border: 1px solid var(--line-control);
+  border-radius: var(--r-nav);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 13px;
+}
+.movement-filters input:focus-visible,
+.movement-filters select:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+.movement-filters input:user-invalid {
+  border-color: var(--danger);
+}
+.filter-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 36px;
+  padding: 0 14px;
+  border: 1px solid var(--line-control);
+  border-radius: var(--r-pill);
+  background: var(--chip);
+  color: var(--text-2);
+  font-size: 13px;
+  font-weight: 500;
+}
+.filter-toggle[aria-expanded='true'] {
+  background: var(--surface);
+  color: var(--ink);
+}
+.filter-count {
+  color: var(--forest);
+  font-weight: 600;
+}
+.filter-panel {
+  flex-basis: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid var(--line-inner);
+  border-radius: var(--r-tile);
+  background: var(--surface-sunk);
+}
+.filter-panel label {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-2);
+}
+.filter-clear {
+  align-self: center;
+}
+.filter-status,
+.filter-window {
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+.filter-status:empty {
+  display: none;
+}
+.filter-status[aria-busy='true'] {
+  opacity: 0.6;
+}
+.filter-error {
+  color: var(--danger);
+  font-weight: 500;
+}
+@media (max-width: 1100px) {
+  .filter-panel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .filter-direction {
+    grid-column: 1 / -1;
+  }
+}
+/* CF2: "Download CSV" (styled as the Filters pill) and its currency hint. */
+.filter-export {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.filter-export a {
+  text-decoration: none;
+}
+.filter-export a:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+.filter-hint {
+  font-size: 12px;
+  color: var(--muted);
+}

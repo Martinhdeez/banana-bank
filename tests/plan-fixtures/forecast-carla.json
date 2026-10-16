@@ -1,0 +1,88 @@
+{
+  "today": "2026-10-07",
+  "until": "2026-10-31",
+  "history": {
+    "months": ["2026-07", "2026-08", "2026-09"]
+  },
+  "income": "counted",
+  "notes": [],
+  "sourceLine": "Worked out by fixed rules from your movements and your prepared transfers. No AI is involved in these figures.",
+  "accounts": [
+    {
+      "id": "acc-carla",
+      "label": "Aurora account",
+      "balanceCents": 208901,
+      "endCents": 382361,
+      "lowest": {
+        "date": "2026-10-22",
+        "balanceCents": 193361
+      },
+      "shortfall": null,
+      "headline": "Covered until 31 Oct",
+      "explanation": "Lowest point €1,933.61 on 22 Oct. An estimate: it counts 4 usual payments.",
+      "options": [],
+      "events": [
+        {
+          "date": "2026-10-10",
+          "label": "Adeslas Segurcaixa Recibo",
+          "amountCents": -6150,
+          "source": "usual_charge",
+          "certainty": "estimated",
+          "merchantKey": "ADESLAS SEGURCAIXA RECIBO",
+          "seenOn": ["2026-07-10", "2026-08-10", "2026-09-10"],
+          "usualDay": 10,
+          "balanceAfterCents": 202751
+        },
+        {
+          "date": "2026-10-11",
+          "label": "Endesa Energia Xxi Ref",
+          "amountCents": -5260,
+          "source": "usual_charge",
+          "certainty": "estimated",
+          "merchantKey": "ENDESA ENERGIA XXI REF",
+          "seenOn": ["2026-07-11", "2026-08-11", "2026-09-11"],
+          "usualDay": 11,
+          "balanceAfterCents": 197491
+        },
+        {
+          "date": "2026-10-22",
+          "label": "Aigues De Barcelona Fact",
+          "amountCents": -4130,
+          "source": "usual_charge",
+          "certainty": "estimated",
+          "merchantKey": "AIGUES DE BARCELONA FACT",
+          "seenOn": ["2026-07-22", "2026-08-22", "2026-09-22"],
+          "usualDay": 22,
+          "balanceAfterCents": 193361
+        },
+        {
+          "date": "2026-10-28",
+          "label": "Nomina Clinica Delta",
+          "amountCents": 189000,
+          "source": "usual_income",
+          "certainty": "estimated",
+          "merchantKey": "NOMINA CLINICA DELTA",
+          "seenOn": ["2026-07-28", "2026-08-28", "2026-09-28"],
+          "usualDay": 28,
+          "balanceAfterCents": 382361
+        }
+      ]
+    },
+    {
+      "id": "acc-carla-savings",
+      "label": "Personal savings",
+      "balanceCents": 165000,
+      "endCents": 165000,
+      "lowest": {
+        "date": "2026-10-07",
+        "balanceCents": 165000
+      },
+      "shortfall": null,
+      "headline": "Covered until 31 Oct",
+      "explanation": "Lowest point €1,650.00 on 7 Oct.",
+      "options": [],
+      "events": []
+    }
+  ],
+  "notCounted": []
+}

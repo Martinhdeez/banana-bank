@@ -1,0 +1,36 @@
+{
+  "goalPlan": {
+    "name": "Savings goal",
+    "targetCents": 120000,
+    "targetDate": "2027-03-31",
+    "day": 1,
+    "from": {
+      "id": "acc-lucia",
+      "label": "Aurora account"
+    },
+    "to": {
+      "id": "acc-lucia-savings",
+      "label": "Personal savings"
+    },
+    "monthlyCents": 24000,
+    "payments": 5,
+    "firstDue": "2026-11-01",
+    "lastDue": "2027-03-01",
+    "fits": true,
+    "room": {
+      "monthlyCents": 71448,
+      "months": 3
+    },
+    "today": "2026-10-07"
+  },
+  "quickReplies": [
+    {
+      "label": "Create this goal",
+      "value": "Create this goal"
+    },
+    {
+      "label": "Change something",
+      "value": "Change something about this plan"
+    }
+  ]
+}

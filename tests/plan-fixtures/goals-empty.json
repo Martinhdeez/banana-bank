@@ -1,0 +1,20 @@
+{
+  "today": "2026-10-07",
+  "canSave": true,
+  "canSaveReason": null,
+  "accounts": [
+    {
+      "id": "acc-lucia-savings",
+      "label": "Personal savings"
+    },
+    {
+      "id": "acc-lucia",
+      "label": "Aurora account"
+    }
+  ],
+  "room": {
+    "monthlyCents": 71448,
+    "months": 3
+  },
+  "goals": []
+}

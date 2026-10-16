@@ -1,0 +1,1620 @@
+/* SI7a: spend insights on Overview. Two roots, both ours: `.spend-insights` (the card in the
+   designer's `insights` slot) and `.si-row` (the chip line in the `rowExtra` slot). Tokens of
+   app/globals.css; the category colours and the review panel's yellow are defined here. */
+
+/* ── Category colours: `--si-c` (colour), `--si-t` (tint) and `--si-d` (a deep shade, for text
+   and icons on the tint: at least 4.5:1), taken by whatever sits inside an element with
+   `data-category` (a list row, a candidate, a tile of the mosaic). ── */
+.spend-insights {
+  --si-c: #8f9a92;
+  --si-t: #eceee7;
+  --si-d: #5f6b63;
+  --si-panel: #fdf8dc;
+  --si-panel-line: #f3e9a8;
+}
+.spend-insights [data-category='home_utilities'] {
+  --si-c: #4f9d8c;
+  --si-t: #dcefe9;
+  --si-d: #2f6b5d;
+}
+.spend-insights [data-category='groceries'] {
+  --si-c: #6f9f52;
+  --si-t: #e5f0d9;
+  --si-d: #4f7437;
+}
+.spend-insights [data-category='shopping'] {
+  --si-c: #8f79cf;
+  --si-t: #e9e4f8;
+  --si-d: #5d4f9c;
+}
+.spend-insights [data-category='work'] {
+  --si-c: #a07a52;
+  --si-t: #f1e7da;
+  --si-d: #6e4f2e;
+}
+.spend-insights [data-category='eating_out_leisure'] {
+  --si-c: #e07f52;
+  --si-t: #fae4d7;
+  --si-d: #9a4f2a;
+}
+.spend-insights [data-category='transfer_person'] {
+  --si-c: #c99a00;
+  --si-t: #f9eeb4;
+  --si-d: #7d6200;
+}
+.spend-insights [data-category='transport'] {
+  --si-c: #4f89c9;
+  --si-t: #dde9f8;
+  --si-d: #3b679a;
+}
+.spend-insights [data-category='health'] {
+  --si-c: #d9739b;
+  --si-t: #f8e1ea;
+  --si-d: #984a6b;
+}
+.spend-insights [data-category='other'] {
+  --si-c: #8f9a92;
+  --si-t: #eceee7;
+  --si-d: #5f6b63;
+}
+.spend-insights [data-category='savings_internal'] {
+  --si-c: #5f8796;
+  --si-t: #e1ecef;
+  --si-d: #3f6676;
+}
+.spend-insights [data-category='income'] {
+  --si-c: var(--positive-icon);
+  --si-t: var(--positive-bg);
+  --si-d: var(--positive);
+}
+
+/* ── Card ── */
+.spend-insights {
+  padding: 22px 24px 18px;
+  min-width: 0;
+  border-radius: 20px;
+  /* The layout follows the card's own width (the sidebar can be open or collapsed). */
+  container-type: inline-size;
+}
+.spend-insights .si-head {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 10px 14px;
+  margin-bottom: 18px;
+}
+.spend-insights h2 {
+  margin: 0;
+  /* The height of the period control beside it. */
+  line-height: 36px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+.spend-insights .si-window {
+  align-self: center;
+  padding: 5px 12px;
+  border-radius: var(--r-pill);
+  background: var(--chip);
+  color: var(--text-2);
+  font-size: 12px;
+  font-weight: 500;
+}
+/* IT8c-ui: the period of the card: one dropdown button and, under it, its menu (quick choices,
+   a month of any year, a range of days). */
+.spend-insights .si-period-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  /* Wide enough for most labels, so the header does not move when the period changes. */
+  min-width: 172px;
+  max-width: 100%;
+  height: 36px;
+  padding: 0 12px 0 14px;
+  border: 1px solid var(--sage-line);
+  border-radius: var(--r-pill);
+  background: var(--sage);
+  color: var(--forest);
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.spend-insights .si-period-trigger > span {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-align: left;
+  text-overflow: ellipsis;
+}
+.spend-insights .si-period-trigger > svg {
+  flex-shrink: 0;
+}
+.spend-insights .si-period-trigger > svg:last-child {
+  transition: transform 0.15s ease;
+}
+.spend-insights .si-period-trigger[aria-expanded='true'] > svg:last-child {
+  transform: rotate(180deg);
+}
+.spend-insights .si-period-trigger:hover,
+.spend-insights .si-period-trigger[aria-expanded='true'] {
+  border-color: var(--forest);
+  background: var(--surface);
+}
+.spend-insights .si-period-menu {
+  /* Under its button: no `top` / `left`, so it starts where the block does, pushed down by the
+     button's height. In a card too narrow for that it starts at the header's left edge instead
+     (below), so it never leaves the card. */
+  position: absolute;
+  z-index: 20;
+  /* 8px to the left: the caption under the button stays behind the menu, not in its corner. */
+  margin: 44px 0 0 -8px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: min(340px, 100cqw);
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: var(--shadow-drawer);
+}
+@container (max-width: 620px) {
+  /* The button takes its own line, at the left, so the menu is still under it. */
+  .spend-insights .si-period-block {
+    flex-basis: 100%;
+  }
+  .spend-insights .si-period-menu {
+    left: 0;
+  }
+}
+.spend-insights .si-period-menu h3 {
+  margin: 0 0 8px;
+  color: var(--text-2);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+.spend-insights .si-period-quick {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+}
+.spend-insights .si-period-quick > :last-child {
+  grid-column: 1 / -1;
+}
+.spend-insights .si-period-menu [data-testid='spending-period-option'] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  height: 34px;
+  padding: 0 12px;
+  border: 1px solid var(--line-control);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.spend-insights .si-period-menu [data-testid='spending-period-option']:hover:not(:disabled) {
+  border-color: var(--forest);
+  background: var(--chip);
+}
+/* The applied one: a forest ring, bold, and a check (quick) or a filled cell (month). */
+.spend-insights .si-period-menu [data-testid='spending-period-option'][aria-pressed='true'] {
+  border-color: var(--forest);
+  background: var(--sage);
+  box-shadow: inset 0 0 0 1px var(--forest);
+  color: var(--forest);
+  font-weight: 700;
+}
+.spend-insights .si-period-year {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+.spend-insights .si-period-year h3 {
+  flex: 1;
+  margin: 0;
+}
+.spend-insights .si-period-year span {
+  min-width: 40px;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+}
+.spend-insights .si-period-year button {
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--line-control);
+  border-radius: var(--r-pill);
+  background: var(--surface);
+  color: var(--forest);
+}
+.spend-insights .si-period-year button:hover:not(:disabled) {
+  background: var(--chip);
+}
+.spend-insights .si-period-year button:first-of-type svg {
+  transform: rotate(90deg);
+}
+.spend-insights .si-period-year button:last-of-type svg {
+  transform: rotate(-90deg);
+}
+.spend-insights .si-period-months {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+}
+.spend-insights .si-period-months [data-testid='spending-period-option'] {
+  position: relative;
+  justify-content: center;
+  padding: 0;
+}
+/* A month with movements in the bank's history. */
+.spend-insights .si-period-months i {
+  position: absolute;
+  bottom: 4px;
+  left: calc(50% - 2px);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent-dot);
+}
+.spend-insights .si-period-menu button:disabled {
+  border-color: var(--line-row);
+  background: var(--surface-sunk);
+  color: var(--sep);
+  cursor: default;
+}
+.spend-insights .si-period-custom {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 6px;
+}
+/* A narrow card: the two dates share a line and Apply takes the next one. */
+@container (max-width: 420px) {
+  .spend-insights .si-period-custom {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+  .spend-insights .si-period-custom .si-button {
+    grid-column: 1 / -1;
+  }
+}
+.spend-insights .si-period-custom label {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+  color: var(--text-2);
+  font-size: 11px;
+}
+.spend-insights .si-period-custom input {
+  width: 100%;
+  min-width: 0;
+  height: 34px;
+  padding: 0 8px;
+  border: 1px solid var(--line-control);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 12px;
+}
+.spend-insights .si-period-custom .si-button {
+  height: 34px;
+  padding: 0 14px;
+  border-radius: 10px;
+  font-size: 13px;
+}
+.spend-insights .si-period-custom .si-button:disabled {
+  border-color: var(--line-control);
+}
+/* A day outside the bank's history or after this week: said under the dates. */
+.spend-insights .si-period-hint {
+  grid-column: 1 / -1;
+  color: var(--danger);
+  font-size: 11px;
+}
+.spend-insights .si-period-menu:focus {
+  outline: none;
+}
+.spend-insights .si-period-foot {
+  margin: 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--line-row);
+  color: var(--text-2);
+  font-size: 11px;
+}
+.spend-insights .si-period-block :is(button, input):focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+/* Polish: the control and its caption are one block of the header (control on top, caption
+   right under it), so they stay together whatever wraps. The title and the Ask button line up
+   with the control, the first line of the block. */
+.spend-insights .si-period-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  min-width: 0;
+  max-width: 100%;
+}
+.spend-insights .si-period-note {
+  margin: 0;
+  color: var(--text-2);
+  font-size: 12px;
+}
+.spend-insights .si-ask-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 36px;
+  margin-left: auto;
+  padding: 0 14px;
+  border: 1px solid var(--line-control);
+  border-radius: var(--r-pill);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.spend-insights .si-ask-all:hover {
+  border-color: var(--forest);
+  background: var(--chip);
+}
+.spend-insights ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.spend-insights p {
+  margin: 0;
+}
+.spend-insights h3 {
+  margin: 4px 0 0;
+  color: var(--text-2);
+  font-size: 12px;
+  font-weight: 600;
+}
+.spend-insights .si-count {
+  font-weight: 400;
+}
+.spend-insights .si-sub {
+  font-size: 12px;
+  color: var(--text-2);
+}
+
+/* Main area (the total, the mosaic, the category list) | review panel. One column until the card
+   is wide enough for the panel beside it. */
+.spend-insights .si-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px 28px;
+  align-items: start;
+}
+/* The mosaic and the list follow the width of the main area, not of the card. */
+.spend-insights .si-main {
+  min-width: 0;
+  container: si-main / inline-size;
+}
+@container (min-width: 1000px) {
+  .spend-insights .si-body {
+    grid-template-columns: minmax(0, 1fr) 320px;
+  }
+  /* The slot takes the height of the row; the panel inside it grows to that and no further. */
+  .spend-insights .si-panel-slot {
+    align-self: stretch;
+    position: relative;
+  }
+  /* 12px of padding: the select and "Resolve in chat" then share one line of a card. */
+  .spend-insights .si-panel {
+    position: absolute;
+    inset: 0 0 auto;
+    max-height: 100%;
+    padding: 14px 12px;
+  }
+  .spend-insights .si-groups {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ── Focus block: the total of the period, or the category pointed at or pinned ── */
+.spend-insights .si-focus {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 8px 24px;
+}
+.spend-insights .si-focus > :first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+.spend-insights :is(.si-focus-label, .si-focus-sub, .si-income) {
+  color: var(--text-2);
+  font-size: 12px;
+  line-height: 1.35;
+}
+.spend-insights .si-focus-amount {
+  color: var(--ink);
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+.spend-insights .si-income strong {
+  margin-left: 6px;
+  color: var(--positive);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ── Blocks: one tile per category, its area the share of the spending (the categories too small
+   for a tile share one, "Smaller categories"). Each tile is placed by the rectangle the component
+   worked out for this box (inline, in percentages). The gaps are the 3px each tile is inset by,
+   so the box hangs 3px out of the column and the tiles' edges line up with the text. ── */
+.spend-insights :is(.si-blocks, .si-empty) {
+  height: 232px;
+  margin-top: 20px;
+}
+.spend-insights .si-blocks {
+  position: relative;
+  margin-inline: -3px;
+}
+@container si-main (max-width: 599.98px) {
+  .spend-insights :is(.si-blocks, .si-empty) {
+    height: 200px;
+  }
+}
+.spend-insights .si-block {
+  position: absolute;
+}
+.spend-insights .si-block-in {
+  position: absolute;
+  inset: 3px;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 10px;
+  border-radius: 14px;
+  background: var(--si-t);
+  color: var(--si-d);
+  overflow: hidden;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+/* The tile of the smaller categories: no category's colour (sage would read as Groceries, grey as
+   Other): the card's own surface, outlined. */
+.spend-insights .si-block[data-group] .si-block-in {
+  background: var(--surface);
+  box-shadow: inset 0 0 0 1px var(--line);
+  color: var(--text-2);
+}
+.spend-insights .si-block[data-on] .si-block-in {
+  transform: scale(1.015);
+}
+.spend-insights .si-block[data-dim] .si-block-in {
+  opacity: 0.35;
+}
+/* What a tile shows is set by the component (`data-show`), which measures what fits whole: a text
+   is drawn entire or not at all, never cut. The name may take two lines. */
+.spend-insights .si-block-in > * {
+  flex-shrink: 0;
+}
+.spend-insights .si-block-name {
+  display: flex;
+  /* In a narrow tile the name goes under its icon instead of being dropped. */
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 2px 6px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+}
+.spend-insights .si-block-name :is(svg, b) {
+  flex-shrink: 0;
+  font-weight: 600;
+}
+.spend-insights .si-block-amount {
+  margin-top: auto;
+  padding-top: 2px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 18px;
+  white-space: nowrap;
+}
+.spend-insights .si-block-sub {
+  font-size: 12px;
+  line-height: 16px;
+  white-space: nowrap;
+}
+/* Name, or name and amount: the group has no mark before its name. Or the amount under the mark,
+   when the name is too long for the tile. */
+.spend-insights
+  .si-block:is([data-show='name'], [data-show='amount'], [data-show='figure'])
+  .si-block-sub,
+.spend-insights .si-block[data-show='name'] .si-block-amount,
+.spend-insights .si-block[data-show='figure'] .si-block-name > span,
+.spend-insights .si-block:is([data-show='name'], [data-show='amount'], [data-show='sub']) b {
+  display: none;
+}
+/* The mark alone, centred (an icon, or "+N" for the group); also the state before measuring. */
+.spend-insights
+  .si-block:is(:not([data-show]), [data-show='icon'], [data-show='none'])
+  .si-block-in {
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.spend-insights
+  .si-block:is(:not([data-show]), [data-show='icon'], [data-show='none'])
+  :is(.si-block-name > :last-child, .si-block-amount, .si-block-sub) {
+  display: none;
+}
+/* Tiny: colour only. */
+.spend-insights .si-block[data-show='none'] .si-block-in {
+  border-radius: 8px;
+}
+.spend-insights .si-block[data-show='none'] .si-block-name {
+  display: none;
+}
+/* Large: also its share and its movements. */
+.spend-insights .si-block[data-show='sub'] .si-block-in {
+  padding: 14px;
+}
+.spend-insights .si-block[data-show='sub'] .si-block-name {
+  gap: 8px;
+  font-size: 13px;
+  line-height: 18px;
+}
+.spend-insights .si-block[data-show='sub'] .si-block-amount {
+  font-size: 26px;
+  letter-spacing: -0.8px;
+  line-height: 32px;
+}
+
+/* ── Category list: two columns of compact rows under the mosaic (one in a narrow main area) ── */
+.spend-insights .si-categories {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2px 28px;
+  margin-top: 14px;
+}
+@container si-main (max-width: 599.98px) {
+  .spend-insights .si-categories {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+/* tile | name | amount | share, the last two in columns of their own so the figures line up down
+   the list; under the name the small line and the bar. The row hangs 8px out of its column, so
+   its highlight has room around the text. */
+.spend-insights .si-category {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr) auto 34px;
+  align-items: start;
+  gap: 0 10px;
+  width: calc(100% + 16px);
+  margin: 0 -8px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 18px;
+  text-align: left;
+  /* Pointing is all a mouse does here (a click pins nothing). */
+  cursor: default;
+  transition:
+    background 0.15s ease,
+    opacity 0.15s ease;
+}
+.spend-insights .si-category[data-on] {
+  background: var(--chip);
+}
+.spend-insights .si-category[data-dim] {
+  opacity: 0.5;
+}
+.spend-insights .si-tile {
+  display: inline-grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: var(--si-t);
+  color: var(--si-d);
+}
+.spend-insights .si-category .si-tile {
+  grid-row: 1 / span 3;
+  margin-top: 3px;
+}
+/* The full name; in a narrow column it takes two lines, never an ellipsis. */
+.spend-insights .si-cat-name {
+  grid-area: 1 / 2;
+  overflow-wrap: anywhere;
+}
+.spend-insights .si-cat-amount {
+  grid-area: 1 / 3;
+  font-weight: 500;
+  text-align: right;
+  white-space: nowrap;
+}
+.spend-insights .si-cat-share {
+  grid-area: 1 / 4;
+  /* `--muted` is 4.3:1 on the card at these sizes; this one is over 4.5:1. */
+  color: var(--text-2);
+  font-size: 12px;
+  text-align: right;
+  white-space: nowrap;
+}
+.spend-insights .si-bar {
+  grid-area: 3 / 2 / auto / -1;
+  display: block;
+  height: 3px;
+  margin-top: 4px;
+  border-radius: var(--r-pill);
+  background: var(--line-inner);
+  overflow: hidden;
+}
+.spend-insights .si-bar > span {
+  display: block;
+  height: 100%;
+  border-radius: var(--r-pill);
+  background: color-mix(in srgb, var(--si-c) 45%, var(--surface));
+  overflow: hidden;
+  transition: width 0.4s ease;
+}
+.spend-insights .si-bar i {
+  display: block;
+  height: 100%;
+  background: var(--si-c);
+}
+/* The count and what is estimated, then "· N to review". Nothing is cut: when "· N to review"
+   does not fit it goes to a second line, and that line does not start with the separator: the
+   text is a wrapping flex line pulled left by the width of "· " (`--dot`, measured in this font)
+   and clipped there; the first line is indented back by the same width.
+   ponytail: `--dot` is tied to the font; in a column too narrow for the first part alone (under
+   about 200px, not reached at 320px and up) that part wraps at a space, which can be before a "·". */
+.spend-insights .si-cat-meta {
+  --dot: 0.46em;
+  grid-area: 2 / 2 / auto / -1;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.28em;
+  min-width: 0;
+  margin-left: calc(-1 * var(--dot));
+  color: var(--text-2);
+  font-size: 11px;
+  line-height: 16px;
+  text-indent: var(--dot);
+  clip-path: inset(0 0 0 var(--dot));
+}
+.spend-insights .si-review {
+  color: var(--ochre);
+  font-weight: 500;
+  text-indent: 0;
+  white-space: nowrap;
+}
+.spend-insights :is(.si-status, .si-retry, .si-empty) {
+  margin-top: 12px;
+  font-size: 12px;
+  color: var(--text-2);
+}
+/* IT8-ui: often the first thing seen (a month that has just begun): a quiet tile, not a stray line. */
+.spend-insights .si-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 6px;
+  /* The box of the mosaic it stands for (height and margin with `.si-blocks`): what follows does
+     not move when a period is empty. */
+  margin-top: 20px;
+  padding: 0 24px;
+  border: 1px dashed var(--sage-line);
+  border-radius: var(--r-card);
+  background: var(--surface-sunk);
+  font-size: 13px;
+}
+.spend-insights .si-empty p {
+  margin: 0;
+  color: var(--ink);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+}
+.spend-insights .si-empty .si-button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  font-size: 13px;
+}
+.spend-insights .si-status:empty {
+  display: none;
+}
+.spend-insights .si-status {
+  color: var(--ochre);
+  font-weight: 500;
+}
+.spend-insights .si-note {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line-row);
+  color: var(--text-2);
+  font-size: 12px;
+}
+
+/* ── Review panel: progress, the groups to sort, the customer's rules ── */
+.spend-insights .si-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid var(--si-panel-line);
+  border-radius: 18px;
+  background: var(--si-panel);
+}
+.spend-insights .si-progress {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.spend-insights .si-progress svg {
+  flex-shrink: 0;
+  transform: rotate(-90deg);
+}
+.spend-insights .si-progress circle {
+  fill: none;
+  stroke: var(--lime-wash-line);
+  stroke-width: 5;
+}
+.spend-insights .si-progress circle + circle {
+  stroke: var(--forest);
+  stroke-linecap: round;
+  transition: stroke-dasharray 0.4s ease;
+}
+.spend-insights .si-progress strong {
+  display: block;
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 600;
+}
+.spend-insights .si-progress span {
+  display: block;
+  color: var(--ochre);
+  font-size: 12px;
+}
+/* The list scrolls inside a panel that has a height limit; the padding (taken back by the
+   margin) keeps a focus outline at its edge visible. */
+.spend-insights .si-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr));
+  align-content: start;
+  gap: 8px;
+  flex: 0 1 auto;
+  min-height: 0;
+  margin: -4px;
+  padding: 4px;
+  overflow-y: auto;
+  /* Polish: where the list scrolls it shows it: a thin scrollbar that is always there (the
+     overlay one of macOS only appears while scrolling) and a fade at the bottom edge until the
+     end is reached. Without scroll-driven animations there is no fade, only the scrollbar. */
+  --si-fade: 0px;
+  /* A control focused by keyboard is scrolled clear of the fade. */
+  scroll-padding-bottom: 40px;
+  mask-image: linear-gradient(to bottom, #000 calc(100% - var(--si-fade)), transparent);
+}
+.spend-insights .si-groups::-webkit-scrollbar {
+  width: 6px;
+}
+.spend-insights .si-groups::-webkit-scrollbar-thumb {
+  border-radius: var(--r-pill);
+  background: var(--lime-line);
+}
+@supports not selector(::-webkit-scrollbar) {
+  .spend-insights .si-groups {
+    scrollbar-width: thin;
+    scrollbar-color: var(--lime-line) transparent;
+  }
+}
+@property --si-fade {
+  syntax: '<length>';
+  inherits: false;
+  initial-value: 0px;
+}
+@keyframes si-groups-fade {
+  0%,
+  92% {
+    --si-fade: 36px;
+  }
+  100% {
+    --si-fade: 0px;
+  }
+}
+@supports (animation-timeline: scroll()) {
+  /* Inactive (no fade) when the list does not scroll. */
+  .spend-insights .si-groups {
+    animation: si-groups-fade linear both;
+    animation-timeline: scroll(self);
+  }
+}
+.spend-insights .si-panel > :not(.si-groups) {
+  flex-shrink: 0;
+}
+/* A card, top to bottom: the name, "N movements · €X", the suggestions when there are any, and
+   the select with "Resolve in chat" as its last line. A18: the cards of a row are one height, so
+   their selects are on one line whatever the name or the suggestions above. */
+.spend-insights .si-groups li {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 12px 14px;
+  border: 1px solid var(--si-panel-line);
+  border-radius: 16px;
+  background: var(--surface);
+  container-type: inline-size;
+}
+.spend-insights .si-group-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  max-width: 100%;
+  font-size: 14px;
+}
+/* Bank text: one line, cut cleanly (the full name is its `title`). */
+.spend-insights .si-group-head strong {
+  min-width: 0;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.spend-insights .si-refund {
+  flex-shrink: 0;
+  padding: 1px 8px;
+  border-radius: var(--r-pill);
+  background: var(--positive-bg);
+  color: var(--positive);
+  font-size: 11px;
+  font-weight: 600;
+}
+.spend-insights .si-groups .si-sub {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* A suggestion is never squeezed: the line wraps instead. */
+.spend-insights .si-suggest {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+/* The last line: pushed to the bottom of the card. In a narrow card the select takes the line and
+   "Resolve in chat" goes under it. */
+.spend-insights .si-group-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 10px;
+  margin-top: auto;
+  padding-top: 8px;
+}
+/* The select takes what "Resolve in chat" leaves of the line (a native select is as wide as its
+   longest option otherwise), up to 200px, and never less than its "Choose a category…". */
+.spend-insights .si-groups .si-group-select {
+  flex: 1 1 150px;
+  min-width: min(100%, 150px);
+  max-width: 200px;
+}
+.spend-insights .si-groups .si-group-select select {
+  width: 100%;
+}
+.spend-insights .si-candidate {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  max-width: 100%;
+  height: 32px;
+  padding: 0 12px 0 5px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-pill);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  /* Never squeezed (its label would touch the pill's edge): the line wraps instead. */
+  flex-shrink: 0;
+}
+.spend-insights .si-candidate:hover {
+  border-color: var(--si-c);
+  background: var(--si-t);
+}
+.spend-insights .si-candidate .si-tile {
+  order: -1;
+  width: 22px;
+  height: 22px;
+  border-radius: 7px;
+}
+.spend-insights .si-candidate:hover .si-tile {
+  background: var(--surface);
+}
+.spend-insights .si-unsure {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--text-2);
+  font-size: 12px;
+  white-space: nowrap;
+}
+/* A narrow card keeps the select and "Resolve in chat" on one line without the question. */
+@container (max-width: 340px) {
+  .spend-insights .si-unsure :is(.si-unsure-q, svg) {
+    display: none;
+  }
+}
+.spend-insights .si-unsure svg {
+  color: var(--forest);
+}
+.spend-insights .si-resolve {
+  position: relative;
+  padding: 0;
+  background: transparent;
+  color: var(--forest);
+  font-size: 12px;
+  font-weight: 600;
+}
+.spend-insights .si-resolve:hover {
+  text-decoration: underline;
+}
+.spend-insights .si-done {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 26px 16px;
+  border: 1px solid var(--si-panel-line);
+  border-radius: 16px;
+  background: var(--surface);
+  text-align: center;
+  overflow: hidden;
+}
+/* Four dots of confetti, in the category colours. */
+.spend-insights .si-done::before,
+.spend-insights .si-done::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+}
+.spend-insights .si-done::before {
+  left: 22px;
+  top: 18px;
+  width: 8px;
+  height: 8px;
+  background: var(--lime);
+  box-shadow: 22px 78px 0 -1px #4f9d8c;
+}
+.spend-insights .si-done::after {
+  right: 30px;
+  top: 30px;
+  width: 6px;
+  height: 6px;
+  background: #e07f52;
+  box-shadow: -18px 62px 0 1.5px #8f79cf;
+}
+.spend-insights .si-done-mark {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  background: var(--forest);
+  color: var(--lime);
+}
+.spend-insights .si-done strong {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+.spend-insights .si-done > span:last-child {
+  margin-top: 2px;
+  color: var(--text-2);
+  font-size: 13px;
+}
+.spend-insights .si-rules {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.spend-insights .si-rules li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  max-width: 100%;
+  min-width: 0;
+  padding: 4px 6px 4px 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-pill);
+  background: var(--surface);
+  font-size: 12px;
+}
+/* "MERCHANT → Label": the merchant (bank text) is cut when it must be, the label never. */
+.spend-insights .si-rule-text {
+  display: flex;
+  gap: 5px;
+  min-width: 0;
+  white-space: nowrap;
+}
+.spend-insights .si-rule-text strong {
+  min-width: 0;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.spend-insights .si-rule-remove {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border-radius: 50%;
+  background: var(--chip);
+  color: var(--text-2);
+}
+.spend-insights .si-rule-remove:hover {
+  background: var(--danger-bg);
+  color: var(--danger);
+}
+
+/* ── Shared controls (card and rows) ── */
+:is(.spend-insights, .si-row) .si-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+:is(.spend-insights, .si-row) .si-button {
+  padding: 4px 10px;
+  border: 1px solid var(--line-control);
+  border-radius: var(--r-pill);
+  background: var(--surface);
+  color: var(--forest);
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+:is(.spend-insights, .si-row) .si-button:hover {
+  background: var(--chip);
+}
+:is(.spend-insights, .si-row) .si-button.primary {
+  border-color: var(--forest);
+  background: var(--forest);
+  color: var(--surface);
+}
+:is(.spend-insights, .si-row) .si-button.primary:hover {
+  background: var(--forest-hover);
+}
+:is(.spend-insights, .si-row) :is(button, .si-feedback):focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+/* A native select under a label and a chevron: the whole pill opens the browser's own list. */
+.spend-insights .si-group-select,
+.si-row .si-change {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  color: var(--text-2);
+}
+.spend-insights .si-group-select {
+  max-width: 100%;
+}
+.spend-insights .si-group-select select {
+  appearance: none;
+  max-width: 100%;
+  height: 32px;
+  padding: 0 24px 0 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-pill);
+  background: var(--surface);
+  color: var(--text-2);
+  font-size: 12px;
+}
+.spend-insights .si-group-select svg {
+  position: absolute;
+  right: 8px;
+  pointer-events: none;
+}
+.spend-insights .si-group-select select:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+/* Offer, learning notice, error. */
+:is(.spend-insights, .si-row) .si-feedback {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+  padding: 10px 12px;
+  border: 1px solid var(--lime-wash-line);
+  border-radius: 14px;
+  background: var(--lime-wash);
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.4;
+}
+:is(.spend-insights, .si-row) .si-feedback.error {
+  border-color: transparent;
+  background: var(--danger-bg);
+  color: var(--danger);
+}
+:is(.spend-insights, .si-row) .si-feedback p {
+  flex: 1 1 120px;
+  margin: 0;
+  color: inherit;
+}
+/* "Learned …" with Undo: the dark green notice, a check in a lime disc before the text. */
+:is(.spend-insights, .si-row) .si-feedback.learned {
+  border-color: var(--forest);
+  background: var(--forest);
+  color: var(--surface);
+}
+:is(.spend-insights, .si-row) .si-learned {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 6px 10px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+:is(.spend-insights, .si-row) .si-learned::before {
+  content: '✓';
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--lime);
+  color: var(--forest);
+  font-size: 12px;
+  font-weight: 700;
+}
+:is(.spend-insights, .si-row) .si-learned .si-actions {
+  flex-wrap: nowrap;
+  margin-left: auto;
+}
+:is(.spend-insights, .si-row) .si-learned .si-button {
+  border-color: transparent;
+  background: transparent;
+  color: var(--lime);
+}
+:is(.spend-insights, .si-row) .si-learned .si-button:hover {
+  border-color: var(--lime);
+}
+:is(.spend-insights, .si-row) .si-learned :is(button):focus-visible {
+  outline-color: var(--lime);
+}
+:is(.spend-insights, .si-row) .si-dismiss {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border-radius: var(--r-pill);
+  background: transparent;
+  color: inherit;
+}
+.spend-insights > .si-feedback {
+  margin-bottom: 16px;
+}
+
+/* ── Row: chip, select, "why" ── */
+/* A3: the same in every row, whatever the length of the chip. The chip on its own line and
+   "Confirm" / "Keep as Other" and "Ask the assistant" together on the next; where the
+   description column has room for the longest chip and both actions (the `si-extra` container,
+   Overview's line of controls), all on one line. */
+.si-row {
+  flex: 1 1 100%;
+  display: grid;
+  grid-template-columns: auto auto minmax(0, 1fr);
+  justify-items: start;
+  align-items: center;
+  gap: 6px 12px;
+  min-width: 0;
+}
+.si-row :is(.si-pill, .si-why, .si-feedback) {
+  grid-column: 1 / -1;
+}
+.si-row .si-feedback {
+  justify-self: stretch;
+}
+@container si-extra (min-width: 480px) {
+  .si-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 12px;
+  }
+}
+/* One pill, two parts: the chip (opens the "why") and the select (changes the category). */
+.si-row .si-pill {
+  display: inline-flex;
+  max-width: 100%;
+  min-width: 0;
+  border: 1px solid var(--line-control);
+  border-radius: var(--r-pill);
+  background: var(--chip);
+  color: var(--text-2);
+}
+/* Estimated: dashed outline and "· estimated". Confirmed: green, with the check mark. To review:
+   yellow and "· to review". Never by colour alone. */
+.si-row .si-pill[data-state='estimated'],
+.si-row .si-pill[data-state='pending'] {
+  border-style: dashed;
+  border-color: var(--sep);
+  background: var(--surface);
+}
+.si-row .si-pill[data-state='confirmed'] {
+  border-color: var(--sage-line);
+  background: var(--positive-bg);
+  color: var(--positive);
+}
+.si-row .si-pill[data-state='needs_review'] {
+  border-style: dashed;
+  border-color: var(--lime-line);
+  background: var(--lime-soft);
+  color: var(--ochre);
+}
+.si-row .si-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-width: 0;
+  padding: 2px 4px 2px 10px;
+  border-radius: var(--r-pill) 0 0 var(--r-pill);
+  background: transparent;
+  color: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.si-row .si-pill[data-state='confirmed'] .si-chip {
+  font-weight: 600;
+}
+.si-row .si-chip-mark {
+  display: inline-grid;
+  flex-shrink: 0;
+}
+.si-row .si-chip-mark svg {
+  stroke-width: 2.6;
+}
+.si-row .si-change {
+  flex-shrink: 0;
+  justify-content: center;
+  width: 26px;
+  border-left: 1px solid currentColor;
+  border-left-color: color-mix(in srgb, currentColor 25%, transparent);
+  border-radius: 0 var(--r-pill) var(--r-pill) 0;
+  color: inherit;
+}
+.si-row .si-pill:not([data-state='confirmed']) .si-change {
+  border-left-style: dashed;
+}
+.si-row .si-change select {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.si-row .si-change:focus-within {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+.si-row :is(.si-ask, .si-keep) {
+  padding: 0;
+  background: transparent;
+  color: var(--forest);
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+/* The "why": on click (data-open) or on keyboard focus of the chip. */
+.si-row .si-why {
+  display: none;
+  flex-basis: 100%;
+  color: var(--text-2);
+  font-size: 12px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+.si-row[data-open] .si-why,
+.si-row:has(.si-chip:focus-visible) .si-why {
+  display: block;
+}
+.si-row .si-feedback {
+  flex-basis: 100%;
+  margin-top: 2px;
+  font-size: 12px;
+}
+/* Phones: the description column is about 220px; the longest chip text still fits. */
+@media (max-width: 760px) {
+  .spend-insights {
+    padding: 18px 16px 16px;
+  }
+  .spend-insights h2 {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+  .spend-insights .si-ask-all {
+    margin-left: 0;
+  }
+  .si-row .si-chip {
+    padding-left: 8px;
+    font-size: 11px;
+    line-height: 20px;
+  }
+  .si-row .si-change {
+    width: 24px;
+  }
+  /* Room for the 44px of the actions under the chip. */
+  .si-row {
+    gap: 13px 14px;
+  }
+  .si-row .si-feedback {
+    margin-top: 0;
+  }
+}
+/* Touch: 44px targets. The card's small buttons grow; the glyph-sized ones (a row's select and
+   text buttons, the close and remove marks) get a hit area around them and nothing moves. */
+@media (max-width: 760px), (pointer: coarse) {
+  .spend-insights .si-period-trigger,
+  .spend-insights .si-period-menu [data-testid='spending-period-option'],
+  .spend-insights .si-period-custom :is(input, .si-button) {
+    height: 44px;
+  }
+  .spend-insights .si-period-year button {
+    width: 44px;
+    height: 44px;
+  }
+  .spend-insights .si-period-menu {
+    margin-top: 52px;
+  }
+  .spend-insights .si-ask-all,
+  .spend-insights .si-candidate,
+  .spend-insights .si-group-select select,
+  :is(.spend-insights, .si-row) .si-button {
+    height: 44px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  :is(.spend-insights, .si-row) .si-button {
+    padding-inline: 16px;
+  }
+  .spend-insights .si-candidate .si-tile {
+    width: 28px;
+    height: 28px;
+    border-radius: 9px;
+  }
+  .spend-insights :is(.si-actions, .si-rules) {
+    gap: 8px;
+  }
+  /* The gap keeps the 44px of "Resolve in chat" off the select when it wraps under it. */
+  .spend-insights .si-group-foot {
+    row-gap: 14px;
+    padding-top: 14px;
+  }
+  .spend-insights .si-suggest {
+    gap: 8px;
+    margin-top: 14px;
+  }
+  .spend-insights .si-resolve {
+    margin: -13px 0;
+    padding: 13px 0;
+  }
+  .spend-insights .si-rules li {
+    min-height: 44px;
+    padding: 0 6px 0 14px;
+  }
+  .spend-insights .si-rule-remove {
+    width: 32px;
+    height: 32px;
+  }
+  .spend-insights .si-rule-remove::after,
+  :is(.spend-insights, .si-row) .si-dismiss::after {
+    content: '';
+    position: absolute;
+    inset: -6px;
+  }
+  :is(.spend-insights, .si-row) .si-dismiss::after {
+    inset: -10px;
+  }
+  .si-row .si-change select {
+    inset: -10px;
+    width: auto;
+    height: auto;
+    min-width: 44px;
+    min-height: 44px;
+  }
+  /* Positioned: the account name under the row (later in the page) must not take the tap. */
+  .si-row :is(.si-ask, .si-keep) {
+    position: relative;
+    margin: -13px 0;
+    padding: 13px 0;
+  }
+}
+/* Phones: these sit under the chip, so their 44px grows downwards, off the select's own area. */
+@media (max-width: 760px) {
+  .si-row :is(.si-ask, .si-keep) {
+    margin: -2px 0 -26px;
+    padding: 2px 0 26px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .spend-insights :is(.si-block-in, .si-category, .si-bar > span, .si-progress circle) {
+    transition: none;
+  }
+}
+
+/* ── SI7b: the Assistant. A third root, `.si-chat`, on each piece Home puts into the designer's
+   `composerExtra` and `messageExtra` slots. ── */
+.si-chat .si-sub {
+  color: var(--text-2);
+  font-size: 12px;
+  font-weight: 400;
+}
+.si-chat strong {
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.si-chat button:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+/* The attached movement: in the composer (with the remove button) and on a user message. */
+.si-attached {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 100%;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--chip);
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.35;
+  text-align: left;
+}
+.si-attached .si-attached-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--forest);
+}
+.si-attached .si-attached-main {
+  display: grid;
+  min-width: 0;
+}
+.si-attached .si-remove {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text-2);
+}
+.si-attached .si-remove:hover {
+  background: var(--surface);
+  color: var(--ink);
+}
+/* Cited movements under an answer. */
+.si-cited {
+  max-width: 440px;
+}
+.si-cited .si-caption {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--faint);
+  font-size: 11px;
+}
+.si-cited ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+}
+.si-cited li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  padding: 8px 12px;
+  font-size: 13px;
+  line-height: 1.35;
+}
+.si-cited li + li {
+  border-top: 1px solid var(--line-row);
+}
+.si-cited .si-cited-main {
+  display: grid;
+  min-width: 0;
+}
+.si-cited .si-cited-amount {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+/* Quick replies under the newest answer. */
+.si-replies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.si-cited + .si-replies {
+  margin-top: 10px;
+}
+.si-replies .si-reply {
+  padding: 6px 14px;
+  border: 1px solid var(--line-control);
+  border-radius: var(--r-pill);
+  background: var(--surface);
+  color: var(--forest);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.35;
+  text-align: left;
+}
+.si-replies .si-reply:hover:not(:disabled) {
+  border-color: var(--forest);
+  background: var(--chip);
+}
+/* Touch: 44px targets. The replies grow; the remove button gets a hit area around it. */
+@media (max-width: 760px), (pointer: coarse) {
+  .si-replies {
+    gap: 8px;
+  }
+  .si-replies .si-reply {
+    min-height: 44px;
+    padding: 6px 16px;
+  }
+  .si-attached .si-remove::after {
+    content: '';
+    position: absolute;
+    inset: -10px;
+  }
+}

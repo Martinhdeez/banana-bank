@@ -1,0 +1,53 @@
+{
+  "name": "challenge-banana-candidate",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "setup": "node --import tsx scripts/setup.ts",
+    "reset": "node --import tsx scripts/reset.ts",
+    "backup": "node --import tsx scripts/backup.ts",
+    "dev": "node --import tsx scripts/dev.ts",
+    "bank": "node --import tsx simulator/server.ts",
+    "build": "next build --webpack",
+    "start": "node --import tsx scripts/dev.ts --production",
+    "demo": "node --import tsx scripts/demo.ts",
+    "eval:insights": "node --import tsx scripts/eval-insights.ts",
+    "offers:table": "node --import tsx scripts/offers-table.ts",
+    "observations:table": "node --import tsx scripts/observations-table.ts",
+    "ingest": "node --import tsx scripts/ingest.ts",
+    "scenario": "node --import tsx scripts/scenario.ts",
+    "doctor": "node --import tsx scripts/doctor.ts",
+    "typecheck": "next typegen && tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "node --import tsx --import ./tests/helpers/quiet-access-log.ts --test 'tests/**/*.test.ts'",
+    "test:alt-bank": "node --import tsx --test tests/alt-bank.test.ts",
+    "e2e": "node --import tsx scripts/e2e.ts",
+    "e2e:demo": "node --import tsx scripts/e2e-demo.ts",
+    "verify": "node --import tsx scripts/verify.ts",
+    "probe:transfers": "node --import tsx scripts/probe-transfers.ts",
+    "package": "bash scripts/package-submission.sh"
+  },
+  "dependencies": {
+    "better-sqlite3": "13.0.3",
+    "dotenv": "17.2.3",
+    "next": "16.3.8",
+    "openai": "7.23.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "zod": "4.3.6"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "7.6.13",
+    "@types/node": "24.13.6",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "prettier": "3.9.9",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3"
+  }
+}

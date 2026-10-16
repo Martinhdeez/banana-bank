@@ -1,0 +1,172 @@
+/* XS4 (plan 24 §6): the product suggestion under an assistant answer. Quiet on purpose: the left
+   rule of the cited excerpt in the document viewer, no fill, the chat's own text sizes. The
+   replies inside it are the round-7 `.si-replies` (spend-insights.css), unchanged. */
+.offer-block {
+  max-width: 440px;
+  padding: 2px 0 2px 14px;
+  border-left: 3px solid var(--lime-line);
+  font-size: 13px;
+  line-height: 1.5;
+}
+/* The global `p` is muted with a bottom margin: here the text is the answer's. */
+.offer-block p {
+  margin: 0;
+  color: inherit;
+}
+.offer-block > * + * {
+  margin-top: 8px;
+}
+.offer-block .offer-eyebrow {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+.offer-block .offer-name {
+  margin-top: 2px;
+  color: var(--forest);
+  font-size: 14px;
+}
+.offer-block :is(.offer-basis, .offer-note) {
+  color: var(--text-2);
+  font-size: 12px;
+}
+/* The product sheet: closed until asked for. */
+.offer-block .offer-sheet summary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 32px;
+  color: var(--forest);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+.offer-block .offer-sheet summary::-webkit-details-marker {
+  display: none;
+}
+.offer-block .offer-sheet summary::before {
+  content: '';
+  flex: none;
+  width: 6px;
+  height: 6px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(-45deg);
+}
+.offer-block .offer-sheet[open] summary::before {
+  transform: rotate(45deg);
+}
+.offer-block .offer-sheet summary:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+.offer-block .offer-sheet .offer-sheet-text {
+  padding: 10px 0;
+  border-block: 1px solid var(--line);
+  color: var(--text-2);
+  font-size: 12px;
+}
+.offer-block .offer-sheet .offer-sheet-text > * + * {
+  margin-top: 6px;
+}
+/* A section name (`## Terms` in the sheet) opens a new group. */
+.offer-block .offer-sheet .offer-sheet-text > * + p:has(> strong:only-child) {
+  margin-top: 12px;
+}
+.offer-block .offer-sheet-text ul {
+  margin-bottom: 0;
+  padding-left: 16px;
+}
+.offer-block .offer-sheet-text strong {
+  color: var(--ink);
+}
+/* Touch: a 44px target for the sheet's summary, like the replies. */
+@media (max-width: 760px), (pointer: coarse) {
+  .offer-block .offer-sheet summary {
+    min-height: 44px;
+  }
+}
+
+/* UI4 (plan 28 §4.5): the savings-goal card under an assistant answer. A white card with the
+   form's own plan block (`.goal-preview`, plan.css) inside; the created goal is the same card,
+   compact. The global `p` is muted with a bottom margin: here each line sets its own. */
+.chat-goal {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-width: 440px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-card);
+  background: var(--surface);
+  font-size: 13px;
+  line-height: 1.45;
+}
+.chat-goal p {
+  margin: 0;
+  color: var(--text-2);
+}
+.chat-goal .chat-goal-name {
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 600;
+}
+/* UI4 follow-up: a plan the customer then created. The header carries a "Created" chip; the card
+   settles (sage fill, no white emphasis), figures unchanged. */
+.chat-goal-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+.chat-goal-chip {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: var(--r-pill);
+  background: var(--positive-bg);
+  color: var(--positive);
+  font-size: 12px;
+  font-weight: 500;
+}
+.chat-goal.settled {
+  border-color: var(--sage-line);
+  background: var(--sage);
+}
+.chat-goal.settled .chat-goal-name {
+  font-weight: 500;
+}
+.chat-goal bdi {
+  overflow-wrap: anywhere;
+}
+.chat-goal .chat-goal-target {
+  font-variant-numeric: tabular-nums;
+}
+.chat-goal .goal-preview {
+  margin-top: 10px;
+  font-variant-numeric: tabular-nums;
+}
+.chat-goal.created .chat-goal-note {
+  margin-top: 6px;
+  color: var(--forest);
+}
+.chat-goal .plan-link {
+  align-self: flex-start;
+  margin-top: 2px;
+}
+.chat-goal + .si-replies {
+  margin-top: 10px;
+}
+@media (max-width: 760px), (pointer: coarse) {
+  .chat-goal .plan-link {
+    min-height: 44px;
+  }
+}

@@ -1,0 +1,42 @@
+node_modules/
+.next/
+.env
+.env.*
+!.env.example
+.data/
+.data-*/
+dist/
+coverage/
+test-results/
+*.tsbuildinfo
+.DS_Store
+*.log
+next-env.d.ts
+
+# --- Project additions (the delivery ZIP is built from the local checkout) ---
+# Delivery artefacts: large binaries, kept locally only
+*.zip
+*.mp4
+*.mov
+*.webm
+submission/presentation.pdf
+
+# Browser automation output
+.playwright-mcp/
+playwright-report/
+
+# Claude Code config, hooks and AI session transcripts: local only (added to the delivery ZIP by hand)
+.claude/
+submission/ai-sessions/
+
+# Editor state
+.vscode/
+.idea/
+*.swp
+
+# Personal notes (see global folder conventions)
+.notes/
+
+# Written by `npm run package` (PK1), packed into the ZIP only
+submission/EXCLUDED.md
+submission/BUILD.txt

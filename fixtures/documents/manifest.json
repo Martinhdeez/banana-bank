@@ -1,0 +1,802 @@
+[
+  {
+    "id": "aurora-fees-2026",
+    "title": "Aurora · current fees",
+    "file": "aurora-fees-2026.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "fees"
+  },
+  {
+    "id": "aurora-conditions-2026",
+    "title": "Aurora · current conditions",
+    "file": "aurora-conditions-2026.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "conditions"
+  },
+  {
+    "id": "aurora-operations-2026",
+    "title": "Aurora · current operations",
+    "file": "aurora-operations-2026.html",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "operations"
+  },
+  {
+    "id": "horizon-fees-2026",
+    "title": "Horizon · current fees",
+    "file": "horizon-fees-2026.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "fees"
+  },
+  {
+    "id": "horizon-conditions-2026",
+    "title": "Horizon · current conditions",
+    "file": "horizon-conditions-2026.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "conditions"
+  },
+  {
+    "id": "horizon-operations-2026",
+    "title": "Horizon · current operations",
+    "file": "horizon-operations-2026.html",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "operations"
+  },
+  {
+    "id": "cloud-fees-2026",
+    "title": "Cloud · current fees",
+    "file": "cloud-fees-2026.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "fees"
+  },
+  {
+    "id": "cloud-conditions-2026",
+    "title": "Cloud · current conditions",
+    "file": "cloud-conditions-2026.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "conditions"
+  },
+  {
+    "id": "cloud-operations-2026",
+    "title": "Cloud · current operations",
+    "file": "cloud-operations-2026.html",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "operations"
+  },
+  {
+    "id": "travel-fees-2026",
+    "title": "Travel · current fees",
+    "file": "travel-fees-2026.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "fees"
+  },
+  {
+    "id": "travel-conditions-2026",
+    "title": "Travel · current conditions",
+    "file": "travel-conditions-2026.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "conditions"
+  },
+  {
+    "id": "travel-operations-2026",
+    "title": "Travel · current operations",
+    "file": "travel-operations-2026.html",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "operations"
+  },
+  {
+    "id": "family-fees-2026",
+    "title": "Family · current fees",
+    "file": "family-fees-2026.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "fees"
+  },
+  {
+    "id": "family-conditions-2026",
+    "title": "Family · current conditions",
+    "file": "family-conditions-2026.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "conditions"
+  },
+  {
+    "id": "family-operations-2026",
+    "title": "Family · current operations",
+    "file": "family-operations-2026.html",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "operations"
+  },
+  {
+    "id": "professional-fees-2026",
+    "title": "Professional · current fees",
+    "file": "professional-fees-2026.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "fees"
+  },
+  {
+    "id": "professional-conditions-2026",
+    "title": "Professional · current conditions",
+    "file": "professional-conditions-2026.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "conditions"
+  },
+  {
+    "id": "professional-operations-2026",
+    "title": "Professional · current operations",
+    "file": "professional-operations-2026.html",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "operations"
+  },
+  {
+    "id": "young-fees-2026",
+    "title": "Young · current fees",
+    "file": "young-fees-2026.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "fees"
+  },
+  {
+    "id": "young-conditions-2026",
+    "title": "Young · current conditions",
+    "file": "young-conditions-2026.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "conditions"
+  },
+  {
+    "id": "young-operations-2026",
+    "title": "Young · current operations",
+    "file": "young-operations-2026.html",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "operations"
+  },
+  {
+    "id": "community-fees-2026",
+    "title": "Community · current fees",
+    "file": "community-fees-2026.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "fees"
+  },
+  {
+    "id": "community-conditions-2026",
+    "title": "Community · current conditions",
+    "file": "community-conditions-2026.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "conditions"
+  },
+  {
+    "id": "community-operations-2026",
+    "title": "Community · current operations",
+    "file": "community-operations-2026.html",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "operations"
+  },
+  {
+    "id": "faq-aurora-waiver",
+    "title": "When is the Aurora fee waived?",
+    "file": "faq-aurora-waiver.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "faq"
+  },
+  {
+    "id": "faq-internal-transfer",
+    "title": "What does an internal transfer cost?",
+    "file": "faq-internal-transfer.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "faq"
+  },
+  {
+    "id": "faq-confirmation",
+    "title": "How do I authorize a transfer?",
+    "file": "faq-confirmation.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "faq"
+  },
+  {
+    "id": "faq-lost-response",
+    "title": "Does a timeout mean it did not happen?",
+    "file": "faq-lost-response.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "faq"
+  },
+  {
+    "id": "faq-balance",
+    "title": "Where can I check my balance?",
+    "file": "faq-balance.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "faq"
+  },
+  {
+    "id": "faq-versions",
+    "title": "How should I read an old fee schedule?",
+    "file": "faq-versions.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "faq"
+  },
+  {
+    "id": "faq-two-accounts",
+    "title": "How do I choose a source account?",
+    "file": "faq-two-accounts.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "faq"
+  },
+  {
+    "id": "faq-human",
+    "title": "Can I ask for human support?",
+    "file": "faq-human.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "faq"
+  },
+  {
+    "id": "faq-insufficient-funds",
+    "title": "What if I do not have enough money?",
+    "file": "faq-insufficient-funds.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "faq"
+  },
+  {
+    "id": "faq-reference",
+    "title": "What is the reference for?",
+    "file": "faq-reference.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "faq"
+  },
+  {
+    "id": "faq-history",
+    "title": "Where can I see transactions?",
+    "file": "faq-history.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "faq"
+  },
+  {
+    "id": "faq-changed-amount",
+    "title": "Can I change an amount after confirmation?",
+    "file": "faq-changed-amount.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "faq"
+  },
+  {
+    "id": "faq-cloud-account",
+    "title": "Does Cloud have a fee?",
+    "file": "faq-cloud-account.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "faq"
+  },
+  {
+    "id": "faq-young-account",
+    "title": "Does Young have a fee?",
+    "file": "faq-young-account.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "faq"
+  },
+  {
+    "id": "faq-personal-data",
+    "title": "Can someone else see my chat?",
+    "file": "faq-personal-data.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "faq"
+  },
+  {
+    "id": "faq-cancellation",
+    "title": "Can I cancel a completed operation?",
+    "file": "faq-cancellation.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "faq"
+  },
+  {
+    "id": "faq-description",
+    "title": "What does the description do?",
+    "file": "faq-description.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "faq"
+  },
+  {
+    "id": "faq-date",
+    "title": "Which date does the corpus use?",
+    "file": "faq-date.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "faq"
+  },
+  {
+    "id": "faq-recipient",
+    "title": "Who can receive a transfer?",
+    "file": "faq-recipient.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "faq"
+  },
+  {
+    "id": "faq-limits",
+    "title": "What is the maximum amount?",
+    "file": "faq-limits.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "faq"
+  },
+  {
+    "id": "procedure-1",
+    "title": "Procedure: bound confirmation",
+    "file": "procedure-1.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "internal",
+    "family": "procedure"
+  },
+  {
+    "id": "procedure-2",
+    "title": "Procedure: uncertainty handling",
+    "file": "procedure-2.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "internal",
+    "family": "procedure"
+  },
+  {
+    "id": "procedure-3",
+    "title": "Procedure: reconciliation",
+    "file": "procedure-3.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "internal",
+    "family": "procedure"
+  },
+  {
+    "id": "procedure-4",
+    "title": "Procedure: case handling",
+    "file": "procedure-4.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "internal",
+    "family": "procedure"
+  },
+  {
+    "id": "procedure-5",
+    "title": "Procedure: document validity",
+    "file": "procedure-5.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "internal",
+    "family": "procedure"
+  },
+  {
+    "id": "procedure-6",
+    "title": "Procedure: account holder identity",
+    "file": "procedure-6.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "internal",
+    "family": "procedure"
+  },
+  {
+    "id": "procedure-7",
+    "title": "Procedure: ledger inspection",
+    "file": "procedure-7.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "internal",
+    "family": "procedure"
+  },
+  {
+    "id": "procedure-8",
+    "title": "Procedure: retries",
+    "file": "procedure-8.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "internal",
+    "family": "procedure"
+  },
+  {
+    "id": "procedure-9",
+    "title": "Procedure: concurrency",
+    "file": "procedure-9.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "internal",
+    "family": "procedure"
+  },
+  {
+    "id": "procedure-10",
+    "title": "Procedure: evidence recording",
+    "file": "procedure-10.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "internal",
+    "family": "procedure"
+  },
+  {
+    "id": "procedure-11",
+    "title": "Procedure: context switching",
+    "file": "procedure-11.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "internal",
+    "family": "procedure"
+  },
+  {
+    "id": "procedure-12",
+    "title": "Procedure: fee updates",
+    "file": "procedure-12.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "internal",
+    "family": "procedure"
+  },
+  {
+    "id": "archive-aurora-1",
+    "title": "Aurora · archived conditions 1",
+    "file": "archive-aurora-1.md",
+    "version": 1,
+    "validFrom": "2026-01-01",
+    "validTo": "2026-08-31",
+    "audience": "public",
+    "family": "archive"
+  },
+  {
+    "id": "archive-horizon-2",
+    "title": "Horizon · archived conditions 2",
+    "file": "archive-horizon-2.md",
+    "version": 1,
+    "validFrom": "2026-01-01",
+    "validTo": "2026-08-31",
+    "audience": "public",
+    "family": "archive"
+  },
+  {
+    "id": "archive-cloud-3",
+    "title": "Cloud · archived conditions 3",
+    "file": "archive-cloud-3.md",
+    "version": 1,
+    "validFrom": "2026-01-01",
+    "validTo": "2026-08-31",
+    "audience": "public",
+    "family": "archive"
+  },
+  {
+    "id": "archive-travel-4",
+    "title": "Travel · archived conditions 4",
+    "file": "archive-travel-4.md",
+    "version": 1,
+    "validFrom": "2026-01-01",
+    "validTo": "2026-08-31",
+    "audience": "public",
+    "family": "archive"
+  },
+  {
+    "id": "archive-family-5",
+    "title": "Family · archived conditions 5",
+    "file": "archive-family-5.md",
+    "version": 1,
+    "validFrom": "2026-01-01",
+    "validTo": "2026-08-31",
+    "audience": "public",
+    "family": "archive"
+  },
+  {
+    "id": "archive-professional-6",
+    "title": "Professional · archived conditions 6",
+    "file": "archive-professional-6.md",
+    "version": 1,
+    "validFrom": "2026-01-01",
+    "validTo": "2026-08-31",
+    "audience": "public",
+    "family": "archive"
+  },
+  {
+    "id": "archive-young-7",
+    "title": "Young · archived conditions 7",
+    "file": "archive-young-7.md",
+    "version": 1,
+    "validFrom": "2026-01-01",
+    "validTo": "2026-08-31",
+    "audience": "public",
+    "family": "archive"
+  },
+  {
+    "id": "archive-community-8",
+    "title": "Community · archived conditions 8",
+    "file": "archive-community-8.md",
+    "version": 1,
+    "validFrom": "2026-01-01",
+    "validTo": "2026-08-31",
+    "audience": "public",
+    "family": "archive"
+  },
+  {
+    "id": "archive-aurora-9",
+    "title": "Aurora · archived conditions 9",
+    "file": "archive-aurora-9.md",
+    "version": 1,
+    "validFrom": "2026-01-01",
+    "validTo": "2026-08-31",
+    "audience": "public",
+    "family": "archive"
+  },
+  {
+    "id": "archive-horizon-10",
+    "title": "Horizon · archived conditions 10",
+    "file": "archive-horizon-10.md",
+    "version": 1,
+    "validFrom": "2026-01-01",
+    "validTo": "2026-08-31",
+    "audience": "public",
+    "family": "archive"
+  },
+  {
+    "id": "archive-cloud-11",
+    "title": "Cloud · archived conditions 11",
+    "file": "archive-cloud-11.md",
+    "version": 1,
+    "validFrom": "2026-01-01",
+    "validTo": "2026-08-31",
+    "audience": "public",
+    "family": "archive"
+  },
+  {
+    "id": "archive-travel-12",
+    "title": "Travel · archived conditions 12",
+    "file": "archive-travel-12.md",
+    "version": 1,
+    "validFrom": "2026-01-01",
+    "validTo": "2026-08-31",
+    "audience": "public",
+    "family": "archive"
+  },
+  {
+    "id": "notice-aurora",
+    "title": "Aurora policy update",
+    "file": "notice-aurora.csv",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "notice"
+  },
+  {
+    "id": "notice-horizon",
+    "title": "Horizon policy update",
+    "file": "notice-horizon.csv",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "notice"
+  },
+  {
+    "id": "notice-cloud",
+    "title": "Cloud policy update",
+    "file": "notice-cloud.csv",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "notice"
+  },
+  {
+    "id": "notice-travel",
+    "title": "Travel policy update",
+    "file": "notice-travel.csv",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "notice"
+  },
+  {
+    "id": "notice-family",
+    "title": "Family policy update",
+    "file": "notice-family.csv",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "notice"
+  },
+  {
+    "id": "notice-professional",
+    "title": "Professional policy update",
+    "file": "notice-professional.csv",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "notice"
+  },
+  {
+    "id": "notice-young",
+    "title": "Young policy update",
+    "file": "notice-young.csv",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "notice"
+  },
+  {
+    "id": "notice-community",
+    "title": "Community policy update",
+    "file": "notice-community.csv",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "notice"
+  },
+  {
+    "id": "context-guide-1",
+    "title": "Support guide 1",
+    "file": "context-guide-1.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "context"
+  },
+  {
+    "id": "context-guide-2",
+    "title": "Support guide 2",
+    "file": "context-guide-2.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "context"
+  },
+  {
+    "id": "context-guide-3",
+    "title": "Support guide 3",
+    "file": "context-guide-3.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "context"
+  },
+  {
+    "id": "context-guide-4",
+    "title": "Support guide 4",
+    "file": "context-guide-4.md",
+    "version": 2,
+    "validFrom": "2026-09-01",
+    "validTo": null,
+    "audience": "public",
+    "family": "context"
+  }
+]

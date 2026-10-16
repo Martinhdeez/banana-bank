@@ -1,0 +1,148 @@
+/* CF1-ui: printable transfer receipt (app/receipt/[intentId]) and its link in "Your transfers".
+   Redesign tokens only. */
+.receipt-link {
+  color: var(--forest);
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.receipt-link:hover {
+  color: var(--forest-hover);
+}
+.receipt-page {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 32px 16px 48px;
+}
+.receipt-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.receipt-card {
+  padding: 28px;
+}
+.receipt-card h1 {
+  font-size: 26px;
+}
+.receipt-card .loading {
+  padding: 24px 0;
+  text-align: left;
+}
+.receipt-banner {
+  margin-bottom: 18px;
+  padding: 10px 14px;
+  border: 1px solid var(--lime-wash-line);
+  border-radius: var(--r-tile);
+  background: var(--lime-wash);
+  color: var(--ochre);
+  font-size: 13px;
+}
+.receipt-amount {
+  margin-bottom: 18px;
+  font-size: 34px;
+  font-weight: 550;
+  letter-spacing: -0.03em;
+}
+.receipt-fields {
+  display: grid;
+  grid-template-columns: minmax(120px, max-content) minmax(0, 1fr);
+  margin: 0 0 24px;
+  border-top: 1px solid var(--line-inner);
+}
+.receipt-fields dt,
+.receipt-fields dd {
+  margin: 0;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line-row);
+  font-size: 13px;
+}
+.receipt-fields dt {
+  padding-right: 16px;
+  color: var(--muted);
+}
+.receipt-fields dd {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  color: var(--ink);
+}
+.receipt-fields small {
+  display: block;
+  color: var(--muted);
+}
+.receipt-fields code {
+  font-family: var(--mono);
+  font-size: 12px;
+}
+.receipt-reference {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 12px;
+}
+.receipt-reference code {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.receipt-missing {
+  color: var(--faint);
+}
+.receipt-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.receipt-actions .secondary-button {
+  display: inline-flex;
+  align-items: center;
+}
+@media (max-width: 480px) {
+  .receipt-page {
+    padding-top: 20px;
+  }
+  .receipt-card {
+    padding: 20px 16px;
+  }
+  .receipt-fields {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .receipt-fields dt {
+    padding-bottom: 0;
+    border-bottom: 0;
+    font-size: 12px;
+  }
+  .receipt-fields dd {
+    padding-top: 2px;
+  }
+}
+@media print {
+  @page {
+    margin: 16mm;
+  }
+  body:has(.receipt-page) {
+    background: var(--surface);
+  }
+  .receipt-page {
+    max-width: none;
+    padding: 0;
+  }
+  .receipt-page,
+  .receipt-page * {
+    color: black !important;
+    box-shadow: none !important;
+  }
+  .receipt-card {
+    border: 0;
+    padding: 0;
+  }
+  .receipt-banner {
+    border-color: black;
+    background: none;
+  }
+  .receipt-page button,
+  .receipt-page a,
+  .receipt-actions {
+    display: none;
+  }
+}

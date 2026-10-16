@@ -1,0 +1,99 @@
+{
+  "fees": [
+    { "product": "Cloud", "euros": 0, "doc": "cloud-fees-2026" },
+    { "product": "Young", "euros": 0, "doc": "young-fees-2026" },
+    { "product": "Community", "euros": 2, "doc": "community-fees-2026" },
+    { "product": "Horizon", "euros": 3, "doc": "horizon-fees-2026" },
+    { "product": "Travel", "euros": 4, "doc": "travel-fees-2026" },
+    { "product": "Family", "euros": 5, "doc": "family-fees-2026" },
+    { "product": "Aurora", "euros": 6, "doc": "aurora-fees-2026" },
+    { "product": "Professional", "euros": 9, "doc": "professional-fees-2026" }
+  ],
+  "auroraWaiver": {
+    "doc": "aurora-fees-2026",
+    "salaryEuros": 1200,
+    "waivedEuros": 0,
+    "cardPurchases": "three"
+  },
+  "offers": [
+    {
+      "id": "offer-aurora-fee-waiver",
+      "name": "Aurora fee waiver",
+      "pitch": "You may already meet half of the conditions for a €0 Aurora fee.",
+      "reason": "the customer holds an Aurora account and a salary-sized payment arrived in it",
+      "cites": ["aurora-fees-2026"],
+      "version": 1,
+      "validFrom": "2026-10-01"
+    },
+    {
+      "id": "offer-cashback-card",
+      "name": "Cashback debit card",
+      "pitch": "1% back on eating out and leisure.",
+      "reason": "the customer pays regularly for eating out and leisure",
+      "cites": [],
+      "version": 1,
+      "validFrom": "2026-10-01"
+    },
+    {
+      "id": "offer-salary-plan",
+      "name": "Salary Plan",
+      "pitch": "Have your salary paid here and get a few services with it.",
+      "reason": "regular income arrives in the customer's account; the plan applies if it is a salary",
+      "cites": [],
+      "version": 1,
+      "validFrom": "2026-10-01"
+    },
+    {
+      "id": "offer-savings-pot",
+      "name": "Savings Pot",
+      "pitch": "A separate account to set money aside.",
+      "reason": "the customer keeps a balance in the main account and has no savings account",
+      "cites": [],
+      "version": 1,
+      "validFrom": "2026-10-01"
+    },
+    {
+      "id": "offer-home-insurance",
+      "name": "Home insurance",
+      "pitch": "Cover for the things in your home.",
+      "reason": "the customer pays rent or household bills that repeat every month",
+      "cites": [],
+      "version": 1,
+      "validFrom": "2026-10-01"
+    },
+    {
+      "id": "offer-bills-watch",
+      "name": "Bills & Subscriptions Watch",
+      "pitch": "One list of what repeats every month, with a warning before it is charged.",
+      "reason": "several of the customer's payments repeat every month",
+      "cites": [],
+      "version": 1,
+      "validFrom": "2026-10-01"
+    },
+    {
+      "id": "offer-round-ups",
+      "name": "Round-ups",
+      "pitch": "Card purchases rounded up to the next euro into your savings.",
+      "reason": "the customer makes many small payments and has a savings account",
+      "cites": [],
+      "version": 1,
+      "validFrom": "2026-10-01"
+    },
+    {
+      "id": "offer-cloud-account",
+      "name": "Cloud account",
+      "pitch": "An account with no monthly fee.",
+      "reason": "the customer's account has a monthly fee and the Cloud account has none",
+      "cites": [
+        "cloud-fees-2026",
+        "horizon-fees-2026",
+        "travel-fees-2026",
+        "family-fees-2026",
+        "aurora-fees-2026",
+        "professional-fees-2026"
+      ],
+      "version": 1,
+      "validFrom": "2026-10-01"
+    }
+  ]
+}

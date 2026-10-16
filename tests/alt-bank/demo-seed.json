@@ -1,0 +1,4299 @@
+{
+  "openingAt": "2026-07-01T06:00:00.000Z",
+  "openings": {
+    "acc-lucia": 409634,
+    "acc-lucia-savings": 70000,
+    "acc-bruno": 351770,
+    "acc-carla": 349807,
+    "acc-diego": 78086,
+    "acc-elena": 358809,
+    "acc-hugo": 180234,
+    "acc-ines": 400730,
+    "acc-omar": 449198
+  },
+  "movements": [
+    {
+      "id": "demo-lucia-033",
+      "accountId": "acc-lucia",
+      "amountCents": -95000,
+      "description": "RECIBO ALQUILER INMOB. CASTELLANA 41 SL",
+      "createdAt": "2026-07-01T06:00:00.000Z"
+    },
+    {
+      "id": "demo-lucia-034",
+      "accountId": "acc-lucia",
+      "amountCents": -4780,
+      "description": "COMPRA TARJ. 4532XXXXXXXX1234 MERCADONA 0412 MADRID ES",
+      "createdAt": "2026-07-03T17:15:00.000Z"
+    },
+    {
+      "id": "demo-lucia-035",
+      "accountId": "acc-lucia",
+      "amountCents": -5812,
+      "description": "RECIBO IBERDROLA CLIENTES SAU",
+      "createdAt": "2026-07-06T06:00:00.000Z"
+    },
+    {
+      "id": "demo-lucia-036",
+      "accountId": "acc-lucia",
+      "amountCents": -3990,
+      "description": "RECIBO DIGI SPAIN TELECOM SLU",
+      "createdAt": "2026-07-10T06:00:00.000Z"
+    },
+    {
+      "id": "demo-lucia-037",
+      "accountId": "acc-lucia",
+      "amountCents": -3250,
+      "description": "RESTAURANTE LA MUSA LATINA MADRID",
+      "createdAt": "2026-07-11T19:40:00.000Z"
+    },
+    {
+      "id": "demo-lucia-038",
+      "accountId": "acc-lucia",
+      "amountCents": -1099,
+      "description": "PAYPAL *SPOTIFY 35314369001",
+      "createdAt": "2026-07-14T04:00:00.000Z"
+    },
+    {
+      "id": "demo-lucia-039",
+      "accountId": "acc-lucia",
+      "amountCents": -895,
+      "description": "FARMACIA LDA. M. RUIZ 0001",
+      "createdAt": "2026-07-17T16:30:00.000Z"
+    },
+    {
+      "id": "demo-lucia-040",
+      "accountId": "acc-lucia",
+      "amountCents": -6341,
+      "description": "COMPRA TARJ. 4532XXXXXXXX1234 MERCADONA 0412 MADRID ES",
+      "createdAt": "2026-07-18T09:30:00.000Z"
+    },
+    {
+      "id": "demo-lucia-041",
+      "accountId": "acc-lucia",
+      "amountCents": -2999,
+      "description": "PRIMARK GRAN VIA MADRID",
+      "createdAt": "2026-07-22T18:10:00.000Z"
+    },
+    {
+      "id": "demo-lucia-042",
+      "accountId": "acc-lucia",
+      "amountCents": -1980,
+      "description": "CINESA PROYECCIONES MADRID",
+      "createdAt": "2026-07-25T20:20:00.000Z"
+    },
+    {
+      "id": "demo-lucia-043",
+      "accountId": "acc-lucia",
+      "amountCents": 215000,
+      "description": "NOMINA JULIO ACME CONSULTING SL",
+      "createdAt": "2026-07-28T06:00:00.000Z"
+    },
+    {
+      "id": "demo-lucia-044",
+      "accountId": "acc-lucia",
+      "amountCents": -3270,
+      "description": "RECARGA ABONO TRANSPORTE CRTM",
+      "createdAt": "2026-07-31T06:10:00.000Z"
+    },
+    {
+      "id": "demo-lucia-001",
+      "accountId": "acc-lucia",
+      "amountCents": -95000,
+      "description": "RECIBO ALQUILER INMOB. CASTELLANA 41 SL",
+      "createdAt": "2026-08-04T06:00:00.000Z"
+    },
+    {
+      "id": "demo-lucia-002",
+      "accountId": "acc-lucia",
+      "amountCents": -6743,
+      "description": "RECIBO IBERDROLA CLIENTES SAU",
+      "createdAt": "2026-08-05T06:00:00.000Z"
+    },
+    {
+      "id": "demo-lucia-003",
+      "accountId": "acc-lucia",
+      "amountCents": -5432,
+      "description": "COMPRA TARJ. 4532XXXXXXXX1234 MERCADONA 0412 MADRID ES",
+      "createdAt": "2026-08-08T09:20:00.000Z"
+    },
+    {
+      "id": "demo-lucia-004",
+      "accountId": "acc-lucia",
+      "amountCents": -3990,
+      "description": "RECIBO DIGI SPAIN TELECOM SLU",
+      "createdAt": "2026-08-10T06:00:00.000Z"
+    },
+    {
+      "id": "demo-lucia-005",
+      "accountId": "acc-lucia",
+      "amountCents": -1099,
+      "description": "PAYPAL *SPOTIFY 35314369001",
+      "createdAt": "2026-08-14T04:00:00.000Z"
+    },
+    {
+      "id": "demo-lucia-006",
+      "accountId": "acc-lucia",
+      "amountCents": -1400,
+      "description": "LA ESQUINA SL",
+      "createdAt": "2026-08-15T23:30:00.000Z"
+    },
+    {
+      "id": "demo-lucia-007",
+      "accountId": "acc-lucia",
+      "amountCents": -2399,
+      "description": "AMZN Mktp ES*2K4LL0P93",
+      "createdAt": "2026-08-19T21:00:00.000Z"
+    },
+    {
+      "id": "demo-lucia-008",
+      "accountId": "acc-lucia",
+      "amountCents": -6107,
+      "description": "COMPRA TARJ. 4532XXXXXXXX1234 MERCADONA 0412 MADRID ES",
+      "createdAt": "2026-08-22T09:05:00.000Z"
+    },
+    {
+      "id": "demo-lucia-009",
+      "accountId": "acc-lucia",
+      "amountCents": -15000,
+      "description": "TRANSFERENCIA 000123",
+      "createdAt": "2026-08-25T08:00:00.000Z"
+    },
+    {
+      "id": "demo-lucia-010",
+      "accountId": "acc-lucia",
+      "amountCents": 215000,
+      "description": "NOMINA AGOSTO ACME CONSULTING SL",
+      "createdAt": "2026-08-28T06:00:00.000Z"
+    },
+    {
+      "id": "demo-lucia-012",
+      "accountId": "acc-lucia",
+      "amountCents": -3270,
+      "description": "RECARGA ABONO TRANSPORTE CRTM",
+      "createdAt": "2026-08-31T06:10:00.000Z"
+    },
+    {
+      "id": "demo-lucia-013",
+      "accountId": "acc-lucia",
+      "amountCents": -95000,
+      "description": "RECIBO ALQUILER INMOB. CASTELLANA 41 SL",
+      "createdAt": "2026-09-01T06:00:00.000Z"
+    },
+    {
+      "id": "demo-lucia-014",
+      "accountId": "acc-lucia",
+      "amountCents": -7120,
+      "description": "RECIBO IBERDROLA CLIENTES SAU",
+      "createdAt": "2026-09-05T06:00:00.000Z"
+    },
+    {
+      "id": "demo-lucia-015",
+      "accountId": "acc-lucia",
+      "amountCents": -4890,
+      "description": "COMPRA TARJ. 4532XXXXXXXX1234 MERCADONA 0412 MADRID ES",
+      "createdAt": "2026-09-05T10:10:00.000Z"
+    },
+    {
+      "id": "demo-lucia-016",
+      "accountId": "acc-lucia",
+      "amountCents": -2150,
+      "description": "LA ESQUINA SL",
+      "createdAt": "2026-09-06T00:10:00.000Z"
+    },
+    {
+      "id": "demo-lucia-017",
+      "accountId": "acc-lucia",
+      "amountCents": -1245,
+      "description": "FARMACIA LDA. M. RUIZ 0001",
+      "createdAt": "2026-09-08T16:20:00.000Z"
+    },
+    {
+      "id": "demo-lucia-018",
+      "accountId": "acc-lucia",
+      "amountCents": -3990,
+      "description": "RECIBO DIGI SPAIN TELECOM SLU",
+      "createdAt": "2026-09-10T06:00:00.000Z"
+    },
+    {
+      "id": "demo-lucia-019",
+      "accountId": "acc-lucia",
+      "amountCents": -7640,
+      "description": "EL CORTE INGLES 0018 MADRID",
+      "createdAt": "2026-09-12T11:00:00.000Z"
+    },
+    {
+      "id": "demo-lucia-020",
+      "accountId": "acc-lucia",
+      "amountCents": -4995,
+      "description": "ZARA ESPANA S.A. 3321 MADRID",
+      "createdAt": "2026-09-12T16:30:00.000Z"
+    },
+    {
+      "id": "demo-lucia-021",
+      "accountId": "acc-lucia",
+      "amountCents": -1600,
+      "description": "LA ESQUINA SL",
+      "createdAt": "2026-09-12T22:45:00.000Z"
+    },
+    {
+      "id": "demo-lucia-022",
+      "accountId": "acc-lucia",
+      "amountCents": -1099,
+      "description": "PAYPAL *SPOTIFY 35314369001",
+      "createdAt": "2026-09-14T04:00:00.000Z"
+    },
+    {
+      "id": "demo-lucia-023",
+      "accountId": "acc-lucia",
+      "amountCents": -5000,
+      "description": "REINTEGRO CAJERO 0921 MADRID",
+      "createdAt": "2026-09-18T18:00:00.000Z"
+    },
+    {
+      "id": "demo-lucia-024",
+      "accountId": "acc-lucia",
+      "amountCents": -7215,
+      "description": "COMPRA TARJ. 4532XXXXXXXX1234 MERCADONA 0412 MADRID ES",
+      "createdAt": "2026-09-19T09:40:00.000Z"
+    },
+    {
+      "id": "demo-lucia-025",
+      "accountId": "acc-lucia",
+      "amountCents": -4150,
+      "description": "AMZN Mktp ES*7HH21MM04",
+      "createdAt": "2026-09-21T20:30:00.000Z"
+    },
+    {
+      "id": "demo-lucia-027",
+      "accountId": "acc-lucia",
+      "amountCents": -1800,
+      "description": "TPV BAR LA ESQUINA SL 27/09 03:41",
+      "createdAt": "2026-09-27T01:41:00.000Z"
+    },
+    {
+      "id": "demo-lucia-028",
+      "accountId": "acc-lucia",
+      "amountCents": -1135,
+      "description": "UBER *TRIP HELP.UBER.COM NL",
+      "createdAt": "2026-09-27T02:05:00.000Z"
+    },
+    {
+      "id": "demo-lucia-029",
+      "accountId": "acc-lucia",
+      "amountCents": 215000,
+      "description": "NOMINA SEPTIEMBRE ACME CONSULTING SL",
+      "createdAt": "2026-09-28T06:00:00.000Z"
+    },
+    {
+      "id": "demo-lucia-031",
+      "accountId": "acc-lucia",
+      "amountCents": -3270,
+      "description": "RECARGA ABONO TRANSPORTE CRTM",
+      "createdAt": "2026-09-30T06:10:00.000Z"
+    },
+    {
+      "id": "demo-lucia-032",
+      "accountId": "acc-lucia",
+      "amountCents": -95000,
+      "description": "RECIBO ALQUILER INMOB. CASTELLANA 41 SL",
+      "createdAt": "2026-10-01T06:00:00.000Z"
+    },
+    {
+      "id": "demo-lucia-045",
+      "accountId": "acc-lucia",
+      "amountCents": -5236,
+      "description": "COMPRA TARJ. 4532XXXXXXXX1234 MERCADONA 0412 MADRID ES",
+      "createdAt": "2026-10-02T17:30:00.000Z"
+    },
+    {
+      "id": "demo-lucia-049",
+      "accountId": "acc-lucia",
+      "amountCents": -3499,
+      "description": "ZARA ESPANA S.A. 3321 MADRID",
+      "createdAt": "2026-10-03T09:40:00.000Z"
+    },
+    {
+      "id": "demo-lucia-046",
+      "accountId": "acc-lucia",
+      "amountCents": -2460,
+      "description": "VIPS 0231 MADRID",
+      "createdAt": "2026-10-03T12:20:00.000Z"
+    },
+    {
+      "id": "demo-lucia-047",
+      "accountId": "acc-lucia",
+      "amountCents": -940,
+      "description": "RENFE CERCANIAS MADRID",
+      "createdAt": "2026-10-04T10:05:00.000Z"
+    },
+    {
+      "id": "demo-lucia-048",
+      "accountId": "acc-lucia",
+      "amountCents": -6130,
+      "description": "RECIBO IBERDROLA CLIENTES SAU",
+      "createdAt": "2026-10-05T06:00:00.000Z"
+    },
+    {
+      "id": "demo-lucia-050",
+      "accountId": "acc-lucia",
+      "amountCents": -760,
+      "description": "FARMACIA LDA. M. RUIZ 0001",
+      "createdAt": "2026-10-05T16:25:00.000Z"
+    },
+    {
+      "id": "demo-lucia-051",
+      "accountId": "acc-lucia",
+      "amountCents": -4680,
+      "description": "RESTAURANTE EL RINCON DE CHAMBERI",
+      "createdAt": "2026-07-04T20:10:00.000Z"
+    },
+    {
+      "id": "demo-lucia-052",
+      "accountId": "acc-lucia",
+      "amountCents": -4360,
+      "description": "RENFE VIAJEROS INTERNET MADRID",
+      "createdAt": "2026-07-05T07:15:00.000Z"
+    },
+    {
+      "id": "demo-lucia-053",
+      "accountId": "acc-lucia",
+      "amountCents": -6840,
+      "description": "COMPRA TARJ. 4532XXXXXXXX1234 MERCADONA 0412 MADRID ES",
+      "createdAt": "2026-07-08T17:05:00.000Z"
+    },
+    {
+      "id": "demo-lucia-054",
+      "accountId": "acc-lucia",
+      "amountCents": -10900,
+      "description": "IKEA SAN SEBASTIAN DE LOS REYES",
+      "createdAt": "2026-07-12T10:40:00.000Z"
+    },
+    {
+      "id": "demo-lucia-055",
+      "accountId": "acc-lucia",
+      "amountCents": -4290,
+      "description": "CARREFOUR EXPRESS 0871 MADRID",
+      "createdAt": "2026-07-14T18:15:00.000Z"
+    },
+    {
+      "id": "demo-lucia-056",
+      "accountId": "acc-lucia",
+      "amountCents": -2850,
+      "description": "VIPS 0231 MADRID",
+      "createdAt": "2026-07-19T12:30:00.000Z"
+    },
+    {
+      "id": "demo-lucia-057",
+      "accountId": "acc-lucia",
+      "amountCents": -4599,
+      "description": "MANGO GOYA MADRID",
+      "createdAt": "2026-07-21T16:20:00.000Z"
+    },
+    {
+      "id": "demo-lucia-058",
+      "accountId": "acc-lucia",
+      "amountCents": -5500,
+      "description": "CLINICA DENTAL CHAMBERI SLP",
+      "createdAt": "2026-07-23T15:00:00.000Z"
+    },
+    {
+      "id": "demo-lucia-059",
+      "accountId": "acc-lucia",
+      "amountCents": -8125,
+      "description": "COMPRA TARJ. 4532XXXXXXXX1234 MERCADONA 0412 MADRID ES",
+      "createdAt": "2026-07-24T16:50:00.000Z"
+    },
+    {
+      "id": "demo-lucia-060",
+      "accountId": "acc-lucia",
+      "amountCents": -5400,
+      "description": "TICKETMASTER ES 0034871",
+      "createdAt": "2026-07-26T19:00:00.000Z"
+    },
+    {
+      "id": "demo-lucia-061",
+      "accountId": "acc-lucia",
+      "amountCents": -3735,
+      "description": "LIDL SUPERMERCADOS SAU MADRID",
+      "createdAt": "2026-07-29T17:40:00.000Z"
+    },
+    {
+      "id": "demo-lucia-062",
+      "accountId": "acc-lucia",
+      "amountCents": -6480,
+      "description": "COMPRA TARJ. 4532XXXXXXXX1234 MERCADONA 0412 MADRID ES",
+      "createdAt": "2026-08-01T18:30:00.000Z"
+    },
+    {
+      "id": "demo-lucia-063",
+      "accountId": "acc-lucia",
+      "amountCents": -5840,
+      "description": "RESTAURANTE LA MUSA LATINA MADRID",
+      "createdAt": "2026-08-07T20:00:00.000Z"
+    },
+    {
+      "id": "demo-lucia-064",
+      "accountId": "acc-lucia",
+      "amountCents": -3420,
+      "description": "RENFE VIAJEROS INTERNET MADRID",
+      "createdAt": "2026-08-12T11:10:00.000Z"
+    },
+    {
+      "id": "demo-lucia-065",
+      "accountId": "acc-lucia",
+      "amountCents": -8835,
+      "description": "CARREFOUR EXPRESS 0871 MADRID",
+      "createdAt": "2026-08-13T17:20:00.000Z"
+    },
+    {
+      "id": "demo-lucia-066",
+      "accountId": "acc-lucia",
+      "amountCents": -4490,
+      "description": "RESTAURANTE EL RINCON DE CHAMBERI",
+      "createdAt": "2026-08-15T12:20:00.000Z"
+    },
+    {
+      "id": "demo-lucia-067",
+      "accountId": "acc-lucia",
+      "amountCents": -5995,
+      "description": "ZARA ESPANA S.A. 3321 MADRID",
+      "createdAt": "2026-08-18T16:40:00.000Z"
+    },
+    {
+      "id": "demo-lucia-068",
+      "accountId": "acc-lucia",
+      "amountCents": -2830,
+      "description": "FARMACIA LDA. M. RUIZ 0001",
+      "createdAt": "2026-08-20T15:30:00.000Z"
+    },
+    {
+      "id": "demo-lucia-069",
+      "accountId": "acc-lucia",
+      "amountCents": -2460,
+      "description": "CINESA PROYECCIONES MADRID",
+      "createdAt": "2026-08-23T20:10:00.000Z"
+    },
+    {
+      "id": "demo-lucia-070",
+      "accountId": "acc-lucia",
+      "amountCents": -5190,
+      "description": "LIDL SUPERMERCADOS SAU MADRID",
+      "createdAt": "2026-08-26T17:15:00.000Z"
+    },
+    {
+      "id": "demo-lucia-071",
+      "accountId": "acc-lucia",
+      "amountCents": -6290,
+      "description": "FNAC CALLAO MADRID",
+      "createdAt": "2026-08-27T10:30:00.000Z"
+    },
+    {
+      "id": "demo-lucia-072",
+      "accountId": "acc-lucia",
+      "amountCents": -4160,
+      "description": "LIDL SUPERMERCADOS SAU MADRID",
+      "createdAt": "2026-09-11T17:30:00.000Z"
+    },
+    {
+      "id": "demo-lucia-073",
+      "accountId": "acc-lucia",
+      "amountCents": -5800,
+      "description": "RESTAURANTE LA MUSA LATINA MADRID",
+      "createdAt": "2026-09-16T19:30:00.000Z"
+    },
+    {
+      "id": "demo-lucia-074",
+      "accountId": "acc-lucia",
+      "amountCents": -4599,
+      "description": "MANGO GOYA MADRID",
+      "createdAt": "2026-09-22T16:20:00.000Z"
+    },
+    {
+      "id": "demo-lucia-075",
+      "accountId": "acc-lucia",
+      "amountCents": -2750,
+      "description": "VIPS 0231 MADRID",
+      "createdAt": "2026-09-24T12:15:00.000Z"
+    },
+    {
+      "id": "demo-lucia-076",
+      "accountId": "acc-lucia",
+      "amountCents": -8320,
+      "description": "COMPRA TARJ. 4532XXXXXXXX1234 MERCADONA 0412 MADRID ES",
+      "createdAt": "2026-09-26T09:20:00.000Z"
+    },
+    {
+      "id": "demo-lucia-077",
+      "accountId": "acc-lucia",
+      "amountCents": -6370,
+      "description": "CARREFOUR EXPRESS 0871 MADRID",
+      "createdAt": "2026-09-29T17:10:00.000Z"
+    },
+    {
+      "id": "demo-lucia-078",
+      "accountId": "acc-lucia",
+      "amountCents": -1890,
+      "description": "LIDL SUPERMERCADOS SAU MADRID",
+      "createdAt": "2026-10-04T09:15:00.000Z"
+    },
+    {
+      "id": "demo-lucia-079",
+      "accountId": "acc-lucia",
+      "amountCents": -1350,
+      "description": "RESTAURANTE EL RINCON DE CHAMBERI",
+      "createdAt": "2026-10-06T12:05:00.000Z"
+    },
+    {
+      "id": "demo-lucia-080",
+      "accountId": "acc-lucia",
+      "amountCents": -7845,
+      "description": "CARREFOUR EXPRESS 0871 MADRID",
+      "createdAt": "2026-10-06T17:20:00.000Z"
+    },
+    {
+      "id": "demo-bruno-030",
+      "accountId": "acc-bruno",
+      "amountCents": -62000,
+      "description": "TRANSFERENCIA A FAVOR DE M. SORIANO CONCEPTO ALQUILER",
+      "createdAt": "2026-07-01T07:00:00.000Z"
+    },
+    {
+      "id": "demo-bruno-031",
+      "accountId": "acc-bruno",
+      "amountCents": -4135,
+      "description": "Pago en CONSUM COOP V. VALENCIA",
+      "createdAt": "2026-07-03T17:20:00.000Z"
+    },
+    {
+      "id": "demo-bruno-032",
+      "accountId": "acc-bruno",
+      "amountCents": 125000,
+      "description": "TRANSFERENCIA RECIBIDA ESTUDIO NORTE SL FRA 2026-024",
+      "createdAt": "2026-07-07T06:00:00.000Z"
+    },
+    {
+      "id": "demo-bruno-033",
+      "accountId": "acc-bruno",
+      "amountCents": -1840,
+      "description": "GLOVO 09JUL VLC7M3 VALENCIA",
+      "createdAt": "2026-07-09T19:30:00.000Z"
+    },
+    {
+      "id": "demo-bruno-034",
+      "accountId": "acc-bruno",
+      "amountCents": -960,
+      "description": "FARMACIA RUZAFA 0042",
+      "createdAt": "2026-07-12T08:30:00.000Z"
+    },
+    {
+      "id": "demo-bruno-035",
+      "accountId": "acc-bruno",
+      "amountCents": -3500,
+      "description": "VODAFONE ESPANA SAU RECIBO",
+      "createdAt": "2026-07-15T06:00:00.000Z"
+    },
+    {
+      "id": "demo-bruno-036",
+      "accountId": "acc-bruno",
+      "amountCents": -3690,
+      "description": "Pago en CONSUM COOP V. VALENCIA",
+      "createdAt": "2026-07-17T18:05:00.000Z"
+    },
+    {
+      "id": "demo-bruno-037",
+      "accountId": "acc-bruno",
+      "amountCents": -1140,
+      "description": "CABIFY ESPANA SLU",
+      "createdAt": "2026-07-18T23:10:00.000Z"
+    },
+    {
+      "id": "demo-bruno-038",
+      "accountId": "acc-bruno",
+      "amountCents": -1250,
+      "description": "CERVECERIA EL CABANYAL",
+      "createdAt": "2026-07-21T20:15:00.000Z"
+    },
+    {
+      "id": "demo-bruno-039",
+      "accountId": "acc-bruno",
+      "amountCents": -2270,
+      "description": "GLOVO 24JUL VLC3R8 VALENCIA",
+      "createdAt": "2026-07-24T20:10:00.000Z"
+    },
+    {
+      "id": "demo-bruno-040",
+      "accountId": "acc-bruno",
+      "amountCents": -5499,
+      "description": "DECATHLON VALENCIA",
+      "createdAt": "2026-07-26T09:40:00.000Z"
+    },
+    {
+      "id": "demo-bruno-041",
+      "accountId": "acc-bruno",
+      "amountCents": 88000,
+      "description": "TRANSFERENCIA RECIBIDA PIXELWORKS BV INV 109",
+      "createdAt": "2026-07-28T06:00:00.000Z"
+    },
+    {
+      "id": "demo-bruno-042",
+      "accountId": "acc-bruno",
+      "amountCents": -2764,
+      "description": "Pago en CONSUM COOP V. VALENCIA",
+      "createdAt": "2026-07-30T16:45:00.000Z"
+    },
+    {
+      "id": "demo-bruno-001",
+      "accountId": "acc-bruno",
+      "amountCents": -62000,
+      "description": "TRANSFERENCIA A FAVOR DE M. SORIANO CONCEPTO ALQUILER",
+      "createdAt": "2026-08-04T07:00:00.000Z"
+    },
+    {
+      "id": "demo-bruno-002",
+      "accountId": "acc-bruno",
+      "amountCents": -1500,
+      "description": "SUMUP *ESPAI NOU",
+      "createdAt": "2026-08-06T07:05:00.000Z"
+    },
+    {
+      "id": "demo-bruno-003",
+      "accountId": "acc-bruno",
+      "amountCents": -3820,
+      "description": "Pago en CONSUM COOP V. VALENCIA",
+      "createdAt": "2026-08-07T17:30:00.000Z"
+    },
+    {
+      "id": "demo-bruno-004",
+      "accountId": "acc-bruno",
+      "amountCents": -2921,
+      "description": "VALENBISI ABONO ANUAL",
+      "createdAt": "2026-08-09T08:00:00.000Z"
+    },
+    {
+      "id": "demo-bruno-005",
+      "accountId": "acc-bruno",
+      "amountCents": 140000,
+      "description": "TRANSFERENCIA RECIBIDA ESTUDIO NORTE SL FRA 2026-031",
+      "createdAt": "2026-08-12T06:00:00.000Z"
+    },
+    {
+      "id": "demo-bruno-006",
+      "accountId": "acc-bruno",
+      "amountCents": -1790,
+      "description": "GLOVO 12AGO VLC2K7 VALENCIA",
+      "createdAt": "2026-08-12T19:40:00.000Z"
+    },
+    {
+      "id": "demo-bruno-007",
+      "accountId": "acc-bruno",
+      "amountCents": -3500,
+      "description": "VODAFONE ESPANA SAU RECIBO",
+      "createdAt": "2026-08-15T06:00:00.000Z"
+    },
+    {
+      "id": "demo-bruno-008",
+      "accountId": "acc-bruno",
+      "amountCents": -3629,
+      "description": "ADOBE *CREATIVE CLOUD",
+      "createdAt": "2026-08-18T04:00:00.000Z"
+    },
+    {
+      "id": "demo-bruno-009",
+      "accountId": "acc-bruno",
+      "amountCents": -1500,
+      "description": "SUMUP *ESPAI NOU",
+      "createdAt": "2026-08-20T07:10:00.000Z"
+    },
+    {
+      "id": "demo-bruno-010",
+      "accountId": "acc-bruno",
+      "amountCents": -4567,
+      "description": "Pago en CONSUM COOP V. VALENCIA",
+      "createdAt": "2026-08-21T18:10:00.000Z"
+    },
+    {
+      "id": "demo-bruno-011",
+      "accountId": "acc-bruno",
+      "amountCents": -2130,
+      "description": "GLOVO 27AGO VLC9P1 VALENCIA",
+      "createdAt": "2026-08-27T20:05:00.000Z"
+    },
+    {
+      "id": "demo-bruno-012",
+      "accountId": "acc-bruno",
+      "amountCents": -29400,
+      "description": "CUOTA AUTONOMOS TGSS",
+      "createdAt": "2026-08-31T06:00:00.000Z"
+    },
+    {
+      "id": "demo-bruno-013",
+      "accountId": "acc-bruno",
+      "amountCents": -62000,
+      "description": "TRANSFERENCIA A FAVOR DE M. SORIANO CONCEPTO ALQUILER",
+      "createdAt": "2026-09-01T07:00:00.000Z"
+    },
+    {
+      "id": "demo-bruno-014",
+      "accountId": "acc-bruno",
+      "amountCents": -4000,
+      "description": "PAYPAL *JGARCIA88",
+      "createdAt": "2026-09-02T19:00:00.000Z"
+    },
+    {
+      "id": "demo-bruno-015",
+      "accountId": "acc-bruno",
+      "amountCents": -1500,
+      "description": "SUMUP *ESPAI NOU",
+      "createdAt": "2026-09-03T07:00:00.000Z"
+    },
+    {
+      "id": "demo-bruno-016",
+      "accountId": "acc-bruno",
+      "amountCents": -2980,
+      "description": "Pago en CONSUM COOP V. VALENCIA",
+      "createdAt": "2026-09-04T17:45:00.000Z"
+    },
+    {
+      "id": "demo-bruno-017",
+      "accountId": "acc-bruno",
+      "amountCents": 98000,
+      "description": "TRANSFERENCIA RECIBIDA PIXELWORKS BV INV 118",
+      "createdAt": "2026-09-09T06:00:00.000Z"
+    },
+    {
+      "id": "demo-bruno-018",
+      "accountId": "acc-bruno",
+      "amountCents": -1560,
+      "description": "GLOVO 10SEP VLC4T2 VALENCIA",
+      "createdAt": "2026-09-10T19:15:00.000Z"
+    },
+    {
+      "id": "demo-bruno-019",
+      "accountId": "acc-bruno",
+      "amountCents": -980,
+      "description": "CABIFY ESPANA SLU",
+      "createdAt": "2026-09-12T00:20:00.000Z"
+    },
+    {
+      "id": "demo-bruno-020",
+      "accountId": "acc-bruno",
+      "amountCents": -3500,
+      "description": "VODAFONE ESPANA SAU RECIBO",
+      "createdAt": "2026-09-15T06:00:00.000Z"
+    },
+    {
+      "id": "demo-bruno-021",
+      "accountId": "acc-bruno",
+      "amountCents": -1500,
+      "description": "SUMUP *ESPAI NOU",
+      "createdAt": "2026-09-17T07:05:00.000Z"
+    },
+    {
+      "id": "demo-bruno-022",
+      "accountId": "acc-bruno",
+      "amountCents": -3629,
+      "description": "ADOBE *CREATIVE CLOUD",
+      "createdAt": "2026-09-18T04:00:00.000Z"
+    },
+    {
+      "id": "demo-bruno-023",
+      "accountId": "acc-bruno",
+      "amountCents": -5112,
+      "description": "Pago en CONSUM COOP V. VALENCIA",
+      "createdAt": "2026-09-18T18:00:00.000Z"
+    },
+    {
+      "id": "demo-bruno-024",
+      "accountId": "acc-bruno",
+      "amountCents": -24900,
+      "description": "MEDIAMARKT SATURN E-COMMERCE",
+      "createdAt": "2026-09-20T11:00:00.000Z"
+    },
+    {
+      "id": "demo-bruno-026",
+      "accountId": "acc-bruno",
+      "amountCents": -1980,
+      "description": "GLOVO 24SEP VLC1X9 VALENCIA",
+      "createdAt": "2026-09-24T20:30:00.000Z"
+    },
+    {
+      "id": "demo-bruno-027",
+      "accountId": "acc-bruno",
+      "amountCents": -2450,
+      "description": "CERVECERIA EL CABANYAL",
+      "createdAt": "2026-09-26T21:10:00.000Z"
+    },
+    {
+      "id": "demo-bruno-028",
+      "accountId": "acc-bruno",
+      "amountCents": 165000,
+      "description": "TRANSFERENCIA RECIBIDA ESTUDIO NORTE SL FRA 2026-038",
+      "createdAt": "2026-09-30T06:00:00.000Z"
+    },
+    {
+      "id": "demo-bruno-029",
+      "accountId": "acc-bruno",
+      "amountCents": -29400,
+      "description": "CUOTA AUTONOMOS TGSS",
+      "createdAt": "2026-09-30T06:05:00.000Z"
+    },
+    {
+      "id": "demo-bruno-043",
+      "accountId": "acc-bruno",
+      "amountCents": -62000,
+      "description": "TRANSFERENCIA A FAVOR DE M. SORIANO CONCEPTO ALQUILER",
+      "createdAt": "2026-10-01T07:00:00.000Z"
+    },
+    {
+      "id": "demo-bruno-044",
+      "accountId": "acc-bruno",
+      "amountCents": -3348,
+      "description": "Pago en CONSUM COOP V. VALENCIA",
+      "createdAt": "2026-10-02T17:10:00.000Z"
+    },
+    {
+      "id": "demo-bruno-047",
+      "accountId": "acc-bruno",
+      "amountCents": -3999,
+      "description": "DECATHLON VALENCIA",
+      "createdAt": "2026-10-03T10:30:00.000Z"
+    },
+    {
+      "id": "demo-bruno-045",
+      "accountId": "acc-bruno",
+      "amountCents": -1920,
+      "description": "GLOVO 03OCT VLC5H2 VALENCIA",
+      "createdAt": "2026-10-03T19:50:00.000Z"
+    },
+    {
+      "id": "demo-bruno-046",
+      "accountId": "acc-bruno",
+      "amountCents": -1600,
+      "description": "CERVECERIA EL CABANYAL",
+      "createdAt": "2026-10-04T21:30:00.000Z"
+    },
+    {
+      "id": "demo-bruno-048",
+      "accountId": "acc-bruno",
+      "amountCents": -1190,
+      "description": "CABIFY ESPANA SLU",
+      "createdAt": "2026-10-04T22:40:00.000Z"
+    },
+    {
+      "id": "demo-bruno-049",
+      "accountId": "acc-bruno",
+      "amountCents": -685,
+      "description": "FARMACIA RUZAFA 0042",
+      "createdAt": "2026-10-05T08:15:00.000Z"
+    },
+    {
+      "id": "demo-bruno-050",
+      "accountId": "acc-bruno",
+      "amountCents": -5230,
+      "description": "MERCADONA 3318 VALENCIA",
+      "createdAt": "2026-07-06T10:10:00.000Z"
+    },
+    {
+      "id": "demo-bruno-051",
+      "accountId": "acc-bruno",
+      "amountCents": -12900,
+      "description": "IKEA ALFAFAR VALENCIA",
+      "createdAt": "2026-07-11T09:30:00.000Z"
+    },
+    {
+      "id": "demo-bruno-052",
+      "accountId": "acc-bruno",
+      "amountCents": -3860,
+      "description": "RENFE VIAJEROS INTERNET MADRID",
+      "createdAt": "2026-07-13T05:40:00.000Z"
+    },
+    {
+      "id": "demo-bruno-053",
+      "accountId": "acc-bruno",
+      "amountCents": -6175,
+      "description": "Pago en CONSUM COOP V. VALENCIA",
+      "createdAt": "2026-07-14T17:10:00.000Z"
+    },
+    {
+      "id": "demo-bruno-054",
+      "accountId": "acc-bruno",
+      "amountCents": -6000,
+      "description": "CLINICA DENTAL RUZAFA SLP",
+      "createdAt": "2026-07-20T15:30:00.000Z"
+    },
+    {
+      "id": "demo-bruno-055",
+      "accountId": "acc-bruno",
+      "amountCents": -3495,
+      "description": "FNAC VALENCIA SAN AGUSTIN",
+      "createdAt": "2026-07-23T16:15:00.000Z"
+    },
+    {
+      "id": "demo-bruno-056",
+      "accountId": "acc-bruno",
+      "amountCents": -3420,
+      "description": "LIDL SUPERMERCADOS SAU VALENCIA",
+      "createdAt": "2026-07-25T10:20:00.000Z"
+    },
+    {
+      "id": "demo-bruno-057",
+      "accountId": "acc-bruno",
+      "amountCents": -5890,
+      "description": "MERCADONA 3318 VALENCIA",
+      "createdAt": "2026-08-01T17:40:00.000Z"
+    },
+    {
+      "id": "demo-bruno-058",
+      "accountId": "acc-bruno",
+      "amountCents": -2995,
+      "description": "ZARA ESPANA S.A. 1147 VALENCIA",
+      "createdAt": "2026-08-14T10:30:00.000Z"
+    },
+    {
+      "id": "demo-bruno-059",
+      "accountId": "acc-bruno",
+      "amountCents": -4735,
+      "description": "LIDL SUPERMERCADOS SAU VALENCIA",
+      "createdAt": "2026-08-17T09:50:00.000Z"
+    },
+    {
+      "id": "demo-bruno-060",
+      "accountId": "acc-bruno",
+      "amountCents": -1435,
+      "description": "FARMACIA RUZAFA 0042",
+      "createdAt": "2026-08-19T16:30:00.000Z"
+    },
+    {
+      "id": "demo-bruno-061",
+      "accountId": "acc-bruno",
+      "amountCents": -6310,
+      "description": "MERCADONA 3318 VALENCIA",
+      "createdAt": "2026-08-28T17:20:00.000Z"
+    },
+    {
+      "id": "demo-bruno-062",
+      "accountId": "acc-bruno",
+      "amountCents": -1320,
+      "description": "CABIFY ESPANA SLU",
+      "createdAt": "2026-08-28T23:30:00.000Z"
+    },
+    {
+      "id": "demo-bruno-063",
+      "accountId": "acc-bruno",
+      "amountCents": -5540,
+      "description": "MERCADONA 3318 VALENCIA",
+      "createdAt": "2026-09-08T17:30:00.000Z"
+    },
+    {
+      "id": "demo-bruno-064",
+      "accountId": "acc-bruno",
+      "amountCents": -6685,
+      "description": "Pago en CONSUM COOP V. VALENCIA",
+      "createdAt": "2026-09-13T10:15:00.000Z"
+    },
+    {
+      "id": "demo-bruno-065",
+      "accountId": "acc-bruno",
+      "amountCents": -875,
+      "description": "FARMACIA RUZAFA 0042",
+      "createdAt": "2026-09-22T16:40:00.000Z"
+    },
+    {
+      "id": "demo-bruno-066",
+      "accountId": "acc-bruno",
+      "amountCents": -4120,
+      "description": "LIDL SUPERMERCADOS SAU VALENCIA",
+      "createdAt": "2026-09-25T17:05:00.000Z"
+    },
+    {
+      "id": "demo-bruno-067",
+      "accountId": "acc-bruno",
+      "amountCents": -1290,
+      "description": "CABIFY ESPANA SLU",
+      "createdAt": "2026-09-27T00:10:00.000Z"
+    },
+    {
+      "id": "demo-bruno-068",
+      "accountId": "acc-bruno",
+      "amountCents": -2215,
+      "description": "LIDL SUPERMERCADOS SAU VALENCIA",
+      "createdAt": "2026-10-04T10:10:00.000Z"
+    },
+    {
+      "id": "demo-bruno-069",
+      "accountId": "acc-bruno",
+      "amountCents": -6490,
+      "description": "MERCADONA 3318 VALENCIA",
+      "createdAt": "2026-10-06T17:25:00.000Z"
+    },
+    {
+      "id": "demo-carla-001",
+      "accountId": "acc-carla",
+      "amountCents": -87000,
+      "description": "RECIBO ALQUILER FINQUES LAIETANA SL",
+      "createdAt": "2026-07-01T06:00:00.000Z"
+    },
+    {
+      "id": "demo-carla-002",
+      "accountId": "acc-carla",
+      "amountCents": -2200,
+      "description": "TMB T-USUAL BARCELONA",
+      "createdAt": "2026-07-02T05:50:00.000Z"
+    },
+    {
+      "id": "demo-carla-003",
+      "accountId": "acc-carla",
+      "amountCents": -3975,
+      "description": "BONPREU 0214 BARCELONA ES",
+      "createdAt": "2026-07-04T16:40:00.000Z"
+    },
+    {
+      "id": "demo-carla-004",
+      "accountId": "acc-carla",
+      "amountCents": -2499,
+      "description": "BASIC-FIT SPAIN SAU",
+      "createdAt": "2026-07-06T06:00:00.000Z"
+    },
+    {
+      "id": "demo-carla-005",
+      "accountId": "acc-carla",
+      "amountCents": -6150,
+      "description": "ADESLAS SEGURCAIXA RECIBO 07/26",
+      "createdAt": "2026-07-10T06:00:00.000Z"
+    },
+    {
+      "id": "demo-carla-006",
+      "accountId": "acc-carla",
+      "amountCents": -4435,
+      "description": "ADEUDO RECIBO ENDESA ENERGIA XXI SLU REF 0098122",
+      "createdAt": "2026-07-11T06:00:00.000Z"
+    },
+    {
+      "id": "demo-carla-007",
+      "accountId": "acc-carla",
+      "amountCents": -1890,
+      "description": "GLOVO 14JUL BCN8K2 BARCELONA",
+      "createdAt": "2026-07-14T19:15:00.000Z"
+    },
+    {
+      "id": "demo-carla-008",
+      "accountId": "acc-carla",
+      "amountCents": -4830,
+      "description": "BONPREU 0214 BARCELONA ES",
+      "createdAt": "2026-07-18T10:20:00.000Z"
+    },
+    {
+      "id": "demo-carla-009",
+      "accountId": "acc-carla",
+      "amountCents": -1640,
+      "description": "CINESA DIAGONAL MAR",
+      "createdAt": "2026-07-20T18:40:00.000Z"
+    },
+    {
+      "id": "demo-carla-010",
+      "accountId": "acc-carla",
+      "amountCents": -3980,
+      "description": "AIGUES DE BARCELONA FACT 2026-07",
+      "createdAt": "2026-07-22T06:00:00.000Z"
+    },
+    {
+      "id": "demo-carla-011",
+      "accountId": "acc-carla",
+      "amountCents": -3495,
+      "description": "PAYPAL *ZALANDO SE 4029357733",
+      "createdAt": "2026-07-25T17:30:00.000Z"
+    },
+    {
+      "id": "demo-carla-012",
+      "accountId": "acc-carla",
+      "amountCents": 189000,
+      "description": "NOMINA CLINICA DELTA SLP",
+      "createdAt": "2026-07-28T06:00:00.000Z"
+    },
+    {
+      "id": "demo-carla-013",
+      "accountId": "acc-carla",
+      "amountCents": -785,
+      "description": "FARMACIA DIAGONAL 412",
+      "createdAt": "2026-07-30T17:10:00.000Z"
+    },
+    {
+      "id": "demo-carla-014",
+      "accountId": "acc-carla",
+      "amountCents": -2200,
+      "description": "TMB T-USUAL BARCELONA",
+      "createdAt": "2026-08-04T05:50:00.000Z"
+    },
+    {
+      "id": "demo-carla-015",
+      "accountId": "acc-carla",
+      "amountCents": -87000,
+      "description": "RECIBO ALQUILER FINQUES LAIETANA SL",
+      "createdAt": "2026-08-04T06:00:00.000Z"
+    },
+    {
+      "id": "demo-carla-016",
+      "accountId": "acc-carla",
+      "amountCents": -2499,
+      "description": "BASIC-FIT SPAIN SAU",
+      "createdAt": "2026-08-05T06:00:00.000Z"
+    },
+    {
+      "id": "demo-carla-017",
+      "accountId": "acc-carla",
+      "amountCents": -4210,
+      "description": "BONPREU 0214 BARCELONA ES",
+      "createdAt": "2026-08-08T16:30:00.000Z"
+    },
+    {
+      "id": "demo-carla-018",
+      "accountId": "acc-carla",
+      "amountCents": -6150,
+      "description": "ADESLAS SEGURCAIXA RECIBO 08/26",
+      "createdAt": "2026-08-10T06:00:00.000Z"
+    },
+    {
+      "id": "demo-carla-019",
+      "accountId": "acc-carla",
+      "amountCents": -4810,
+      "description": "ADEUDO RECIBO ENDESA ENERGIA XXI SLU REF 0098123",
+      "createdAt": "2026-08-11T06:00:00.000Z"
+    },
+    {
+      "id": "demo-carla-020",
+      "accountId": "acc-carla",
+      "amountCents": -380,
+      "description": "SQ *THE BREW LAB",
+      "createdAt": "2026-08-13T05:40:00.000Z"
+    },
+    {
+      "id": "demo-carla-021",
+      "accountId": "acc-carla",
+      "amountCents": -2740,
+      "description": "TPV 77120034 BARCELONA",
+      "createdAt": "2026-08-15T12:10:00.000Z"
+    },
+    {
+      "id": "demo-carla-022",
+      "accountId": "acc-carla",
+      "amountCents": -2130,
+      "description": "GLOVO 16AGO BCN2P7 BARCELONA",
+      "createdAt": "2026-08-16T19:05:00.000Z"
+    },
+    {
+      "id": "demo-carla-023",
+      "accountId": "acc-carla",
+      "amountCents": -1849,
+      "description": "AMZN Mktp ES*1Z9QW8RR2",
+      "createdAt": "2026-08-21T20:00:00.000Z"
+    },
+    {
+      "id": "demo-carla-024",
+      "accountId": "acc-carla",
+      "amountCents": -3860,
+      "description": "AIGUES DE BARCELONA FACT 2026-08",
+      "createdAt": "2026-08-22T06:00:00.000Z"
+    },
+    {
+      "id": "demo-carla-025",
+      "accountId": "acc-carla",
+      "amountCents": -3785,
+      "description": "BONPREU 0214 BARCELONA ES",
+      "createdAt": "2026-08-23T10:15:00.000Z"
+    },
+    {
+      "id": "demo-carla-026",
+      "accountId": "acc-carla",
+      "amountCents": 189000,
+      "description": "NOMINA CLINICA DELTA SLP",
+      "createdAt": "2026-08-28T06:00:00.000Z"
+    },
+    {
+      "id": "demo-carla-027",
+      "accountId": "acc-carla",
+      "amountCents": -960,
+      "description": "FARMACIA DIAGONAL 412",
+      "createdAt": "2026-08-30T17:20:00.000Z"
+    },
+    {
+      "id": "demo-carla-028",
+      "accountId": "acc-carla",
+      "amountCents": -380,
+      "description": "SQ *THE BREW LAB",
+      "createdAt": "2026-09-02T05:35:00.000Z"
+    },
+    {
+      "id": "demo-carla-029",
+      "accountId": "acc-carla",
+      "amountCents": -87000,
+      "description": "RECIBO ALQUILER FINQUES LAIETANA SL",
+      "createdAt": "2026-09-03T06:00:00.000Z"
+    },
+    {
+      "id": "demo-carla-030",
+      "accountId": "acc-carla",
+      "amountCents": -2200,
+      "description": "TMB T-USUAL BARCELONA",
+      "createdAt": "2026-09-04T05:50:00.000Z"
+    },
+    {
+      "id": "demo-carla-031",
+      "accountId": "acc-carla",
+      "amountCents": -2499,
+      "description": "BASIC-FIT SPAIN SAU",
+      "createdAt": "2026-09-05T06:00:00.000Z"
+    },
+    {
+      "id": "demo-carla-032",
+      "accountId": "acc-carla",
+      "amountCents": -5520,
+      "description": "BONPREU 0214 BARCELONA ES",
+      "createdAt": "2026-09-06T09:30:00.000Z"
+    },
+    {
+      "id": "demo-carla-033",
+      "accountId": "acc-carla",
+      "amountCents": -8490,
+      "description": "PAYPAL *ZALANDO SE 4029357733",
+      "createdAt": "2026-09-07T20:40:00.000Z"
+    },
+    {
+      "id": "demo-carla-034",
+      "accountId": "acc-carla",
+      "amountCents": -6150,
+      "description": "ADESLAS SEGURCAIXA RECIBO 09/26",
+      "createdAt": "2026-09-10T06:00:00.000Z"
+    },
+    {
+      "id": "demo-carla-035",
+      "accountId": "acc-carla",
+      "amountCents": -5260,
+      "description": "ADEUDO RECIBO ENDESA ENERGIA XXI SLU REF 0098124",
+      "createdAt": "2026-09-11T06:00:00.000Z"
+    },
+    {
+      "id": "demo-carla-036",
+      "accountId": "acc-carla",
+      "amountCents": -1200,
+      "description": "COMPRA TARJ. 5412XXXX 0098231 ES",
+      "createdAt": "2026-09-13T12:10:00.000Z"
+    },
+    {
+      "id": "demo-carla-037",
+      "accountId": "acc-carla",
+      "amountCents": 3995,
+      "description": "DEVOLUCION PAYPAL *ZALANDO",
+      "createdAt": "2026-09-15T08:00:00.000Z"
+    },
+    {
+      "id": "demo-carla-038",
+      "accountId": "acc-carla",
+      "amountCents": -380,
+      "description": "SQ *THE BREW LAB",
+      "createdAt": "2026-09-16T05:40:00.000Z"
+    },
+    {
+      "id": "demo-carla-039",
+      "accountId": "acc-carla",
+      "amountCents": -1780,
+      "description": "CINESA DIAGONAL MAR",
+      "createdAt": "2026-09-19T19:30:00.000Z"
+    },
+    {
+      "id": "demo-carla-040",
+      "accountId": "acc-carla",
+      "amountCents": -1500,
+      "description": "BIZUM ENVIADO A MARTA P.",
+      "createdAt": "2026-09-19T21:50:00.000Z"
+    },
+    {
+      "id": "demo-carla-041",
+      "accountId": "acc-carla",
+      "amountCents": -4475,
+      "description": "BONPREU 0214 BARCELONA ES",
+      "createdAt": "2026-09-20T10:00:00.000Z"
+    },
+    {
+      "id": "demo-carla-042",
+      "accountId": "acc-carla",
+      "amountCents": -4130,
+      "description": "AIGUES DE BARCELONA FACT 2026-09",
+      "createdAt": "2026-09-22T06:00:00.000Z"
+    },
+    {
+      "id": "demo-carla-043",
+      "accountId": "acc-carla",
+      "amountCents": -20000,
+      "description": "REVOLUT**7741* DUBLIN",
+      "createdAt": "2026-09-25T17:00:00.000Z"
+    },
+    {
+      "id": "demo-carla-044",
+      "accountId": "acc-carla",
+      "amountCents": -6499,
+      "description": "VUELING AIRLINES BCN",
+      "createdAt": "2026-09-26T14:00:00.000Z"
+    },
+    {
+      "id": "demo-carla-045",
+      "accountId": "acc-carla",
+      "amountCents": 189000,
+      "description": "NOMINA CLINICA DELTA SLP",
+      "createdAt": "2026-09-28T06:00:00.000Z"
+    },
+    {
+      "id": "demo-carla-046",
+      "accountId": "acc-carla",
+      "amountCents": -87000,
+      "description": "RECIBO ALQUILER FINQUES LAIETANA SL",
+      "createdAt": "2026-10-01T06:00:00.000Z"
+    },
+    {
+      "id": "demo-carla-047",
+      "accountId": "acc-carla",
+      "amountCents": -2200,
+      "description": "TMB T-USUAL BARCELONA",
+      "createdAt": "2026-10-02T05:50:00.000Z"
+    },
+    {
+      "id": "demo-carla-048",
+      "accountId": "acc-carla",
+      "amountCents": -1120,
+      "description": "FARMACIA DIAGONAL 412",
+      "createdAt": "2026-10-02T17:40:00.000Z"
+    },
+    {
+      "id": "demo-carla-049",
+      "accountId": "acc-carla",
+      "amountCents": -5120,
+      "description": "BONPREU 0214 BARCELONA ES",
+      "createdAt": "2026-10-03T16:15:00.000Z"
+    },
+    {
+      "id": "demo-carla-050",
+      "accountId": "acc-carla",
+      "amountCents": -2995,
+      "description": "PAYPAL *ZALANDO SE 4029357733",
+      "createdAt": "2026-10-04T10:30:00.000Z"
+    },
+    {
+      "id": "demo-carla-051",
+      "accountId": "acc-carla",
+      "amountCents": -2360,
+      "description": "GLOVO 04OCT BCN6T1 BARCELONA",
+      "createdAt": "2026-10-04T19:20:00.000Z"
+    },
+    {
+      "id": "demo-carla-052",
+      "accountId": "acc-carla",
+      "amountCents": -2499,
+      "description": "BASIC-FIT SPAIN SAU",
+      "createdAt": "2026-10-05T06:00:00.000Z"
+    },
+    {
+      "id": "demo-carla-053",
+      "accountId": "acc-carla",
+      "amountCents": -4250,
+      "description": "RESTAURANTE CAN SOLE BARCELONA",
+      "createdAt": "2026-07-03T18:40:00.000Z"
+    },
+    {
+      "id": "demo-carla-054",
+      "accountId": "acc-carla",
+      "amountCents": -7240,
+      "description": "MERCADONA 4120 BARCELONA",
+      "createdAt": "2026-07-07T17:10:00.000Z"
+    },
+    {
+      "id": "demo-carla-055",
+      "accountId": "acc-carla",
+      "amountCents": -1185,
+      "description": "CABIFY ESPANA SLU",
+      "createdAt": "2026-07-09T21:40:00.000Z"
+    },
+    {
+      "id": "demo-carla-056",
+      "accountId": "acc-carla",
+      "amountCents": -8990,
+      "description": "IKEA BADALONA",
+      "createdAt": "2026-07-12T09:20:00.000Z"
+    },
+    {
+      "id": "demo-carla-057",
+      "accountId": "acc-carla",
+      "amountCents": -6815,
+      "description": "CAPRABO 0338 BARCELONA",
+      "createdAt": "2026-07-15T16:30:00.000Z"
+    },
+    {
+      "id": "demo-carla-058",
+      "accountId": "acc-carla",
+      "amountCents": -6500,
+      "description": "CLINICA DENTAL EIXAMPLE SLP",
+      "createdAt": "2026-07-17T14:00:00.000Z"
+    },
+    {
+      "id": "demo-carla-059",
+      "accountId": "acc-carla",
+      "amountCents": -2940,
+      "description": "RENFE VIAJEROS INTERNET MADRID",
+      "createdAt": "2026-07-19T07:20:00.000Z"
+    },
+    {
+      "id": "demo-carla-060",
+      "accountId": "acc-carla",
+      "amountCents": -3999,
+      "description": "MANGO PASSEIG DE GRACIA",
+      "createdAt": "2026-07-23T16:10:00.000Z"
+    },
+    {
+      "id": "demo-carla-061",
+      "accountId": "acc-carla",
+      "amountCents": -3800,
+      "description": "TICKETMASTER ES 0035120",
+      "createdAt": "2026-07-26T19:30:00.000Z"
+    },
+    {
+      "id": "demo-carla-062",
+      "accountId": "acc-carla",
+      "amountCents": -5890,
+      "description": "CAPRABO 0338 BARCELONA",
+      "createdAt": "2026-07-27T10:40:00.000Z"
+    },
+    {
+      "id": "demo-carla-063",
+      "accountId": "acc-carla",
+      "amountCents": -6430,
+      "description": "MERCADONA 4120 BARCELONA",
+      "createdAt": "2026-08-02T17:20:00.000Z"
+    },
+    {
+      "id": "demo-carla-064",
+      "accountId": "acc-carla",
+      "amountCents": -6800,
+      "description": "RESTAURANTE CAN SOLE BARCELONA",
+      "createdAt": "2026-08-07T19:40:00.000Z"
+    },
+    {
+      "id": "demo-carla-065",
+      "accountId": "acc-carla",
+      "amountCents": -5995,
+      "description": "ZARA ESPANA S.A. 0418 BARCELONA",
+      "createdAt": "2026-08-12T16:15:00.000Z"
+    },
+    {
+      "id": "demo-carla-066",
+      "accountId": "acc-carla",
+      "amountCents": -3160,
+      "description": "RENFE VIAJEROS INTERNET MADRID",
+      "createdAt": "2026-08-14T07:10:00.000Z"
+    },
+    {
+      "id": "demo-carla-067",
+      "accountId": "acc-carla",
+      "amountCents": -8175,
+      "description": "CAPRABO 0338 BARCELONA",
+      "createdAt": "2026-08-17T10:10:00.000Z"
+    },
+    {
+      "id": "demo-carla-068",
+      "accountId": "acc-carla",
+      "amountCents": -5000,
+      "description": "FISIOTERAPIA GRACIA SLP",
+      "createdAt": "2026-08-19T15:30:00.000Z"
+    },
+    {
+      "id": "demo-carla-069",
+      "accountId": "acc-carla",
+      "amountCents": -2700,
+      "description": "YELMO CINES ICARIA",
+      "createdAt": "2026-08-24T20:10:00.000Z"
+    },
+    {
+      "id": "demo-carla-070",
+      "accountId": "acc-carla",
+      "amountCents": -5249,
+      "description": "DECATHLON BARCELONA CENTRE",
+      "createdAt": "2026-08-26T16:40:00.000Z"
+    },
+    {
+      "id": "demo-carla-071",
+      "accountId": "acc-carla",
+      "amountCents": -1420,
+      "description": "CABIFY ESPANA SLU",
+      "createdAt": "2026-08-28T21:55:00.000Z"
+    },
+    {
+      "id": "demo-carla-072",
+      "accountId": "acc-carla",
+      "amountCents": -5920,
+      "description": "MERCADONA 4120 BARCELONA",
+      "createdAt": "2026-08-30T09:30:00.000Z"
+    },
+    {
+      "id": "demo-carla-073",
+      "accountId": "acc-carla",
+      "amountCents": -7860,
+      "description": "MERCADONA 4120 BARCELONA",
+      "createdAt": "2026-09-12T17:15:00.000Z"
+    },
+    {
+      "id": "demo-carla-074",
+      "accountId": "acc-carla",
+      "amountCents": -3650,
+      "description": "RESTAURANTE CAN SOLE BARCELONA",
+      "createdAt": "2026-09-18T19:20:00.000Z"
+    },
+    {
+      "id": "demo-carla-075",
+      "accountId": "acc-carla",
+      "amountCents": -2999,
+      "description": "MANGO PASSEIG DE GRACIA",
+      "createdAt": "2026-09-27T10:20:00.000Z"
+    },
+    {
+      "id": "demo-carla-076",
+      "accountId": "acc-carla",
+      "amountCents": -6985,
+      "description": "CAPRABO 0338 BARCELONA",
+      "createdAt": "2026-09-28T09:40:00.000Z"
+    },
+    {
+      "id": "demo-carla-077",
+      "accountId": "acc-carla",
+      "amountCents": -6260,
+      "description": "CAPRABO 0338 BARCELONA",
+      "createdAt": "2026-10-05T17:30:00.000Z"
+    },
+    {
+      "id": "demo-carla-078",
+      "accountId": "acc-carla",
+      "amountCents": -480,
+      "description": "CAFETERIA LA PLACA",
+      "createdAt": "2026-10-06T06:10:00.000Z"
+    },
+    {
+      "id": "demo-diego-001",
+      "accountId": "acc-diego",
+      "amountCents": 25000,
+      "description": "BIZUM RECIBIDO DE CARMEN S. CONCEPTO MES",
+      "createdAt": "2026-07-01T10:00:00.000Z"
+    },
+    {
+      "id": "demo-diego-002",
+      "accountId": "acc-diego",
+      "amountCents": -30000,
+      "description": "TRANSFERENCIA A FAVOR DE P. MOLINA CONCEPTO ALQUILER HABITACION",
+      "createdAt": "2026-07-03T07:00:00.000Z"
+    },
+    {
+      "id": "demo-diego-003",
+      "accountId": "acc-diego",
+      "amountCents": -1685,
+      "description": "LIDL SUPERMERCADOS SAU GRANADA",
+      "createdAt": "2026-07-04T11:10:00.000Z"
+    },
+    {
+      "id": "demo-diego-004",
+      "accountId": "acc-diego",
+      "amountCents": -1000,
+      "description": "BONOBUS GRANADA RECARGA",
+      "createdAt": "2026-07-06T06:30:00.000Z"
+    },
+    {
+      "id": "demo-diego-005",
+      "accountId": "acc-diego",
+      "amountCents": -7499,
+      "description": "RYANAIR 8821345567 DUBLIN IE",
+      "createdAt": "2026-07-08T21:05:00.000Z"
+    },
+    {
+      "id": "demo-diego-006",
+      "accountId": "acc-diego",
+      "amountCents": -1500,
+      "description": "RECIBO DIGI SPAIN TELECOM SLU",
+      "createdAt": "2026-07-10T06:00:00.000Z"
+    },
+    {
+      "id": "demo-diego-007",
+      "accountId": "acc-diego",
+      "amountCents": -650,
+      "description": "KEBAB ALHAMBRA",
+      "createdAt": "2026-07-11T00:40:00.000Z"
+    },
+    {
+      "id": "demo-diego-008",
+      "accountId": "acc-diego",
+      "amountCents": -4000,
+      "description": "REINTEGRO CAJERO 0118 GRANADA",
+      "createdAt": "2026-07-12T10:20:00.000Z"
+    },
+    {
+      "id": "demo-diego-009",
+      "accountId": "acc-diego",
+      "amountCents": -599,
+      "description": "PAYPAL *SPOTIFY 35314369001",
+      "createdAt": "2026-07-14T04:00:00.000Z"
+    },
+    {
+      "id": "demo-diego-010",
+      "accountId": "acc-diego",
+      "amountCents": -2140,
+      "description": "LIDL SUPERMERCADOS SAU GRANADA",
+      "createdAt": "2026-07-17T11:30:00.000Z"
+    },
+    {
+      "id": "demo-diego-011",
+      "accountId": "acc-diego",
+      "amountCents": -1000,
+      "description": "TPV 00931 PEDRO ANTONIO GR",
+      "createdAt": "2026-07-18T23:30:00.000Z"
+    },
+    {
+      "id": "demo-diego-012",
+      "accountId": "acc-diego",
+      "amountCents": -999,
+      "description": "STEAMGAMES.COM 4259522985",
+      "createdAt": "2026-07-23T17:00:00.000Z"
+    },
+    {
+      "id": "demo-diego-013",
+      "accountId": "acc-diego",
+      "amountCents": -800,
+      "description": "BIZUM ENVIADO A NURIA V. CONCEPTO CINE",
+      "createdAt": "2026-07-25T20:15:00.000Z"
+    },
+    {
+      "id": "demo-diego-014",
+      "accountId": "acc-diego",
+      "amountCents": -1420,
+      "description": "LIDL SUPERMERCADOS SAU GRANADA",
+      "createdAt": "2026-07-28T11:05:00.000Z"
+    },
+    {
+      "id": "demo-diego-015",
+      "accountId": "acc-diego",
+      "amountCents": 42000,
+      "description": "NOMINA BAR EL REFUGIO SL",
+      "createdAt": "2026-07-31T06:00:00.000Z"
+    },
+    {
+      "id": "demo-diego-016",
+      "accountId": "acc-diego",
+      "amountCents": 25000,
+      "description": "BIZUM RECIBIDO DE CARMEN S. CONCEPTO MES",
+      "createdAt": "2026-08-04T10:00:00.000Z"
+    },
+    {
+      "id": "demo-diego-017",
+      "accountId": "acc-diego",
+      "amountCents": -30000,
+      "description": "TRANSFERENCIA A FAVOR DE P. MOLINA CONCEPTO ALQUILER HABITACION",
+      "createdAt": "2026-08-05T07:00:00.000Z"
+    },
+    {
+      "id": "demo-diego-018",
+      "accountId": "acc-diego",
+      "amountCents": -1000,
+      "description": "BONOBUS GRANADA RECARGA",
+      "createdAt": "2026-08-06T06:30:00.000Z"
+    },
+    {
+      "id": "demo-diego-019",
+      "accountId": "acc-diego",
+      "amountCents": -1840,
+      "description": "LIDL SUPERMERCADOS SAU GRANADA",
+      "createdAt": "2026-08-08T11:00:00.000Z"
+    },
+    {
+      "id": "demo-diego-020",
+      "accountId": "acc-diego",
+      "amountCents": -1500,
+      "description": "RECIBO DIGI SPAIN TELECOM SLU",
+      "createdAt": "2026-08-10T06:00:00.000Z"
+    },
+    {
+      "id": "demo-diego-021",
+      "accountId": "acc-diego",
+      "amountCents": -2999,
+      "description": "DECATHLON GRANADA",
+      "createdAt": "2026-08-12T16:40:00.000Z"
+    },
+    {
+      "id": "demo-diego-022",
+      "accountId": "acc-diego",
+      "amountCents": -599,
+      "description": "PAYPAL *SPOTIFY 35314369001",
+      "createdAt": "2026-08-14T04:00:00.000Z"
+    },
+    {
+      "id": "demo-diego-023",
+      "accountId": "acc-diego",
+      "amountCents": -650,
+      "description": "KEBAB ALHAMBRA",
+      "createdAt": "2026-08-15T01:20:00.000Z"
+    },
+    {
+      "id": "demo-diego-024",
+      "accountId": "acc-diego",
+      "amountCents": -1999,
+      "description": "STEAMGAMES.COM 4259522985",
+      "createdAt": "2026-08-18T14:00:00.000Z"
+    },
+    {
+      "id": "demo-diego-025",
+      "accountId": "acc-diego",
+      "amountCents": -4800,
+      "description": "TICKETMASTER ES 0034912",
+      "createdAt": "2026-08-19T15:45:00.000Z"
+    },
+    {
+      "id": "demo-diego-026",
+      "accountId": "acc-diego",
+      "amountCents": -1135,
+      "description": "FARMACIA RECOGIDAS 0019",
+      "createdAt": "2026-08-20T17:15:00.000Z"
+    },
+    {
+      "id": "demo-diego-027",
+      "accountId": "acc-diego",
+      "amountCents": -4000,
+      "description": "REINTEGRO CAJERO 0118 GRANADA",
+      "createdAt": "2026-08-21T18:30:00.000Z"
+    },
+    {
+      "id": "demo-diego-028",
+      "accountId": "acc-diego",
+      "amountCents": -1200,
+      "description": "TPV 00931 PEDRO ANTONIO GR",
+      "createdAt": "2026-08-21T23:15:00.000Z"
+    },
+    {
+      "id": "demo-diego-029",
+      "accountId": "acc-diego",
+      "amountCents": -2210,
+      "description": "LIDL SUPERMERCADOS SAU GRANADA",
+      "createdAt": "2026-08-22T11:10:00.000Z"
+    },
+    {
+      "id": "demo-diego-030",
+      "accountId": "acc-diego",
+      "amountCents": -1290,
+      "description": "PRIMARK GRANADA",
+      "createdAt": "2026-08-26T15:30:00.000Z"
+    },
+    {
+      "id": "demo-diego-031",
+      "accountId": "acc-diego",
+      "amountCents": -1200,
+      "description": "BIZUM ENVIADO A NURIA V. CONCEPTO CENA",
+      "createdAt": "2026-08-29T20:30:00.000Z"
+    },
+    {
+      "id": "demo-diego-032",
+      "accountId": "acc-diego",
+      "amountCents": 38000,
+      "description": "NOMINA BAR EL REFUGIO SL",
+      "createdAt": "2026-08-31T06:00:00.000Z"
+    },
+    {
+      "id": "demo-diego-033",
+      "accountId": "acc-diego",
+      "amountCents": 25000,
+      "description": "BIZUM RECIBIDO DE CARMEN S. CONCEPTO MES",
+      "createdAt": "2026-09-01T10:00:00.000Z"
+    },
+    {
+      "id": "demo-diego-034",
+      "accountId": "acc-diego",
+      "amountCents": -8640,
+      "description": "LIBRERIA BABEL GRANADA",
+      "createdAt": "2026-09-02T09:30:00.000Z"
+    },
+    {
+      "id": "demo-diego-035",
+      "accountId": "acc-diego",
+      "amountCents": -700,
+      "description": "KEBAB ALHAMBRA",
+      "createdAt": "2026-09-05T02:10:00.000Z"
+    },
+    {
+      "id": "demo-diego-036",
+      "accountId": "acc-diego",
+      "amountCents": -30000,
+      "description": "TRANSFERENCIA A FAVOR DE P. MOLINA CONCEPTO ALQUILER HABITACION",
+      "createdAt": "2026-09-05T07:00:00.000Z"
+    },
+    {
+      "id": "demo-diego-037",
+      "accountId": "acc-diego",
+      "amountCents": -1000,
+      "description": "BONOBUS GRANADA RECARGA",
+      "createdAt": "2026-09-07T06:30:00.000Z"
+    },
+    {
+      "id": "demo-diego-038",
+      "accountId": "acc-diego",
+      "amountCents": -1399,
+      "description": "AMZN Mktp ES*5T1BB7XK1",
+      "createdAt": "2026-09-08T21:10:00.000Z"
+    },
+    {
+      "id": "demo-diego-039",
+      "accountId": "acc-diego",
+      "amountCents": -1575,
+      "description": "LIDL SUPERMERCADOS SAU GRANADA",
+      "createdAt": "2026-09-09T11:20:00.000Z"
+    },
+    {
+      "id": "demo-diego-040",
+      "accountId": "acc-diego",
+      "amountCents": -1500,
+      "description": "RECIBO DIGI SPAIN TELECOM SLU",
+      "createdAt": "2026-09-10T06:00:00.000Z"
+    },
+    {
+      "id": "demo-diego-041",
+      "accountId": "acc-diego",
+      "amountCents": -2475,
+      "description": "ALSA GRANADA-MADRID",
+      "createdAt": "2026-09-11T05:15:00.000Z"
+    },
+    {
+      "id": "demo-diego-042",
+      "accountId": "acc-diego",
+      "amountCents": -900,
+      "description": "TPV 00931 PEDRO ANTONIO GR",
+      "createdAt": "2026-09-12T00:30:00.000Z"
+    },
+    {
+      "id": "demo-diego-043",
+      "accountId": "acc-diego",
+      "amountCents": -599,
+      "description": "PAYPAL *SPOTIFY 35314369001",
+      "createdAt": "2026-09-14T04:00:00.000Z"
+    },
+    {
+      "id": "demo-diego-044",
+      "accountId": "acc-diego",
+      "amountCents": -420,
+      "description": "COPISTERIA LA GIOCONDA",
+      "createdAt": "2026-09-16T09:00:00.000Z"
+    },
+    {
+      "id": "demo-diego-045",
+      "accountId": "acc-diego",
+      "amountCents": -1500,
+      "description": "TPV 00931 PEDRO ANTONIO GR",
+      "createdAt": "2026-09-18T23:50:00.000Z"
+    },
+    {
+      "id": "demo-diego-046",
+      "accountId": "acc-diego",
+      "amountCents": -800,
+      "description": "BIZUM ENVIADO A ALEX T.",
+      "createdAt": "2026-09-20T16:00:00.000Z"
+    },
+    {
+      "id": "demo-diego-047",
+      "accountId": "acc-diego",
+      "amountCents": -4000,
+      "description": "REINTEGRO CAJERO 0118 GRANADA",
+      "createdAt": "2026-09-21T19:10:00.000Z"
+    },
+    {
+      "id": "demo-diego-048",
+      "accountId": "acc-diego",
+      "amountCents": 1400,
+      "description": "VINTED PAGO VENTA",
+      "createdAt": "2026-09-24T13:00:00.000Z"
+    },
+    {
+      "id": "demo-diego-049",
+      "accountId": "acc-diego",
+      "amountCents": -2430,
+      "description": "LIDL SUPERMERCADOS SAU GRANADA",
+      "createdAt": "2026-09-25T11:00:00.000Z"
+    },
+    {
+      "id": "demo-diego-050",
+      "accountId": "acc-diego",
+      "amountCents": -650,
+      "description": "KEBAB ALHAMBRA",
+      "createdAt": "2026-09-26T01:45:00.000Z"
+    },
+    {
+      "id": "demo-diego-051",
+      "accountId": "acc-diego",
+      "amountCents": 38000,
+      "description": "NOMINA BAR EL REFUGIO SL",
+      "createdAt": "2026-09-30T06:00:00.000Z"
+    },
+    {
+      "id": "demo-diego-052",
+      "accountId": "acc-diego",
+      "amountCents": -45000,
+      "description": "UGR MATRICULA PLAZO 1",
+      "createdAt": "2026-10-01T06:00:00.000Z"
+    },
+    {
+      "id": "demo-diego-053",
+      "accountId": "acc-diego",
+      "amountCents": -1760,
+      "description": "LIDL SUPERMERCADOS SAU GRANADA",
+      "createdAt": "2026-10-02T11:15:00.000Z"
+    },
+    {
+      "id": "demo-diego-054",
+      "accountId": "acc-diego",
+      "amountCents": -700,
+      "description": "KEBAB ALHAMBRA",
+      "createdAt": "2026-10-03T00:10:00.000Z"
+    },
+    {
+      "id": "demo-diego-055",
+      "accountId": "acc-diego",
+      "amountCents": -899,
+      "description": "PRIMARK GRANADA",
+      "createdAt": "2026-10-03T15:20:00.000Z"
+    },
+    {
+      "id": "demo-diego-056",
+      "accountId": "acc-diego",
+      "amountCents": -1000,
+      "description": "BONOBUS GRANADA RECARGA",
+      "createdAt": "2026-10-04T06:30:00.000Z"
+    },
+    {
+      "id": "demo-diego-057",
+      "accountId": "acc-diego",
+      "amountCents": -30000,
+      "description": "TRANSFERENCIA A FAVOR DE P. MOLINA CONCEPTO ALQUILER HABITACION",
+      "createdAt": "2026-10-05T07:00:00.000Z"
+    },
+    {
+      "id": "demo-diego-058",
+      "accountId": "acc-diego",
+      "amountCents": -495,
+      "description": "FARMACIA RECOGIDAS 0019",
+      "createdAt": "2026-10-05T08:30:00.000Z"
+    },
+    {
+      "id": "demo-diego-059",
+      "accountId": "acc-diego",
+      "amountCents": -2460,
+      "description": "MERCADONA 0931 GRANADA",
+      "createdAt": "2026-07-09T11:20:00.000Z"
+    },
+    {
+      "id": "demo-diego-060",
+      "accountId": "acc-diego",
+      "amountCents": -3185,
+      "description": "MERCADONA 0931 GRANADA",
+      "createdAt": "2026-07-21T17:10:00.000Z"
+    },
+    {
+      "id": "demo-diego-061",
+      "accountId": "acc-diego",
+      "amountCents": -2175,
+      "description": "MERCADONA 0931 GRANADA",
+      "createdAt": "2026-08-13T11:40:00.000Z"
+    },
+    {
+      "id": "demo-diego-062",
+      "accountId": "acc-diego",
+      "amountCents": -2640,
+      "description": "MERCADONA 0931 GRANADA",
+      "createdAt": "2026-08-27T17:20:00.000Z"
+    },
+    {
+      "id": "demo-diego-063",
+      "accountId": "acc-diego",
+      "amountCents": -2230,
+      "description": "MERCADONA 0931 GRANADA",
+      "createdAt": "2026-09-15T17:30:00.000Z"
+    },
+    {
+      "id": "demo-diego-064",
+      "accountId": "acc-diego",
+      "amountCents": -1995,
+      "description": "MERCADONA 0931 GRANADA",
+      "createdAt": "2026-09-29T11:10:00.000Z"
+    },
+    {
+      "id": "demo-diego-065",
+      "accountId": "acc-diego",
+      "amountCents": -2145,
+      "description": "MERCADONA 0931 GRANADA",
+      "createdAt": "2026-10-06T11:25:00.000Z"
+    },
+    {
+      "id": "demo-elena-001",
+      "accountId": "acc-elena",
+      "amountCents": -6000,
+      "description": "RECIBO COMUNIDAD PROPIETARIOS C/ OLMO 14",
+      "createdAt": "2026-07-01T06:00:00.000Z"
+    },
+    {
+      "id": "demo-elena-002",
+      "accountId": "acc-elena",
+      "amountCents": -8875,
+      "description": "EROSKI CENTER 0331 BILBAO",
+      "createdAt": "2026-07-03T16:10:00.000Z"
+    },
+    {
+      "id": "demo-elena-003",
+      "accountId": "acc-elena",
+      "amountCents": -74218,
+      "description": "RECIBO HIPOTECA 0049 KUTXABANK",
+      "createdAt": "2026-07-05T06:00:00.000Z"
+    },
+    {
+      "id": "demo-elena-004",
+      "accountId": "acc-elena",
+      "amountCents": -5530,
+      "description": "E.S. REPSOL 33412 A-8 KM 112",
+      "createdAt": "2026-07-08T15:20:00.000Z"
+    },
+    {
+      "id": "demo-elena-005",
+      "accountId": "acc-elena",
+      "amountCents": -12000,
+      "description": "UDALEKUAK BILBAO CUOTA JULIO",
+      "createdAt": "2026-07-10T06:00:00.000Z"
+    },
+    {
+      "id": "demo-elena-006",
+      "accountId": "acc-elena",
+      "amountCents": -8120,
+      "description": "RECIBO IBERDROLA CLIENTES SAU",
+      "createdAt": "2026-07-12T06:00:00.000Z"
+    },
+    {
+      "id": "demo-elena-007",
+      "accountId": "acc-elena",
+      "amountCents": -9760,
+      "description": "EROSKI CENTER 0331 BILBAO",
+      "createdAt": "2026-07-17T09:40:00.000Z"
+    },
+    {
+      "id": "demo-elena-008",
+      "accountId": "acc-elena",
+      "amountCents": -3150,
+      "description": "TELEPIZZA BILBAO 0412",
+      "createdAt": "2026-07-18T19:00:00.000Z"
+    },
+    {
+      "id": "demo-elena-009",
+      "accountId": "acc-elena",
+      "amountCents": -7990,
+      "description": "MOVISTAR FUSION FACT 28-J4C9",
+      "createdAt": "2026-07-20T06:00:00.000Z"
+    },
+    {
+      "id": "demo-elena-010",
+      "accountId": "acc-elena",
+      "amountCents": -4500,
+      "description": "COMPRA TARJ. 4532XXXX DECATHLON BILBAO ES",
+      "createdAt": "2026-07-22T10:30:00.000Z"
+    },
+    {
+      "id": "demo-elena-011",
+      "accountId": "acc-elena",
+      "amountCents": -6800,
+      "description": "RESTAURANTE EL PUERTO GETXO",
+      "createdAt": "2026-07-25T12:45:00.000Z"
+    },
+    {
+      "id": "demo-elena-012",
+      "accountId": "acc-elena",
+      "amountCents": 248000,
+      "description": "NOMINA INGENIERIA URIBE SA",
+      "createdAt": "2026-07-28T06:00:00.000Z"
+    },
+    {
+      "id": "demo-elena-013",
+      "accountId": "acc-elena",
+      "amountCents": -8415,
+      "description": "EROSKI CENTER 0331 BILBAO",
+      "createdAt": "2026-07-31T08:20:00.000Z"
+    },
+    {
+      "id": "demo-elena-014",
+      "accountId": "acc-elena",
+      "amountCents": -6000,
+      "description": "RECIBO COMUNIDAD PROPIETARIOS C/ OLMO 14",
+      "createdAt": "2026-08-01T06:00:00.000Z"
+    },
+    {
+      "id": "demo-elena-015",
+      "accountId": "acc-elena",
+      "amountCents": -74218,
+      "description": "RECIBO HIPOTECA 0049 KUTXABANK",
+      "createdAt": "2026-08-05T06:00:00.000Z"
+    },
+    {
+      "id": "demo-elena-016",
+      "accountId": "acc-elena",
+      "amountCents": -8240,
+      "description": "EROSKI CENTER 0331 BILBAO",
+      "createdAt": "2026-08-08T16:00:00.000Z"
+    },
+    {
+      "id": "demo-elena-017",
+      "accountId": "acc-elena",
+      "amountCents": -8840,
+      "description": "RECIBO IBERDROLA CLIENTES SAU",
+      "createdAt": "2026-08-12T06:00:00.000Z"
+    },
+    {
+      "id": "demo-elena-018",
+      "accountId": "acc-elena",
+      "amountCents": -6200,
+      "description": "E.S. REPSOL 33412 A-8 KM 112",
+      "createdAt": "2026-08-14T15:30:00.000Z"
+    },
+    {
+      "id": "demo-elena-019",
+      "accountId": "acc-elena",
+      "amountCents": -7990,
+      "description": "MOVISTAR FUSION FACT 28-K6F1",
+      "createdAt": "2026-08-20T06:00:00.000Z"
+    },
+    {
+      "id": "demo-elena-020",
+      "accountId": "acc-elena",
+      "amountCents": -2790,
+      "description": "TELEPIZZA BILBAO 0412",
+      "createdAt": "2026-08-21T19:10:00.000Z"
+    },
+    {
+      "id": "demo-elena-021",
+      "accountId": "acc-elena",
+      "amountCents": -9115,
+      "description": "EROSKI CENTER 0331 BILBAO",
+      "createdAt": "2026-08-22T09:00:00.000Z"
+    },
+    {
+      "id": "demo-elena-022",
+      "accountId": "acc-elena",
+      "amountCents": -1420,
+      "description": "FARMACIA ABANDO 0007",
+      "createdAt": "2026-08-25T16:40:00.000Z"
+    },
+    {
+      "id": "demo-elena-023",
+      "accountId": "acc-elena",
+      "amountCents": -11900,
+      "description": "EL CORTE INGLES 0052 BILBAO",
+      "createdAt": "2026-08-27T10:30:00.000Z"
+    },
+    {
+      "id": "demo-elena-024",
+      "accountId": "acc-elena",
+      "amountCents": 248000,
+      "description": "NOMINA INGENIERIA URIBE SA",
+      "createdAt": "2026-08-28T06:00:00.000Z"
+    },
+    {
+      "id": "demo-elena-025",
+      "accountId": "acc-elena",
+      "amountCents": -6340,
+      "description": "KIABI ESPANA KSCE SA",
+      "createdAt": "2026-08-29T15:00:00.000Z"
+    },
+    {
+      "id": "demo-elena-026",
+      "accountId": "acc-elena",
+      "amountCents": -6000,
+      "description": "RECIBO COMUNIDAD PROPIETARIOS C/ OLMO 14",
+      "createdAt": "2026-09-01T06:00:00.000Z"
+    },
+    {
+      "id": "demo-elena-027",
+      "accountId": "acc-elena",
+      "amountCents": -4800,
+      "description": "MAPFRE RECIBO POLIZA 55120",
+      "createdAt": "2026-09-02T06:00:00.000Z"
+    },
+    {
+      "id": "demo-elena-028",
+      "accountId": "acc-elena",
+      "amountCents": -3598,
+      "description": "COMPRA TARJ. 4532XXXX DECATHLON BILBAO ES",
+      "createdAt": "2026-09-03T17:00:00.000Z"
+    },
+    {
+      "id": "demo-elena-029",
+      "accountId": "acc-elena",
+      "amountCents": -74218,
+      "description": "RECIBO HIPOTECA 0049 KUTXABANK",
+      "createdAt": "2026-09-05T06:00:00.000Z"
+    },
+    {
+      "id": "demo-elena-030",
+      "accountId": "acc-elena",
+      "amountCents": -7630,
+      "description": "EROSKI CENTER 0331 BILBAO",
+      "createdAt": "2026-09-05T16:20:00.000Z"
+    },
+    {
+      "id": "demo-elena-031",
+      "accountId": "acc-elena",
+      "amountCents": -3299,
+      "description": "AMZN Mktp ES*8M3DD2WQ7",
+      "createdAt": "2026-09-08T20:15:00.000Z"
+    },
+    {
+      "id": "demo-elena-032",
+      "accountId": "acc-elena",
+      "amountCents": -9500,
+      "description": "COLEGIO LAS ARENAS CUOTA COMEDOR",
+      "createdAt": "2026-09-10T06:00:00.000Z"
+    },
+    {
+      "id": "demo-elena-033",
+      "accountId": "acc-elena",
+      "amountCents": -9315,
+      "description": "RECIBO IBERDROLA CLIENTES SAU",
+      "createdAt": "2026-09-12T06:00:00.000Z"
+    },
+    {
+      "id": "demo-elena-034",
+      "accountId": "acc-elena",
+      "amountCents": -5840,
+      "description": "E.S. REPSOL 33412 A-8 KM 112",
+      "createdAt": "2026-09-13T15:10:00.000Z"
+    },
+    {
+      "id": "demo-elena-035",
+      "accountId": "acc-elena",
+      "amountCents": -3000,
+      "description": "EXTRAESCOLARES JUDO CLUB TXIKI",
+      "createdAt": "2026-09-15T06:00:00.000Z"
+    },
+    {
+      "id": "demo-elena-036",
+      "accountId": "acc-elena",
+      "amountCents": -9000,
+      "description": "CLINICA DENTAL SONRISA SLP",
+      "createdAt": "2026-09-17T15:00:00.000Z"
+    },
+    {
+      "id": "demo-elena-037",
+      "accountId": "acc-elena",
+      "amountCents": -640,
+      "description": "TELPARK INDAUTXU",
+      "createdAt": "2026-09-17T16:10:00.000Z"
+    },
+    {
+      "id": "demo-elena-038",
+      "accountId": "acc-elena",
+      "amountCents": -10480,
+      "description": "EROSKI CENTER 0331 BILBAO",
+      "createdAt": "2026-09-19T09:20:00.000Z"
+    },
+    {
+      "id": "demo-elena-039",
+      "accountId": "acc-elena",
+      "amountCents": -7990,
+      "description": "MOVISTAR FUSION FACT 28-L2B7",
+      "createdAt": "2026-09-20T06:00:00.000Z"
+    },
+    {
+      "id": "demo-elena-040",
+      "accountId": "acc-elena",
+      "amountCents": -2450,
+      "description": "TELEPIZZA BILBAO 0412",
+      "createdAt": "2026-09-25T19:20:00.000Z"
+    },
+    {
+      "id": "demo-elena-041",
+      "accountId": "acc-elena",
+      "amountCents": -1860,
+      "description": "FARMACIA ABANDO 0007",
+      "createdAt": "2026-09-27T10:10:00.000Z"
+    },
+    {
+      "id": "demo-elena-042",
+      "accountId": "acc-elena",
+      "amountCents": 248000,
+      "description": "NOMINA INGENIERIA URIBE SA",
+      "createdAt": "2026-09-28T06:00:00.000Z"
+    },
+    {
+      "id": "demo-elena-043",
+      "accountId": "acc-elena",
+      "amountCents": -6000,
+      "description": "RECIBO COMUNIDAD PROPIETARIOS C/ OLMO 14",
+      "createdAt": "2026-10-01T06:00:00.000Z"
+    },
+    {
+      "id": "demo-elena-044",
+      "accountId": "acc-elena",
+      "amountCents": -9500,
+      "description": "COLEGIO LAS ARENAS CUOTA COMEDOR",
+      "createdAt": "2026-10-01T06:05:00.000Z"
+    },
+    {
+      "id": "demo-elena-045",
+      "accountId": "acc-elena",
+      "amountCents": -2640,
+      "description": "TELEPIZZA BILBAO 0412",
+      "createdAt": "2026-10-02T19:05:00.000Z"
+    },
+    {
+      "id": "demo-elena-046",
+      "accountId": "acc-elena",
+      "amountCents": -4290,
+      "description": "KIABI ESPANA KSCE SA",
+      "createdAt": "2026-10-03T10:10:00.000Z"
+    },
+    {
+      "id": "demo-elena-047",
+      "accountId": "acc-elena",
+      "amountCents": -9235,
+      "description": "EROSKI CENTER 0331 BILBAO",
+      "createdAt": "2026-10-03T16:30:00.000Z"
+    },
+    {
+      "id": "demo-elena-048",
+      "accountId": "acc-elena",
+      "amountCents": -1275,
+      "description": "FARMACIA ABANDO 0007",
+      "createdAt": "2026-10-04T09:30:00.000Z"
+    },
+    {
+      "id": "demo-elena-049",
+      "accountId": "acc-elena",
+      "amountCents": -6120,
+      "description": "E.S. REPSOL 33412 A-8 KM 112",
+      "createdAt": "2026-10-04T15:05:00.000Z"
+    },
+    {
+      "id": "demo-elena-050",
+      "accountId": "acc-elena",
+      "amountCents": -74218,
+      "description": "RECIBO HIPOTECA 0049 KUTXABANK",
+      "createdAt": "2026-10-05T06:00:00.000Z"
+    },
+    {
+      "id": "demo-elena-051",
+      "accountId": "acc-elena",
+      "amountCents": -3160,
+      "description": "CINESA ZUBIARTE BILBAO",
+      "createdAt": "2026-07-04T17:30:00.000Z"
+    },
+    {
+      "id": "demo-elena-052",
+      "accountId": "acc-elena",
+      "amountCents": -7640,
+      "description": "BM SUPERMERCADOS 0117 BILBAO",
+      "createdAt": "2026-07-10T16:20:00.000Z"
+    },
+    {
+      "id": "demo-elena-053",
+      "accountId": "acc-elena",
+      "amountCents": -5490,
+      "description": "ZARA ESPANA S.A. 0611 BILBAO",
+      "createdAt": "2026-07-11T10:10:00.000Z"
+    },
+    {
+      "id": "demo-elena-054",
+      "accountId": "acc-elena",
+      "amountCents": -2135,
+      "description": "FARMACIA ABANDO 0007",
+      "createdAt": "2026-07-15T16:40:00.000Z"
+    },
+    {
+      "id": "demo-elena-055",
+      "accountId": "acc-elena",
+      "amountCents": -11900,
+      "description": "IKEA BARAKALDO",
+      "createdAt": "2026-07-19T09:30:00.000Z"
+    },
+    {
+      "id": "demo-elena-056",
+      "accountId": "acc-elena",
+      "amountCents": -5240,
+      "description": "E.S. REPSOL 33412 A-8 KM 112",
+      "createdAt": "2026-07-24T06:10:00.000Z"
+    },
+    {
+      "id": "demo-elena-057",
+      "accountId": "acc-elena",
+      "amountCents": -5890,
+      "description": "BM SUPERMERCADOS 0117 BILBAO",
+      "createdAt": "2026-07-24T16:45:00.000Z"
+    },
+    {
+      "id": "demo-elena-058",
+      "accountId": "acc-elena",
+      "amountCents": -985,
+      "description": "PEAJE AP-8 ZARAUTZ",
+      "createdAt": "2026-07-25T08:05:00.000Z"
+    },
+    {
+      "id": "demo-elena-059",
+      "accountId": "acc-elena",
+      "amountCents": -6410,
+      "description": "E.S. REPSOL 33412 A-8 KM 112",
+      "createdAt": "2026-08-02T07:20:00.000Z"
+    },
+    {
+      "id": "demo-elena-060",
+      "accountId": "acc-elena",
+      "amountCents": -1870,
+      "description": "PEAJE AP-8 ZARAUTZ",
+      "createdAt": "2026-08-02T09:40:00.000Z"
+    },
+    {
+      "id": "demo-elena-061",
+      "accountId": "acc-elena",
+      "amountCents": -8820,
+      "description": "BM SUPERMERCADOS 0117 BILBAO",
+      "createdAt": "2026-08-04T17:10:00.000Z"
+    },
+    {
+      "id": "demo-elena-062",
+      "accountId": "acc-elena",
+      "amountCents": -8400,
+      "description": "RESTAURANTE EL PUERTO GETXO",
+      "createdAt": "2026-08-09T19:30:00.000Z"
+    },
+    {
+      "id": "demo-elena-063",
+      "accountId": "acc-elena",
+      "amountCents": -7965,
+      "description": "MERCADONA 5210 BARAKALDO",
+      "createdAt": "2026-08-13T16:30:00.000Z"
+    },
+    {
+      "id": "demo-elena-064",
+      "accountId": "acc-elena",
+      "amountCents": -2380,
+      "description": "MCDONALDS BILBAO MEGAPARK",
+      "createdAt": "2026-08-15T11:40:00.000Z"
+    },
+    {
+      "id": "demo-elena-065",
+      "accountId": "acc-elena",
+      "amountCents": -3999,
+      "description": "COMPRA TARJ. 4532XXXX DECATHLON BILBAO ES",
+      "createdAt": "2026-08-18T10:20:00.000Z"
+    },
+    {
+      "id": "demo-elena-066",
+      "accountId": "acc-elena",
+      "amountCents": -6250,
+      "description": "FNAC BILBAO",
+      "createdAt": "2026-08-24T09:15:00.000Z"
+    },
+    {
+      "id": "demo-elena-067",
+      "accountId": "acc-elena",
+      "amountCents": -1680,
+      "description": "FARMACIA ABANDO 0007",
+      "createdAt": "2026-08-26T16:50:00.000Z"
+    },
+    {
+      "id": "demo-elena-068",
+      "accountId": "acc-elena",
+      "amountCents": -6135,
+      "description": "BM SUPERMERCADOS 0117 BILBAO",
+      "createdAt": "2026-08-30T08:40:00.000Z"
+    },
+    {
+      "id": "demo-elena-069",
+      "accountId": "acc-elena",
+      "amountCents": -7435,
+      "description": "CASA DEL LIBRO BILBAO",
+      "createdAt": "2026-09-03T15:40:00.000Z"
+    },
+    {
+      "id": "demo-elena-070",
+      "accountId": "acc-elena",
+      "amountCents": -1940,
+      "description": "MCDONALDS BILBAO MEGAPARK",
+      "createdAt": "2026-09-06T11:30:00.000Z"
+    },
+    {
+      "id": "demo-elena-071",
+      "accountId": "acc-elena",
+      "amountCents": -8275,
+      "description": "BM SUPERMERCADOS 0117 BILBAO",
+      "createdAt": "2026-09-10T16:30:00.000Z"
+    },
+    {
+      "id": "demo-elena-072",
+      "accountId": "acc-elena",
+      "amountCents": -6870,
+      "description": "KIABI ESPANA KSCE SA",
+      "createdAt": "2026-09-12T10:15:00.000Z"
+    },
+    {
+      "id": "demo-elena-073",
+      "accountId": "acc-elena",
+      "amountCents": -6200,
+      "description": "RESTAURANTE EL PUERTO GETXO",
+      "createdAt": "2026-09-14T12:30:00.000Z"
+    },
+    {
+      "id": "demo-elena-074",
+      "accountId": "acc-elena",
+      "amountCents": -6840,
+      "description": "MERCADONA 5210 BARAKALDO",
+      "createdAt": "2026-09-24T16:40:00.000Z"
+    },
+    {
+      "id": "demo-elena-075",
+      "accountId": "acc-elena",
+      "amountCents": -5560,
+      "description": "E.S. REPSOL 33412 A-8 KM 112",
+      "createdAt": "2026-09-27T07:15:00.000Z"
+    },
+    {
+      "id": "demo-elena-076",
+      "accountId": "acc-elena",
+      "amountCents": -5990,
+      "description": "BM SUPERMERCADOS 0117 BILBAO",
+      "createdAt": "2026-09-29T17:05:00.000Z"
+    },
+    {
+      "id": "demo-elena-077",
+      "accountId": "acc-elena",
+      "amountCents": -7145,
+      "description": "BM SUPERMERCADOS 0117 BILBAO",
+      "createdAt": "2026-10-06T16:40:00.000Z"
+    },
+    {
+      "id": "demo-hugo-001",
+      "accountId": "acc-hugo",
+      "amountCents": 33000,
+      "description": "NOMINA SEMANAL TEMPOLOG ETT SA",
+      "createdAt": "2026-07-03T06:00:00.000Z"
+    },
+    {
+      "id": "demo-hugo-002",
+      "accountId": "acc-hugo",
+      "amountCents": -2790,
+      "description": "MERCADONA 2231 SEVILLA",
+      "createdAt": "2026-07-03T17:20:00.000Z"
+    },
+    {
+      "id": "demo-hugo-003",
+      "accountId": "acc-hugo",
+      "amountCents": -1900,
+      "description": "CEPSA E.S. LA CARTUJA",
+      "createdAt": "2026-07-05T06:30:00.000Z"
+    },
+    {
+      "id": "demo-hugo-004",
+      "accountId": "acc-hugo",
+      "amountCents": -2990,
+      "description": "VIDING FITNESS SEVILLA",
+      "createdAt": "2026-07-10T04:00:00.000Z"
+    },
+    {
+      "id": "demo-hugo-005",
+      "accountId": "acc-hugo",
+      "amountCents": 33000,
+      "description": "NOMINA SEMANAL TEMPOLOG ETT SA",
+      "createdAt": "2026-07-10T06:00:00.000Z"
+    },
+    {
+      "id": "demo-hugo-006",
+      "accountId": "acc-hugo",
+      "amountCents": -1100,
+      "description": "100 MONTADITOS 0456 SEVILLA",
+      "createdAt": "2026-07-11T19:20:00.000Z"
+    },
+    {
+      "id": "demo-hugo-007",
+      "accountId": "acc-hugo",
+      "amountCents": 33000,
+      "description": "NOMINA SEMANAL TEMPOLOG ETT SA",
+      "createdAt": "2026-07-17T06:00:00.000Z"
+    },
+    {
+      "id": "demo-hugo-008",
+      "accountId": "acc-hugo",
+      "amountCents": -3345,
+      "description": "MERCADONA 2231 SEVILLA",
+      "createdAt": "2026-07-17T17:10:00.000Z"
+    },
+    {
+      "id": "demo-hugo-009",
+      "accountId": "acc-hugo",
+      "amountCents": -2200,
+      "description": "YOIGO RECIBO",
+      "createdAt": "2026-07-18T06:00:00.000Z"
+    },
+    {
+      "id": "demo-hugo-010",
+      "accountId": "acc-hugo",
+      "amountCents": -1500,
+      "description": "BIZUM ENVIADO A RAFA M.",
+      "createdAt": "2026-07-19T18:30:00.000Z"
+    },
+    {
+      "id": "demo-hugo-011",
+      "accountId": "acc-hugo",
+      "amountCents": -1850,
+      "description": "CEPSA E.S. LA CARTUJA",
+      "createdAt": "2026-07-22T06:10:00.000Z"
+    },
+    {
+      "id": "demo-hugo-012",
+      "accountId": "acc-hugo",
+      "amountCents": 33000,
+      "description": "NOMINA SEMANAL TEMPOLOG ETT SA",
+      "createdAt": "2026-07-24T06:00:00.000Z"
+    },
+    {
+      "id": "demo-hugo-013",
+      "accountId": "acc-hugo",
+      "amountCents": -900,
+      "description": "100 MONTADITOS 0456 SEVILLA",
+      "createdAt": "2026-07-25T20:00:00.000Z"
+    },
+    {
+      "id": "demo-hugo-014",
+      "accountId": "acc-hugo",
+      "amountCents": -4500,
+      "description": "DECATHLON SEVILLA",
+      "createdAt": "2026-07-26T10:00:00.000Z"
+    },
+    {
+      "id": "demo-hugo-015",
+      "accountId": "acc-hugo",
+      "amountCents": 33000,
+      "description": "NOMINA SEMANAL TEMPOLOG ETT SA",
+      "createdAt": "2026-07-31T06:00:00.000Z"
+    },
+    {
+      "id": "demo-hugo-016",
+      "accountId": "acc-hugo",
+      "amountCents": -3010,
+      "description": "MERCADONA 2231 SEVILLA",
+      "createdAt": "2026-07-31T17:15:00.000Z"
+    },
+    {
+      "id": "demo-hugo-017",
+      "accountId": "acc-hugo",
+      "amountCents": 33000,
+      "description": "NOMINA SEMANAL TEMPOLOG ETT SA",
+      "createdAt": "2026-08-07T06:00:00.000Z"
+    },
+    {
+      "id": "demo-hugo-018",
+      "accountId": "acc-hugo",
+      "amountCents": -3120,
+      "description": "MERCADONA 2231 SEVILLA",
+      "createdAt": "2026-08-07T17:10:00.000Z"
+    },
+    {
+      "id": "demo-hugo-019",
+      "accountId": "acc-hugo",
+      "amountCents": -4120,
+      "description": "RECIBO SEGURO MOTO LINEA DIRECTA",
+      "createdAt": "2026-08-08T06:00:00.000Z"
+    },
+    {
+      "id": "demo-hugo-020",
+      "accountId": "acc-hugo",
+      "amountCents": -1800,
+      "description": "CEPSA E.S. LA CARTUJA",
+      "createdAt": "2026-08-09T06:20:00.000Z"
+    },
+    {
+      "id": "demo-hugo-021",
+      "accountId": "acc-hugo",
+      "amountCents": -2990,
+      "description": "VIDING FITNESS SEVILLA",
+      "createdAt": "2026-08-10T04:00:00.000Z"
+    },
+    {
+      "id": "demo-hugo-022",
+      "accountId": "acc-hugo",
+      "amountCents": -950,
+      "description": "100 MONTADITOS 0456 SEVILLA",
+      "createdAt": "2026-08-12T19:00:00.000Z"
+    },
+    {
+      "id": "demo-hugo-023",
+      "accountId": "acc-hugo",
+      "amountCents": 33000,
+      "description": "NOMINA SEMANAL TEMPOLOG ETT SA",
+      "createdAt": "2026-08-14T06:00:00.000Z"
+    },
+    {
+      "id": "demo-hugo-024",
+      "accountId": "acc-hugo",
+      "amountCents": -2200,
+      "description": "YOIGO RECIBO",
+      "createdAt": "2026-08-18T06:00:00.000Z"
+    },
+    {
+      "id": "demo-hugo-025",
+      "accountId": "acc-hugo",
+      "amountCents": -1599,
+      "description": "AMZN Mktp ES*3C8VV5NN2",
+      "createdAt": "2026-08-19T21:40:00.000Z"
+    },
+    {
+      "id": "demo-hugo-026",
+      "accountId": "acc-hugo",
+      "amountCents": 33000,
+      "description": "NOMINA SEMANAL TEMPOLOG ETT SA",
+      "createdAt": "2026-08-21T06:00:00.000Z"
+    },
+    {
+      "id": "demo-hugo-027",
+      "accountId": "acc-hugo",
+      "amountCents": -2875,
+      "description": "MERCADONA 2231 SEVILLA",
+      "createdAt": "2026-08-21T17:30:00.000Z"
+    },
+    {
+      "id": "demo-hugo-028",
+      "accountId": "acc-hugo",
+      "amountCents": -2000,
+      "description": "BIZUM ENVIADO A RAFA M.",
+      "createdAt": "2026-08-23T18:00:00.000Z"
+    },
+    {
+      "id": "demo-hugo-029",
+      "accountId": "acc-hugo",
+      "amountCents": -1950,
+      "description": "CEPSA E.S. LA CARTUJA",
+      "createdAt": "2026-08-24T06:10:00.000Z"
+    },
+    {
+      "id": "demo-hugo-030",
+      "accountId": "acc-hugo",
+      "amountCents": -3750,
+      "description": "WALLAPOP *ENVIO 99120",
+      "createdAt": "2026-08-27T10:00:00.000Z"
+    },
+    {
+      "id": "demo-hugo-031",
+      "accountId": "acc-hugo",
+      "amountCents": 33000,
+      "description": "NOMINA SEMANAL TEMPOLOG ETT SA",
+      "createdAt": "2026-08-28T06:00:00.000Z"
+    },
+    {
+      "id": "demo-hugo-032",
+      "accountId": "acc-hugo",
+      "amountCents": -2200,
+      "description": "TPV SALA MALANDAR 02:14",
+      "createdAt": "2026-08-30T00:14:00.000Z"
+    },
+    {
+      "id": "demo-hugo-033",
+      "accountId": "acc-hugo",
+      "amountCents": 33000,
+      "description": "NOMINA SEMANAL TEMPOLOG ETT SA",
+      "createdAt": "2026-09-04T06:00:00.000Z"
+    },
+    {
+      "id": "demo-hugo-034",
+      "accountId": "acc-hugo",
+      "amountCents": -4000,
+      "description": "REINTEGRO CAJERO 0331 SEVILLA",
+      "createdAt": "2026-09-04T18:00:00.000Z"
+    },
+    {
+      "id": "demo-hugo-035",
+      "accountId": "acc-hugo",
+      "amountCents": -2499,
+      "description": "DECATHLON SEVILLA",
+      "createdAt": "2026-09-06T10:30:00.000Z"
+    },
+    {
+      "id": "demo-hugo-036",
+      "accountId": "acc-hugo",
+      "amountCents": -1280,
+      "description": "COMPRA EN DIA % S.A. 08-09 TARJ *7781",
+      "createdAt": "2026-09-08T16:30:00.000Z"
+    },
+    {
+      "id": "demo-hugo-037",
+      "accountId": "acc-hugo",
+      "amountCents": -2000,
+      "description": "CEPSA E.S. LA CARTUJA",
+      "createdAt": "2026-09-09T06:15:00.000Z"
+    },
+    {
+      "id": "demo-hugo-038",
+      "accountId": "acc-hugo",
+      "amountCents": -2990,
+      "description": "VIDING FITNESS SEVILLA",
+      "createdAt": "2026-09-10T04:00:00.000Z"
+    },
+    {
+      "id": "demo-hugo-039",
+      "accountId": "acc-hugo",
+      "amountCents": 33000,
+      "description": "NOMINA SEMANAL TEMPOLOG ETT SA",
+      "createdAt": "2026-09-11T06:00:00.000Z"
+    },
+    {
+      "id": "demo-hugo-040",
+      "accountId": "acc-hugo",
+      "amountCents": -1000,
+      "description": "BIZUM ENVIADO A RAFA M.",
+      "createdAt": "2026-09-13T19:30:00.000Z"
+    },
+    {
+      "id": "demo-hugo-041",
+      "accountId": "acc-hugo",
+      "amountCents": -1200,
+      "description": "100 MONTADITOS 0456 SEVILLA",
+      "createdAt": "2026-09-13T19:45:00.000Z"
+    },
+    {
+      "id": "demo-hugo-042",
+      "accountId": "acc-hugo",
+      "amountCents": -9000,
+      "description": "MULTA AYTO SEVILLA EXP 2026/0091",
+      "createdAt": "2026-09-16T06:00:00.000Z"
+    },
+    {
+      "id": "demo-hugo-043",
+      "accountId": "acc-hugo",
+      "amountCents": -2200,
+      "description": "YOIGO RECIBO",
+      "createdAt": "2026-09-18T06:00:00.000Z"
+    },
+    {
+      "id": "demo-hugo-044",
+      "accountId": "acc-hugo",
+      "amountCents": 33000,
+      "description": "NOMINA SEMANAL TEMPOLOG ETT SA",
+      "createdAt": "2026-09-18T06:00:00.000Z"
+    },
+    {
+      "id": "demo-hugo-045",
+      "accountId": "acc-hugo",
+      "amountCents": -3560,
+      "description": "MERCADONA 2231 SEVILLA",
+      "createdAt": "2026-09-19T17:00:00.000Z"
+    },
+    {
+      "id": "demo-hugo-046",
+      "accountId": "acc-hugo",
+      "amountCents": -2990,
+      "description": "AMZN Mktp ES*6R0JJ9TT4",
+      "createdAt": "2026-09-22T20:50:00.000Z"
+    },
+    {
+      "id": "demo-hugo-047",
+      "accountId": "acc-hugo",
+      "amountCents": -4000,
+      "description": "FISIOTERAPIA AVANZA SL",
+      "createdAt": "2026-09-24T17:00:00.000Z"
+    },
+    {
+      "id": "demo-hugo-048",
+      "accountId": "acc-hugo",
+      "amountCents": 33000,
+      "description": "NOMINA SEMANAL TEMPOLOG ETT SA",
+      "createdAt": "2026-09-25T06:00:00.000Z"
+    },
+    {
+      "id": "demo-hugo-049",
+      "accountId": "acc-hugo",
+      "amountCents": -6000,
+      "description": "TRANSFERENCIA 000987",
+      "createdAt": "2026-09-26T08:00:00.000Z"
+    },
+    {
+      "id": "demo-hugo-050",
+      "accountId": "acc-hugo",
+      "amountCents": -850,
+      "description": "100 MONTADITOS 0456 SEVILLA",
+      "createdAt": "2026-09-27T19:10:00.000Z"
+    },
+    {
+      "id": "demo-hugo-051",
+      "accountId": "acc-hugo",
+      "amountCents": -1750,
+      "description": "CEPSA E.S. LA CARTUJA",
+      "createdAt": "2026-09-29T06:10:00.000Z"
+    },
+    {
+      "id": "demo-hugo-052",
+      "accountId": "acc-hugo",
+      "amountCents": 33000,
+      "description": "NOMINA SEMANAL TEMPOLOG ETT SA",
+      "createdAt": "2026-10-02T06:00:00.000Z"
+    },
+    {
+      "id": "demo-hugo-053",
+      "accountId": "acc-hugo",
+      "amountCents": -3280,
+      "description": "MERCADONA 2231 SEVILLA",
+      "createdAt": "2026-10-02T17:05:00.000Z"
+    },
+    {
+      "id": "demo-hugo-054",
+      "accountId": "acc-hugo",
+      "amountCents": -1999,
+      "description": "DECATHLON SEVILLA",
+      "createdAt": "2026-10-03T09:30:00.000Z"
+    },
+    {
+      "id": "demo-hugo-055",
+      "accountId": "acc-hugo",
+      "amountCents": -1050,
+      "description": "100 MONTADITOS 0456 SEVILLA",
+      "createdAt": "2026-10-03T19:15:00.000Z"
+    },
+    {
+      "id": "demo-hugo-056",
+      "accountId": "acc-hugo",
+      "amountCents": -2000,
+      "description": "CEPSA E.S. LA CARTUJA",
+      "createdAt": "2026-10-04T06:20:00.000Z"
+    },
+    {
+      "id": "demo-hugo-057",
+      "accountId": "acc-hugo",
+      "amountCents": -1000,
+      "description": "BIZUM ENVIADO A RAFA M.",
+      "createdAt": "2026-10-04T18:10:00.000Z"
+    },
+    {
+      "id": "demo-hugo-058",
+      "accountId": "acc-hugo",
+      "amountCents": -4000,
+      "description": "FISIOTERAPIA AVANZA SL",
+      "createdAt": "2026-10-05T16:00:00.000Z"
+    },
+    {
+      "id": "demo-hugo-059",
+      "accountId": "acc-hugo",
+      "amountCents": -4130,
+      "description": "LIDL SUPERMERCADOS SAU SEVILLA",
+      "createdAt": "2026-07-08T17:30:00.000Z"
+    },
+    {
+      "id": "demo-hugo-060",
+      "accountId": "acc-hugo",
+      "amountCents": -7900,
+      "description": "MEDIAMARKT SEVILLA LAGOH",
+      "createdAt": "2026-07-13T09:20:00.000Z"
+    },
+    {
+      "id": "demo-hugo-061",
+      "accountId": "acc-hugo",
+      "amountCents": -3490,
+      "description": "ITV SEVILLA NORTE",
+      "createdAt": "2026-07-14T07:30:00.000Z"
+    },
+    {
+      "id": "demo-hugo-062",
+      "accountId": "acc-hugo",
+      "amountCents": -4785,
+      "description": "MERCADONA 2231 SEVILLA",
+      "createdAt": "2026-07-23T17:15:00.000Z"
+    },
+    {
+      "id": "demo-hugo-063",
+      "accountId": "acc-hugo",
+      "amountCents": -840,
+      "description": "FARMACIA TRIANA 0112",
+      "createdAt": "2026-07-27T16:40:00.000Z"
+    },
+    {
+      "id": "demo-hugo-064",
+      "accountId": "acc-hugo",
+      "amountCents": -3620,
+      "description": "LIDL SUPERMERCADOS SAU SEVILLA",
+      "createdAt": "2026-07-28T17:50:00.000Z"
+    },
+    {
+      "id": "demo-hugo-065",
+      "accountId": "acc-hugo",
+      "amountCents": -5240,
+      "description": "MERCADONA 2231 SEVILLA",
+      "createdAt": "2026-08-01T17:20:00.000Z"
+    },
+    {
+      "id": "demo-hugo-066",
+      "accountId": "acc-hugo",
+      "amountCents": -4475,
+      "description": "LIDL SUPERMERCADOS SAU SEVILLA",
+      "createdAt": "2026-08-14T17:40:00.000Z"
+    },
+    {
+      "id": "demo-hugo-067",
+      "accountId": "acc-hugo",
+      "amountCents": -2750,
+      "description": "PRIMARK SEVILLA",
+      "createdAt": "2026-08-16T10:30:00.000Z"
+    },
+    {
+      "id": "demo-hugo-068",
+      "accountId": "acc-hugo",
+      "amountCents": -5810,
+      "description": "MERCADONA 2231 SEVILLA",
+      "createdAt": "2026-08-28T17:10:00.000Z"
+    },
+    {
+      "id": "demo-hugo-069",
+      "accountId": "acc-hugo",
+      "amountCents": -4990,
+      "description": "MERCADONA 2231 SEVILLA",
+      "createdAt": "2026-09-03T17:15:00.000Z"
+    },
+    {
+      "id": "demo-hugo-070",
+      "accountId": "acc-hugo",
+      "amountCents": -5535,
+      "description": "LIDL SUPERMERCADOS SAU SEVILLA",
+      "createdAt": "2026-09-12T17:30:00.000Z"
+    },
+    {
+      "id": "demo-hugo-071",
+      "accountId": "acc-hugo",
+      "amountCents": -5380,
+      "description": "MERCADONA 2231 SEVILLA",
+      "createdAt": "2026-09-26T17:20:00.000Z"
+    },
+    {
+      "id": "demo-hugo-072",
+      "accountId": "acc-hugo",
+      "amountCents": -2860,
+      "description": "LIDL SUPERMERCADOS SAU SEVILLA",
+      "createdAt": "2026-10-05T17:40:00.000Z"
+    },
+    {
+      "id": "demo-hugo-073",
+      "accountId": "acc-hugo",
+      "amountCents": -1430,
+      "description": "COMPRA EN DIA % S.A. 06-10 TARJ *7781",
+      "createdAt": "2026-10-06T16:30:00.000Z"
+    },
+    {
+      "id": "demo-ines-001",
+      "accountId": "acc-ines",
+      "amountCents": -5500,
+      "description": "RECIBO COMUNIDAD PROPIETARIOS PS SAGASTA 9",
+      "createdAt": "2026-07-01T06:00:00.000Z"
+    },
+    {
+      "id": "demo-ines-002",
+      "accountId": "acc-ines",
+      "amountCents": -5200,
+      "description": "SANITAS S.A. DE SEGUROS RECIBO",
+      "createdAt": "2026-07-03T06:00:00.000Z"
+    },
+    {
+      "id": "demo-ines-003",
+      "accountId": "acc-ines",
+      "amountCents": -3675,
+      "description": "MERCADONA 0877 ZARAGOZA",
+      "createdAt": "2026-07-04T08:20:00.000Z"
+    },
+    {
+      "id": "demo-ines-004",
+      "accountId": "acc-ines",
+      "amountCents": -720,
+      "description": "FRUTERIA HNOS GARCIA",
+      "createdAt": "2026-07-07T08:05:00.000Z"
+    },
+    {
+      "id": "demo-ines-005",
+      "accountId": "acc-ines",
+      "amountCents": -360,
+      "description": "CAFETERIA EL TUBO",
+      "createdAt": "2026-07-09T09:10:00.000Z"
+    },
+    {
+      "id": "demo-ines-006",
+      "accountId": "acc-ines",
+      "amountCents": -1000,
+      "description": "DONATIVO CRUZ ROJA ESPANOLA",
+      "createdAt": "2026-07-10T06:00:00.000Z"
+    },
+    {
+      "id": "demo-ines-007",
+      "accountId": "acc-ines",
+      "amountCents": -2760,
+      "description": "NATURGY IBERIA SA GAS",
+      "createdAt": "2026-07-14T06:00:00.000Z"
+    },
+    {
+      "id": "demo-ines-008",
+      "accountId": "acc-ines",
+      "amountCents": -1530,
+      "description": "FARMACIA LDA. M. RUIZ 0001",
+      "createdAt": "2026-07-15T16:00:00.000Z"
+    },
+    {
+      "id": "demo-ines-009",
+      "accountId": "acc-ines",
+      "amountCents": -4210,
+      "description": "MERCADONA 0877 ZARAGOZA",
+      "createdAt": "2026-07-18T08:30:00.000Z"
+    },
+    {
+      "id": "demo-ines-010",
+      "accountId": "acc-ines",
+      "amountCents": -320,
+      "description": "PANADERIA LA TAHONA SL",
+      "createdAt": "2026-07-21T07:15:00.000Z"
+    },
+    {
+      "id": "demo-ines-011",
+      "accountId": "acc-ines",
+      "amountCents": -2800,
+      "description": "PELUQUERIA MARISOL",
+      "createdAt": "2026-07-23T15:00:00.000Z"
+    },
+    {
+      "id": "demo-ines-012",
+      "accountId": "acc-ines",
+      "amountCents": 134000,
+      "description": "ABONO PENSION SEGURIDAD SOCIAL",
+      "createdAt": "2026-07-24T06:00:00.000Z"
+    },
+    {
+      "id": "demo-ines-013",
+      "accountId": "acc-ines",
+      "amountCents": -15000,
+      "description": "REINTEGRO CAJERO 0412 ZARAGOZA",
+      "createdAt": "2026-07-27T09:00:00.000Z"
+    },
+    {
+      "id": "demo-ines-014",
+      "accountId": "acc-ines",
+      "amountCents": -2000,
+      "description": "BIZUM ENVIADO A NIETO PABLO CONCEPTO PAGA",
+      "createdAt": "2026-07-29T10:00:00.000Z"
+    },
+    {
+      "id": "demo-ines-015",
+      "accountId": "acc-ines",
+      "amountCents": -5500,
+      "description": "RECIBO COMUNIDAD PROPIETARIOS PS SAGASTA 9",
+      "createdAt": "2026-08-01T06:00:00.000Z"
+    },
+    {
+      "id": "demo-ines-016",
+      "accountId": "acc-ines",
+      "amountCents": -5200,
+      "description": "SANITAS S.A. DE SEGUROS RECIBO",
+      "createdAt": "2026-08-04T06:00:00.000Z"
+    },
+    {
+      "id": "demo-ines-017",
+      "accountId": "acc-ines",
+      "amountCents": -3460,
+      "description": "MERCADONA 0877 ZARAGOZA",
+      "createdAt": "2026-08-06T08:15:00.000Z"
+    },
+    {
+      "id": "demo-ines-018",
+      "accountId": "acc-ines",
+      "amountCents": -4180,
+      "description": "ADEUDO RECIBO ENDESA ENERGIA XXI SLU REF 0077309",
+      "createdAt": "2026-08-07T06:00:00.000Z"
+    },
+    {
+      "id": "demo-ines-019",
+      "accountId": "acc-ines",
+      "amountCents": -630,
+      "description": "FRUTERIA HNOS GARCIA",
+      "createdAt": "2026-08-08T08:10:00.000Z"
+    },
+    {
+      "id": "demo-ines-020",
+      "accountId": "acc-ines",
+      "amountCents": -1000,
+      "description": "DONATIVO CRUZ ROJA ESPANOLA",
+      "createdAt": "2026-08-10T06:00:00.000Z"
+    },
+    {
+      "id": "demo-ines-021",
+      "accountId": "acc-ines",
+      "amountCents": -1245,
+      "description": "FARMACIA LDA. M. RUIZ 0001",
+      "createdAt": "2026-08-13T16:20:00.000Z"
+    },
+    {
+      "id": "demo-ines-022",
+      "accountId": "acc-ines",
+      "amountCents": -2990,
+      "description": "NATURGY IBERIA SA GAS",
+      "createdAt": "2026-08-14T06:00:00.000Z"
+    },
+    {
+      "id": "demo-ines-023",
+      "accountId": "acc-ines",
+      "amountCents": -12900,
+      "description": "OPTICA UNIVERSITARIA 0034",
+      "createdAt": "2026-08-18T10:30:00.000Z"
+    },
+    {
+      "id": "demo-ines-024",
+      "accountId": "acc-ines",
+      "amountCents": -4120,
+      "description": "MERCADONA 0877 ZARAGOZA",
+      "createdAt": "2026-08-20T08:20:00.000Z"
+    },
+    {
+      "id": "demo-ines-025",
+      "accountId": "acc-ines",
+      "amountCents": -6400,
+      "description": "EL CORTE INGLES 0007 ZARAGOZA",
+      "createdAt": "2026-08-20T10:40:00.000Z"
+    },
+    {
+      "id": "demo-ines-026",
+      "accountId": "acc-ines",
+      "amountCents": -320,
+      "description": "PANADERIA LA TAHONA SL",
+      "createdAt": "2026-08-22T07:10:00.000Z"
+    },
+    {
+      "id": "demo-ines-027",
+      "accountId": "acc-ines",
+      "amountCents": 134000,
+      "description": "ABONO PENSION SEGURIDAD SOCIAL",
+      "createdAt": "2026-08-25T06:00:00.000Z"
+    },
+    {
+      "id": "demo-ines-028",
+      "accountId": "acc-ines",
+      "amountCents": -15000,
+      "description": "REINTEGRO CAJERO 0412 ZARAGOZA",
+      "createdAt": "2026-08-26T09:00:00.000Z"
+    },
+    {
+      "id": "demo-ines-029",
+      "accountId": "acc-ines",
+      "amountCents": -2800,
+      "description": "PELUQUERIA MARISOL",
+      "createdAt": "2026-08-27T15:00:00.000Z"
+    },
+    {
+      "id": "demo-ines-030",
+      "accountId": "acc-ines",
+      "amountCents": -2000,
+      "description": "BIZUM ENVIADO A NIETO PABLO CONCEPTO PAGA",
+      "createdAt": "2026-08-30T10:00:00.000Z"
+    },
+    {
+      "id": "demo-ines-031",
+      "accountId": "acc-ines",
+      "amountCents": -5500,
+      "description": "RECIBO COMUNIDAD PROPIETARIOS PS SAGASTA 9",
+      "createdAt": "2026-09-01T06:00:00.000Z"
+    },
+    {
+      "id": "demo-ines-032",
+      "accountId": "acc-ines",
+      "amountCents": -5200,
+      "description": "SANITAS S.A. DE SEGUROS RECIBO",
+      "createdAt": "2026-09-03T06:00:00.000Z"
+    },
+    {
+      "id": "demo-ines-033",
+      "accountId": "acc-ines",
+      "amountCents": -3890,
+      "description": "MERCADONA 0877 ZARAGOZA",
+      "createdAt": "2026-09-03T08:30:00.000Z"
+    },
+    {
+      "id": "demo-ines-034",
+      "accountId": "acc-ines",
+      "amountCents": -810,
+      "description": "FRUTERIA HNOS GARCIA",
+      "createdAt": "2026-09-05T08:05:00.000Z"
+    },
+    {
+      "id": "demo-ines-035",
+      "accountId": "acc-ines",
+      "amountCents": -360,
+      "description": "CAFETERIA EL TUBO",
+      "createdAt": "2026-09-06T09:00:00.000Z"
+    },
+    {
+      "id": "demo-ines-036",
+      "accountId": "acc-ines",
+      "amountCents": -4400,
+      "description": "ADEUDO RECIBO ENDESA ENERGIA XXI SLU REF 0077310",
+      "createdAt": "2026-09-07T06:00:00.000Z"
+    },
+    {
+      "id": "demo-ines-037",
+      "accountId": "acc-ines",
+      "amountCents": -870,
+      "description": "TAXI ZGZ LIC 0412",
+      "createdAt": "2026-09-09T11:15:00.000Z"
+    },
+    {
+      "id": "demo-ines-038",
+      "accountId": "acc-ines",
+      "amountCents": -1000,
+      "description": "DONATIVO CRUZ ROJA ESPANOLA",
+      "createdAt": "2026-09-10T06:00:00.000Z"
+    },
+    {
+      "id": "demo-ines-039",
+      "accountId": "acc-ines",
+      "amountCents": -2000,
+      "description": "LOTERIAS Y APUESTAS DEL ESTADO 50012",
+      "createdAt": "2026-09-11T10:00:00.000Z"
+    },
+    {
+      "id": "demo-ines-040",
+      "accountId": "acc-ines",
+      "amountCents": -3140,
+      "description": "NATURGY IBERIA SA GAS",
+      "createdAt": "2026-09-14T06:00:00.000Z"
+    },
+    {
+      "id": "demo-ines-041",
+      "accountId": "acc-ines",
+      "amountCents": -2380,
+      "description": "FARMACIA LDA. M. RUIZ 0001",
+      "createdAt": "2026-09-16T16:10:00.000Z"
+    },
+    {
+      "id": "demo-ines-042",
+      "accountId": "acc-ines",
+      "amountCents": -4530,
+      "description": "MERCADONA 0877 ZARAGOZA",
+      "createdAt": "2026-09-17T08:40:00.000Z"
+    },
+    {
+      "id": "demo-ines-043",
+      "accountId": "acc-ines",
+      "amountCents": -3180,
+      "description": "RENFE VIAJEROS INTERNET MADRID",
+      "createdAt": "2026-09-18T07:00:00.000Z"
+    },
+    {
+      "id": "demo-ines-044",
+      "accountId": "acc-ines",
+      "amountCents": -11250,
+      "description": "EL CORTE INGLES 0007 ZARAGOZA",
+      "createdAt": "2026-09-18T11:00:00.000Z"
+    },
+    {
+      "id": "demo-ines-045",
+      "accountId": "acc-ines",
+      "amountCents": -575,
+      "description": "FRUTERIA HNOS GARCIA",
+      "createdAt": "2026-09-19T08:00:00.000Z"
+    },
+    {
+      "id": "demo-ines-046",
+      "accountId": "acc-ines",
+      "amountCents": -410,
+      "description": "CAFETERIA EL TUBO",
+      "createdAt": "2026-09-20T09:10:00.000Z"
+    },
+    {
+      "id": "demo-ines-047",
+      "accountId": "acc-ines",
+      "amountCents": -2800,
+      "description": "PELUQUERIA MARISOL",
+      "createdAt": "2026-09-24T15:00:00.000Z"
+    },
+    {
+      "id": "demo-ines-048",
+      "accountId": "acc-ines",
+      "amountCents": 134000,
+      "description": "ABONO PENSION SEGURIDAD SOCIAL",
+      "createdAt": "2026-09-25T06:00:00.000Z"
+    },
+    {
+      "id": "demo-ines-049",
+      "accountId": "acc-ines",
+      "amountCents": -15000,
+      "description": "REINTEGRO CAJERO 0412 ZARAGOZA",
+      "createdAt": "2026-09-26T09:00:00.000Z"
+    },
+    {
+      "id": "demo-ines-050",
+      "accountId": "acc-ines",
+      "amountCents": -2000,
+      "description": "BIZUM ENVIADO A NIETO PABLO CONCEPTO PAGA",
+      "createdAt": "2026-09-27T10:00:00.000Z"
+    },
+    {
+      "id": "demo-ines-051",
+      "accountId": "acc-ines",
+      "amountCents": -910,
+      "description": "FARMACIA LDA. M. RUIZ 0001",
+      "createdAt": "2026-09-29T16:00:00.000Z"
+    },
+    {
+      "id": "demo-ines-052",
+      "accountId": "acc-ines",
+      "amountCents": -5500,
+      "description": "RECIBO COMUNIDAD PROPIETARIOS PS SAGASTA 9",
+      "createdAt": "2026-10-01T06:00:00.000Z"
+    },
+    {
+      "id": "demo-ines-053",
+      "accountId": "acc-ines",
+      "amountCents": -840,
+      "description": "TAXI ZGZ LIC 0412",
+      "createdAt": "2026-10-02T07:20:00.000Z"
+    },
+    {
+      "id": "demo-ines-054",
+      "accountId": "acc-ines",
+      "amountCents": -3940,
+      "description": "MERCADONA 0877 ZARAGOZA",
+      "createdAt": "2026-10-02T08:25:00.000Z"
+    },
+    {
+      "id": "demo-ines-055",
+      "accountId": "acc-ines",
+      "amountCents": -5200,
+      "description": "SANITAS S.A. DE SEGUROS RECIBO",
+      "createdAt": "2026-10-03T06:00:00.000Z"
+    },
+    {
+      "id": "demo-ines-056",
+      "accountId": "acc-ines",
+      "amountCents": -690,
+      "description": "FRUTERIA HNOS GARCIA",
+      "createdAt": "2026-10-03T08:10:00.000Z"
+    },
+    {
+      "id": "demo-ines-057",
+      "accountId": "acc-ines",
+      "amountCents": -360,
+      "description": "CAFETERIA EL TUBO",
+      "createdAt": "2026-10-04T09:05:00.000Z"
+    },
+    {
+      "id": "demo-ines-058",
+      "accountId": "acc-ines",
+      "amountCents": -2595,
+      "description": "ZARA ESPANA S.A. 0412 ZARAGOZA",
+      "createdAt": "2026-10-05T09:30:00.000Z"
+    },
+    {
+      "id": "demo-ines-059",
+      "accountId": "acc-ines",
+      "amountCents": -2840,
+      "description": "CARNICERIA HNOS LAHOZ",
+      "createdAt": "2026-07-08T08:30:00.000Z"
+    },
+    {
+      "id": "demo-ines-060",
+      "accountId": "acc-ines",
+      "amountCents": -7890,
+      "description": "ALCAMPO ZARAGOZA UTEBO",
+      "createdAt": "2026-07-11T08:15:00.000Z"
+    },
+    {
+      "id": "demo-ines-061",
+      "accountId": "acc-ines",
+      "amountCents": -3200,
+      "description": "RESTAURANTE LA RINCONADA DE LORENZO",
+      "createdAt": "2026-07-12T12:10:00.000Z"
+    },
+    {
+      "id": "demo-ines-062",
+      "accountId": "acc-ines",
+      "amountCents": -6120,
+      "description": "MERCADONA 0877 ZARAGOZA",
+      "createdAt": "2026-07-25T08:20:00.000Z"
+    },
+    {
+      "id": "demo-ines-063",
+      "accountId": "acc-ines",
+      "amountCents": -6280,
+      "description": "ALCAMPO ZARAGOZA UTEBO",
+      "createdAt": "2026-07-30T08:35:00.000Z"
+    },
+    {
+      "id": "demo-ines-064",
+      "accountId": "acc-ines",
+      "amountCents": -7460,
+      "description": "ALCAMPO ZARAGOZA UTEBO",
+      "createdAt": "2026-08-03T08:30:00.000Z"
+    },
+    {
+      "id": "demo-ines-065",
+      "accountId": "acc-ines",
+      "amountCents": -6630,
+      "description": "ALCAMPO ZARAGOZA UTEBO",
+      "createdAt": "2026-08-17T08:20:00.000Z"
+    },
+    {
+      "id": "demo-ines-066",
+      "accountId": "acc-ines",
+      "amountCents": -2685,
+      "description": "CARNICERIA HNOS LAHOZ",
+      "createdAt": "2026-08-19T08:40:00.000Z"
+    },
+    {
+      "id": "demo-ines-067",
+      "accountId": "acc-ines",
+      "amountCents": -2850,
+      "description": "RESTAURANTE LA RINCONADA DE LORENZO",
+      "createdAt": "2026-08-22T12:20:00.000Z"
+    },
+    {
+      "id": "demo-ines-068",
+      "accountId": "acc-ines",
+      "amountCents": -6875,
+      "description": "MERCADONA 0877 ZARAGOZA",
+      "createdAt": "2026-08-28T08:25:00.000Z"
+    },
+    {
+      "id": "demo-ines-069",
+      "accountId": "acc-ines",
+      "amountCents": -3400,
+      "description": "RESTAURANTE LA RINCONADA DE LORENZO",
+      "createdAt": "2026-09-05T12:15:00.000Z"
+    },
+    {
+      "id": "demo-ines-070",
+      "accountId": "acc-ines",
+      "amountCents": -7240,
+      "description": "ALCAMPO ZARAGOZA UTEBO",
+      "createdAt": "2026-09-10T08:35:00.000Z"
+    },
+    {
+      "id": "demo-ines-071",
+      "accountId": "acc-ines",
+      "amountCents": -2460,
+      "description": "CARNICERIA HNOS LAHOZ",
+      "createdAt": "2026-09-12T08:45:00.000Z"
+    },
+    {
+      "id": "demo-ines-072",
+      "accountId": "acc-ines",
+      "amountCents": -6485,
+      "description": "ALCAMPO ZARAGOZA UTEBO",
+      "createdAt": "2026-09-23T08:30:00.000Z"
+    },
+    {
+      "id": "demo-ines-073",
+      "accountId": "acc-ines",
+      "amountCents": -6730,
+      "description": "MERCADONA 0877 ZARAGOZA",
+      "createdAt": "2026-09-28T08:20:00.000Z"
+    },
+    {
+      "id": "demo-ines-074",
+      "accountId": "acc-ines",
+      "amountCents": -2290,
+      "description": "CARNICERIA HNOS LAHOZ",
+      "createdAt": "2026-10-05T08:30:00.000Z"
+    },
+    {
+      "id": "demo-ines-075",
+      "accountId": "acc-ines",
+      "amountCents": -5860,
+      "description": "ALCAMPO ZARAGOZA UTEBO",
+      "createdAt": "2026-10-06T08:40:00.000Z"
+    },
+    {
+      "id": "demo-omar-001",
+      "accountId": "acc-omar",
+      "amountCents": -110000,
+      "description": "RECIBO ALQUILER COSTA PROPERTIES SL",
+      "createdAt": "2026-07-03T06:00:00.000Z"
+    },
+    {
+      "id": "demo-omar-002",
+      "accountId": "acc-omar",
+      "amountCents": -2860,
+      "description": "CARREFOUR EXPRESS 1182 MALAGA ESP",
+      "createdAt": "2026-07-04T18:15:00.000Z"
+    },
+    {
+      "id": "demo-omar-003",
+      "accountId": "acc-omar",
+      "amountCents": -1399,
+      "description": "NETFLIX.COM AMSTERDAM NL",
+      "createdAt": "2026-07-09T04:00:00.000Z"
+    },
+    {
+      "id": "demo-omar-004",
+      "accountId": "acc-omar",
+      "amountCents": -925,
+      "description": "GITHUB, INC. SAN FRANCISCO US",
+      "createdAt": "2026-07-11T04:00:00.000Z"
+    },
+    {
+      "id": "demo-omar-005",
+      "accountId": "acc-omar",
+      "amountCents": -1980,
+      "description": "UBER *EATS PENDING AMSTERDAM",
+      "createdAt": "2026-07-12T19:30:00.000Z"
+    },
+    {
+      "id": "demo-omar-006",
+      "accountId": "acc-omar",
+      "amountCents": -6410,
+      "description": "TOTALENERGIES CLIENTES SAU",
+      "createdAt": "2026-07-16T06:00:00.000Z"
+    },
+    {
+      "id": "demo-omar-007",
+      "accountId": "acc-omar",
+      "amountCents": -4650,
+      "description": "RESTAURANTE CASA PACO S.L.",
+      "createdAt": "2026-07-18T18:40:00.000Z"
+    },
+    {
+      "id": "demo-omar-008",
+      "accountId": "acc-omar",
+      "amountCents": -4210,
+      "description": "RENFE VIAJEROS INTERNET MADRID",
+      "createdAt": "2026-07-19T07:10:00.000Z"
+    },
+    {
+      "id": "demo-omar-009",
+      "accountId": "acc-omar",
+      "amountCents": -3800,
+      "description": "O2 FIBRA RECIBO",
+      "createdAt": "2026-07-22T06:00:00.000Z"
+    },
+    {
+      "id": "demo-omar-010",
+      "accountId": "acc-omar",
+      "amountCents": -3520,
+      "description": "CARREFOUR EXPRESS 1182 MALAGA ESP",
+      "createdAt": "2026-07-24T17:25:00.000Z"
+    },
+    {
+      "id": "demo-omar-011",
+      "accountId": "acc-omar",
+      "amountCents": 290000,
+      "description": "PAYROLL JUL - GLOBEX EU BV",
+      "createdAt": "2026-07-27T05:00:00.000Z"
+    },
+    {
+      "id": "demo-omar-012",
+      "accountId": "acc-omar",
+      "amountCents": -1730,
+      "description": "UBER *EATS PENDING AMSTERDAM",
+      "createdAt": "2026-07-30T20:40:00.000Z"
+    },
+    {
+      "id": "demo-omar-013",
+      "accountId": "acc-omar",
+      "amountCents": -110000,
+      "description": "RECIBO ALQUILER COSTA PROPERTIES SL",
+      "createdAt": "2026-08-04T06:00:00.000Z"
+    },
+    {
+      "id": "demo-omar-014",
+      "accountId": "acc-omar",
+      "amountCents": -2340,
+      "description": "CARREFOUR EXPRESS 1182 MALAGA ESP",
+      "createdAt": "2026-08-08T18:00:00.000Z"
+    },
+    {
+      "id": "demo-omar-015",
+      "accountId": "acc-omar",
+      "amountCents": -1399,
+      "description": "NETFLIX.COM AMSTERDAM NL",
+      "createdAt": "2026-08-09T04:00:00.000Z"
+    },
+    {
+      "id": "demo-omar-016",
+      "accountId": "acc-omar",
+      "amountCents": -925,
+      "description": "GITHUB, INC. SAN FRANCISCO US",
+      "createdAt": "2026-08-11T04:00:00.000Z"
+    },
+    {
+      "id": "demo-omar-017",
+      "accountId": "acc-omar",
+      "amountCents": -1640,
+      "description": "UBER *EATS PENDING AMSTERDAM",
+      "createdAt": "2026-08-14T20:00:00.000Z"
+    },
+    {
+      "id": "demo-omar-018",
+      "accountId": "acc-omar",
+      "amountCents": -6800,
+      "description": "RESTAURANTE CASA PACO S.L.",
+      "createdAt": "2026-08-15T19:30:00.000Z"
+    },
+    {
+      "id": "demo-omar-019",
+      "accountId": "acc-omar",
+      "amountCents": -5870,
+      "description": "TOTALENERGIES CLIENTES SAU",
+      "createdAt": "2026-08-16T06:00:00.000Z"
+    },
+    {
+      "id": "demo-omar-020",
+      "accountId": "acc-omar",
+      "amountCents": -299,
+      "description": "APPLE.COM/BILL ITUNES.COM IE",
+      "createdAt": "2026-08-21T04:00:00.000Z"
+    },
+    {
+      "id": "demo-omar-021",
+      "accountId": "acc-omar",
+      "amountCents": -3800,
+      "description": "O2 FIBRA RECIBO",
+      "createdAt": "2026-08-22T06:00:00.000Z"
+    },
+    {
+      "id": "demo-omar-022",
+      "accountId": "acc-omar",
+      "amountCents": -3180,
+      "description": "CARREFOUR EXPRESS 1182 MALAGA ESP",
+      "createdAt": "2026-08-23T17:40:00.000Z"
+    },
+    {
+      "id": "demo-omar-023",
+      "accountId": "acc-omar",
+      "amountCents": 290000,
+      "description": "PAYROLL AUG - GLOBEX EU BV",
+      "createdAt": "2026-08-27T05:00:00.000Z"
+    },
+    {
+      "id": "demo-omar-024",
+      "accountId": "acc-omar",
+      "amountCents": -30000,
+      "description": "REVOLUT**7741* DUBLIN",
+      "createdAt": "2026-08-30T17:00:00.000Z"
+    },
+    {
+      "id": "demo-omar-025",
+      "accountId": "acc-omar",
+      "amountCents": -499,
+      "description": "AMAZON PRIME*2R4TT1 LUXEMBOURG LU",
+      "createdAt": "2026-09-01T04:00:00.000Z"
+    },
+    {
+      "id": "demo-omar-026",
+      "accountId": "acc-omar",
+      "amountCents": -950,
+      "description": "NOTION LABS INC",
+      "createdAt": "2026-09-02T04:00:00.000Z"
+    },
+    {
+      "id": "demo-omar-027",
+      "accountId": "acc-omar",
+      "amountCents": -110000,
+      "description": "RECIBO ALQUILER COSTA PROPERTIES SL",
+      "createdAt": "2026-09-03T06:00:00.000Z"
+    },
+    {
+      "id": "demo-omar-028",
+      "accountId": "acc-omar",
+      "amountCents": -7899,
+      "description": "RYANAIR 2245519872 DUBLIN IE",
+      "createdAt": "2026-09-04T21:10:00.000Z"
+    },
+    {
+      "id": "demo-omar-029",
+      "accountId": "acc-omar",
+      "amountCents": -5800,
+      "description": "RESTAURANTE CASA PACO S.L.",
+      "createdAt": "2026-09-05T19:50:00.000Z"
+    },
+    {
+      "id": "demo-omar-030",
+      "accountId": "acc-omar",
+      "amountCents": -1420,
+      "description": "UBER *TRIP HELP.UBER.COM NL",
+      "createdAt": "2026-09-05T23:20:00.000Z"
+    },
+    {
+      "id": "demo-omar-031",
+      "accountId": "acc-omar",
+      "amountCents": -1399,
+      "description": "NETFLIX.COM AMSTERDAM NL",
+      "createdAt": "2026-09-09T04:00:00.000Z"
+    },
+    {
+      "id": "demo-omar-032",
+      "accountId": "acc-omar",
+      "amountCents": -2210,
+      "description": "UBER *EATS PENDING AMSTERDAM",
+      "createdAt": "2026-09-10T20:15:00.000Z"
+    },
+    {
+      "id": "demo-omar-033",
+      "accountId": "acc-omar",
+      "amountCents": -925,
+      "description": "GITHUB, INC. SAN FRANCISCO US",
+      "createdAt": "2026-09-11T04:00:00.000Z"
+    },
+    {
+      "id": "demo-omar-034",
+      "accountId": "acc-omar",
+      "amountCents": -5420,
+      "description": "AMZN Mktp ES*9P2KK4LQ0",
+      "createdAt": "2026-09-12T13:00:00.000Z"
+    },
+    {
+      "id": "demo-omar-035",
+      "accountId": "acc-omar",
+      "amountCents": -3500,
+      "description": "QUIRONSALUD HOSP. MALAGA",
+      "createdAt": "2026-09-15T08:00:00.000Z"
+    },
+    {
+      "id": "demo-omar-036",
+      "accountId": "acc-omar",
+      "amountCents": -5870,
+      "description": "TOTALENERGIES CLIENTES SAU",
+      "createdAt": "2026-09-16T06:00:00.000Z"
+    },
+    {
+      "id": "demo-omar-037",
+      "accountId": "acc-omar",
+      "amountCents": -900,
+      "description": "SQ *LITTLE PAPER STORE",
+      "createdAt": "2026-09-19T10:10:00.000Z"
+    },
+    {
+      "id": "demo-omar-038",
+      "accountId": "acc-omar",
+      "amountCents": -2715,
+      "description": "CARREFOUR EXPRESS 1182 MALAGA ESP",
+      "createdAt": "2026-09-20T17:30:00.000Z"
+    },
+    {
+      "id": "demo-omar-039",
+      "accountId": "acc-omar",
+      "amountCents": -299,
+      "description": "APPLE.COM/BILL ITUNES.COM IE",
+      "createdAt": "2026-09-21T04:00:00.000Z"
+    },
+    {
+      "id": "demo-omar-040",
+      "accountId": "acc-omar",
+      "amountCents": -3800,
+      "description": "O2 FIBRA RECIBO",
+      "createdAt": "2026-09-22T06:00:00.000Z"
+    },
+    {
+      "id": "demo-omar-041",
+      "accountId": "acc-omar",
+      "amountCents": -1875,
+      "description": "UBER *EATS PENDING AMSTERDAM",
+      "createdAt": "2026-09-24T19:40:00.000Z"
+    },
+    {
+      "id": "demo-omar-042",
+      "accountId": "acc-omar",
+      "amountCents": -1135,
+      "description": "UBER *TRIP HELP.UBER.COM NL",
+      "createdAt": "2026-09-26T21:30:00.000Z"
+    },
+    {
+      "id": "demo-omar-043",
+      "accountId": "acc-omar",
+      "amountCents": -30000,
+      "description": "REVOLUT**7741* DUBLIN",
+      "createdAt": "2026-09-27T17:00:00.000Z"
+    },
+    {
+      "id": "demo-omar-044",
+      "accountId": "acc-omar",
+      "amountCents": 290000,
+      "description": "PAYROLL SEP - GLOBEX EU BV",
+      "createdAt": "2026-09-28T05:00:00.000Z"
+    },
+    {
+      "id": "demo-omar-045",
+      "accountId": "acc-omar",
+      "amountCents": -1460,
+      "description": "FARMACIA LARIOS 0031",
+      "createdAt": "2026-10-02T16:40:00.000Z"
+    },
+    {
+      "id": "demo-omar-046",
+      "accountId": "acc-omar",
+      "amountCents": -110000,
+      "description": "RECIBO ALQUILER COSTA PROPERTIES SL",
+      "createdAt": "2026-10-03T06:00:00.000Z"
+    },
+    {
+      "id": "demo-omar-047",
+      "accountId": "acc-omar",
+      "amountCents": -3145,
+      "description": "CARREFOUR EXPRESS 1182 MALAGA ESP",
+      "createdAt": "2026-10-03T18:30:00.000Z"
+    },
+    {
+      "id": "demo-omar-048",
+      "accountId": "acc-omar",
+      "amountCents": -5999,
+      "description": "DECATHLON MALAGA",
+      "createdAt": "2026-10-04T10:20:00.000Z"
+    },
+    {
+      "id": "demo-omar-049",
+      "accountId": "acc-omar",
+      "amountCents": -5200,
+      "description": "RESTAURANTE CASA PACO S.L.",
+      "createdAt": "2026-10-04T19:10:00.000Z"
+    },
+    {
+      "id": "demo-omar-050",
+      "accountId": "acc-omar",
+      "amountCents": -1280,
+      "description": "UBER *TRIP HELP.UBER.COM NL",
+      "createdAt": "2026-10-04T23:05:00.000Z"
+    },
+    {
+      "id": "demo-omar-051",
+      "accountId": "acc-omar",
+      "amountCents": -7240,
+      "description": "MERCADONA 1904 MALAGA",
+      "createdAt": "2026-07-01T17:30:00.000Z"
+    },
+    {
+      "id": "demo-omar-052",
+      "accountId": "acc-omar",
+      "amountCents": -18900,
+      "description": "MEDIAMARKT MALAGA PLAZA MAYOR",
+      "createdAt": "2026-07-06T10:20:00.000Z"
+    },
+    {
+      "id": "demo-omar-053",
+      "accountId": "acc-omar",
+      "amountCents": -1480,
+      "description": "CABIFY ESPANA SLU",
+      "createdAt": "2026-07-08T21:50:00.000Z"
+    },
+    {
+      "id": "demo-omar-054",
+      "accountId": "acc-omar",
+      "amountCents": -5890,
+      "description": "LIDL SUPERMERCADOS SAU MALAGA",
+      "createdAt": "2026-07-10T17:10:00.000Z"
+    },
+    {
+      "id": "demo-omar-055",
+      "accountId": "acc-omar",
+      "amountCents": -7500,
+      "description": "CLINICA DENTAL MALAGA CENTRO SLP",
+      "createdAt": "2026-07-13T15:30:00.000Z"
+    },
+    {
+      "id": "demo-omar-056",
+      "accountId": "acc-omar",
+      "amountCents": -9640,
+      "description": "VUELING AIRLINES BCN",
+      "createdAt": "2026-07-15T20:05:00.000Z"
+    },
+    {
+      "id": "demo-omar-057",
+      "accountId": "acc-omar",
+      "amountCents": -8135,
+      "description": "MERCADONA 1904 MALAGA",
+      "createdAt": "2026-07-17T17:40:00.000Z"
+    },
+    {
+      "id": "demo-omar-058",
+      "accountId": "acc-omar",
+      "amountCents": -6499,
+      "description": "DECATHLON MALAGA",
+      "createdAt": "2026-07-21T10:10:00.000Z"
+    },
+    {
+      "id": "demo-omar-059",
+      "accountId": "acc-omar",
+      "amountCents": -7990,
+      "description": "ZARA ESPANA S.A. 0207 MALAGA",
+      "createdAt": "2026-07-26T16:20:00.000Z"
+    },
+    {
+      "id": "demo-omar-060",
+      "accountId": "acc-omar",
+      "amountCents": -5460,
+      "description": "MERCADONA 1904 MALAGA",
+      "createdAt": "2026-07-29T17:15:00.000Z"
+    },
+    {
+      "id": "demo-omar-061",
+      "accountId": "acc-omar",
+      "amountCents": -6820,
+      "description": "MERCADONA 1904 MALAGA",
+      "createdAt": "2026-08-02T09:30:00.000Z"
+    },
+    {
+      "id": "demo-omar-062",
+      "accountId": "acc-omar",
+      "amountCents": -11230,
+      "description": "RYANAIR 2245518121 DUBLIN IE",
+      "createdAt": "2026-08-05T21:20:00.000Z"
+    },
+    {
+      "id": "demo-omar-063",
+      "accountId": "acc-omar",
+      "amountCents": -14600,
+      "description": "IKEA MALAGA",
+      "createdAt": "2026-08-07T10:40:00.000Z"
+    },
+    {
+      "id": "demo-omar-064",
+      "accountId": "acc-omar",
+      "amountCents": -7745,
+      "description": "MERCADONA 1904 MALAGA",
+      "createdAt": "2026-08-12T17:30:00.000Z"
+    },
+    {
+      "id": "demo-omar-065",
+      "accountId": "acc-omar",
+      "amountCents": -1240,
+      "description": "FARMACIA LARIOS 0031",
+      "createdAt": "2026-08-13T16:10:00.000Z"
+    },
+    {
+      "id": "demo-omar-066",
+      "accountId": "acc-omar",
+      "amountCents": -3890,
+      "description": "RENFE VIAJEROS INTERNET MADRID",
+      "createdAt": "2026-08-17T06:50:00.000Z"
+    },
+    {
+      "id": "demo-omar-067",
+      "accountId": "acc-omar",
+      "amountCents": -6190,
+      "description": "LIDL SUPERMERCADOS SAU MALAGA",
+      "createdAt": "2026-08-18T17:20:00.000Z"
+    },
+    {
+      "id": "demo-omar-068",
+      "accountId": "acc-omar",
+      "amountCents": -4500,
+      "description": "FISIOTERAPIA MALAGUETA SLP",
+      "createdAt": "2026-08-20T15:00:00.000Z"
+    },
+    {
+      "id": "demo-omar-069",
+      "accountId": "acc-omar",
+      "amountCents": -1620,
+      "description": "CABIFY ESPANA SLU",
+      "createdAt": "2026-08-24T23:10:00.000Z"
+    },
+    {
+      "id": "demo-omar-070",
+      "accountId": "acc-omar",
+      "amountCents": -5990,
+      "description": "UNIQLO MALAGA",
+      "createdAt": "2026-08-26T16:40:00.000Z"
+    },
+    {
+      "id": "demo-omar-071",
+      "accountId": "acc-omar",
+      "amountCents": -6930,
+      "description": "MERCADONA 1904 MALAGA",
+      "createdAt": "2026-08-29T10:15:00.000Z"
+    },
+    {
+      "id": "demo-omar-072",
+      "accountId": "acc-omar",
+      "amountCents": -7480,
+      "description": "MERCADONA 1904 MALAGA",
+      "createdAt": "2026-09-04T17:20:00.000Z"
+    },
+    {
+      "id": "demo-omar-073",
+      "accountId": "acc-omar",
+      "amountCents": -6625,
+      "description": "LIDL SUPERMERCADOS SAU MALAGA",
+      "createdAt": "2026-09-11T17:05:00.000Z"
+    },
+    {
+      "id": "demo-omar-074",
+      "accountId": "acc-omar",
+      "amountCents": -11900,
+      "description": "PCCOMPONENTES Y MULTIMEDIA SL",
+      "createdAt": "2026-09-13T09:30:00.000Z"
+    },
+    {
+      "id": "demo-omar-075",
+      "accountId": "acc-omar",
+      "amountCents": -8310,
+      "description": "MERCADONA 1904 MALAGA",
+      "createdAt": "2026-09-18T17:40:00.000Z"
+    },
+    {
+      "id": "demo-omar-076",
+      "accountId": "acc-omar",
+      "amountCents": -6240,
+      "description": "MERCADONA 1904 MALAGA",
+      "createdAt": "2026-09-29T17:30:00.000Z"
+    },
+    {
+      "id": "demo-omar-077",
+      "accountId": "acc-omar",
+      "amountCents": -8820,
+      "description": "MERCADONA 1904 MALAGA",
+      "createdAt": "2026-10-05T17:25:00.000Z"
+    },
+    {
+      "id": "demo-omar-078",
+      "accountId": "acc-omar",
+      "amountCents": -2875,
+      "description": "LIDL SUPERMERCADOS SAU MALAGA",
+      "createdAt": "2026-10-06T11:10:00.000Z"
+    }
+  ],
+  "transfers": [
+    {
+      "userId": "lucia",
+      "reference": "demo-lucia-savings-07",
+      "fromAccountId": "acc-lucia",
+      "toAccountId": "acc-lucia-savings",
+      "amountCents": 20000,
+      "concept": "ahorro mensual",
+      "createdAt": "2026-07-29T07:00:00.000Z"
+    },
+    {
+      "userId": "lucia",
+      "reference": "demo-lucia-savings-08",
+      "fromAccountId": "acc-lucia",
+      "toAccountId": "acc-lucia-savings",
+      "amountCents": 20000,
+      "concept": "ahorro mensual",
+      "createdAt": "2026-08-29T07:00:00.000Z"
+    },
+    {
+      "userId": "lucia",
+      "reference": "demo-lucia-savings-09",
+      "fromAccountId": "acc-lucia",
+      "toAccountId": "acc-lucia-savings",
+      "amountCents": 20000,
+      "concept": "ahorro mensual",
+      "createdAt": "2026-09-29T07:00:00.000Z"
+    },
+    {
+      "userId": "carla",
+      "reference": "demo-carla-savings-07",
+      "fromAccountId": "acc-carla",
+      "toAccountId": "acc-carla-savings",
+      "amountCents": 25000,
+      "concept": "vacaciones 2027",
+      "createdAt": "2026-07-29T07:00:00.000Z"
+    },
+    {
+      "userId": "carla",
+      "reference": "demo-carla-savings-08",
+      "fromAccountId": "acc-carla",
+      "toAccountId": "acc-carla-savings",
+      "amountCents": 25000,
+      "concept": "vacaciones 2027",
+      "createdAt": "2026-08-29T07:00:00.000Z"
+    },
+    {
+      "userId": "carla",
+      "reference": "demo-carla-savings-09",
+      "fromAccountId": "acc-carla",
+      "toAccountId": "acc-carla-savings",
+      "amountCents": 25000,
+      "concept": "vacaciones 2027",
+      "createdAt": "2026-09-29T07:00:00.000Z"
+    },
+    {
+      "userId": "elena",
+      "reference": "demo-elena-savings-07",
+      "fromAccountId": "acc-elena",
+      "toAccountId": "acc-elena-savings",
+      "amountCents": 30000,
+      "concept": "colchón",
+      "createdAt": "2026-07-29T07:00:00.000Z"
+    },
+    {
+      "userId": "elena",
+      "reference": "demo-elena-savings-08",
+      "fromAccountId": "acc-elena",
+      "toAccountId": "acc-elena-savings",
+      "amountCents": 30000,
+      "concept": "colchón",
+      "createdAt": "2026-08-29T07:00:00.000Z"
+    },
+    {
+      "userId": "elena",
+      "reference": "demo-elena-savings-09",
+      "fromAccountId": "acc-elena",
+      "toAccountId": "acc-elena-savings",
+      "amountCents": 30000,
+      "concept": "colchón",
+      "createdAt": "2026-09-29T07:00:00.000Z"
+    },
+    {
+      "userId": "hugo",
+      "reference": "demo-hugo-rent-07",
+      "fromAccountId": "acc-hugo",
+      "toAccountId": "acc-omar",
+      "amountCents": 40000,
+      "concept": "alquiler julio",
+      "createdAt": "2026-07-01T07:00:00.000Z"
+    },
+    {
+      "userId": "hugo",
+      "reference": "demo-hugo-rent-08",
+      "fromAccountId": "acc-hugo",
+      "toAccountId": "acc-omar",
+      "amountCents": 40000,
+      "concept": "alquiler agosto",
+      "createdAt": "2026-08-04T07:00:00.000Z"
+    },
+    {
+      "userId": "hugo",
+      "reference": "demo-hugo-rent-09",
+      "fromAccountId": "acc-hugo",
+      "toAccountId": "acc-omar",
+      "amountCents": 40000,
+      "concept": "alquiler septiembre",
+      "createdAt": "2026-09-01T07:00:00.000Z"
+    },
+    {
+      "userId": "ines",
+      "reference": "demo-ines-savings-07",
+      "fromAccountId": "acc-ines",
+      "toAccountId": "acc-ines-savings",
+      "amountCents": 15000,
+      "concept": "viaje imserso",
+      "createdAt": "2026-07-27T07:30:00.000Z"
+    },
+    {
+      "userId": "ines",
+      "reference": "demo-ines-savings-09",
+      "fromAccountId": "acc-ines",
+      "toAccountId": "acc-ines-savings",
+      "amountCents": 15000,
+      "concept": "viaje imserso",
+      "createdAt": "2026-09-26T07:30:00.000Z"
+    }
+  ],
+  "descriptions": {
+    "ref-historic-lucia": "Transfer · Team dinner",
+    "ref-historic-elena": "Transfer · Transfer to Hugo",
+    "demo-lucia-savings-07": "ahorro mensual",
+    "demo-lucia-savings-08": "ahorro mensual",
+    "demo-lucia-savings-09": "ahorro mensual",
+    "demo-carla-savings-07": "vacaciones 2027",
+    "demo-carla-savings-08": "vacaciones 2027",
+    "demo-carla-savings-09": "vacaciones 2027",
+    "demo-elena-savings-07": "colchón",
+    "demo-elena-savings-08": "colchón",
+    "demo-elena-savings-09": "colchón",
+    "demo-hugo-rent-07": "Transfer · alquiler julio",
+    "demo-hugo-rent-08": "Transfer · alquiler agosto",
+    "demo-hugo-rent-09": "Transfer · alquiler septiembre",
+    "demo-ines-savings-07": "viaje imserso",
+    "demo-ines-savings-09": "viaje imserso"
+  }
+}

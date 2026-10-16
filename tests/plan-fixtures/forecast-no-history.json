@@ -1,0 +1,56 @@
+{
+  "adjustable": true,
+  "today": "2026-10-07",
+  "until": "2026-10-31",
+  "history": {
+    "months": null,
+    "reason": "no_history"
+  },
+  "income": "none_regular",
+  "notes": ["Not enough history to find usual charges: only your prepared transfers are counted."],
+  "sourceLine": "Worked out by fixed rules from your movements and your prepared transfers. No AI is involved in these figures.",
+  "accounts": [
+    {
+      "id": "acc-lucia",
+      "label": "Aurora account",
+      "balanceCents": 293761,
+      "endCents": 268761,
+      "lowest": {
+        "date": "2026-10-20",
+        "balanceCents": 268761
+      },
+      "shortfall": null,
+      "headline": "Covered until 31 Oct",
+      "explanation": "Lowest point €2,687.61 on 20 Oct.",
+      "options": [],
+      "events": [
+        {
+          "date": "2026-10-20",
+          "source": "prepared",
+          "certainty": "certain",
+          "preparedId": "prep-bruno",
+          "label": "Prepared transfer to Bruno Vidal · Horizon account",
+          "amountCents": -25000,
+          "balanceAfterCents": 268761
+        }
+      ]
+    },
+    {
+      "id": "acc-lucia-savings",
+      "label": "Personal savings",
+      "balanceCents": 130000,
+      "endCents": 130000,
+      "lowest": {
+        "date": "2026-10-07",
+        "balanceCents": 130000
+      },
+      "shortfall": null,
+      "headline": "Covered until 31 Oct",
+      "explanation": "Lowest point €1,300.00 on 7 Oct.",
+      "options": [],
+      "events": []
+    }
+  ],
+  "notCounted": [],
+  "adjustments": []
+}

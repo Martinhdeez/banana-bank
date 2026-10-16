@@ -1,0 +1,704 @@
+/* Transfers view (redesign slice 3). */
+.transfer-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 380px;
+  gap: 16px;
+  align-items: start;
+  margin-bottom: 20px;
+}
+.transfer-details {
+  padding: 24px;
+}
+.transfer-form .step {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 10px;
+  padding: 0;
+}
+.account-tiles {
+  border: 0;
+  margin: 0 0 24px;
+  padding: 0;
+  min-width: 0;
+}
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+.from-tile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  border-radius: var(--r-tile);
+  border: 1px solid var(--line);
+  background: var(--surface);
+  cursor: pointer;
+}
+.from-tile > span:first-of-type {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+.from-tile strong {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.from-tile .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: var(--savings-dot);
+}
+.from-tile .dot.main {
+  background: var(--lime-line);
+}
+.from-tile small {
+  font-size: 12px;
+  color: var(--muted);
+}
+.tile-balance {
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.from-tile:has(input:checked) {
+  background: var(--lime-wash);
+  border: 2px solid var(--forest);
+  padding: 13px 15px;
+}
+.from-tile:has(input:focus-visible) {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+.recipient-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-bottom: 12px;
+}
+.recipient-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  font: 12px var(--font);
+  color: var(--ink);
+  background: transparent;
+  cursor: pointer;
+}
+.recipient-chip .chip-paid {
+  margin-top: -4px;
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--text-2);
+  white-space: nowrap;
+}
+.recipient-chip .avatar {
+  width: 44px;
+  height: 44px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.recipient-chip[aria-pressed='true'] {
+  font-weight: 600;
+}
+.recipient-chip[aria-pressed='true'] .avatar {
+  box-shadow:
+    0 0 0 2px var(--surface),
+    0 0 0 4px var(--forest);
+}
+.recipient-chip:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: var(--r-nav);
+}
+:is(.recipient-chip, .recipient) .avatar {
+  position: relative;
+}
+:is(.recipient-chip, .recipient) .fav {
+  position: absolute;
+  right: -3px;
+  top: -3px;
+  font-size: 12px;
+  font-style: normal;
+  line-height: 1;
+  color: var(--gold-dot);
+}
+/* CF4-ui: star toggle beside a chip (a sibling, never nested in the chip button). */
+.chip-slot {
+  position: relative;
+  display: flex;
+}
+.favourite-toggle {
+  position: absolute;
+  top: -5px;
+  right: -9px;
+  display: grid;
+  place-items: center;
+  /* WCAG 2.2 SC 2.5.8: at least 24x24 px target. */
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--r-pill);
+  background: var(--surface);
+  color: var(--faint);
+  cursor: pointer;
+}
+.favourite-toggle:hover {
+  color: var(--ink);
+}
+.favourite-toggle[aria-pressed='true'] {
+  color: var(--gold-dot);
+  border-color: var(--lime-line);
+}
+/* The filled toggle already marks a favourite; the avatar badge would sit under it. */
+.chip-slot .fav {
+  display: none;
+}
+.favourite-toggle svg.filled {
+  fill: currentColor;
+}
+.favourite-toggle:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+/* Pointer devices: empty stars appear on hover or focus, so seven outlines don't crowd the row.
+   Opacity keeps them focusable; touch screens always show them; a favourite's star always shows. */
+@media (hover: hover) and (pointer: fine) {
+  .favourite-toggle[aria-pressed='false'] {
+    opacity: 0;
+    transition: opacity 0.15s ease;
+  }
+  .chip-slot:hover .favourite-toggle,
+  .chip-slot:focus-within .favourite-toggle {
+    opacity: 1;
+  }
+}
+.recipient-fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+.transfer-form .field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--muted);
+}
+.select-wrap {
+  position: relative;
+  display: block;
+}
+.select-wrap select {
+  display: block;
+  width: 100%;
+  height: 42px;
+  padding: 0 36px 0 14px;
+  border-radius: var(--r-pill);
+  border: 1px solid var(--line-control);
+  background: var(--surface-sunk);
+  appearance: none;
+  font: 14px var(--font);
+  color: var(--ink);
+  cursor: pointer;
+}
+.select-wrap svg {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  translate: 0 -50%;
+  width: 16px;
+  height: 16px;
+  color: var(--muted);
+  pointer-events: none;
+}
+.sending-to {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 8px 0 24px;
+  min-height: 1lh;
+}
+.sending-to strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+.amount-field {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 16px 18px;
+  border: 1px solid var(--line-control);
+  border-radius: 14px;
+  background: var(--surface);
+  cursor: text;
+}
+/* The box itself shows focus: a darker border and a soft halo, no outline ring around or inside it.
+   The inset line doubles the border to 2px without moving the content, so focus also shows as a
+   change of thickness; the invalid box keeps its own colour and would otherwise only gain the halo. */
+.amount-field:focus-within {
+  border-color: var(--focus);
+  box-shadow:
+    inset 0 0 0 1px var(--focus),
+    0 0 0 3px var(--sage);
+}
+.amount-field:focus-within:has(
+    input:user-invalid:not(:placeholder-shown),
+    input[aria-invalid='true']
+  ) {
+  box-shadow:
+    inset 0 0 0 1px var(--danger-dot),
+    0 0 0 3px var(--danger-bg);
+}
+.amount-field input:focus-visible {
+  outline: none;
+}
+.amount-field .cur {
+  font-size: 30px;
+  color: var(--faint);
+}
+.amount-field input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font: 600 40px var(--font);
+  letter-spacing: -1.4px;
+  color: var(--ink);
+  outline: none;
+}
+.amount-field input::placeholder {
+  color: var(--sep);
+}
+.amount-field .available {
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.concept-field {
+  display: block;
+  margin-top: 14px;
+}
+.concept-field > span {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--muted);
+}
+.concept-field input {
+  display: block;
+  width: 100%;
+  height: 44px;
+  padding: 0 16px;
+  border-radius: var(--r-tile);
+  border: 1px solid var(--line-control);
+  background: var(--surface);
+  font: 14px var(--font);
+  color: var(--ink);
+}
+/* U3: say which field blocks the submit once the customer has typed in it. An empty field is not
+   marked: the form is cleared after a proposal, and a cleared form must not look like an error. */
+.amount-field:has(input:user-invalid:not(:placeholder-shown)),
+.concept-field input:user-invalid:not(:placeholder-shown) {
+  border-color: var(--danger-dot);
+}
+/* A7 (polish): the form's own message under a field, and the field it names. */
+.transfer-form .field-error {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--danger);
+}
+.amount-field:has(input[aria-invalid='true']),
+.concept-field input[aria-invalid='true'],
+.select-wrap select[aria-invalid='true'] {
+  border-color: var(--danger-dot);
+}
+.transfer-summary {
+  padding: 20px 22px;
+  position: sticky;
+  top: calc(var(--topbar-h) + 16px);
+}
+.transfer-summary h2 {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0;
+  margin-bottom: 8px;
+}
+.summary-amount {
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  margin-bottom: 14px;
+}
+.summary-amount.empty {
+  color: var(--faint);
+}
+.summary-rows {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  row-gap: 9px;
+  column-gap: 10px;
+  margin: 0;
+  font-size: 13px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line-inner);
+}
+.summary-rows dt {
+  color: var(--muted);
+}
+.summary-rows dd {
+  margin: 0;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+.summary-rows .estimate span {
+  display: block;
+  font-weight: 600;
+}
+.summary-rows .estimate small {
+  display: block;
+  margin-top: 2px;
+  font-size: 11px;
+  color: var(--faint);
+}
+/* A7: an amount above the balance, in words and in the danger colour. */
+.summary-rows .estimate.over span,
+.summary-rows .estimate.over small {
+  color: var(--danger);
+}
+.summary-rows .estimate.over small {
+  font-weight: 500;
+}
+.transfer-summary .primary-button {
+  width: 100%;
+  height: 44px;
+  margin-top: 16px;
+  padding: 0 18px;
+  gap: 10px;
+  border-radius: var(--r-pill);
+  font-size: 14px;
+  font-weight: 500;
+}
+.transfer-summary .primary-button:disabled {
+  opacity: 0.7;
+}
+.summary-note {
+  margin: 8px 0 0;
+  font-size: 11px;
+  color: var(--faint);
+  text-align: center;
+}
+
+/* R8: history with each transfer's recorded steps. */
+.transfer-history {
+  overflow: hidden;
+}
+.history-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  padding: 16px 20px;
+}
+.history-title h2 {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+  margin: 0;
+}
+.history-title span {
+  font-size: 12px;
+  color: var(--faint);
+}
+/* A2 (polish): one grid for the header and every row. The last column is the row action (the
+   Receipt link), there whether or not a row has one, so From, Date and Status line up. */
+.history-head,
+.transfer-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 130px 150px 170px 120px 52px;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 20px;
+}
+.history-head {
+  padding-block: 8px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--faint);
+  background: var(--surface-sunk);
+  border-top: 1px solid var(--line-inner);
+}
+.history-head span:nth-child(5),
+.transfer-amount,
+.row-action {
+  text-align: right;
+}
+.row-action:empty {
+  display: none;
+}
+.transfer-row {
+  border-top: 1px solid var(--line-inner);
+  font-size: 13px;
+}
+.transfer-to {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.transfer-to strong {
+  font-size: 14px;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+.transfer-to small {
+  font-size: 12px;
+  color: var(--faint);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.transfer-meta {
+  display: contents;
+}
+.transfer-from,
+.transfer-row time {
+  color: var(--text-2);
+}
+.transfer-amount {
+  font-weight: 600;
+  white-space: nowrap;
+}
+.transfer-amount.unsent {
+  color: var(--faint);
+  font-weight: 500;
+}
+.status-badge {
+  justify-self: start;
+  padding: 3px 9px;
+  border-radius: var(--r-pill);
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+  background: var(--chip);
+  color: var(--text-2);
+}
+.status-badge.awaiting_confirmation {
+  background: var(--lime-soft);
+  color: var(--ochre);
+}
+.status-badge.completed {
+  background: var(--positive-bg);
+  color: var(--positive);
+}
+.status-badge.failed {
+  background: var(--danger-bg);
+  color: var(--danger);
+}
+.status-badge.cancelled,
+.status-badge.expired {
+  color: var(--faint);
+}
+.timeline {
+  list-style: none;
+  margin: 0 20px 14px;
+  padding: 10px 14px;
+  border-radius: var(--r-tile);
+  background: var(--surface-sunk);
+  border: 1px solid var(--line-inner);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+}
+.timeline li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.timeline li + li::before {
+  content: '';
+  width: 24px;
+  height: 2px;
+  background: var(--sage-line);
+}
+.step-dot {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--forest)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 12 5 5 9-10'/%3E%3C/svg%3E")
+    center / 11px no-repeat;
+}
+.timeline li:is(.failed, .expired, .cancelled) .step-dot {
+  background: var(--chip);
+  border: 1.5px solid var(--text-2);
+}
+.timeline time {
+  color: var(--faint);
+  white-space: nowrap;
+}
+/* Settled transfers: the recorded steps on one quiet wrapped line (R8 reads them). */
+.final .timeline {
+  margin: -4px 20px 12px;
+  padding: 0;
+  background: none;
+  border: 0;
+  gap: 4px 6px;
+  font-size: 11px;
+  color: var(--muted);
+}
+.final .timeline li + li::before {
+  display: inline;
+  content: '→';
+  width: auto;
+  height: auto;
+  background: none;
+  color: var(--faint);
+}
+.final .step-dot,
+.final .timeline time {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .transfer-form {
+    grid-template-columns: minmax(0, 1fr) 320px;
+  }
+  .history-head,
+  .transfer-row {
+    grid-template-columns: minmax(0, 1fr) 110px 140px 150px 100px 52px;
+  }
+}
+
+@media (max-width: 760px) {
+  .transfer-form {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .transfer-details {
+    padding: 18px;
+  }
+  .transfer-summary {
+    position: static;
+  }
+  .recipient-chips {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 4px 4px 6px;
+    margin-inline: -4px;
+  }
+  .amount-field {
+    flex-wrap: wrap;
+  }
+  .amount-field input {
+    font-size: 32px;
+  }
+  .amount-field .available {
+    flex-basis: 100%;
+    margin-left: 0;
+  }
+  .history-head {
+    display: none;
+  }
+  .transfer-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      'to amount'
+      'meta status';
+    row-gap: 6px;
+    padding: 12px 16px;
+  }
+  .row-action {
+    grid-column: 1 / -1;
+    text-align: left;
+  }
+  .transfer-to {
+    grid-area: to;
+  }
+  .transfer-amount {
+    grid-area: amount;
+  }
+  .transfer-meta {
+    grid-area: meta;
+    display: block;
+    min-width: 0;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .transfer-meta time::before {
+    content: ' · ';
+  }
+  .status-badge {
+    grid-area: status;
+    justify-self: end;
+  }
+  .tile-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .timeline {
+    margin: 0 16px 12px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+  }
+  .timeline li {
+    display: grid;
+    grid-template-columns: 18px minmax(0, 1fr);
+    column-gap: 8px;
+  }
+  .timeline li time {
+    grid-column: 2;
+    font-size: 11px;
+  }
+  .timeline li + li::before {
+    display: none;
+  }
+  .final .timeline {
+    flex-direction: row;
+    margin: -2px 16px 12px;
+  }
+  .final .timeline li {
+    display: flex;
+  }
+}
+
+/* Polish, the prepared transfers block of this page. B4: a long unbroken description or note
+   wraps inside its card. A16: the heading takes the focus after the last card's neighbour is
+   deleted; it shows the app's ring only for keyboard use. */
+.prepared-title,
+.prepared-meta,
+.prepared-note,
+.prepared .prepared-feedback {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+.prepared-head h2:focus,
+.prepared:focus {
+  outline: none;
+}
+.prepared-head h2:focus-visible,
+.prepared:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 4px;
+}

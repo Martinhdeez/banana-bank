@@ -1,0 +1,51 @@
+{
+  "today": "2026-10-07",
+  "until": "2026-10-31",
+  "history": {
+    "months": ["2026-07", "2026-08", "2026-09"]
+  },
+  "income": "none_regular",
+  "notes": ["No regular income found; none is counted."],
+  "sourceLine": "Worked out by fixed rules from your movements and your prepared transfers. No AI is involved in these figures.",
+  "accounts": [
+    {
+      "id": "acc-bruno",
+      "label": "Horizon account",
+      "balanceCents": 459252,
+      "endCents": 455752,
+      "lowest": {
+        "date": "2026-10-15",
+        "balanceCents": 455752
+      },
+      "shortfall": null,
+      "headline": "Covered until 31 Oct",
+      "explanation": "Lowest point €4,557.52 on 15 Oct. An estimate: it counts 1 usual payment.",
+      "options": [],
+      "events": [
+        {
+          "date": "2026-10-15",
+          "label": "Vodafone Espana Recibo",
+          "amountCents": -3500,
+          "source": "usual_charge",
+          "certainty": "estimated",
+          "merchantKey": "VODAFONE ESPANA RECIBO",
+          "seenOn": ["2026-07-15", "2026-08-15", "2026-09-15"],
+          "usualDay": 15,
+          "balanceAfterCents": 455752
+        }
+      ]
+    }
+  ],
+  "notCounted": [
+    {
+      "label": "Transferencia Recibida Estudio Norte Fra",
+      "reason": "irregular",
+      "text": "Transferencia Recibida Estudio Norte Fra: not regular, not counted."
+    },
+    {
+      "label": "Transferencia Recibida Pixelworks Inv",
+      "reason": "irregular",
+      "text": "Transferencia Recibida Pixelworks Inv: not regular, not counted."
+    }
+  ]
+}

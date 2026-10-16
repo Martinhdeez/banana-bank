@@ -1,0 +1,365 @@
+/* UI2: "What the assistant may do". The drawer is AccountDrawer's (overview.css), wider, with
+   cards on paper; the openers sit in the Assistant header and the sidebar's user block. */
+
+/* ── Openers ── */
+.controls-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 36px;
+  padding: 0 12px;
+  border-radius: var(--r-pill);
+  background: transparent;
+  color: var(--text-2);
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.controls-button:hover {
+  background: var(--chip);
+  color: var(--ink);
+}
+.controls-button.icon {
+  flex: none;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin-left: auto;
+  padding: 0;
+}
+.app-shell.collapsed .controls-button.icon {
+  display: none;
+}
+.chat-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+/* ── Drawer ── */
+.controls-drawer {
+  width: 480px;
+}
+/* The page behind an open drawer does not scroll. */
+html:has(.controls-drawer[open]) {
+  overflow: hidden;
+}
+.controls-drawer .drawer-head {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--surface);
+}
+.controls-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: calc(100% - 69px);
+  padding: 16px;
+  background: var(--paper);
+}
+.controls-body > .card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: none;
+  padding: 20px;
+}
+.controls-body :is(h3, p) {
+  margin: 0;
+}
+.controls-body h3 {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+  color: var(--ink);
+}
+.controls-body p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-2);
+}
+.controls-body > .card > h3 + p {
+  margin-top: -8px;
+}
+.controls-body .load-error .primary-button {
+  align-self: flex-start;
+}
+
+/* Loading: three quiet cards. */
+.controls-loading {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.controls-loading .card {
+  height: 132px;
+  background: var(--surface-sunk);
+  animation: controls-pulse 1.2s ease-in-out infinite alternate;
+}
+@keyframes controls-pulse {
+  to {
+    opacity: 0.55;
+  }
+}
+
+/* ── Switches ── */
+.controls-switch {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+  padding-top: 12px;
+  border-top: 1px solid var(--line-row);
+}
+/* A 44px target around a 44×26 track. */
+.controls-switch button {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  margin: -8px 0;
+  padding: 0;
+  border-radius: var(--r-pill);
+  background: transparent;
+  outline-offset: -6px;
+}
+.controls-switch button:disabled {
+  opacity: 1;
+}
+/* Off at the bank: the row stays, the switch cannot be used. */
+.controls-switch[data-available='false'] button {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.controls-switch button i {
+  position: absolute;
+  inset: 9px 0;
+  border-radius: var(--r-pill);
+  background: var(--sep);
+  transition: background 0.15s ease;
+}
+.controls-switch button i::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--surface);
+  transition: translate 0.15s ease;
+}
+.controls-switch button[aria-checked='true'] i {
+  background: var(--forest);
+}
+.controls-switch button[aria-checked='true'] i::after {
+  translate: 18px 0;
+}
+.controls-switch strong {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.controls-switch small {
+  display: block;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--text-2);
+}
+.controls-switch small b {
+  font-weight: 500;
+  color: var(--ink);
+}
+.controls-switch-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px 8px;
+}
+.controls-switch .controls-state {
+  padding: 1px 8px;
+  border-radius: var(--r-pill);
+  background: var(--chip);
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.controls-switch .controls-error,
+.controls-note.error {
+  color: var(--danger);
+}
+.controls-switch .controls-error {
+  margin-top: 4px;
+}
+
+/* ── Rules and the record ── */
+.controls-list,
+.controls-never {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.controls-list:empty {
+  display: none;
+}
+/* The status line stays mounted (it is announced when it fills); empty, it takes no room. */
+.controls-body .controls-note:empty {
+  margin-top: -12px;
+}
+.controls-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-top: 1px solid var(--line-row);
+  font-size: 14px;
+}
+.controls-list li > span {
+  min-width: 0;
+}
+.controls-list strong {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 6px;
+  font-weight: 500;
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+.controls-list strong svg {
+  flex: none;
+  color: var(--text-2);
+}
+.controls-list small {
+  display: block;
+  font-size: 12px;
+  color: var(--text-2);
+}
+.controls-list.recorded li {
+  justify-content: flex-start;
+  align-items: baseline;
+}
+/* "Told in the chat: {basis}" can be long: it wraps, never cut. */
+.controls-list.recorded strong {
+  display: block;
+  overflow-wrap: anywhere;
+}
+.controls-list time {
+  flex: none;
+  width: 48px;
+  font-size: 12px;
+  color: var(--text-2);
+}
+.controls-link {
+  flex: none;
+  min-height: 32px;
+  padding: 0;
+  background: transparent;
+  color: var(--forest);
+  font-size: 13px;
+  font-weight: 600;
+}
+.controls-link:hover {
+  color: var(--forest-hover);
+  text-decoration: underline;
+}
+.controls-body .controls-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.controls-body .controls-note.done {
+  padding: 10px 14px;
+  border-radius: var(--r-tile);
+  background: var(--positive-bg);
+  color: var(--positive);
+  font-weight: 500;
+}
+.controls-note svg {
+  flex: none;
+}
+
+/* ── What it can never do ── */
+.controls-never li {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  font-size: 14px;
+  color: var(--ink);
+}
+.controls-never span {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: var(--sage);
+  color: var(--forest);
+}
+
+/* Phones: a full-screen sheet; the header opener keeps only its icon; 44px targets. */
+@media (max-width: 760px) {
+  .controls-drawer {
+    inset: 0;
+    width: 100%;
+    height: 100dvh;
+    max-height: none;
+    border-radius: 0;
+    background: var(--paper);
+  }
+  .controls-button {
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0;
+  }
+  .controls-button span {
+    display: none;
+  }
+  /* Room for the opener in the header: the picker gives way, never the buttons. */
+  .chat-header {
+    gap: 8px;
+  }
+  .chat-header-actions {
+    gap: 4px;
+  }
+  .chat-header .conversation-picker select {
+    min-width: 0;
+    max-width: min(180px, 100%);
+  }
+  .controls-drawer .icon-button.close {
+    width: 44px;
+    height: 44px;
+  }
+  .controls-drawer .drawer-head {
+    padding: 10px 16px;
+  }
+  .controls-body {
+    padding: 12px;
+  }
+  .controls-body > .card {
+    padding: 16px;
+  }
+  .controls-link {
+    min-height: 44px;
+    padding: 0 4px;
+  }
+}
+@media (max-width: 420px) {
+  .chat-header .assistant-avatar {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .controls-loading .card {
+    animation: none;
+  }
+  .controls-switch button i,
+  .controls-switch button i::after {
+    transition: none;
+  }
+}

@@ -1,0 +1,148 @@
+/* OB2 (plan 26 §6): the "Worth a look" card of Overview. A quiet sibling of the spending card
+   under it: the same white card, line and radius (`.card` gives the surface and the border).
+   Tokens of globals.css only. */
+.observation {
+  min-width: 0;
+  padding: 20px 24px 16px;
+  border-radius: 20px;
+}
+/* The stack of the slot the card sits in: the gap `main` puts between its blocks. Nothing is
+   added to the spending card, and without this card the slot is as it was. */
+.overview-insights:has(> .observation) {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.observation p {
+  margin: 0;
+}
+.observation .eyebrow {
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.observation h2 {
+  margin: 0 0 6px;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  line-height: 1.3;
+}
+.observation-basis {
+  max-width: 78ch;
+  color: var(--text-2);
+  font-size: 14px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.observation .observation-error {
+  margin-top: 8px;
+  color: var(--danger);
+  font-size: 13px;
+}
+/* The two buttons, the footer line and "Don't show these": one wrapping row. Wide: the quiet one
+   ends the buttons' row and the footer line takes the next. */
+.observation-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 8px;
+  margin-top: 14px;
+}
+.observation-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.observation button {
+  height: 36px;
+  padding: 0 14px;
+  border: 1px solid var(--line-control);
+  border-radius: var(--r-pill);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.observation button:hover {
+  border-color: var(--forest);
+  background: var(--chip);
+}
+/* The acting button: the app's primary (forest fill), at this card's size. */
+.observation .primary-button {
+  border-color: var(--forest);
+  background: var(--forest);
+  color: var(--surface);
+}
+.observation .primary-button:hover {
+  border-color: var(--forest-hover);
+  background: var(--forest-hover);
+}
+/* "Don't show these": the quiet one, at the far end of its row. */
+.observation .observation-quiet {
+  margin-left: auto;
+  padding: 0 6px;
+  border-color: transparent;
+  background: transparent;
+  color: var(--muted);
+}
+.observation .observation-quiet:hover {
+  border-color: transparent;
+  background: transparent;
+  color: var(--ink);
+  text-decoration: underline;
+}
+.observation .observation-foot {
+  order: 1;
+  flex-basis: 100%;
+  color: var(--muted);
+  font-size: 12px;
+}
+/* After "Don't show these": one line and Undo, until the next load. */
+.observation.is-off {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 16px;
+  padding-block: 14px;
+  color: var(--text-2);
+  font-size: 13px;
+}
+.observation.is-off .observation-error {
+  flex-basis: 100%;
+  margin: 0;
+}
+@media (max-width: 760px) {
+  .observation {
+    padding: 16px 16px 14px;
+  }
+  .overview-insights:has(> .observation) {
+    gap: 20px;
+  }
+  /* Narrow: the buttons take the first line; the footer text and, at its end, "Don't show
+     these" share the next. The text gives way (two lines at 390 px); the quiet one goes under it
+     only when the text cannot keep its minimum width. */
+  .observation-bottom {
+    row-gap: 4px;
+  }
+  .observation-actions {
+    flex-basis: 100%;
+  }
+  .observation .observation-foot {
+    order: 0;
+    flex: 1 1 0;
+    min-width: 9em;
+    text-wrap: balance;
+  }
+  .observation .observation-quiet {
+    padding: 0;
+  }
+}
+/* Touch: 44px targets. */
+@media (max-width: 760px), (pointer: coarse) {
+  .observation button {
+    height: 44px;
+  }
+}

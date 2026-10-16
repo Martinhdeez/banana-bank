@@ -1,0 +1,713 @@
+/* Cases view (redesign slice 5, U4). Rules scoped to the operator view. */
+.case-counters {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+/* Heading as in the mock (Cases.dc.html). */
+.page-heading:has(.case-counters) {
+  align-items: flex-end;
+  margin-bottom: 0; /* main already spaces heading and grid (24px). */
+}
+.page-heading:has(.case-counters) .eyebrow {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  color: var(--faint);
+  margin-bottom: 8px;
+}
+.page-heading:has(.case-counters) h1 {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.8px;
+  margin-bottom: 4px;
+}
+.page-heading:has(.case-counters) p {
+  font-size: 14px;
+  color: var(--muted);
+}
+.counter {
+  font-size: 12px;
+  font-weight: 600;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-pill);
+  padding: 7px 12px;
+  color: var(--ink);
+}
+.counter.money {
+  color: var(--danger);
+  background: var(--danger-bg);
+  border-color: var(--danger-bg);
+}
+/* Small pill buttons (shared button restyle is not in this slice yet). */
+.case-counters .is-small,
+.case-head .is-small {
+  height: 32px;
+  padding: 0 14px;
+  border-radius: var(--r-pill);
+  font-size: 12px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.case-counters .secondary-button,
+.case-head .secondary-button {
+  border: 1px solid var(--line-control);
+  color: var(--ink);
+  background: var(--surface);
+}
+/* Mock: the header's resolve buttons are 38px, 13px. */
+.case-head .primary-button,
+.case-head .secondary-button {
+  height: 38px;
+  padding: 0 16px;
+  font-size: 13px;
+}
+.case-head .primary-button {
+  background: var(--forest);
+  color: var(--surface);
+}
+.case-head .primary-button:hover {
+  background: var(--forest-hover);
+}
+
+.operator-grid {
+  display: grid;
+  grid-template-columns: 340px minmax(0, 1fr) 300px;
+  gap: 16px;
+  align-items: start;
+}
+
+/* Inbox */
+.case-list {
+  padding: 12px;
+  max-height: calc(100vh - 200px);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.segmented {
+  display: flex;
+  gap: 2px;
+  padding: 3px;
+  background: var(--chip);
+  border-radius: var(--r-pill);
+  margin-bottom: 6px;
+}
+.segmented button {
+  flex: 1;
+  height: 30px;
+  border-radius: var(--r-pill);
+  background: transparent;
+  color: var(--text-2);
+  font-size: 12px;
+  font-weight: 500;
+}
+.segmented button[aria-pressed='true'] {
+  background: var(--surface);
+  color: var(--ink);
+  font-weight: 600;
+  box-shadow: var(--shadow-seg);
+}
+.segmented {
+  margin-bottom: 8px;
+}
+.case-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 36px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-pill);
+  color: var(--faint);
+  margin-bottom: 8px;
+  flex-shrink: 0;
+}
+.case-search input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  font-size: 13px;
+  color: var(--ink);
+}
+.case-search:focus-within {
+  border-color: var(--forest);
+}
+/* PL1: the input's own outline is off, so the pill carries the app's focus ring. */
+.case-search:has(input:focus-visible) {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+/* OPX3: inbox filters under the search. */
+.case-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+  flex-shrink: 0;
+}
+.case-filters .chip {
+  height: 28px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-pill);
+  background: var(--surface);
+  color: var(--text-2);
+  font-size: 12px;
+  font-weight: 500;
+  max-width: 100%;
+}
+.case-filters .chip[aria-pressed='true'] {
+  background: var(--lime-wash);
+  border-color: var(--lime-wash-line);
+  color: var(--ink);
+  font-weight: 600;
+}
+.case-filters select.chip:focus-visible {
+  outline: 2px solid var(--focus);
+}
+.case-list[aria-busy='true'] .case-item {
+  opacity: 0.6;
+}
+.case-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
+  padding: 12px;
+  border-radius: var(--r-tile);
+  border: 1px solid transparent;
+  background: none;
+  color: var(--ink);
+  flex-shrink: 0;
+}
+.case-item:hover {
+  background: var(--surface-sunk);
+}
+.case-item.selected {
+  background: var(--lime-wash);
+  border-color: var(--lime-wash-line);
+}
+.case-item .avatar,
+.case-head .avatar {
+  width: 34px;
+  height: 34px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.case-body {
+  min-width: 0;
+  flex: 1;
+}
+.case-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: baseline;
+}
+.case-top strong {
+  font-size: 13px;
+  font-weight: 600;
+}
+.case-ref {
+  font-size: 11px;
+  font-family: var(--mono);
+  color: var(--faint);
+}
+.case-summary {
+  display: block;
+  font-size: 12px;
+  color: var(--text-2);
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* OP2: priority reason in the inbox; money at stake uses the danger tone. */
+.case-priority {
+  display: inline-block;
+  margin: 6px 0 4px;
+  padding: 2px 8px;
+  border-radius: var(--r-pill);
+  font-size: 11px;
+  font-weight: 600;
+}
+.case-priority.money {
+  color: var(--danger);
+  background: var(--danger-bg);
+}
+.case-priority.open {
+  color: var(--ochre);
+  background: var(--lime-soft);
+}
+/* OPX2-ui: priority and wait side by side; they wrap on narrow rows. */
+.case-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 6px;
+  margin: 6px 0 4px;
+}
+.case-chips .case-priority {
+  margin: 0;
+}
+/* OPX2-ui: wait and SLA level; the level is also in the text, never colour alone. */
+.case-wait {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: var(--r-pill);
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--text-2);
+  background: var(--chip);
+}
+.case-wait.warn {
+  color: var(--ochre);
+  background: var(--lime-soft);
+}
+.case-wait.breach {
+  color: var(--danger);
+  background: var(--danger-bg);
+}
+.case-item small {
+  display: block;
+  font-size: 11px;
+  color: var(--faint);
+}
+.case-list .empty-state {
+  padding: 16px 12px;
+  margin: 0;
+}
+
+/* Case detail */
+.case-detail {
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 200px);
+  overflow: auto;
+  padding-bottom: 18px;
+}
+.case-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 22px;
+  border-bottom: 1px solid var(--line-inner);
+}
+.case-head .avatar {
+  width: 42px;
+  height: 42px;
+  font-size: 13px;
+}
+/* Name and meta never shrink below one line; when the row is too narrow, the badge and the
+   resolve button wrap to a second row, still right-aligned. */
+.case-who {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  max-width: calc(100% - 54px);
+}
+.case-actions {
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap; /* OPX2-ui: status, wait and the button wrap instead of leaving the card. */
+  align-items: center;
+  gap: 8px 12px;
+}
+.case-who strong {
+  font-size: 17px;
+  font-weight: 600;
+}
+.case-who strong,
+.case-who small {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.case-who small {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.status-pill {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: var(--r-pill);
+  color: var(--ochre);
+  background: var(--lime-soft);
+}
+.status-pill.closed {
+  color: var(--positive);
+  background: var(--positive-bg);
+}
+/* OPX1-ui: Export menu (details/summary) in the case header. The card is placed from the header
+   (right edge, just under the button's row), so it never leaves the card when the actions wrap
+   and Export starts a row (OPX2-ui wrap). */
+.case-head {
+  position: relative;
+}
+.export-menu summary {
+  list-style: none;
+  cursor: pointer;
+}
+.export-menu summary::-webkit-details-marker {
+  display: none;
+}
+.export-options {
+  position: absolute;
+  right: 22px;
+  margin-top: 6px;
+  z-index: 5;
+  width: max-content;
+  max-width: min(260px, calc(100% - 44px));
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-tile);
+  box-shadow: var(--shadow-drawer);
+}
+.export-options a {
+  display: block;
+  padding: 8px 10px;
+  border-radius: var(--r-nav);
+  font-size: 13px;
+  color: var(--ink);
+  text-decoration: none;
+}
+.export-options a:hover,
+.export-options a:focus-visible {
+  background: var(--chip);
+}
+.export-error {
+  margin: 4px 0 0;
+  padding: 8px 10px;
+  border-radius: var(--r-nav);
+  font-size: 12px;
+  color: var(--danger);
+  background: var(--danger-bg);
+}
+.resolve-confirm {
+  flex-basis: 100%;
+  /* Question on the left, both buttons side by side on the right. */
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 8px;
+  background: var(--lime-wash);
+  border: 1px solid var(--lime-wash-line);
+  border-radius: var(--r-tile);
+  padding: 8px 12px;
+  color: var(--ochre);
+}
+.resolve-confirm span {
+  font-size: 13px;
+}
+.handoff {
+  margin: 18px 22px 0;
+  padding: 14px 16px;
+  border-radius: var(--r-tile);
+  background: var(--surface-soft);
+  border: 1px solid var(--line-inner);
+}
+.handoff h3,
+.case-rail .gaps h3 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.handoff h3 {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  color: var(--faint);
+  margin-bottom: 8px;
+}
+.handoff p {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.block-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  padding: 16px 22px 0;
+  margin: 0;
+}
+.case-thread {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px 22px;
+}
+.bubble-row {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  align-items: flex-start;
+}
+.bubble-row.assistant {
+  align-items: flex-end;
+}
+.bubble-meta {
+  font-size: 11px;
+  color: var(--faint);
+}
+.case-bubble {
+  max-width: 460px;
+  font-size: 13px;
+  line-height: 1.5;
+  padding: 9px 13px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  background: var(--chip);
+  border-radius: 4px 14px 14px 14px;
+}
+.bubble-row.assistant .case-bubble {
+  background: var(--sage);
+  border-radius: 14px 4px 14px 14px;
+}
+.case-latest blockquote {
+  margin: 10px 22px;
+  padding: 12px 14px;
+  font-size: 13px;
+  background: var(--chip);
+  border-radius: var(--r-tile);
+}
+.case-latest .muted {
+  padding: 0 22px;
+}
+
+/* Evidence rail */
+.case-rail {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+.case-rail .card {
+  padding: 16px 18px;
+}
+.case-rail h3 {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.rail-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 13px;
+  padding: 5px 0;
+}
+.rail-row span {
+  color: var(--muted);
+}
+.rail-row strong {
+  font-weight: 600;
+}
+.evidence-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 13px;
+  padding: 6px 0;
+  overflow-wrap: anywhere;
+}
+.evidence-row strong {
+  display: block;
+  font-weight: 500;
+}
+.evidence-row small {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+}
+.evidence-row .dot {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  margin-top: 6px;
+  border-radius: 50%;
+  background: var(--faint);
+}
+.evidence-row .dot.completed {
+  background: var(--positive-icon);
+}
+.evidence-row .dot.rejected {
+  background: var(--danger-dot);
+}
+.steps {
+  font-size: 12px;
+  color: var(--text-2);
+  line-height: 1.8;
+  padding-left: 18px;
+  margin: 0 0 8px;
+}
+.steps pre {
+  font-size: 11px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-family: var(--mono);
+  background: var(--surface-sunk);
+  border-radius: var(--r-nav);
+  padding: 8px;
+  margin: 4px 0;
+}
+.case-rail .muted {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+.case-rail .gaps {
+  padding: 14px 16px;
+  background: var(--lime-wash);
+  border-color: var(--lime-wash-line);
+}
+.case-rail .gaps h3 {
+  color: var(--ochre);
+  margin-bottom: 4px;
+}
+.case-rail .gaps p {
+  font-size: 12px;
+  color: var(--text-2);
+  margin-bottom: 6px;
+}
+
+/* INT1-ui: audit status. Broken is marked by a danger edge and text, not a red card. */
+.case-rail .audit-status .muted {
+  margin: 6px 0 0;
+}
+.audit-line {
+  margin: 0;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  font-size: 13px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.audit-line svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.audit-status.verified .audit-line svg {
+  color: var(--positive-icon);
+}
+.audit-status.empty .audit-line {
+  color: var(--muted);
+}
+.audit-status.broken {
+  border-left: 3px solid var(--danger-dot);
+}
+.audit-status.broken .audit-line {
+  color: var(--danger);
+}
+
+/* OPX4-ui: case activity, one line per recorded view, resolution or export. */
+.activity-list {
+  list-style: none;
+  margin: 0 0 6px;
+  padding: 0;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--text-2);
+}
+.activity-list li {
+  padding: 4px 0;
+  overflow-wrap: anywhere;
+}
+.activity-list li + li {
+  border-top: 1px solid var(--line-inner);
+}
+.activity-list strong {
+  font-weight: 500;
+}
+.activity-list small {
+  display: block;
+  color: var(--muted);
+}
+/* FX2-b: also the "Show all" of the bank operations card. */
+.case-rail .text-button {
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+.case-rail .case-activity .muted {
+  margin: 6px 0 0;
+}
+
+/* Empty panel (also used by Documents: keep). */
+.case-empty {
+  text-align: center;
+  padding: 75px 10px;
+  color: #879778;
+}
+.case-empty svg {
+  width: 33px;
+  height: 33px;
+  margin-bottom: 20px;
+}
+.case-empty h2 {
+  font-size: 21px;
+}
+.case-empty p {
+  font-size: 12px;
+  max-width: 270px;
+  margin: auto;
+}
+
+@media (max-width: 1100px) {
+  .operator-grid {
+    grid-template-columns: 340px minmax(0, 1fr);
+  }
+  .case-rail {
+    grid-column: 2;
+  }
+}
+
+/* Mobile: inbox, then detail, then rail; O5 reveal (scroll + focus) stays in Home. */
+@media (max-width: 760px) {
+  .operator-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .case-rail {
+    grid-column: auto;
+  }
+  .case-list,
+  .case-detail {
+    max-height: none;
+  }
+  /* The detail appears only once a case is selected (then revealed by O5). */
+  .case-detail:has(.case-empty) {
+    display: none;
+  }
+  .page-heading:has(.case-counters) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  /* Question on its own row, the two buttons below it. */
+  .resolve-confirm {
+    grid-template-columns: auto auto;
+    justify-content: start;
+  }
+  .resolve-confirm button {
+    white-space: nowrap;
+  }
+  .resolve-confirm span {
+    grid-column: 1 / -1;
+  }
+}

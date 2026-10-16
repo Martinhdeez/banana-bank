@@ -1,0 +1,144 @@
+/* "Transfers to confirm" panel (redesign slice 3), shared by Transfers and Assistant.
+   Proposal cards and the result are direct children (e2e: `.approvals > div`). */
+.approvals {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 10px;
+  padding: 16px 18px;
+  margin-bottom: 20px;
+  background: var(--lime-wash);
+  border-color: var(--lime-wash-line);
+}
+.approvals-head {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--ochre);
+}
+.approvals-head svg {
+  width: 16px;
+  height: 16px;
+}
+.count-badge {
+  padding: 1px 7px;
+  border-radius: var(--r-pill);
+  background: var(--lime);
+  color: var(--forest);
+  font-size: 11px;
+  font-weight: 700;
+}
+/* X1: confirm outcome inside the panel; focused after confirming. */
+.approvals .confirm-result {
+  grid-column: 1 / -1;
+  margin: 0;
+  line-height: 1.6;
+  /* B4 (polish): a long unbroken description wraps instead of widening the page. */
+  overflow-wrap: anywhere;
+}
+.approvals .confirm-result > span {
+  min-width: 0;
+}
+/* A8 (polish): with nothing left to confirm the card only holds a result: neutral, not the
+   yellow "to confirm" panel. */
+.approvals.settled {
+  background: var(--surface);
+  border-color: var(--line);
+}
+.approvals.settled .approvals-head {
+  color: var(--ink);
+}
+.approvals .confirm-result:focus {
+  outline: 2px solid var(--forest);
+  outline-offset: 2px;
+}
+/* R1: a proposal awaiting confirmation, visibly different from a completed result. */
+.approvals > .proposal {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  min-width: 0;
+  padding: 12px 14px;
+  border-radius: var(--r-tile);
+  background: var(--surface);
+  border: 1px solid var(--lime-wash-line);
+}
+.approvals > .proposal:focus {
+  outline: 2px solid var(--forest);
+  outline-offset: 2px;
+}
+.approvals .pending-badge {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0;
+  background: var(--lime-soft);
+  color: var(--ochre);
+}
+.proposal-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  width: 100%;
+  margin: 0;
+  font-size: 13px;
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+.proposal-title strong {
+  font-weight: 600;
+}
+.proposal-title span {
+  font-size: 12px;
+  color: var(--faint);
+}
+.proposal-meta {
+  margin: 0;
+  max-width: 100%;
+  font-size: 12px;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+/* X3: warning on identical pending proposals. */
+.approvals .duplicate-flag {
+  margin: 0;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  background: var(--danger-bg);
+  color: var(--danger);
+}
+.proposal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+.approvals .is-small {
+  height: 32px;
+  padding: 0 14px;
+  border-radius: var(--r-pill);
+  font-size: 12px;
+  font-weight: 500;
+}
+.approvals .secondary-button.is-small {
+  border-color: var(--line-control);
+  color: var(--ink);
+}
+.approvals .is-small:disabled {
+  opacity: 0.6;
+}
+
+@media (max-width: 760px) {
+  .approvals {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 14px;
+  }
+}

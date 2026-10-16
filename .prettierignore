@@ -1,0 +1,31 @@
+# F1: scope `prettier --check .` to the app's own code. Reasons: F1 change note in .artifacts/.
+
+# External bank: never modified.
+simulator/
+
+# Byte-sensitive seed data (CSV/JSON/HTML/Markdown compared or ingested as-is).
+fixtures/
+
+# Evidence, tracking, delivery and local-only material.
+.scratch/
+.artifacts/
+submission/
+.claude/
+.notes/
+.archived/
+
+# Prose: briefs, contracts, plans, README. Prettier rewrites tables and emphasis.
+*.md
+docs/
+
+# Generated, installed or runtime output.
+package-lock.json
+node_modules/
+.next/
+next-env.d.ts
+.data/
+.data-*/
+test-results/
+playwright-report/
+coverage/
+dist/

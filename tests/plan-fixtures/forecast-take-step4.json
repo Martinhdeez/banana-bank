@@ -1,0 +1,156 @@
+{
+  "adjustable": true,
+  "today": "2026-10-07",
+  "until": "2026-10-31",
+  "history": {
+    "months": ["2026-07", "2026-08", "2026-09"]
+  },
+  "income": "counted",
+  "notes": [],
+  "sourceLine": "Worked out by fixed rules from your movements, your prepared transfers and what you added or left out. No AI is involved in these figures.",
+  "accounts": [
+    {
+      "id": "acc-lucia",
+      "label": "Aurora account",
+      "balanceCents": 293761,
+      "endCents": 211902,
+      "lowest": {
+        "date": "2026-10-20",
+        "balanceCents": 172
+      },
+      "shortfall": null,
+      "headline": "Covered until 31 Oct",
+      "explanation": "Lowest point €1.72 on 20 Oct. An estimate: it counts 4 usual payments and 1 added by you.",
+      "options": [],
+      "events": [
+        {
+          "date": "2026-10-10",
+          "label": "Digi Spain Telecom",
+          "amountCents": -3990,
+          "source": "usual_charge",
+          "certainty": "estimated",
+          "merchantKey": "DIGI SPAIN TELECOM",
+          "seenOn": ["2026-07-10", "2026-08-10", "2026-09-10"],
+          "usualDay": 10,
+          "balanceAfterCents": 289771
+        },
+        {
+          "date": "2026-10-14",
+          "label": "Spotify",
+          "amountCents": -1099,
+          "source": "usual_charge",
+          "certainty": "estimated",
+          "merchantKey": "SPOTIFY",
+          "seenOn": ["2026-07-14", "2026-08-14", "2026-09-14"],
+          "usualDay": 14,
+          "balanceAfterCents": 288672
+        },
+        {
+          "date": "2026-10-19",
+          "source": "prepared",
+          "certainty": "certain",
+          "preparedId": "c0e5f088-30a5-49e4-90a3-92742ecef899",
+          "label": "Prepared transfer from Personal savings",
+          "amountCents": 3000,
+          "balanceAfterCents": 291672
+        },
+        {
+          "date": "2026-10-20",
+          "source": "prepared",
+          "certainty": "certain",
+          "preparedId": "ca8babb9-268a-4054-80b5-19b5a36a4c53",
+          "label": "Prepared transfer to Bruno Vidal · Horizon account",
+          "amountCents": -291500,
+          "balanceAfterCents": 172
+        },
+        {
+          "date": "2026-10-24",
+          "source": "prepared",
+          "certainty": "certain",
+          "preparedId": "bf18b03f-155a-4b65-b9cf-9992bd78d3fb",
+          "label": "Prepared transfer from Personal savings",
+          "amountCents": 42000,
+          "balanceAfterCents": 42172
+        },
+        {
+          "date": "2026-10-25",
+          "label": "Car insurance",
+          "amountCents": -42000,
+          "source": "expected_by_you",
+          "certainty": "estimated",
+          "adjustmentId": "7b202446-2750-4a2f-a00b-ad20708b843d",
+          "balanceAfterCents": 172
+        },
+        {
+          "date": "2026-10-28",
+          "label": "Nomina Acme Consulting",
+          "amountCents": 215000,
+          "source": "usual_income",
+          "certainty": "estimated",
+          "merchantKey": "NOMINA ACME CONSULTING",
+          "seenOn": ["2026-07-28", "2026-08-28", "2026-09-28"],
+          "usualDay": 28,
+          "balanceAfterCents": 215172
+        },
+        {
+          "date": "2026-10-31",
+          "label": "Recarga Abono Transporte Crtm",
+          "amountCents": -3270,
+          "source": "usual_charge",
+          "certainty": "estimated",
+          "merchantKey": "RECARGA ABONO TRANSPORTE CRTM",
+          "seenOn": ["2026-07-31", "2026-08-31", "2026-09-30"],
+          "usualDay": 31,
+          "balanceAfterCents": 211902
+        }
+      ]
+    },
+    {
+      "id": "acc-lucia-savings",
+      "label": "Personal savings",
+      "balanceCents": 130000,
+      "endCents": 85000,
+      "lowest": {
+        "date": "2026-10-24",
+        "balanceCents": 85000
+      },
+      "shortfall": null,
+      "headline": "Covered until 31 Oct",
+      "explanation": "Lowest point €850.00 on 24 Oct.",
+      "options": [],
+      "events": [
+        {
+          "date": "2026-10-19",
+          "source": "prepared",
+          "certainty": "certain",
+          "preparedId": "c0e5f088-30a5-49e4-90a3-92742ecef899",
+          "label": "Prepared transfer to Aurora account",
+          "amountCents": -3000,
+          "balanceAfterCents": 127000
+        },
+        {
+          "date": "2026-10-24",
+          "source": "prepared",
+          "certainty": "certain",
+          "preparedId": "bf18b03f-155a-4b65-b9cf-9992bd78d3fb",
+          "label": "Prepared transfer to Aurora account",
+          "amountCents": -42000,
+          "balanceAfterCents": 85000
+        }
+      ]
+    }
+  ],
+  "notCounted": [],
+  "adjustments": [
+    {
+      "id": "7b202446-2750-4a2f-a00b-ad20708b843d",
+      "kind": "expect",
+      "accountId": "acc-lucia",
+      "label": "Car insurance",
+      "amountCents": 42000,
+      "repeats": "once",
+      "date": "2026-10-25",
+      "createdAt": "2026-10-07T10:32:36.513Z"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "today": "2026-10-07",
+  "canSave": false,
+  "canSaveReason": "A savings goal moves money between two accounts of yours. You have one account, so a goal cannot be set up yet.",
+  "accounts": [
+    {
+      "id": "acc-bruno",
+      "label": "Horizon account"
+    }
+  ],
+  "room": {
+    "monthlyCents": 91068,
+    "months": 3
+  },
+  "goals": []
+}

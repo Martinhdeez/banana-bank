@@ -1,0 +1,88 @@
+{
+  "today": "2026-10-07",
+  "until": "2026-10-31",
+  "history": {
+    "months": ["2026-07", "2026-08", "2026-09"]
+  },
+  "income": "counted",
+  "notes": [],
+  "sourceLine": "Worked out by fixed rules from your movements and your prepared transfers. No AI is involved in these figures.",
+  "accounts": [
+    {
+      "id": "acc-lucia",
+      "label": "Aurora account",
+      "balanceCents": 293761,
+      "endCents": 500402,
+      "lowest": {
+        "date": "2026-10-14",
+        "balanceCents": 288672
+      },
+      "shortfall": null,
+      "headline": "Covered until 31 Oct",
+      "explanation": "Lowest point €2,886.72 on 14 Oct. An estimate: it counts 4 usual payments.",
+      "options": [],
+      "events": [
+        {
+          "date": "2026-10-10",
+          "label": "Digi Spain Telecom",
+          "amountCents": -3990,
+          "source": "usual_charge",
+          "certainty": "estimated",
+          "merchantKey": "DIGI SPAIN TELECOM",
+          "seenOn": ["2026-07-10", "2026-08-10", "2026-09-10"],
+          "usualDay": 10,
+          "balanceAfterCents": 289771
+        },
+        {
+          "date": "2026-10-14",
+          "label": "Spotify",
+          "amountCents": -1099,
+          "source": "usual_charge",
+          "certainty": "estimated",
+          "merchantKey": "SPOTIFY",
+          "seenOn": ["2026-07-14", "2026-08-14", "2026-09-14"],
+          "usualDay": 14,
+          "balanceAfterCents": 288672
+        },
+        {
+          "date": "2026-10-28",
+          "label": "Nomina Acme Consulting",
+          "amountCents": 215000,
+          "source": "usual_income",
+          "certainty": "estimated",
+          "merchantKey": "NOMINA ACME CONSULTING",
+          "seenOn": ["2026-07-28", "2026-08-28", "2026-09-28"],
+          "usualDay": 28,
+          "balanceAfterCents": 503672
+        },
+        {
+          "date": "2026-10-31",
+          "label": "Recarga Abono Transporte Crtm",
+          "amountCents": -3270,
+          "source": "usual_charge",
+          "certainty": "estimated",
+          "merchantKey": "RECARGA ABONO TRANSPORTE CRTM",
+          "seenOn": ["2026-07-31", "2026-08-31", "2026-09-30"],
+          "usualDay": 31,
+          "balanceAfterCents": 500402
+        }
+      ]
+    },
+    {
+      "id": "acc-lucia-savings",
+      "label": "Personal savings",
+      "balanceCents": 130000,
+      "endCents": 130000,
+      "lowest": {
+        "date": "2026-10-07",
+        "balanceCents": 130000
+      },
+      "shortfall": null,
+      "headline": "Covered until 31 Oct",
+      "explanation": "Lowest point €1,300.00 on 7 Oct.",
+      "options": [],
+      "events": []
+    }
+  ],
+  "notCounted": []
+}

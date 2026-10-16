@@ -1,0 +1,366 @@
+/* PT2: prepared transfers. Two blocks, every selector under one of them: `.prepared` (the section
+   between "Transfers to confirm" and the form) and `.prepare-later` (the control in the form
+   summary). Tokens from globals.css only. */
+.prepared {
+  display: grid;
+  align-items: start;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 10px;
+  padding: 16px 18px;
+  margin-bottom: 20px;
+}
+.prepared > :not(.prepared-card) {
+  grid-column: 1 / -1;
+}
+.prepared.empty {
+  padding: 12px 16px;
+  background: var(--surface-soft);
+}
+.prepared-head h2 {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 2px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.prepared-head p,
+.prepared-empty {
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+.prepared-empty {
+  display: flex;
+  gap: 8px;
+}
+.prepared-empty svg {
+  flex: none;
+  margin-top: 1px;
+}
+.prepared-empty strong {
+  font-weight: 600;
+  color: var(--text-2);
+}
+.prepared-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  min-width: 0;
+  padding: 12px 14px;
+  border-radius: var(--r-tile);
+  border: 1px solid var(--line);
+  background: var(--surface-sunk);
+}
+.prepared-card:focus {
+  outline: 2px solid var(--forest);
+  outline-offset: 2px;
+}
+/* Due: the accent rule, with the words "Due today" (never colour only). */
+.prepared-card[data-state='due'] {
+  border-color: var(--lime-line);
+  background: var(--lime-wash);
+  box-shadow: inset 4px 0 0 var(--lime);
+}
+.prepared-card p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.prepared-state {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 2px 9px;
+  border-radius: var(--r-tile);
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--sage);
+  color: var(--forest);
+}
+.prepared-state i {
+  flex: none;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-dot);
+  translate: 0 -1px;
+}
+.prepared-card:is(
+    [data-state='due'],
+    [data-state='awaiting_confirmation'],
+    [data-state='verifying']
+  )
+  .prepared-state {
+  background: var(--lime-soft);
+  color: var(--ochre);
+}
+.prepared-card:is(
+    [data-state='due'],
+    [data-state='awaiting_confirmation'],
+    [data-state='verifying']
+  )
+  .prepared-state
+  i {
+  background: var(--pending-dot);
+}
+.prepared-card[data-state='paused'] .prepared-state {
+  background: var(--chip);
+  color: var(--text-2);
+}
+.prepared-card[data-state='paused'] .prepared-state i {
+  background: var(--sep);
+}
+.prepared-title {
+  font-size: 14px;
+  color: var(--ink);
+}
+.prepared-title strong {
+  font-weight: 600;
+}
+.prepared-meta,
+.prepared-last {
+  font-size: 12px;
+  color: var(--muted);
+}
+.prepared-note {
+  font-size: 13px;
+  font-style: italic;
+  color: var(--text-2);
+}
+.prepared .prepared-feedback {
+  margin: 0;
+  padding: 6px 10px;
+  border-radius: var(--r-nav);
+  font-size: 12px;
+  background: var(--positive-bg);
+  color: var(--positive);
+}
+.prepared .prepared-feedback.warning {
+  background: var(--lime-soft);
+  color: var(--ochre);
+}
+.prepared .prepared-feedback.error {
+  background: var(--danger-bg);
+  color: var(--danger);
+}
+.prepared-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+.prepared-actions :is(.primary-button, .secondary-button) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 36px;
+  padding: 0 14px;
+  border-radius: var(--r-pill);
+  font-size: 13px;
+  font-weight: 500;
+}
+.prepared-actions .primary-button:hover {
+  background: var(--forest-hover);
+}
+.prepared-actions .secondary-button {
+  background: var(--surface);
+  border: 1px solid var(--line-control);
+  color: var(--ink);
+}
+.prepared-actions .secondary-button.danger {
+  border-color: var(--danger-dot);
+  color: var(--danger);
+}
+.prepared-actions svg {
+  width: 14px;
+  height: 14px;
+}
+.prepared-actions .text-link {
+  min-height: 36px;
+  padding: 0;
+  background: transparent;
+  color: var(--forest);
+  font-size: 13px;
+  font-weight: 600;
+}
+.prepared-confirm span {
+  flex-basis: 100%;
+  font-size: 12px;
+  color: var(--text-2);
+}
+
+/* "Prepare for later", inside the form summary. */
+.prepare-later {
+  margin-top: 8px;
+}
+.prepare-later > .secondary-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  height: 44px;
+  border-radius: var(--r-pill);
+  border: 1px solid var(--line-control);
+  background: var(--surface);
+  color: var(--forest);
+  font-size: 14px;
+  font-weight: 500;
+}
+.prepare-later > .secondary-button[aria-expanded='true'] {
+  background: var(--sage);
+  border-color: var(--sage-line);
+}
+.prepare-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+  padding: 14px;
+  border-radius: var(--r-tile);
+  border: 1px solid var(--sage-line);
+  background: var(--surface-soft);
+}
+.prepare-when {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.prepare-when legend,
+.prepare-field {
+  padding: 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--muted);
+}
+.prepare-when legend {
+  margin-bottom: 6px;
+}
+.prepare-choices {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2px;
+  padding: 3px;
+  border-radius: var(--r-pill);
+  background: var(--chip);
+}
+.prepare-choice {
+  position: relative;
+  cursor: pointer;
+}
+.prepare-choice span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 0 4px;
+  border-radius: var(--r-pill);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-2);
+  text-align: center;
+  white-space: nowrap;
+}
+.prepare-choice input:checked + span {
+  background: var(--surface);
+  color: var(--ink);
+  font-weight: 600;
+  box-shadow: var(--shadow-seg);
+}
+.prepare-choice input:focus-visible + span {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+.prepare-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.prepare-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.prepare-field.inline {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+.prepare-field :is(input, select) {
+  min-width: 0;
+  height: 42px;
+  padding: 0 14px;
+  border-radius: var(--r-pill);
+  border: 1px solid var(--line-control);
+  background: var(--surface);
+  font-size: 14px;
+  color: var(--ink);
+}
+.prepare-field :is(input, select):focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+.prepare-field input[aria-invalid='true'] {
+  border-color: var(--danger-dot);
+}
+.prepare-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.prepare-chips button {
+  min-height: 32px;
+  padding: 0 12px;
+  border-radius: var(--r-pill);
+  border: 1px solid var(--line-control);
+  background: var(--surface);
+  font-size: 12px;
+  color: var(--text-2);
+}
+.prepare-chips button[aria-pressed='true'] {
+  background: var(--sage);
+  border-color: var(--sage-line);
+  color: var(--forest);
+  font-weight: 600;
+}
+.prepare-later .prepare-error {
+  margin: 0;
+  padding: 6px 10px;
+  border-radius: var(--r-nav);
+  font-size: 12px;
+  background: var(--danger-bg);
+  color: var(--danger);
+}
+.prepare-group .primary-button {
+  margin-top: 0;
+}
+.prepare-later .prepare-hint {
+  margin: 0;
+  font-size: 11px;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* Touch: 44 px targets. */
+@media (pointer: coarse) {
+  .prepared-actions :is(.primary-button, .secondary-button, .text-link),
+  .prepare-choice span,
+  .prepare-chips button {
+    min-height: 44px;
+  }
+  .prepare-field :is(input, select) {
+    height: 44px;
+  }
+}
+@media (max-width: 760px) {
+  .prepared {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 14px;
+  }
+}

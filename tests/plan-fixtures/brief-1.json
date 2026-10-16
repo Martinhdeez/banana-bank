@@ -1,0 +1,10 @@
+{
+  "headline": "One thing to look at.",
+  "findings": [
+    {
+      "kind": "forecast_shortfall",
+      "text": "Aurora account: €28.28 short on 20 Oct. An estimate.",
+      "accountId": "acc-lucia"
+    }
+  ]
+}

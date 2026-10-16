@@ -1,0 +1,10 @@
+{
+  "headline": "One thing to look at.",
+  "findings": [
+    {
+      "kind": "goal_behind",
+      "text": "Trip to Lisbon: €300.00 behind plan.",
+      "goalId": "fff884db-f1aa-4022-969d-6db616dda9f2"
+    }
+  ]
+}

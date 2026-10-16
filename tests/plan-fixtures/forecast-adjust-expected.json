@@ -1,0 +1,135 @@
+{
+  "adjustable": true,
+  "today": "2026-10-07",
+  "until": "2026-10-31",
+  "history": {
+    "months": ["2026-07", "2026-08", "2026-09"]
+  },
+  "income": "counted",
+  "notes": [],
+  "sourceLine": "Worked out by fixed rules from your movements, your prepared transfers and what you added or left out. No AI is involved in these figures.",
+  "accounts": [
+    {
+      "id": "acc-lucia",
+      "label": "Aurora account",
+      "balanceCents": 293761,
+      "endCents": 210402,
+      "lowest": {
+        "date": "2026-10-25",
+        "balanceCents": -1328
+      },
+      "shortfall": {
+        "date": "2026-10-25",
+        "shortCents": 1328,
+        "certainty": "estimated",
+        "forLabel": "Car insurance, added by you"
+      },
+      "headline": "€13.28 short on 25 Oct",
+      "explanation": "If Digi Spain Telecom (€39.90, around the 10th) and Spotify (€10.99, around the 14th) come as in July–September and Car insurance (€2,900.00, on the 25th, added by you) comes, on 25 Oct you would be €13.28 short for Car insurance, added by you. An estimate.",
+      "options": [
+        {
+          "id": "move:acc-lucia-savings",
+          "title": "Move €20.00 from Personal savings on 24 Oct",
+          "consequence": "Lowest point €6.72 on 25 Oct. An estimate.",
+          "change": {
+            "kind": "add",
+            "date": "2026-10-24",
+            "amountCents": 2000,
+            "label": "From Personal savings"
+          },
+          "prepare": {
+            "fromAccountId": "acc-lucia-savings",
+            "toAccountId": "acc-lucia",
+            "amountCents": 2000,
+            "concept": "Cover for 25 Oct",
+            "when": "on_date",
+            "date": "2026-10-24"
+          }
+        }
+      ],
+      "events": [
+        {
+          "date": "2026-10-10",
+          "label": "Digi Spain Telecom",
+          "amountCents": -3990,
+          "source": "usual_charge",
+          "certainty": "estimated",
+          "merchantKey": "DIGI SPAIN TELECOM",
+          "seenOn": ["2026-07-10", "2026-08-10", "2026-09-10"],
+          "usualDay": 10,
+          "balanceAfterCents": 289771
+        },
+        {
+          "date": "2026-10-14",
+          "label": "Spotify",
+          "amountCents": -1099,
+          "source": "usual_charge",
+          "certainty": "estimated",
+          "merchantKey": "SPOTIFY",
+          "seenOn": ["2026-07-14", "2026-08-14", "2026-09-14"],
+          "usualDay": 14,
+          "balanceAfterCents": 288672
+        },
+        {
+          "date": "2026-10-25",
+          "label": "Car insurance",
+          "amountCents": -290000,
+          "source": "expected_by_you",
+          "certainty": "estimated",
+          "adjustmentId": "1f8ef704-ae7a-4102-94c2-e4b988a3b1ee",
+          "balanceAfterCents": -1328
+        },
+        {
+          "date": "2026-10-28",
+          "label": "Nomina Acme Consulting",
+          "amountCents": 215000,
+          "source": "usual_income",
+          "certainty": "estimated",
+          "merchantKey": "NOMINA ACME CONSULTING",
+          "seenOn": ["2026-07-28", "2026-08-28", "2026-09-28"],
+          "usualDay": 28,
+          "balanceAfterCents": 213672
+        },
+        {
+          "date": "2026-10-31",
+          "label": "Recarga Abono Transporte Crtm",
+          "amountCents": -3270,
+          "source": "usual_charge",
+          "certainty": "estimated",
+          "merchantKey": "RECARGA ABONO TRANSPORTE CRTM",
+          "seenOn": ["2026-07-31", "2026-08-31", "2026-09-30"],
+          "usualDay": 31,
+          "balanceAfterCents": 210402
+        }
+      ]
+    },
+    {
+      "id": "acc-lucia-savings",
+      "label": "Personal savings",
+      "balanceCents": 130000,
+      "endCents": 130000,
+      "lowest": {
+        "date": "2026-10-07",
+        "balanceCents": 130000
+      },
+      "shortfall": null,
+      "headline": "Covered until 31 Oct",
+      "explanation": "Lowest point €1,300.00 on 7 Oct.",
+      "options": [],
+      "events": []
+    }
+  ],
+  "notCounted": [],
+  "adjustments": [
+    {
+      "id": "1f8ef704-ae7a-4102-94c2-e4b988a3b1ee",
+      "kind": "expect",
+      "accountId": "acc-lucia",
+      "label": "Car insurance",
+      "amountCents": 290000,
+      "repeats": "once",
+      "date": "2026-10-25",
+      "createdAt": "2026-10-07T08:17:52.768Z"
+    }
+  ]
+}

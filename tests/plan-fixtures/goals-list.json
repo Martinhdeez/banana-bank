@@ -1,0 +1,741 @@
+{
+  "today": "2026-10-07",
+  "canSave": true,
+  "canSaveReason": null,
+  "accounts": [
+    {
+      "id": "acc-lucia-savings",
+      "label": "Personal savings"
+    },
+    {
+      "id": "acc-lucia",
+      "label": "Aurora account"
+    }
+  ],
+  "room": {
+    "monthlyCents": 71448,
+    "months": 3
+  },
+  "goals": [
+    {
+      "id": "goal-behind",
+      "name": "Trip to Lisbon",
+      "targetCents": 120000,
+      "targetDate": "2027-03-31",
+      "savedCents": 20000,
+      "remainingCents": 100000,
+      "behindCents": 25000,
+      "monthlyCents": 15000,
+      "requiredMonthlyCents": 20000,
+      "suggestion": {
+        "kind": "raise",
+        "monthlyCents": 20000,
+        "text": "€200.00 a month reaches €1,200.00 by 31 Mar 2027."
+      },
+      "alternative": {
+        "kind": "extend",
+        "targetDate": "2027-05-07",
+        "text": "€150.00 a month reaches €1,200.00 by 7 May 2027."
+      },
+      "state": "behind",
+      "headline": "€250.00 behind plan",
+      "basis": "€200.00 of €1,200.00 saved. At €150.00 a month you reach €950.00 by 31 Mar 2027, €250.00 short.",
+      "prepared": {
+        "id": "d05281ba-f89a-4a99-bbdb-85d50881b147",
+        "fromAccountId": "acc-lucia",
+        "toAccountId": "acc-lucia-savings",
+        "to": "Personal savings",
+        "amountCents": 15000,
+        "concept": "Trip to Lisbon",
+        "note": null,
+        "when": {
+          "kind": "monthly",
+          "day": 7
+        },
+        "nextDue": "2026-11-07",
+        "state": "scheduled",
+        "approvalId": null,
+        "expiresAt": null,
+        "lastAttempt": null,
+        "lastSentAt": null
+      },
+      "from": {
+        "id": "acc-lucia",
+        "label": "Aurora account"
+      },
+      "to": {
+        "id": "acc-lucia-savings",
+        "label": "Personal savings"
+      },
+      "history": [
+        {
+          "month": "2026-10",
+          "plannedCents": 20000,
+          "savedCents": 20000
+        }
+      ]
+    },
+    {
+      "readOn": "2026-10-12",
+      "id": "goal-behind-payment-waiting",
+      "name": "Trip to Lisbon",
+      "targetCents": 120000,
+      "targetDate": "2027-03-31",
+      "savedCents": 0,
+      "remainingCents": 120000,
+      "behindCents": 0,
+      "monthlyCents": 20000,
+      "requiredMonthlyCents": 20000,
+      "suggestion": null,
+      "alternative": null,
+      "state": "behind",
+      "headline": "A payment is waiting",
+      "basis": "€0.00 of €1,200.00 saved. The payment of 7 Oct is waiting for your confirmation.",
+      "prepared": {
+        "id": "adb21eac-6175-425f-bd76-33afc3c8fb5a",
+        "fromAccountId": "acc-lucia",
+        "toAccountId": "acc-lucia-savings",
+        "to": "Personal savings",
+        "amountCents": 20000,
+        "concept": "Trip to Lisbon",
+        "note": null,
+        "when": {
+          "kind": "monthly",
+          "day": 7
+        },
+        "nextDue": "2026-10-07",
+        "state": "due",
+        "approvalId": null,
+        "expiresAt": null,
+        "lastAttempt": null,
+        "lastSentAt": null
+      },
+      "from": {
+        "id": "acc-lucia",
+        "label": "Aurora account"
+      },
+      "to": {
+        "id": "acc-lucia-savings",
+        "label": "Personal savings"
+      },
+      "history": [
+        {
+          "month": "2026-10",
+          "plannedCents": 20000,
+          "savedCents": 0
+        }
+      ]
+    },
+    {
+      "id": "goal-on_track-new",
+      "name": "Trip to Lisbon",
+      "targetCents": 120000,
+      "targetDate": "2027-03-31",
+      "savedCents": 0,
+      "remainingCents": 120000,
+      "behindCents": 0,
+      "monthlyCents": 20000,
+      "requiredMonthlyCents": 20000,
+      "suggestion": null,
+      "alternative": null,
+      "state": "on_track",
+      "headline": "On plan",
+      "basis": "€0.00 of €1,200.00 saved. €200.00 a month, 6 payments left, the last on 7 Mar 2027.",
+      "prepared": {
+        "id": "31b3d3fc-5b61-423f-a373-484f6b67587f",
+        "fromAccountId": "acc-lucia",
+        "toAccountId": "acc-lucia-savings",
+        "to": "Personal savings",
+        "amountCents": 20000,
+        "concept": "Trip to Lisbon",
+        "note": null,
+        "when": {
+          "kind": "monthly",
+          "day": 7
+        },
+        "nextDue": "2026-10-07",
+        "state": "due",
+        "approvalId": null,
+        "expiresAt": null,
+        "lastAttempt": null,
+        "lastSentAt": null
+      },
+      "from": {
+        "id": "acc-lucia",
+        "label": "Aurora account"
+      },
+      "to": {
+        "id": "acc-lucia-savings",
+        "label": "Personal savings"
+      },
+      "history": [
+        {
+          "month": "2026-10",
+          "plannedCents": 20000,
+          "savedCents": 0
+        }
+      ]
+    },
+    {
+      "id": "goal-on_track-one-payment",
+      "name": "Trip to Lisbon",
+      "targetCents": 120000,
+      "targetDate": "2027-03-31",
+      "savedCents": 20000,
+      "remainingCents": 100000,
+      "behindCents": 0,
+      "monthlyCents": 20000,
+      "requiredMonthlyCents": 20000,
+      "suggestion": null,
+      "alternative": null,
+      "state": "on_track",
+      "headline": "On plan",
+      "basis": "€200.00 of €1,200.00 saved. €200.00 a month, 5 payments left, the last on 7 Mar 2027.",
+      "prepared": {
+        "id": "31b3d3fc-5b61-423f-a373-484f6b67587f",
+        "fromAccountId": "acc-lucia",
+        "toAccountId": "acc-lucia-savings",
+        "to": "Personal savings",
+        "amountCents": 20000,
+        "concept": "Trip to Lisbon",
+        "note": null,
+        "when": {
+          "kind": "monthly",
+          "day": 7
+        },
+        "nextDue": "2026-11-07",
+        "state": "scheduled",
+        "approvalId": null,
+        "expiresAt": null,
+        "lastAttempt": null,
+        "lastSentAt": "2026-10-07T08:22:12.566Z"
+      },
+      "from": {
+        "id": "acc-lucia",
+        "label": "Aurora account"
+      },
+      "to": {
+        "id": "acc-lucia-savings",
+        "label": "Personal savings"
+      },
+      "history": [
+        {
+          "month": "2026-10",
+          "plannedCents": 20000,
+          "savedCents": 20000
+        }
+      ]
+    },
+    {
+      "id": "goal-no_plan",
+      "name": "Trip to Lisbon",
+      "targetCents": 120000,
+      "targetDate": "2027-05-07",
+      "savedCents": 20000,
+      "remainingCents": 100000,
+      "behindCents": 0,
+      "monthlyCents": null,
+      "requiredMonthlyCents": 14286,
+      "suggestion": {
+        "kind": "prepare_again",
+        "monthlyCents": 14286,
+        "text": "A monthly transfer of €142.86 reaches €1,200.00 by 7 May 2027."
+      },
+      "alternative": null,
+      "state": "no_plan",
+      "headline": "No monthly transfer",
+      "basis": "€200.00 of €1,200.00 saved. No monthly transfer is set up for this goal, so nothing more is added.",
+      "prepared": null,
+      "from": {
+        "id": "acc-lucia",
+        "label": "Aurora account"
+      },
+      "to": {
+        "id": "acc-lucia-savings",
+        "label": "Personal savings"
+      },
+      "history": [
+        {
+          "month": "2026-10",
+          "plannedCents": 20000,
+          "savedCents": 20000
+        }
+      ]
+    },
+    {
+      "id": "goal-paused",
+      "name": "Trip to Lisbon",
+      "targetCents": 120000,
+      "targetDate": "2027-05-07",
+      "savedCents": 20000,
+      "remainingCents": 100000,
+      "behindCents": 0,
+      "monthlyCents": null,
+      "requiredMonthlyCents": 14286,
+      "suggestion": {
+        "kind": "prepare_again",
+        "monthlyCents": 14286,
+        "text": "A monthly transfer of €142.86 reaches €1,200.00 by 7 May 2027."
+      },
+      "alternative": null,
+      "state": "no_plan",
+      "headline": "No monthly transfer",
+      "basis": "€200.00 of €1,200.00 saved. No monthly transfer is set up for this goal, so nothing more is added.",
+      "prepared": {
+        "id": "d05281ba-f89a-4a99-bbdb-85d50881b147",
+        "fromAccountId": "acc-lucia",
+        "toAccountId": "acc-lucia-savings",
+        "to": "Personal savings",
+        "amountCents": 15000,
+        "concept": "Trip to Lisbon",
+        "note": null,
+        "when": {
+          "kind": "monthly",
+          "day": 7
+        },
+        "nextDue": null,
+        "state": "paused",
+        "approvalId": null,
+        "expiresAt": null,
+        "lastAttempt": null,
+        "lastSentAt": null
+      },
+      "from": {
+        "id": "acc-lucia",
+        "label": "Aurora account"
+      },
+      "to": {
+        "id": "acc-lucia-savings",
+        "label": "Personal savings"
+      },
+      "history": [
+        {
+          "month": "2026-10",
+          "plannedCents": 20000,
+          "savedCents": 20000
+        }
+      ]
+    },
+    {
+      "readOn": "2027-04-02",
+      "id": "goal-date_passed",
+      "name": "Trip to Lisbon",
+      "targetCents": 120000,
+      "targetDate": "2027-03-31",
+      "savedCents": 0,
+      "remainingCents": 120000,
+      "behindCents": 0,
+      "monthlyCents": 20000,
+      "requiredMonthlyCents": null,
+      "suggestion": {
+        "kind": "extend",
+        "targetDate": "2027-09-07",
+        "text": "€200.00 a month reaches €1,200.00 by 7 Sep."
+      },
+      "alternative": null,
+      "state": "date_passed",
+      "headline": "The date has passed",
+      "basis": "€0.00 of €1,200.00 saved by 31 Mar. €1,200.00 remains.",
+      "prepared": {
+        "id": "adb21eac-6175-425f-bd76-33afc3c8fb5a",
+        "fromAccountId": "acc-lucia",
+        "toAccountId": "acc-lucia-savings",
+        "to": "Personal savings",
+        "amountCents": 20000,
+        "concept": "Trip to Lisbon",
+        "note": null,
+        "when": {
+          "kind": "monthly",
+          "day": 7
+        },
+        "nextDue": "2026-10-07",
+        "state": "due",
+        "approvalId": null,
+        "expiresAt": null,
+        "lastAttempt": null,
+        "lastSentAt": null
+      },
+      "from": {
+        "id": "acc-lucia",
+        "label": "Aurora account"
+      },
+      "to": {
+        "id": "acc-lucia-savings",
+        "label": "Personal savings"
+      },
+      "history": [
+        {
+          "month": "2026-10",
+          "plannedCents": 20000,
+          "savedCents": 0
+        },
+        {
+          "month": "2026-11",
+          "plannedCents": 20000,
+          "savedCents": 0
+        },
+        {
+          "month": "2026-12",
+          "plannedCents": 20000,
+          "savedCents": 0
+        },
+        {
+          "month": "2027-01",
+          "plannedCents": 20000,
+          "savedCents": 0
+        },
+        {
+          "month": "2027-02",
+          "plannedCents": 20000,
+          "savedCents": 0
+        },
+        {
+          "month": "2027-03",
+          "plannedCents": 20000,
+          "savedCents": 0
+        },
+        {
+          "month": "2027-04",
+          "plannedCents": 20000,
+          "savedCents": 0
+        }
+      ]
+    },
+    {
+      "id": "goal-reached",
+      "name": "New bike",
+      "targetCents": 30000,
+      "targetDate": "2026-12-31",
+      "savedCents": 30000,
+      "remainingCents": 0,
+      "behindCents": 0,
+      "monthlyCents": 30000,
+      "requiredMonthlyCents": null,
+      "suggestion": null,
+      "alternative": null,
+      "state": "reached",
+      "headline": "Reached on 7 Oct",
+      "basis": "€300.00 saved, with the transfers you confirmed. Its monthly transfer of €300.00 is still in Transfers and stays there until you delete it.",
+      "prepared": {
+        "id": "be85c8e6-aa0b-4ad8-82f4-aae0ca36e766",
+        "fromAccountId": "acc-lucia",
+        "toAccountId": "acc-lucia-savings",
+        "to": "Personal savings",
+        "amountCents": 30000,
+        "concept": "New bike",
+        "note": null,
+        "when": {
+          "kind": "monthly",
+          "day": 7
+        },
+        "nextDue": "2026-11-07",
+        "state": "scheduled",
+        "approvalId": null,
+        "expiresAt": null,
+        "lastAttempt": null,
+        "lastSentAt": "2026-10-07T08:22:12.655Z"
+      },
+      "from": {
+        "id": "acc-lucia",
+        "label": "Aurora account"
+      },
+      "to": {
+        "id": "acc-lucia-savings",
+        "label": "Personal savings"
+      },
+      "reachedAt": "2026-10-07",
+      "history": [
+        {
+          "month": "2026-10",
+          "plannedCents": 30000,
+          "savedCents": 30000
+        }
+      ]
+    },
+    {
+      "readOn": "2027-04-02",
+      "id": "goal-date_passed-ended",
+      "name": "Trip to Lisbon",
+      "targetCents": 120000,
+      "targetDate": "2027-03-31",
+      "savedCents": 0,
+      "remainingCents": 120000,
+      "behindCents": 0,
+      "monthlyCents": null,
+      "requiredMonthlyCents": null,
+      "suggestion": {
+        "kind": "extend",
+        "targetDate": "2027-09-07",
+        "text": "€200.00 a month reaches €1,200.00 by 7 Sep."
+      },
+      "alternative": null,
+      "state": "date_passed",
+      "headline": "The date has passed",
+      "basis": "€0.00 of €1,200.00 saved by 31 Mar. €1,200.00 remains.",
+      "prepared": null,
+      "from": {
+        "id": "acc-lucia",
+        "label": "Aurora account"
+      },
+      "to": {
+        "id": "acc-lucia-savings",
+        "label": "Personal savings"
+      },
+      "history": [
+        {
+          "month": "2026-10",
+          "plannedCents": 20000,
+          "savedCents": 0
+        },
+        {
+          "month": "2026-11",
+          "plannedCents": 20000,
+          "savedCents": 0
+        },
+        {
+          "month": "2026-12",
+          "plannedCents": 20000,
+          "savedCents": 0
+        },
+        {
+          "month": "2027-01",
+          "plannedCents": 20000,
+          "savedCents": 0
+        },
+        {
+          "month": "2027-02",
+          "plannedCents": 20000,
+          "savedCents": 0
+        },
+        {
+          "month": "2027-03",
+          "plannedCents": 20000,
+          "savedCents": 0
+        },
+        {
+          "month": "2027-04",
+          "plannedCents": 20000,
+          "savedCents": 0
+        }
+      ]
+    },
+    {
+      "id": "goal-reached-ended",
+      "name": "New bike",
+      "targetCents": 30000,
+      "targetDate": "2026-12-31",
+      "savedCents": 30000,
+      "remainingCents": 0,
+      "behindCents": 0,
+      "monthlyCents": null,
+      "requiredMonthlyCents": null,
+      "suggestion": null,
+      "alternative": null,
+      "state": "reached",
+      "headline": "Reached on 7 Oct",
+      "basis": "€300.00 saved, with the transfers you confirmed.",
+      "prepared": null,
+      "from": {
+        "id": "acc-lucia",
+        "label": "Aurora account"
+      },
+      "to": {
+        "id": "acc-lucia-savings",
+        "label": "Personal savings"
+      },
+      "reachedAt": "2026-10-07",
+      "history": [
+        {
+          "month": "2026-10",
+          "plannedCents": 30000,
+          "savedCents": 30000
+        }
+      ]
+    },
+    {
+      "id": "goal-behind-raise-only",
+      "name": "Trip to Lisbon",
+      "targetCents": 120000,
+      "targetDate": "2027-03-31",
+      "savedCents": 20000,
+      "remainingCents": 100000,
+      "behindCents": 25000,
+      "monthlyCents": 15000,
+      "requiredMonthlyCents": 20000,
+      "suggestion": {
+        "kind": "raise",
+        "monthlyCents": 20000,
+        "text": "€200.00 a month reaches €1,200.00 by 31 Mar 2027."
+      },
+      "alternative": null,
+      "state": "behind",
+      "headline": "€250.00 behind plan",
+      "basis": "€200.00 of €1,200.00 saved. At €150.00 a month you reach €950.00 by 31 Mar 2027, €250.00 short.",
+      "prepared": {
+        "id": "d05281ba-f89a-4a99-bbdb-85d50881b147",
+        "fromAccountId": "acc-lucia",
+        "toAccountId": "acc-lucia-savings",
+        "to": "Personal savings",
+        "amountCents": 15000,
+        "concept": "Trip to Lisbon",
+        "note": null,
+        "when": {
+          "kind": "monthly",
+          "day": 7
+        },
+        "nextDue": "2026-11-07",
+        "state": "scheduled",
+        "approvalId": null,
+        "expiresAt": null,
+        "lastAttempt": null,
+        "lastSentAt": null
+      },
+      "from": {
+        "id": "acc-lucia",
+        "label": "Aurora account"
+      },
+      "to": {
+        "id": "acc-lucia-savings",
+        "label": "Personal savings"
+      },
+      "history": [
+        {
+          "month": "2026-10",
+          "plannedCents": 20000,
+          "savedCents": 20000
+        }
+      ]
+    },
+    {
+      "id": "goal-behind-no-suggestion",
+      "name": "Trip to Lisbon",
+      "targetCents": 120000,
+      "targetDate": "2027-03-31",
+      "savedCents": 20000,
+      "remainingCents": 100000,
+      "behindCents": 25000,
+      "monthlyCents": 15000,
+      "requiredMonthlyCents": 20000,
+      "suggestion": null,
+      "alternative": null,
+      "state": "behind",
+      "headline": "€250.00 behind plan",
+      "basis": "€200.00 of €1,200.00 saved. At €150.00 a month you reach €950.00 by 31 Mar 2027, €250.00 short.",
+      "prepared": {
+        "id": "d05281ba-f89a-4a99-bbdb-85d50881b147",
+        "fromAccountId": "acc-lucia",
+        "toAccountId": "acc-lucia-savings",
+        "to": "Personal savings",
+        "amountCents": 15000,
+        "concept": "Trip to Lisbon",
+        "note": null,
+        "when": {
+          "kind": "monthly",
+          "day": 7
+        },
+        "nextDue": "2026-11-07",
+        "state": "scheduled",
+        "approvalId": null,
+        "expiresAt": null,
+        "lastAttempt": null,
+        "lastSentAt": null
+      },
+      "from": {
+        "id": "acc-lucia",
+        "label": "Aurora account"
+      },
+      "to": {
+        "id": "acc-lucia-savings",
+        "label": "Personal savings"
+      },
+      "history": [
+        {
+          "month": "2026-10",
+          "plannedCents": 20000,
+          "savedCents": 20000
+        }
+      ]
+    },
+    {
+      "readOn": "2027-04-02",
+      "id": "goal-date_passed-no-suggestion",
+      "name": "Trip to Lisbon",
+      "targetCents": 120000,
+      "targetDate": "2027-03-31",
+      "savedCents": 0,
+      "remainingCents": 120000,
+      "behindCents": 0,
+      "monthlyCents": 20000,
+      "requiredMonthlyCents": null,
+      "suggestion": null,
+      "alternative": null,
+      "state": "date_passed",
+      "headline": "The date has passed",
+      "basis": "€0.00 of €1,200.00 saved by 31 Mar. €1,200.00 remains.",
+      "prepared": {
+        "id": "adb21eac-6175-425f-bd76-33afc3c8fb5a",
+        "fromAccountId": "acc-lucia",
+        "toAccountId": "acc-lucia-savings",
+        "to": "Personal savings",
+        "amountCents": 20000,
+        "concept": "Trip to Lisbon",
+        "note": null,
+        "when": {
+          "kind": "monthly",
+          "day": 7
+        },
+        "nextDue": "2026-10-07",
+        "state": "due",
+        "approvalId": null,
+        "expiresAt": null,
+        "lastAttempt": null,
+        "lastSentAt": null
+      },
+      "from": {
+        "id": "acc-lucia",
+        "label": "Aurora account"
+      },
+      "to": {
+        "id": "acc-lucia-savings",
+        "label": "Personal savings"
+      },
+      "history": [
+        {
+          "month": "2026-10",
+          "plannedCents": 20000,
+          "savedCents": 0
+        },
+        {
+          "month": "2026-11",
+          "plannedCents": 20000,
+          "savedCents": 0
+        },
+        {
+          "month": "2026-12",
+          "plannedCents": 20000,
+          "savedCents": 0
+        },
+        {
+          "month": "2027-01",
+          "plannedCents": 20000,
+          "savedCents": 0
+        },
+        {
+          "month": "2027-02",
+          "plannedCents": 20000,
+          "savedCents": 0
+        },
+        {
+          "month": "2027-03",
+          "plannedCents": 20000,
+          "savedCents": 0
+        },
+        {
+          "month": "2027-04",
+          "plannedCents": 20000,
+          "savedCents": 0
+        }
+      ]
+    }
+  ]
+}

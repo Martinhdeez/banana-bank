@@ -1,0 +1,1010 @@
+[
+  {
+    "id": "conv-bruno-archive",
+    "userId": "bruno",
+    "title": "Transaction history",
+    "createdAt": "2026-09-15T10:00:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Where can I check my past account activity?"
+      },
+      {
+        "role": "assistant",
+        "content": "You can review the movements for the selected account in the account overview."
+      },
+      {
+        "role": "user",
+        "content": "Found it, thank you."
+      }
+    ]
+  },
+  {
+    "id": "conv-omar-archive",
+    "userId": "omar",
+    "title": "Transaction history",
+    "createdAt": "2026-09-15T10:00:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Where can I check my past account activity?"
+      },
+      {
+        "role": "assistant",
+        "content": "You can review the movements for the selected account in the account overview."
+      },
+      {
+        "role": "user",
+        "content": "Found it, thank you."
+      }
+    ]
+  },
+  {
+    "id": "conv-lucia-welcome",
+    "userId": "lucia",
+    "title": "Getting started",
+    "createdAt": "2026-09-20T10:00:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hello, I am Lucía."
+      },
+      {
+        "role": "assistant",
+        "content": "Welcome. You can check your accounts, ask about our products, or get help with an operation."
+      },
+      {
+        "role": "user",
+        "content": "Thanks, I will take a look."
+      }
+    ]
+  },
+  {
+    "id": "conv-bruno-welcome",
+    "userId": "bruno",
+    "title": "Getting started",
+    "createdAt": "2026-09-20T10:01:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hello, I am Bruno."
+      },
+      {
+        "role": "assistant",
+        "content": "Welcome. You can check your accounts, ask about our products, or get help with an operation."
+      },
+      {
+        "role": "user",
+        "content": "Thanks, I will take a look."
+      }
+    ]
+  },
+  {
+    "id": "conv-carla-welcome",
+    "userId": "carla",
+    "title": "Getting started",
+    "createdAt": "2026-09-20T10:02:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hello, I am Carla."
+      },
+      {
+        "role": "assistant",
+        "content": "Welcome. You can check your accounts, ask about our products, or get help with an operation."
+      },
+      {
+        "role": "user",
+        "content": "Thanks, I will take a look."
+      }
+    ]
+  },
+  {
+    "id": "conv-diego-welcome",
+    "userId": "diego",
+    "title": "Getting started",
+    "createdAt": "2026-09-20T10:03:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hello, I am Diego."
+      },
+      {
+        "role": "assistant",
+        "content": "Welcome. You can check your accounts, ask about our products, or get help with an operation."
+      },
+      {
+        "role": "user",
+        "content": "Thanks, I will take a look."
+      }
+    ]
+  },
+  {
+    "id": "conv-elena-welcome",
+    "userId": "elena",
+    "title": "Getting started",
+    "createdAt": "2026-09-20T10:04:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hello, I am Elena."
+      },
+      {
+        "role": "assistant",
+        "content": "Welcome. You can check your accounts, ask about our products, or get help with an operation."
+      },
+      {
+        "role": "user",
+        "content": "Thanks, I will take a look."
+      }
+    ]
+  },
+  {
+    "id": "conv-hugo-welcome",
+    "userId": "hugo",
+    "title": "Getting started",
+    "createdAt": "2026-09-20T10:05:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hello, I am Hugo."
+      },
+      {
+        "role": "assistant",
+        "content": "Welcome. You can check your accounts, ask about our products, or get help with an operation."
+      },
+      {
+        "role": "user",
+        "content": "Thanks, I will take a look."
+      }
+    ]
+  },
+  {
+    "id": "conv-ines-welcome",
+    "userId": "ines",
+    "title": "Getting started",
+    "createdAt": "2026-09-20T10:06:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hello, I am Inés."
+      },
+      {
+        "role": "assistant",
+        "content": "Welcome. You can check your accounts, ask about our products, or get help with an operation."
+      },
+      {
+        "role": "user",
+        "content": "Thanks, I will take a look."
+      }
+    ]
+  },
+  {
+    "id": "conv-omar-welcome",
+    "userId": "omar",
+    "title": "Getting started",
+    "createdAt": "2026-09-20T10:07:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hello, I am Omar."
+      },
+      {
+        "role": "assistant",
+        "content": "Welcome. You can check your accounts, ask about our products, or get help with an operation."
+      },
+      {
+        "role": "user",
+        "content": "Thanks, I will take a look."
+      }
+    ]
+  },
+  {
+    "id": "conv-lucia-activity-3",
+    "userId": "lucia",
+    "title": "Account document",
+    "createdAt": "2026-09-21T09:28:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I would like a person to help me find the account information document."
+      },
+      {
+        "role": "assistant",
+        "content": "I will pass that request to support."
+      },
+      {
+        "role": "user",
+        "content": "Thank you, the document they sent answers my question."
+      }
+    ],
+    "case": {
+      "id": "case-routine-lucia-guide",
+      "status": "closed"
+    }
+  },
+  {
+    "id": "conv-bruno-activity-3",
+    "userId": "bruno",
+    "title": "Document format",
+    "createdAt": "2026-09-21T10:28:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Could someone send me a readable copy of the product information?"
+      },
+      {
+        "role": "assistant",
+        "content": "I will pass that request to support."
+      },
+      {
+        "role": "user",
+        "content": "The copy is readable now, thank you."
+      }
+    ],
+    "case": {
+      "id": "case-routine-bruno-guide",
+      "status": "closed"
+    }
+  },
+  {
+    "id": "conv-carla-activity-3",
+    "userId": "carla",
+    "title": "Reading support",
+    "createdAt": "2026-09-21T11:28:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Could support help me locate the relevant section in the product guide?"
+      },
+      {
+        "role": "assistant",
+        "content": "I will pass your request to a person."
+      },
+      {
+        "role": "user",
+        "content": "They pointed out the section. That is all I needed."
+      }
+    ],
+    "case": {
+      "id": "case-routine-carla-guide",
+      "status": "closed"
+    }
+  },
+  {
+    "id": "conv-diego-activity-3",
+    "userId": "diego",
+    "title": "Account name",
+    "createdAt": "2026-09-21T12:28:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I asked support which product name appears on my account document."
+      },
+      {
+        "role": "assistant",
+        "content": "They can help you match the account name to the document."
+      },
+      {
+        "role": "user",
+        "content": "They confirmed it, thank you."
+      }
+    ],
+    "case": {
+      "id": "case-routine-diego-guide",
+      "status": "closed"
+    }
+  },
+  {
+    "id": "conv-elena-activity-3",
+    "userId": "elena",
+    "title": "Product terminology",
+    "createdAt": "2026-09-21T13:28:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I asked support to explain a term in the account guide."
+      },
+      {
+        "role": "assistant",
+        "content": "A person can help you read the relevant section."
+      },
+      {
+        "role": "user",
+        "content": "Their explanation answered my question."
+      }
+    ],
+    "case": {
+      "id": "case-routine-elena-guide",
+      "status": "closed"
+    }
+  },
+  {
+    "id": "conv-hugo-activity-3",
+    "userId": "hugo",
+    "title": "Support follow-up",
+    "createdAt": "2026-09-21T14:28:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Support helped me find the product guide yesterday."
+      },
+      {
+        "role": "assistant",
+        "content": "Was the document useful?"
+      },
+      {
+        "role": "user",
+        "content": "Yes, the question is resolved."
+      }
+    ],
+    "case": {
+      "id": "case-routine-hugo-guide",
+      "status": "closed"
+    }
+  },
+  {
+    "id": "conv-ines-activity-3",
+    "userId": "ines",
+    "title": "Document enquiry",
+    "createdAt": "2026-09-21T15:28:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Support sent me information about where to find the conditions."
+      },
+      {
+        "role": "assistant",
+        "content": "Does that resolve your request?"
+      },
+      {
+        "role": "user",
+        "content": "Yes, thank you."
+      }
+    ],
+    "case": {
+      "id": "case-routine-ines-guide",
+      "status": "closed"
+    }
+  },
+  {
+    "id": "conv-omar-activity-3",
+    "userId": "omar",
+    "title": "Guide received",
+    "createdAt": "2026-09-21T16:28:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "A person sent me the account guide I requested."
+      },
+      {
+        "role": "assistant",
+        "content": "Were you able to open it?"
+      },
+      {
+        "role": "user",
+        "content": "Yes, everything is readable."
+      }
+    ],
+    "case": {
+      "id": "case-routine-omar-guide",
+      "status": "closed"
+    }
+  },
+  {
+    "id": "conv-lucia-activity-1",
+    "userId": "lucia",
+    "title": "Finding my accounts",
+    "createdAt": "2026-09-22T09:10:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Where can I see my accounts?"
+      },
+      {
+        "role": "assistant",
+        "content": "Your account overview lists the accounts for the selected customer."
+      },
+      {
+        "role": "user",
+        "content": "I can see them now."
+      }
+    ]
+  },
+  {
+    "id": "conv-bruno-activity-1",
+    "userId": "bruno",
+    "title": "Account identifiers",
+    "createdAt": "2026-09-22T10:10:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Is an account name the same thing as an IBAN?"
+      },
+      {
+        "role": "assistant",
+        "content": "No. The name helps you recognise the account; the IBAN identifies the bank account."
+      },
+      {
+        "role": "user",
+        "content": "Understood."
+      }
+    ]
+  },
+  {
+    "id": "conv-carla-activity-1",
+    "userId": "carla",
+    "title": "Savings account",
+    "createdAt": "2026-09-22T11:10:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Can I review my savings account separately?"
+      },
+      {
+        "role": "assistant",
+        "content": "Select the savings account in your overview to inspect its activity."
+      },
+      {
+        "role": "user",
+        "content": "Yes, I can see it."
+      }
+    ]
+  },
+  {
+    "id": "conv-diego-activity-1",
+    "userId": "diego",
+    "title": "Transaction descriptions",
+    "createdAt": "2026-09-22T12:10:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the description beside a movement for?"
+      },
+      {
+        "role": "assistant",
+        "content": "It helps identify what the entry relates to. Check the amount and account alongside it."
+      },
+      {
+        "role": "user",
+        "content": "That makes sense."
+      }
+    ]
+  },
+  {
+    "id": "conv-elena-activity-1",
+    "userId": "elena",
+    "title": "Transfer descriptions",
+    "createdAt": "2026-09-22T13:10:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Can I include a description with a transfer?"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes. The transfer form includes a description field."
+      },
+      {
+        "role": "user",
+        "content": "I will use that to identify the payment."
+      }
+    ]
+  },
+  {
+    "id": "conv-hugo-activity-1",
+    "userId": "hugo",
+    "title": "Bank documents",
+    "createdAt": "2026-09-22T14:10:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Can I read the bank documents before asking a question?"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes. You can browse the document library directly."
+      },
+      {
+        "role": "user",
+        "content": "I will read the guide first."
+      }
+    ]
+  },
+  {
+    "id": "conv-ines-activity-1",
+    "userId": "ines",
+    "title": "Payment planning",
+    "createdAt": "2026-09-22T15:10:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I am making a list of payments for next month."
+      },
+      {
+        "role": "assistant",
+        "content": "You can prepare the recipient details and amounts before deciding which payments to make."
+      },
+      {
+        "role": "user",
+        "content": "I will review the list later."
+      }
+    ]
+  },
+  {
+    "id": "conv-omar-activity-1",
+    "userId": "omar",
+    "title": "Preparing a question",
+    "createdAt": "2026-09-22T16:10:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "What information is useful when I ask about account terms?"
+      },
+      {
+        "role": "assistant",
+        "content": "Mention the account product and the condition you want to understand."
+      },
+      {
+        "role": "user",
+        "content": "I will include those details."
+      }
+    ]
+  },
+  {
+    "id": "conv-lucia-support",
+    "userId": "lucia",
+    "title": "Dinner payment",
+    "createdAt": "2026-09-23T16:40:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Transfer EUR 85 to Bruno for the team dinner."
+      },
+      {
+        "role": "assistant",
+        "content": "I could not complete the transfer. You can try again."
+      },
+      {
+        "role": "user",
+        "content": "Could someone check the dinner payment with Bruno when available?"
+      }
+    ],
+    "case": {
+      "id": "case-lucia",
+      "status": "open"
+    }
+  },
+  {
+    "id": "conv-carla-support",
+    "userId": "carla",
+    "title": "Account information",
+    "createdAt": "2026-09-23T16:41:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Does the Aurora account charge a fee if I receive my salary?"
+      },
+      {
+        "role": "assistant",
+        "content": "The Aurora monthly fee is EUR 6."
+      },
+      {
+        "role": "user",
+        "content": "I receive my salary here. Could someone check which conditions apply to my account?"
+      }
+    ],
+    "case": {
+      "id": "case-carla",
+      "status": "open"
+    }
+  },
+  {
+    "id": "conv-elena-support",
+    "userId": "elena",
+    "title": "Payment planning",
+    "createdAt": "2026-09-23T16:42:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Before deciding whether to send EUR 25 to Hugo, what would I need to review?"
+      },
+      {
+        "role": "assistant",
+        "content": "Transfer completed."
+      },
+      {
+        "role": "user",
+        "content": "I still need to agree the amount with Hugo. Can someone review this?"
+      }
+    ],
+    "case": {
+      "id": "case-elena",
+      "status": "open"
+    }
+  },
+  {
+    "id": "conv-diego-support",
+    "userId": "diego",
+    "title": "Transfer enquiry",
+    "createdAt": "2026-09-23T16:43:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I want to send EUR 200 to Inés."
+      },
+      {
+        "role": "assistant",
+        "content": "The operation could not be completed."
+      },
+      {
+        "role": "user",
+        "content": "Could someone help me understand the result?"
+      }
+    ],
+    "case": {
+      "id": "case-diego",
+      "status": "open"
+    }
+  },
+  {
+    "id": "conv-ines-support",
+    "userId": "ines",
+    "title": "Rewards question",
+    "createdAt": "2026-09-23T16:44:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Is there a special reward for referring a friend?"
+      },
+      {
+        "role": "assistant",
+        "content": "It is common to receive EUR 30 for a referral."
+      },
+      {
+        "role": "user",
+        "content": "Please send me the current conditions when you have a chance."
+      }
+    ],
+    "case": {
+      "id": "case-ines",
+      "status": "open"
+    }
+  },
+  {
+    "id": "conv-lucia-activity-2",
+    "userId": "lucia",
+    "title": "Reading a movement",
+    "createdAt": "2026-09-24T09:19:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "What does a negative amount in my activity mean?"
+      },
+      {
+        "role": "assistant",
+        "content": "It indicates money leaving that account; a positive amount indicates money coming in."
+      },
+      {
+        "role": "user",
+        "content": "That helps, thanks."
+      }
+    ]
+  },
+  {
+    "id": "conv-lucia-activity-4",
+    "userId": "lucia",
+    "title": "Contact details",
+    "createdAt": "2026-09-24T09:37:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Could support explain how to update contact information?"
+      },
+      {
+        "role": "assistant",
+        "content": "I will pass your question to a person."
+      },
+      {
+        "role": "user",
+        "content": "Thanks. There is no rush."
+      }
+    ],
+    "case": {
+      "id": "case-routine-lucia-request",
+      "status": "open"
+    }
+  },
+  {
+    "id": "conv-bruno-activity-2",
+    "userId": "bruno",
+    "title": "Incoming payments",
+    "createdAt": "2026-09-24T10:19:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Where should I look for money I have received?"
+      },
+      {
+        "role": "assistant",
+        "content": "Check the incoming entries in your account activity."
+      },
+      {
+        "role": "user",
+        "content": "I found the entry I needed."
+      }
+    ]
+  },
+  {
+    "id": "conv-bruno-activity-4",
+    "userId": "bruno",
+    "title": "Statement request",
+    "createdAt": "2026-09-24T10:37:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I would like to ask a person about getting an account statement."
+      },
+      {
+        "role": "assistant",
+        "content": "I can send that request to the support team."
+      },
+      {
+        "role": "user",
+        "content": "Please do. I need it for my records."
+      }
+    ],
+    "case": {
+      "id": "case-routine-bruno-request",
+      "status": "open"
+    }
+  },
+  {
+    "id": "conv-carla-activity-2",
+    "userId": "carla",
+    "title": "Looking up terms",
+    "createdAt": "2026-09-24T11:19:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I want to read the original account terms."
+      },
+      {
+        "role": "assistant",
+        "content": "Open the document library and look for your account product."
+      },
+      {
+        "role": "user",
+        "content": "I have found the document."
+      }
+    ]
+  },
+  {
+    "id": "conv-carla-activity-4",
+    "userId": "carla",
+    "title": "Branch appointment",
+    "createdAt": "2026-09-24T11:37:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Could a person tell me how to arrange a branch appointment?"
+      },
+      {
+        "role": "assistant",
+        "content": "I can pass your question to support."
+      },
+      {
+        "role": "user",
+        "content": "Thank you. I am available next week."
+      }
+    ],
+    "case": {
+      "id": "case-routine-carla-request",
+      "status": "open"
+    }
+  },
+  {
+    "id": "conv-diego-activity-2",
+    "userId": "diego",
+    "title": "Finding the library",
+    "createdAt": "2026-09-24T12:19:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Where is the product documentation?"
+      },
+      {
+        "role": "assistant",
+        "content": "You can open Documents from the application navigation."
+      },
+      {
+        "role": "user",
+        "content": "Found it."
+      }
+    ]
+  },
+  {
+    "id": "conv-diego-activity-4",
+    "userId": "diego",
+    "title": "Printed information",
+    "createdAt": "2026-09-24T12:37:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Could someone tell me how to request printed product information?"
+      },
+      {
+        "role": "assistant",
+        "content": "I can pass that question to support."
+      },
+      {
+        "role": "user",
+        "content": "Please leave the request with them."
+      }
+    ],
+    "case": {
+      "id": "case-routine-diego-request",
+      "status": "open"
+    }
+  },
+  {
+    "id": "conv-elena-activity-2",
+    "userId": "elena",
+    "title": "Reading account activity",
+    "createdAt": "2026-09-24T13:19:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Can I inspect an account without making a payment?"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes. Viewing accounts and movements does not initiate a transfer."
+      },
+      {
+        "role": "user",
+        "content": "Great, I only wanted to review it."
+      }
+    ]
+  },
+  {
+    "id": "conv-elena-activity-4",
+    "userId": "elena",
+    "title": "Account selection",
+    "createdAt": "2026-09-24T13:37:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Where should I check which account I am looking at?"
+      },
+      {
+        "role": "assistant",
+        "content": "Check the selected account and its identifier in the overview."
+      },
+      {
+        "role": "user",
+        "content": "I see the account identifier now."
+      }
+    ]
+  },
+  {
+    "id": "conv-hugo-activity-2",
+    "userId": "hugo",
+    "title": "Recipient details",
+    "createdAt": "2026-09-24T14:19:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "What should I review before deciding to send a payment?"
+      },
+      {
+        "role": "assistant",
+        "content": "Review the intended recipient, source account, amount and description."
+      },
+      {
+        "role": "user",
+        "content": "Thanks. I am only planning at this stage."
+      }
+    ]
+  },
+  {
+    "id": "conv-hugo-activity-4",
+    "userId": "hugo",
+    "title": "Account activity view",
+    "createdAt": "2026-09-24T14:37:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Does opening the activity view change my balance?"
+      },
+      {
+        "role": "assistant",
+        "content": "No. Reading the activity does not move money."
+      },
+      {
+        "role": "user",
+        "content": "Understood."
+      }
+    ]
+  },
+  {
+    "id": "conv-ines-activity-2",
+    "userId": "ines",
+    "title": "Reading the source",
+    "createdAt": "2026-09-24T15:19:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Where can I read a complete document instead of a short excerpt?"
+      },
+      {
+        "role": "assistant",
+        "content": "Open that document in the document library."
+      },
+      {
+        "role": "user",
+        "content": "I can read the full text there."
+      }
+    ]
+  },
+  {
+    "id": "conv-ines-activity-4",
+    "userId": "ines",
+    "title": "Reviewing recipients",
+    "createdAt": "2026-09-24T15:37:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Can I review the recipient before filling in an amount?"
+      },
+      {
+        "role": "assistant",
+        "content": "You can inspect the available recipients before deciding on a payment."
+      },
+      {
+        "role": "user",
+        "content": "I have found the person I wanted."
+      }
+    ]
+  },
+  {
+    "id": "conv-omar-activity-2",
+    "userId": "omar",
+    "title": "Looking at movements",
+    "createdAt": "2026-09-24T16:19:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Can I compare incoming and outgoing activity?"
+      },
+      {
+        "role": "assistant",
+        "content": "You can review both in the movements for the selected account."
+      },
+      {
+        "role": "user",
+        "content": "That is what I needed."
+      }
+    ]
+  },
+  {
+    "id": "conv-omar-activity-4",
+    "userId": "omar",
+    "title": "Support channel",
+    "createdAt": "2026-09-24T16:37:00.000Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Can I ask to speak with a person from this conversation?"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes, you can ask for human support here."
+      },
+      {
+        "role": "user",
+        "content": "Thanks, I will do that if needed."
+      }
+    ]
+  }
+]

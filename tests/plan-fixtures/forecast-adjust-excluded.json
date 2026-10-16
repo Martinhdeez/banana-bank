@@ -1,0 +1,133 @@
+{
+  "adjustable": true,
+  "today": "2026-10-07",
+  "until": "2026-10-31",
+  "history": {
+    "months": ["2026-07", "2026-08", "2026-09"]
+  },
+  "income": "counted",
+  "notes": [],
+  "sourceLine": "Worked out by fixed rules from your movements, your prepared transfers and what you added or left out. No AI is involved in these figures.",
+  "accounts": [
+    {
+      "id": "acc-lucia",
+      "label": "Aurora account",
+      "balanceCents": 293761,
+      "endCents": 213501,
+      "lowest": {
+        "date": "2026-10-25",
+        "balanceCents": 1771
+      },
+      "shortfall": null,
+      "headline": "Covered until 31 Oct",
+      "explanation": "Lowest point €17.71 on 25 Oct. An estimate: it counts 3 usual payments and 1 added by you.",
+      "options": [],
+      "events": [
+        {
+          "date": "2026-10-10",
+          "label": "Digi Spain Telecom",
+          "amountCents": -3990,
+          "source": "usual_charge",
+          "certainty": "estimated",
+          "merchantKey": "DIGI SPAIN TELECOM",
+          "seenOn": ["2026-07-10", "2026-08-10", "2026-09-10"],
+          "usualDay": 10,
+          "balanceAfterCents": 289771
+        },
+        {
+          "date": "2026-10-24",
+          "source": "prepared",
+          "certainty": "certain",
+          "preparedId": "920ccc06-2e8f-405a-a32a-1fa17149577c",
+          "label": "Prepared transfer from Personal savings",
+          "amountCents": 2000,
+          "balanceAfterCents": 291771
+        },
+        {
+          "date": "2026-10-25",
+          "label": "Car insurance",
+          "amountCents": -290000,
+          "source": "expected_by_you",
+          "certainty": "estimated",
+          "adjustmentId": "1f8ef704-ae7a-4102-94c2-e4b988a3b1ee",
+          "balanceAfterCents": 1771
+        },
+        {
+          "date": "2026-10-28",
+          "label": "Nomina Acme Consulting",
+          "amountCents": 215000,
+          "source": "usual_income",
+          "certainty": "estimated",
+          "merchantKey": "NOMINA ACME CONSULTING",
+          "seenOn": ["2026-07-28", "2026-08-28", "2026-09-28"],
+          "usualDay": 28,
+          "balanceAfterCents": 216771
+        },
+        {
+          "date": "2026-10-31",
+          "label": "Recarga Abono Transporte Crtm",
+          "amountCents": -3270,
+          "source": "usual_charge",
+          "certainty": "estimated",
+          "merchantKey": "RECARGA ABONO TRANSPORTE CRTM",
+          "seenOn": ["2026-07-31", "2026-08-31", "2026-09-30"],
+          "usualDay": 31,
+          "balanceAfterCents": 213501
+        }
+      ]
+    },
+    {
+      "id": "acc-lucia-savings",
+      "label": "Personal savings",
+      "balanceCents": 130000,
+      "endCents": 128000,
+      "lowest": {
+        "date": "2026-10-24",
+        "balanceCents": 128000
+      },
+      "shortfall": null,
+      "headline": "Covered until 31 Oct",
+      "explanation": "Lowest point €1,280.00 on 24 Oct.",
+      "options": [],
+      "events": [
+        {
+          "date": "2026-10-24",
+          "source": "prepared",
+          "certainty": "certain",
+          "preparedId": "920ccc06-2e8f-405a-a32a-1fa17149577c",
+          "label": "Prepared transfer to Aurora account",
+          "amountCents": -2000,
+          "balanceAfterCents": 128000
+        }
+      ]
+    }
+  ],
+  "notCounted": [
+    {
+      "label": "Spotify",
+      "reason": "excluded_by_you",
+      "adjustmentId": "4bf7da29-e58b-4c0c-9c3c-472864bf4309",
+      "text": "Spotify: left out by you, not counted."
+    }
+  ],
+  "adjustments": [
+    {
+      "id": "1f8ef704-ae7a-4102-94c2-e4b988a3b1ee",
+      "kind": "expect",
+      "accountId": "acc-lucia",
+      "label": "Car insurance",
+      "amountCents": 290000,
+      "repeats": "once",
+      "date": "2026-10-25",
+      "createdAt": "2026-10-07T08:17:52.768Z"
+    },
+    {
+      "id": "4bf7da29-e58b-4c0c-9c3c-472864bf4309",
+      "kind": "exclude",
+      "accountId": "acc-lucia",
+      "merchantKey": "SPOTIFY",
+      "label": "Spotify",
+      "createdAt": "2026-10-07T08:17:52.821Z"
+    }
+  ]
+}

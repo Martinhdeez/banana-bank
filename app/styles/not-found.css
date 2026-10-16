@@ -1,0 +1,23 @@
+/* A24g: the branded 404 (app/not-found.tsx). Redesign tokens only; one column at any width. */
+.not-found {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 32px 16px;
+}
+.not-found .brand {
+  text-decoration: none;
+  margin-bottom: 28px;
+}
+.not-found p {
+  color: var(--text-2);
+  margin-bottom: 24px;
+}
+.not-found .primary-button {
+  font-size: 13px;
+  text-decoration: none;
+}

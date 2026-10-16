@@ -1,0 +1,611 @@
+/* AI usage (TR2, plan 27 §6): the operator's tab and its drill-down drawer. Rules scoped to
+   `.usage-*`; the heading, the period control and the buttons are the Cases view's. */
+.usage-lines {
+  display: grid;
+  gap: 2px;
+  max-width: 760px;
+  color: var(--text-2);
+  font-size: 12px;
+}
+.usage-actions .segmented {
+  margin: 0;
+}
+.usage-actions .segmented button {
+  padding: 0 14px;
+}
+.usage-actions a.secondary-button {
+  white-space: nowrap;
+}
+.usage-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+.usage-body[aria-busy='true'] {
+  opacity: 0.6;
+}
+.usage-tiles {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+}
+.usage-tiles > div {
+  padding: 16px 18px;
+  min-width: 0;
+}
+.usage-tiles dt {
+  color: var(--text-2);
+  font-size: 12px;
+}
+.usage-tiles dd {
+  margin: 4px 0 0;
+  font-size: 21px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  overflow-wrap: anywhere;
+}
+.usage-tiles dd.usage-note {
+  margin-top: 2px;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.usage-note,
+.usage-meta {
+  margin: 0;
+  color: var(--text-2);
+  font-size: 12px;
+}
+.usage-card {
+  padding: 20px 24px;
+  min-width: 0;
+}
+.usage-card h2,
+.usage-prices summary {
+  margin: 0 0 12px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.usage-prices summary {
+  margin: 0;
+  cursor: pointer;
+}
+.usage-prices[open] summary {
+  margin-bottom: 12px;
+}
+.usage-card > .usage-note {
+  margin-top: 12px;
+}
+.usage-empty {
+  padding: 40px 24px;
+  text-align: center;
+}
+.usage-empty p {
+  margin: 0;
+  color: var(--text-2);
+  font-size: 14px;
+}
+.usage-scroll {
+  overflow-x: auto;
+}
+.usage-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+.usage-table th,
+.usage-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line-row);
+  text-align: right;
+  white-space: nowrap;
+  font-weight: 400;
+  vertical-align: top;
+}
+.usage-table thead th {
+  color: var(--text-2);
+  font-size: 12px;
+  font-weight: 500;
+  border-bottom-color: var(--line);
+}
+.usage-table :is(th, td):first-child {
+  width: 32%;
+  padding-left: 0;
+  text-align: left;
+  font-weight: 500;
+}
+.usage-table :is(th, td):last-child {
+  padding-right: 0;
+}
+.usage-table tbody tr:last-child > *,
+.usage-table tfoot tr > * {
+  border-bottom: 0;
+}
+.usage-table tfoot tr > * {
+  border-top: 1px solid var(--line);
+  color: var(--text-2);
+}
+.usage-table small,
+.usage-cost small {
+  display: block;
+  color: var(--text-2);
+  font-size: 12px;
+  font-weight: 400;
+}
+.usage-table td.usage-source {
+  white-space: normal;
+  min-width: 260px;
+  text-align: left;
+  color: var(--text-2);
+  font-size: 12px;
+}
+.usage-open {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  background: none;
+  color: var(--forest);
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+}
+.usage-open:hover {
+  text-decoration: underline;
+}
+.usage-share {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 120px;
+  justify-content: flex-end;
+}
+.usage-share i {
+  flex: 1;
+  height: 4px;
+  min-width: 64px;
+  border-radius: var(--r-pill);
+  background: var(--sage);
+  overflow: hidden;
+}
+.usage-share b {
+  display: block;
+  height: 100%;
+  border-radius: var(--r-pill);
+  background: var(--forest);
+}
+.usage-chip,
+.usage-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: var(--r-pill);
+  background: var(--chip);
+  color: var(--text-2);
+  font-size: 12px;
+  font-weight: 500;
+}
+.usage-chip {
+  font-family: var(--mono);
+  color: var(--ink);
+}
+.usage-tag.failed {
+  background: var(--danger-bg);
+  color: var(--danger);
+}
+/* UI3: a customer at today's AI limit. After the name; under it where the first column sticks. */
+.usage-tag.capped {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 8px;
+  vertical-align: middle;
+  background: var(--danger-bg);
+  color: var(--danger);
+}
+.usage-drawer-mark {
+  margin: 0;
+  padding: 12px 24px 0;
+}
+.usage-drawer-mark .usage-tag.capped {
+  margin-left: 0;
+}
+.usage-skeleton {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+.usage-skeleton span {
+  height: 84px;
+  border-radius: var(--r-card);
+  background: var(--chip);
+}
+/* The case detail's line under an assistant turn. */
+.case-detail .usage-run-line {
+  margin-top: -8px;
+  color: var(--text-2);
+}
+
+/* Drill-down drawer: the account drawer's pattern, wider; a full-screen sheet on phones. */
+.usage-drawer {
+  position: fixed;
+  inset: 0 0 0 auto;
+  margin: 0;
+  width: 560px;
+  max-width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  max-height: none;
+  padding: 0;
+  border: 0;
+  border-left: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow-drawer);
+  overflow: auto;
+}
+.usage-drawer::backdrop {
+  background: var(--overlay);
+}
+.usage-drawer .drawer-head h2:focus {
+  outline: none;
+}
+.usage-drawer .icon-button.close {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--chip);
+  color: var(--text-2);
+}
+.usage-crumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  margin: 0;
+  padding: 12px 24px;
+  list-style: none;
+  border-bottom: 1px solid var(--line-inner);
+  color: var(--text-2);
+  font-size: 12px;
+}
+.usage-crumbs li + li::before {
+  content: '/';
+  margin-right: 8px;
+  color: var(--sep);
+}
+.usage-crumbs button {
+  padding: 0;
+  background: none;
+  color: var(--forest);
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.usage-drawer-body {
+  padding: 20px 24px 32px;
+}
+.usage-drawer-body h3 {
+  margin: 24px 0 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.usage-drawer-body .load-error {
+  padding: 20px;
+}
+.usage-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 4px 16px;
+  flex-wrap: wrap;
+  margin: 0;
+  color: var(--text-2);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+.usage-summary .usage-cost {
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 500;
+  text-align: right;
+}
+.usage-list {
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+  border: 1px solid var(--line);
+  border-radius: var(--r-tile);
+}
+.usage-list:empty {
+  display: none;
+}
+.usage-list li {
+  display: grid;
+  gap: 4px;
+  padding: 12px 14px;
+}
+.usage-list li + li {
+  border-top: 1px solid var(--line-row);
+}
+.usage-list strong {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.usage-meta :is(.usage-tag, .usage-link) {
+  margin-left: 8px;
+}
+.usage-link {
+  padding: 0;
+  background: none;
+  color: var(--forest);
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.usage-tokens {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin: 4px 0;
+}
+.usage-tokens dt {
+  color: var(--text-2);
+  font-size: 12px;
+}
+.usage-tokens dd {
+  margin: 0;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+.usage-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+}
+.usage-request-cost {
+  margin: 0;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@media (max-width: 1100px) {
+  .usage-tiles {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  /* Five periods and the CSV do not fit beside the title: they take the next line, and the
+     periods wrap inside their control when even that is too narrow. */
+  .page-heading:has(.usage-actions) {
+    flex-wrap: wrap;
+  }
+  .page-heading:has(.usage-actions) > div:first-child {
+    width: 100%; /* a width, not a basis: the heading is a column on a phone */
+  }
+  .usage-actions .segmented {
+    flex-wrap: wrap;
+    border-radius: var(--r-tile);
+  }
+  .usage-actions .segmented button {
+    flex: 1 0 auto;
+    border-radius: var(--r-nav);
+  }
+}
+@media (max-width: 760px) {
+  .usage-tiles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .usage-tiles dd:not(.usage-note) {
+    font-size: 18px;
+  }
+  .usage-card {
+    padding: 16px;
+  }
+  .usage-summary .usage-cost {
+    flex-basis: 100%;
+    text-align: left;
+  }
+  .usage-actions {
+    width: 100%;
+  }
+  .usage-actions .segmented {
+    flex: 1 1 100%;
+    order: 0;
+  }
+  .usage-actions .segmented button,
+  .usage-actions a.secondary-button {
+    height: 44px;
+  }
+  /* The name stays in view while the figures scroll sideways inside the card. */
+  .usage-table :is(th, td):first-child {
+    position: sticky;
+    left: 0;
+    padding-right: 12px;
+    background: var(--surface);
+  }
+  .usage-table .usage-tag.capped {
+    display: flex;
+    width: fit-content;
+    margin: 0 0 4px;
+  }
+  .usage-drawer-mark {
+    padding: 12px 16px 0;
+  }
+  .usage-open,
+  .usage-crumbs button,
+  .usage-link {
+    min-height: 44px;
+  }
+  .usage-drawer {
+    inset: 0;
+    width: 100%;
+    border-left: 0;
+  }
+  .usage-drawer .icon-button.close {
+    width: 44px;
+    height: 44px;
+  }
+  .usage-crumbs ol {
+    padding: 4px 16px;
+    align-items: center;
+  }
+  .usage-drawer-body {
+    padding: 16px 16px 32px;
+  }
+}
+
+/* The cost Sankey: drawn at the card's width, never under 640px; narrower, it scrolls inside. */
+.usage-flow-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+  margin-bottom: 12px;
+}
+.usage-flow-head h2 {
+  margin: 0;
+}
+.usage-flow-head .segmented {
+  margin: 0;
+}
+.usage-flow-head .segmented button {
+  padding: 0 14px;
+}
+.usage-flow-scroll {
+  overflow-x: auto;
+}
+.usage-flow-scroll svg {
+  display: block;
+  font-variant-numeric: tabular-nums;
+}
+.usage-flow-col {
+  fill: var(--text-2);
+  font-size: 12px;
+}
+.usage-flow-band {
+  fill: var(--sep);
+  opacity: 0.35;
+}
+.usage-flow-band.is-main {
+  fill: var(--forest);
+  opacity: 0.18;
+}
+.usage-flow-node rect {
+  fill: var(--muted);
+}
+.usage-flow-node.is-main rect {
+  fill: var(--forest);
+}
+.usage-flow-node.is-total rect {
+  fill: var(--ink);
+}
+.usage-flow-name {
+  fill: var(--ink);
+  font-size: 13px;
+  font-weight: 500;
+}
+.usage-flow-amount {
+  fill: var(--text-2);
+  font-size: 12px;
+}
+.usage-flow-stub {
+  stroke: var(--faint);
+  stroke-width: 2;
+  stroke-dasharray: 3 3;
+}
+.usage-flow-node,
+.usage-flow-band {
+  transition: opacity 0.15s;
+}
+.usage-flow-node.is-dim {
+  opacity: 0.35;
+}
+.usage-flow-band.is-dim {
+  opacity: 0.1;
+}
+@media (prefers-reduced-motion: reduce) {
+  .usage-flow-node,
+  .usage-flow-band {
+    transition: none;
+  }
+}
+@media (max-width: 760px) {
+  .usage-flow-head .segmented {
+    flex: 1 1 100%;
+  }
+  .usage-flow-head .segmented button {
+    height: 44px;
+  }
+}
+
+/* UP1: the period in words and the custom range, inline under the period control. */
+.usage-lines .usage-period {
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 500;
+}
+.usage-range {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: flex-end;
+  gap: 8px 10px;
+  margin: -8px 0 16px;
+}
+.usage-range label {
+  display: grid;
+  gap: 4px;
+  color: var(--text-2);
+  font-size: 12px;
+}
+.usage-range input {
+  height: 36px;
+  padding: 0 10px;
+  border: 1px solid var(--line-control);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-size: 13px;
+}
+.usage-range .primary-button {
+  height: 36px;
+}
+.usage-range-hint {
+  flex-basis: 100%;
+  margin: 0;
+  color: var(--danger);
+  font-size: 12px;
+  text-align: right;
+}
+@media (max-width: 760px) {
+  .usage-range {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    justify-content: stretch;
+  }
+  .usage-range input {
+    width: 100%;
+    min-width: 0;
+    height: 44px;
+  }
+  .usage-range .primary-button {
+    grid-column: 1 / -1;
+    height: 44px;
+  }
+  .usage-range-hint {
+    grid-column: 1 / -1;
+    text-align: left;
+  }
+}

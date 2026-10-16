@@ -1,0 +1,658 @@
+/* Assistant view: full-height chat column (redesign slice 6). */
+/* The chat fills the viewport under the topbar; an alert above it shrinks the thread instead
+   of pushing the composer off-screen. */
+main:has(> .chat-layout) {
+  padding: 0;
+  gap: 0;
+  height: calc(100dvh - var(--topbar-h));
+}
+.chat-layout {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+/* Header: the conversation picker is the title. */
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 32px;
+  border-bottom: 1px solid var(--line-shell);
+}
+.chat-header .secondary-button {
+  flex-shrink: 0;
+  height: 36px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-pill);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 500;
+}
+.chat-header-main {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+.assistant-avatar,
+.message-avatar {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: var(--sage);
+  color: var(--forest);
+}
+.chat-title {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.conversation-picker {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  max-width: 100%;
+}
+.conversation-picker select {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  font: 600 15px/1.3 var(--font);
+  color: var(--ink);
+  padding: 0 18px 0 0;
+  max-width: 360px;
+  field-sizing: content;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+.conversation-picker svg {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -5px;
+  color: var(--muted);
+  pointer-events: none;
+}
+.chat-title small {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--muted);
+}
+.chat-title .live-dot,
+.context-chip .live-dot {
+  margin-right: 0;
+}
+
+/* Messages */
+.messages {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+.thread {
+  max-width: 780px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.chat-empty {
+  text-align: center;
+  padding-top: 10vh;
+  color: var(--accent-dot);
+}
+.chat-empty:has(+ .chat-approvals) {
+  padding-top: 2vh;
+}
+.chat-empty h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 10px 0 6px;
+}
+.chat-empty p {
+  font-size: 14px;
+  color: var(--muted);
+}
+.message small {
+  display: block;
+  font-size: 11px;
+  color: var(--faint);
+}
+.message.user {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+.message.user .bubble {
+  max-width: 520px;
+  background: var(--forest);
+  color: var(--surface);
+  border-radius: 16px 16px 4px 16px;
+  padding: 10px 14px;
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.message.user.failed .bubble {
+  opacity: 0.7;
+}
+.failed-note button {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font: 600 13px var(--font);
+  color: var(--forest);
+  cursor: pointer;
+}
+.failed-note button:hover {
+  color: var(--forest-hover);
+  text-decoration: underline;
+}
+.failed-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--danger);
+}
+.message.assistant {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.message-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+}
+.message.assistant .bubble {
+  max-width: 600px;
+  min-width: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+  padding-top: 4px;
+}
+.message.assistant .bubble > small {
+  margin-top: 8px;
+}
+/* U6: spacing for rendered paragraphs and lists. */
+.message-body > * {
+  margin: 0 0 8px;
+  color: inherit;
+}
+.message-body > :last-child {
+  margin-bottom: 0;
+}
+.message-body ul,
+.message-body ol {
+  margin: 8px 0;
+  padding-left: 18px;
+}
+.message-body a {
+  color: var(--forest);
+  text-decoration: underline;
+}
+/* HS1: "Ask for human support" under a failed turn: a secondary (outlined) action. */
+.support-ask {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin-top: 10px;
+}
+.support-ask .secondary-button {
+  font: 600 13px var(--font);
+  color: var(--forest);
+  cursor: pointer;
+}
+.support-ask .secondary-button:hover:not(:disabled) {
+  border-color: var(--forest);
+}
+.support-ask .secondary-button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+.support-ask p {
+  margin: 0;
+  font-size: 12px;
+  color: var(--danger);
+}
+@media (max-width: 760px) {
+  .support-ask .secondary-button {
+    min-height: 44px;
+  }
+}
+/* R6/X2: transfer outcome stored in the chat. */
+.bubble .outcome {
+  margin: 0;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 13px;
+}
+.outcome.completed,
+.outcome.notice {
+  background: var(--positive-bg);
+  color: var(--positive);
+}
+.outcome.warning,
+.outcome.pending {
+  background: var(--lime-wash);
+  color: var(--ochre);
+  border: 1px solid var(--lime-wash-line);
+}
+.outcome.error {
+  background: var(--danger-bg);
+  color: var(--danger);
+}
+.citations {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+}
+.citations > span {
+  font-size: 11px;
+  color: var(--faint);
+}
+.citations .subtle-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: var(--text-2);
+  background: var(--chip);
+  border: 1px solid var(--line);
+  border-radius: var(--r-pill);
+  padding: 3px 10px;
+  cursor: pointer;
+}
+.citations .subtle-tag:hover {
+  color: var(--forest);
+}
+/* SI7-slots: extra content under a message, before its date. */
+.message-extra {
+  margin-top: 8px;
+  min-width: 0;
+  white-space: normal;
+}
+.thinking {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-top: 8px;
+  font-size: 12px;
+  color: var(--muted);
+}
+.thinking i {
+  width: 6px;
+  height: 6px;
+  background: var(--faint-2);
+  border-radius: 50%;
+  animation: pulse 1s infinite;
+}
+.thinking i:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.thinking i:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.thinking span {
+  margin-left: 5px;
+}
+@keyframes pulse {
+  50% {
+    opacity: 0.2;
+  }
+}
+
+/* Proposals panel (U2) between the thread and the composer, compact. */
+/* Same content width as the thread and the composer: 780px minus their 32px side padding. */
+.chat-approvals {
+  width: min(716px, 100% - 64px);
+  margin: 0 auto 12px;
+}
+.chat-approvals .approvals {
+  grid-template-columns: minmax(0, 1fr);
+  margin: 0;
+  padding: 12px 14px;
+  max-height: 40vh;
+  overflow: auto;
+}
+/* Empty conversation: the panel is part of the scrolling thread, so it needs no own width or scroll. */
+.thread > .chat-approvals {
+  width: auto;
+  margin: 0;
+}
+.thread > .chat-approvals .approvals {
+  max-height: none;
+}
+.chat-approvals .approvals h2 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.chat-approvals .approvals > div {
+  padding: 10px 12px;
+  font-size: 13px;
+}
+.chat-approvals .approvals > div:last-child {
+  margin-bottom: 0;
+}
+
+/* Composer: one rounded block, textarea on top, context chip + hint + send below. */
+.composer {
+  max-width: 780px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 32px 22px;
+}
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.suggestions button {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-pill);
+  padding: 6px 12px;
+  font-size: 12px;
+  color: var(--text-2);
+  cursor: pointer;
+}
+.suggestions button:hover:not(:disabled) {
+  border-color: var(--forest);
+  color: var(--forest);
+}
+.suggestions button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.composer-box {
+  background: var(--surface);
+  border: 1px solid var(--line-control);
+  border-radius: 20px;
+  padding: 14px 14px 10px 18px;
+  box-shadow: var(--shadow-composer);
+}
+/* SI7-slots: extra content above the textarea. */
+.composer-extra {
+  margin-bottom: 8px;
+  min-width: 0;
+}
+.composer-box:focus-within {
+  border-color: var(--forest);
+}
+.composer textarea {
+  display: block;
+  width: 100%;
+  border: 0;
+  resize: none;
+  background: transparent;
+  font: 15px/1.5 var(--font);
+  color: var(--ink);
+  min-height: 26px;
+  max-height: 160px;
+  field-sizing: content;
+  outline: none;
+}
+.composer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.context-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--muted);
+  background: var(--chip);
+  border-radius: var(--r-pill);
+  padding: 4px 10px;
+  min-width: 0;
+}
+.composer-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.composer-hint {
+  font-size: 11px;
+  color: var(--faint);
+}
+.composer-actions button {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--forest);
+  color: var(--surface);
+  cursor: pointer;
+}
+.composer-actions button:hover:not(:disabled) {
+  background: var(--forest-hover);
+}
+.composer-actions button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+/* VC2: voice input. The mic is quiet beside Send; while listening the composer is one bar:
+   cancel, a pulsing mic, live level bars, the clock and stop. */
+.composer .voice-toggle,
+.composer .voice-cancel {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text-2);
+  cursor: pointer;
+}
+.composer .voice-toggle:hover:not(:disabled),
+.composer .voice-cancel:hover {
+  background: var(--sage);
+  color: var(--forest);
+}
+.composer .voice-toggle.on {
+  background: var(--forest);
+  color: var(--surface);
+}
+.composer .voice-toggle.on:hover {
+  background: var(--forest-hover);
+  color: var(--surface);
+}
+.composer-row[hidden] {
+  display: none;
+}
+.voice-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 34px;
+  margin: 2px 0 0;
+}
+.voice-pulse {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--sage);
+  color: var(--forest);
+}
+.voice-pulse::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid var(--forest);
+  opacity: 0;
+  animation: voice-pulse 1.6s ease-out infinite;
+}
+@keyframes voice-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.45;
+  }
+  100% {
+    transform: scale(1.7);
+    opacity: 0;
+  }
+}
+.voice-level {
+  flex: 1;
+  min-width: 0;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  overflow: hidden;
+}
+.voice-level i {
+  flex: 0 1 3px;
+  min-width: 2px;
+  height: 100%;
+  border-radius: 2px;
+  background: var(--forest);
+  transform: scaleY(0.12);
+  transition: transform 90ms linear;
+}
+.voice-clock {
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-2);
+}
+.voice-shimmer {
+  flex: 1;
+  font: 500 15px/1.5 var(--font);
+  color: transparent;
+  background: linear-gradient(
+      90deg,
+      var(--text-2) 0%,
+      var(--text-2) 35%,
+      var(--line-control) 50%,
+      var(--text-2) 65%,
+      var(--text-2) 100%
+    )
+    0 0 / 200% 100%;
+  background-clip: text;
+  animation: voice-shimmer 1.4s linear infinite;
+}
+@keyframes voice-shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+.voice-status {
+  font-size: 12px;
+  color: var(--text-2);
+  margin-top: 6px;
+}
+.voice-status:empty {
+  margin: 0;
+}
+.voice-status.voice-error {
+  color: var(--danger);
+}
+@media (prefers-reduced-motion: reduce) {
+  .voice-pulse::after,
+  .voice-shimmer {
+    animation: none;
+  }
+  .voice-shimmer {
+    background: none;
+    color: var(--text-2);
+  }
+  .voice-level i {
+    transition: none;
+    transform: scaleY(0.35);
+  }
+}
+.chat-footnote {
+  text-align: center;
+  font-size: 11px;
+  color: var(--faint);
+  margin-top: 8px;
+}
+
+/* U10: phones keep one picker (the header select) and the composer always above the tab bar. */
+@media (max-width: 760px) {
+  main:has(> .chat-layout) {
+    padding: 0 0 var(--tabbar-h);
+  }
+  .chat-header {
+    padding: 12px 16px;
+  }
+
+  .conversation-picker select {
+    max-width: 180px;
+  }
+  .chat-title small,
+  .composer-hint {
+    display: none;
+  }
+  .thread {
+    padding: 12px 16px;
+  }
+  .chat-approvals {
+    width: calc(100% - 32px);
+  }
+  .composer {
+    padding: 0 16px 12px;
+  }
+  /* VC2: 44px touch targets for every composer control on phones. */
+  .composer-actions button,
+  .composer .voice-toggle,
+  .composer .voice-cancel {
+    width: 44px;
+    height: 44px;
+  }
+  /* The 10px they add come off the row's spacing: the composer keeps its height. */
+  .composer-box {
+    padding-bottom: 6px;
+  }
+  .composer-row {
+    margin-top: 4px;
+  }
+  .message.user .bubble {
+    max-width: 85%;
+  }
+}
+main:has(> .chat-layout) > .alert {
+  margin: 12px 32px 0;
+}
+@media (max-width: 760px) {
+  main:has(> .chat-layout) > .alert {
+    margin: 10px 16px 0;
+  }
+}

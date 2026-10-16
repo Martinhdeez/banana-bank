@@ -1,0 +1,3029 @@
+/* UI1 (plan 28, round 13): the Plan tab (the brief, month ahead, goals) and the compact Plan
+   card of the Overview. Tokens of app/globals.css; the tints of the goal tiles are local (the category tints of
+   spend-insights.css, which are scoped to that card). */
+.plan-page,
+.plan-mini,
+.brief,
+.goal-drawer {
+  --g-t: var(--sage);
+  --g-d: var(--forest);
+  --chart-line: 2.5px;
+}
+[data-icon='plane'] {
+  --g-t: #dde9f8;
+  --g-d: #3b679a;
+}
+[data-icon='shield'] {
+  --g-t: #dcefe9;
+  --g-d: #2f6b5d;
+}
+[data-icon='bike'] {
+  --g-t: #e5f0d9;
+  --g-d: #4f7437;
+}
+[data-icon='sofa'] {
+  --g-t: #f9eeb4;
+  --g-d: #7d6200;
+}
+[data-icon='laptop'] {
+  --g-t: #e1ecef;
+  --g-d: #3f6676;
+}
+[data-icon='food'] {
+  --g-t: #fae4d7;
+  --g-d: #9a4f2a;
+}
+
+.plan-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+}
+:is(.plan-page, .plan-mini, .goal-drawer) p {
+  margin: 0;
+  color: var(--text-2);
+}
+:is(.plan-page, .plan-mini, .goal-drawer) :is(h2, h3) {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+  color: var(--ink);
+}
+
+/* Buttons: the look of the Overview heading. */
+:is(.plan-page, .goal-drawer) :is(.primary-button, .secondary-button) {
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+:is(.plan-page, .goal-drawer) .primary-button {
+  background: var(--forest);
+  color: var(--surface);
+}
+:is(.plan-page, .goal-drawer) .primary-button:hover {
+  background: var(--forest-hover);
+}
+:is(.plan-page, .goal-drawer) .secondary-button {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--ink);
+}
+:is(.plan-page, .goal-drawer) .secondary-button:hover {
+  background: var(--surface-sunk);
+}
+.plan-page .secondary-button.icon {
+  width: 40px;
+  padding: 0;
+}
+.plan-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 32px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--forest);
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left;
+}
+.plan-link:hover {
+  color: var(--forest-hover);
+  text-decoration: underline;
+}
+
+/* The state in words, with an icon. */
+.plan-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px 3px 8px;
+  border-radius: var(--r-pill);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.plan-pill.ok {
+  background: var(--sage);
+  color: var(--forest);
+}
+.plan-pill.warn {
+  background: var(--lime-soft);
+  color: var(--ochre);
+}
+.plan-pill.quiet,
+.plan-pill.later {
+  background: var(--chip);
+  color: var(--text-2);
+}
+.plan-pill.later {
+  padding-inline: 10px;
+}
+.plan-pill.done {
+  background: var(--forest);
+  color: var(--surface);
+}
+
+.plan-heading {
+  margin-bottom: 0;
+}
+.plan-heading h1 {
+  margin: 0 0 4px;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.6px;
+}
+.plan-heading p {
+  font-size: 13px;
+}
+
+/* ── Month ahead ── */
+.month-ahead {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px;
+  min-width: 0;
+}
+.plan-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px 16px;
+  flex-wrap: wrap;
+}
+.plan-card-head p {
+  font-size: 13px;
+}
+.verdict {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  border-radius: 14px;
+  background: var(--sage);
+}
+.verdict.short {
+  background: var(--lime-wash);
+  border: 1px solid var(--lime-wash-line);
+}
+.verdict-icon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--forest);
+}
+.verdict.short .verdict-icon {
+  background: var(--lime);
+  color: var(--forest);
+}
+.plan-page .verdict-headline {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  line-height: 1.25;
+  color: var(--ink);
+  text-wrap: balance;
+}
+.plan-page .verdict-sub {
+  margin-top: 4px;
+  font-size: 14px;
+  color: var(--text-2);
+}
+.verdict.short .verdict-sub {
+  color: var(--ochre);
+}
+
+/* A row of figures: small label, confident number. */
+.plan-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 16px 24px;
+  margin: 0;
+}
+.plan-stats > div {
+  min-width: 0;
+}
+.plan-stats > div + div {
+  padding-left: 24px;
+  border-left: 1px solid var(--line-inner);
+}
+.plan-stats dt {
+  font-size: 12px;
+  color: var(--text-2);
+}
+.plan-stats dd {
+  margin: 2px 0 0;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+.plan-stats dd.big {
+  font-size: 32px;
+  letter-spacing: -1.2px;
+  line-height: 1.05;
+}
+.plan-stats dd.short {
+  color: var(--ochre);
+}
+.plan-stats dd small {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--text-2);
+}
+
+/* ── Charts: one family (balance timeline, goal path). ── */
+.plan-chart {
+  position: relative;
+  min-width: 0;
+}
+.plan-chart svg {
+  display: block;
+  overflow: visible;
+}
+.plan-chart text {
+  font-size: 11px;
+  fill: var(--text-2);
+  font-variant-numeric: tabular-nums;
+}
+.chart-grid line {
+  stroke: var(--line-inner);
+  stroke-width: 1;
+}
+.chart-zero line {
+  stroke: var(--sep);
+  stroke-width: 1;
+}
+.chart-area {
+  fill: var(--sage);
+  opacity: 0.75;
+}
+.chart-area.below {
+  fill: var(--lime-soft);
+  opacity: 1;
+}
+.chart-saved {
+  fill: none;
+  stroke: var(--forest);
+  stroke-width: var(--chart-line);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.chart-saved.estimated {
+  stroke-width: 2px;
+  stroke-dasharray: 5 5;
+  stroke-linecap: butt;
+}
+.chart-plan {
+  fill: none;
+  stroke: var(--faint);
+  stroke-width: 1.5px;
+  stroke-dasharray: 5 5;
+}
+.chart-pace {
+  fill: none;
+  stroke: var(--forest);
+  stroke-width: var(--chart-line);
+  stroke-linecap: round;
+  stroke-dasharray: 1 6;
+}
+.chart-pace-end {
+  fill: var(--surface);
+  stroke: var(--forest);
+  stroke-width: 2px;
+}
+.chart-dot {
+  fill: var(--surface);
+  stroke: var(--forest);
+  stroke-width: 2px;
+}
+.chart-dot.certain {
+  fill: var(--forest);
+}
+.chart-dot.short {
+  stroke: var(--ochre);
+}
+.chart-dot.short.certain {
+  fill: var(--ochre);
+}
+.chart-reached {
+  fill: var(--forest);
+  stroke: var(--lime);
+  stroke-width: 4px;
+}
+.chart-target line {
+  stroke: var(--lime-line);
+  stroke-width: 2px;
+}
+.chart-target rect,
+.chart-short rect {
+  fill: var(--lime);
+}
+.plan-chart :is(.chart-target, .chart-short) text {
+  fill: var(--forest);
+  font-weight: 600;
+}
+.chart-today line {
+  stroke: var(--ink);
+  stroke-width: 1.5px;
+  stroke-linecap: round;
+}
+.plan-chart .chart-today text {
+  fill: var(--ink);
+  font-weight: 600;
+}
+.chart-hit {
+  fill: transparent;
+  outline: none;
+  cursor: default;
+}
+rect.chart-hit[data-on],
+rect.chart-hit:focus-visible {
+  fill: rgba(23, 43, 43, 0.05);
+}
+circle.chart-hit[data-on],
+circle.chart-hit:focus-visible {
+  stroke: var(--focus);
+  stroke-width: 2px;
+}
+.chart-tip {
+  position: absolute;
+  z-index: 2;
+  width: max-content;
+  max-width: 240px;
+  translate: -50% -100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: var(--ink);
+  color: var(--surface);
+  font-size: 12px;
+  line-height: 1.4;
+  pointer-events: none;
+}
+.chart-tip strong {
+  font-weight: 600;
+}
+.chart-tip span {
+  color: var(--line);
+}
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 20px;
+  margin: -8px 0 0;
+  padding: 0 0 0 48px;
+  list-style: none;
+  font-size: 12px;
+  color: var(--text-2);
+}
+.chart-legend li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.chart-legend i {
+  width: 22px;
+  height: 0;
+  border-top: var(--chart-line) solid var(--forest);
+}
+.chart-legend i.dotted {
+  border-top-style: dotted;
+}
+.chart-legend i.dashed {
+  border-top: 2px dashed var(--forest);
+}
+.goal-hero .chart-legend i.dashed {
+  border-top: 1.5px dashed var(--faint);
+}
+.chart-legend i.target {
+  border-top: 2px solid var(--lime-line);
+}
+.chart-legend i.below {
+  width: 14px;
+  height: 10px;
+  border: 0;
+  border-radius: 3px;
+  background: var(--lime-soft);
+}
+
+.plan-page .plan-quiet {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: var(--r-tile);
+  background: var(--chip);
+  font-size: 13px;
+}
+.plan-page .plan-subtitle {
+  margin-bottom: -8px;
+}
+.coming-up {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 1px solid var(--line-inner);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.coming-up li {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) 96px 150px;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 16px;
+}
+.coming-up li + li {
+  border-top: 1px solid var(--line-row);
+}
+.coming-up li.short {
+  background: var(--lime-wash);
+}
+.coming-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 11px;
+  line-height: 1.2;
+  color: var(--text-2);
+}
+.coming-date b {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.coming-main {
+  min-width: 0;
+}
+.coming-main strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+}
+.coming-main small {
+  display: block;
+  font-size: 12px;
+  color: var(--text-2);
+}
+.coming-main em {
+  font-style: normal;
+}
+.coming-amount {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: right;
+  white-space: nowrap;
+}
+.coming-amount.credit {
+  color: var(--positive);
+}
+.coming-after {
+  font-size: 13px;
+  font-weight: 500;
+  text-align: right;
+  white-space: nowrap;
+}
+.coming-after small {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-2);
+}
+.not-counted {
+  font-size: 13px;
+  color: var(--text-2);
+}
+.not-counted summary {
+  width: fit-content;
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  color: var(--forest);
+  cursor: pointer;
+}
+.not-counted ul {
+  margin: 4px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.not-counted li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px 0;
+  border-top: 1px solid var(--line-row);
+}
+.not-counted strong {
+  font-weight: 500;
+  color: var(--ink);
+}
+.cover {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line-inner);
+}
+.cover .plan-options {
+  align-self: stretch;
+}
+
+.plan-page .plan-source {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--text-2);
+}
+
+/* Selectable adjustments. */
+.plan-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 8px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.plan-options legend {
+  margin-bottom: 8px;
+  padding: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.plan-option {
+  position: relative;
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1px solid var(--line-control);
+  border-radius: 12px;
+  background: var(--surface);
+  cursor: pointer;
+  transition:
+    border-color 0.15s ease,
+    background 0.15s ease;
+}
+.plan-option input {
+  position: absolute;
+  opacity: 0;
+}
+.plan-option-mark {
+  width: 18px;
+  height: 18px;
+  margin-top: 1px;
+  border: 1.5px solid var(--sep);
+  border-radius: 50%;
+  background: var(--surface);
+}
+.plan-option:has(input:checked) {
+  border-color: var(--forest);
+  background: var(--sage);
+  box-shadow: 0 0 0 1px var(--forest);
+}
+.plan-option:has(input:checked) .plan-option-mark {
+  border: 5px solid var(--forest);
+}
+.plan-option:has(input:focus-visible) {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+.plan-options:disabled .plan-option {
+  cursor: default;
+}
+.plan-options:disabled .plan-option:not(:has(input:checked)) {
+  opacity: 0.55;
+}
+.plan-option-text strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+}
+.plan-option-text small {
+  display: block;
+  margin-top: 2px;
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--text-2);
+}
+.plan-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+}
+:is(.plan-page, .goal-drawer) .plan-done {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+  padding: 10px 14px;
+  border-radius: var(--r-tile);
+  background: var(--positive-bg);
+  color: var(--positive);
+  font-size: 13px;
+  font-weight: 500;
+}
+.plan-done svg {
+  flex: none;
+}
+.plan-done span {
+  flex: 1 1 200px;
+}
+
+/* ── Goals: the list ── */
+.goals-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 8px;
+  min-width: 0;
+}
+.goals-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+}
+.plan-page .goals-head h2 {
+  font-size: 18px;
+  letter-spacing: -0.4px;
+}
+.goals-head p {
+  margin-top: 2px;
+  font-size: 13px;
+}
+.goals-summary {
+  padding: 20px 24px;
+  grid-template-columns: 1.3fr 1fr 1.3fr;
+}
+.goal-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+}
+@media (min-width: 1100px) {
+  .goal-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.goal-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px 20px 0;
+  min-width: 0;
+  transition:
+    translate 0.15s ease,
+    border-color 0.15s ease;
+}
+.goal-card:has(.goal-open):hover {
+  translate: 0 -2px;
+  border-color: var(--sage-line);
+}
+.goal-card header {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+}
+.goal-tile {
+  width: 40px;
+  height: 40px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: var(--g-t);
+  color: var(--g-d);
+}
+.goal-tile.large {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+}
+.plan-page .goal-card-title h3 {
+  font-size: 16px;
+  line-height: 1.3;
+}
+.goal-card-title p {
+  font-size: 13px;
+}
+.goal-open {
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  text-align: left;
+}
+.goal-open::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--r-card);
+}
+.goal-open:focus-visible {
+  outline: none;
+}
+.goal-open:focus-visible::after {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+.plan-page .goal-amount {
+  font-size: 15px;
+  color: var(--text-2);
+}
+.goal-amount strong {
+  margin-right: 2px;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -1.2px;
+  line-height: 1;
+  color: var(--ink);
+}
+.goal-card footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0 16px;
+  min-height: 52px;
+  margin: 4px -20px 0;
+  padding: 8px 20px;
+  border-top: 1px solid var(--line-inner);
+  font-size: 13px;
+  color: var(--text-2);
+}
+.goal-card footer .plan-link {
+  position: relative;
+  z-index: 1;
+}
+
+/* The progress track. */
+.goal-track {
+  position: relative;
+  padding-top: 20px;
+}
+.goal-track.no-pin {
+  padding-top: 20px;
+}
+.goal-track-bar {
+  position: relative;
+  height: 14px;
+  border-radius: var(--r-pill);
+  background: var(--sage);
+  overflow: hidden;
+}
+.goal-track-fill,
+.goal-track-gap,
+.goal-track-tick {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.goal-track-fill {
+  left: 0;
+  border-radius: var(--r-pill);
+  background: var(--forest);
+  transform-origin: left;
+  animation: plan-grow 0.5s ease-out both;
+}
+/* What is behind: from what is saved to where the plan is today. */
+.goal-track-gap {
+  margin-left: -8px;
+  padding-left: 8px;
+  box-sizing: content-box;
+  border-radius: 0 var(--r-pill) var(--r-pill) 0;
+  background: var(--lime);
+}
+.goal-track-tick {
+  width: 1px;
+  background: var(--surface);
+  opacity: 0.55;
+}
+.plan-today {
+  position: absolute;
+  top: 0;
+  bottom: -4px;
+  width: 0;
+  border-left: 1.5px solid var(--ink);
+}
+.plan-today b {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  translate: -50% 0;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.plan-today {
+  top: 16px;
+}
+.plan-today b {
+  top: -15px;
+}
+.plan-today[data-edge='end'] b {
+  translate: -100% 0;
+}
+.plan-today[data-edge='start'] b {
+  translate: 0 0;
+}
+.goal-track.small {
+  padding-top: 0;
+}
+.goal-track.small .goal-track-bar {
+  height: 6px;
+}
+.goal-track.small .plan-today {
+  top: -3px;
+  bottom: -3px;
+}
+.goal-track.small .plan-today b,
+.goal-track.small .goal-track-tick {
+  display: none;
+}
+@keyframes plan-grow {
+  from {
+    transform: scaleX(0);
+  }
+}
+@keyframes plan-draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+}
+
+/* ── Goal detail ── */
+.goal-detail-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+.goal-rail {
+  display: none;
+}
+@media (min-width: 1100px) {
+  .goal-detail-layout {
+    grid-template-columns: 264px minmax(0, 1fr);
+  }
+  .goal-rail {
+    position: sticky;
+    top: calc(var(--topbar-h) + 24px);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .goal-detail .back.bottom {
+    display: none;
+  }
+}
+.goal-rail .back {
+  margin-bottom: 8px;
+}
+.goal-rail .secondary-button {
+  margin-top: 12px;
+}
+.goal-rail-row {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  padding: 12px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background: transparent;
+  color: var(--ink);
+  text-align: left;
+}
+.goal-rail-row:hover {
+  background: var(--chip);
+}
+.goal-rail-row[aria-current] {
+  background: var(--surface);
+  border-color: var(--line);
+}
+.goal-rail-row .goal-tile {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+}
+.goal-rail-row strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+}
+.goal-rail-row small {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 12px;
+  color: var(--text-2);
+}
+.goal-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+}
+.goal-detail-head {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 16px;
+}
+.goal-detail-title h1 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 12px;
+  margin: 0 0 2px;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.6px;
+}
+.goal-detail-title p {
+  font-size: 14px;
+}
+.goal-detail-actions {
+  display: flex;
+  gap: 8px;
+}
+.goal-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px;
+  min-width: 0;
+}
+.goal-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  gap: 20px;
+  align-items: start;
+}
+.stand,
+.goal-plan {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  min-width: 0;
+}
+.stand-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--forest);
+}
+.plan-page .stand-headline {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.9px;
+  line-height: 1.1;
+  color: var(--ink);
+}
+.plan-page .stand-sub {
+  margin-top: -10px;
+  font-size: 14px;
+}
+
+.stand .plan-source {
+  margin-top: -6px;
+}
+.stand .plan-options {
+  grid-template-columns: minmax(0, 1fr);
+}
+.plan-page .goal-plan-amount {
+  font-size: 15px;
+  color: var(--text-2);
+}
+.goal-plan-amount strong {
+  margin-right: 2px;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.9px;
+  line-height: 1.1;
+  color: var(--ink);
+}
+.plan-page .goal-plan-route {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-top: -10px;
+  font-size: 14px;
+}
+.plan-page .goal-plan .prepared-card {
+  gap: 4px;
+  padding: 16px;
+}
+.plan-page .goal-plan .prepared-card p {
+  color: var(--text-2);
+}
+.plan-page .goal-plan .prepared-title {
+  font-size: 15px;
+  color: var(--ink);
+}
+.plan-page .goal-plan .prepared-actions {
+  margin-top: 8px;
+}
+.plan-page .goal-plan h3 {
+  margin-top: 4px;
+  font-size: 13px;
+}
+.goal-history {
+  margin: -8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.goal-history li {
+  display: grid;
+  grid-template-columns: 24px auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  font-size: 14px;
+}
+.goal-history li + li {
+  border-top: 1px solid var(--line-row);
+}
+.goal-history small {
+  font-size: 13px;
+  color: var(--text-2);
+}
+.goal-history b {
+  font-weight: 600;
+}
+.goal-history-mark {
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+.goal-history-mark.sent {
+  background: var(--positive-bg);
+  color: var(--positive);
+}
+.goal-history-mark.missed {
+  background: var(--lime-soft);
+  color: var(--ochre);
+}
+
+/* ── Empty and single-account states ── */
+.goals-empty {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  overflow: hidden;
+}
+.goals-empty-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 32px;
+}
+.plan-page .goals-empty-text h3 {
+  font-size: 24px;
+  letter-spacing: -0.6px;
+  line-height: 1.2;
+}
+.goals-empty-text p {
+  max-width: 44ch;
+  font-size: 14px;
+}
+.plan-page .goals-room {
+  padding: 10px 14px;
+  border-radius: var(--r-tile);
+  background: var(--sage);
+  color: var(--forest);
+  font-size: 13px;
+}
+
+.goals-single {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+}
+.goals-single p {
+  margin-top: 2px;
+  font-size: 14px;
+}
+.goal-templates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.goal-templates button {
+  min-height: 34px;
+  padding: 0 14px;
+  border: 1px solid var(--line-control);
+  border-radius: var(--r-pill);
+  background: var(--surface);
+  color: var(--text-2);
+  font-size: 13px;
+  font-weight: 500;
+}
+.goal-templates button:hover {
+  border-color: var(--forest);
+  color: var(--ink);
+}
+.goal-templates button[aria-pressed='true'] {
+  background: var(--sage);
+  border-color: var(--sage-line);
+  color: var(--forest);
+  font-weight: 600;
+}
+
+/* ── New goal: the drawer of the account details, with a form. ── */
+.goal-drawer {
+  width: 480px;
+}
+.goal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px 24px 24px;
+}
+.goal-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-2);
+}
+.goal-field input,
+.goal-money {
+  width: 100%;
+  height: 44px;
+  padding: 0 14px;
+  border: 1px solid var(--line-control);
+  border-radius: var(--r-tile);
+  background: var(--surface);
+  font: 15px var(--font);
+  color: var(--ink);
+}
+.goal-money {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.goal-money i {
+  font-style: normal;
+  color: var(--text-2);
+}
+.goal-money input {
+  flex: 1;
+  min-width: 0;
+  height: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  outline: 0;
+  font-weight: 600;
+}
+.goal-money:focus-within {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+.goal-field input[aria-invalid='true'],
+.goal-money:has([aria-invalid='true']) {
+  border-color: var(--danger-dot);
+}
+.goal-field .select-wrap select {
+  height: 44px;
+  border-radius: var(--r-tile);
+  background: var(--surface);
+}
+.goal-form .field-error {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--danger);
+}
+.goal-field-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  align-items: start;
+}
+.goal-field-row.three {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr) 88px;
+}
+.goal-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px;
+  border: 1px solid var(--sage-line);
+  border-radius: 14px;
+  background: var(--sage);
+}
+.goal-preview-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--text-2);
+}
+.goal-preview .goal-preview-amount {
+  font-size: 15px;
+  color: var(--ink);
+}
+.goal-preview-amount strong {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.9px;
+  line-height: 1.1;
+}
+.goal-preview .goal-preview-dates {
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+.goal-preview .goal-track-bar {
+  background: var(--surface);
+}
+.goal-preview .goal-track-tick {
+  background: var(--sage-line);
+  opacity: 1;
+}
+.goal-preview .goal-fits {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--forest);
+}
+.goal-preview .goal-fits.over {
+  color: var(--ochre);
+}
+.goal-drawer .goal-preview-empty {
+  font-size: 13px;
+}
+
+.goal-form-actions {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 8px;
+  margin-top: 4px;
+}
+.goal-drawer .goal-form-actions :is(.primary-button, .secondary-button) {
+  height: 44px;
+}
+
+/* ── The compact Plan card of the Overview ── */
+.plan-mini {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-content: start;
+  gap: 12px;
+  padding: 20px;
+  min-width: 0;
+}
+.plan-mini-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--forest);
+}
+.plan-mini-head h2 {
+  flex: 1;
+}
+.plan-mini-row {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
+  align-items: start;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--line-inner);
+  background: transparent;
+}
+.plan-mini-row.verdict.short {
+  border-color: var(--lime-wash-line);
+}
+.plan-mini-row.verdict.covered .verdict-icon {
+  background: var(--sage);
+}
+.plan-mini-row:last-child {
+  grid-column: 1 / -1;
+}
+.plan-mini-row :is(.verdict-icon, .goal-tile) {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+}
+.plan-mini-row p {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px 8px;
+}
+.plan-mini-row strong {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.plan-mini-row small {
+  display: block;
+  flex-basis: 100%;
+  font-size: 13px;
+  color: var(--text-2);
+}
+.plan-mini-row.goal small {
+  margin: 2px 0 10px;
+}
+.plan-mini .plan-mini-invite {
+  font-size: 13px;
+}
+.plan-mini .more {
+  justify-self: start;
+}
+@media (min-width: 1240px) {
+  /* A full row under the balance, "For you to do" and the Assistant card: nothing above moves. */
+  .overview-top .plan-mini {
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .overview-top .plan-mini :is(.plan-mini-head, .more) {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 760px) {
+  .month-ahead,
+  .goal-hero,
+  .stand,
+  .goal-plan {
+    padding: 16px;
+  }
+  .verdict {
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 12px;
+    padding: 16px;
+  }
+  .verdict-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .plan-page .verdict-headline {
+    font-size: 18px;
+  }
+  .verdict button {
+    grid-column: 1 / -1;
+  }
+  .plan-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .plan-stats > div + div {
+    padding-left: 12px;
+  }
+  .plan-stats dd {
+    font-size: 16px;
+  }
+  .plan-stats dd.big {
+    font-size: 26px;
+  }
+  .goals-summary,
+  .goal-hero .plan-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 16px;
+  }
+  .goal-hero .plan-stats {
+    padding: 0;
+  }
+  .goals-summary > div:first-child {
+    grid-column: 1 / -1;
+  }
+  .goals-summary > div:nth-child(2),
+  .goal-hero .plan-stats > div:nth-child(3) {
+    padding-left: 0;
+    border-left: 0;
+  }
+  .plan-stats dd small {
+    display: block;
+    white-space: normal;
+  }
+  .chart-legend {
+    padding-left: 0;
+  }
+  .coming-up li {
+    grid-template-columns: 36px minmax(0, 1fr) auto;
+    gap: 4px 12px;
+    padding: 12px;
+  }
+  .coming-date {
+    grid-row: span 2;
+  }
+  .coming-after {
+    grid-column: 2 / -1;
+    text-align: left;
+  }
+  .goals-head {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .goal-detail-head {
+    grid-template-columns: 52px minmax(0, 1fr);
+  }
+  .goal-detail-actions {
+    grid-column: 1 / -1;
+  }
+  .goal-detail-actions .secondary-button:not(.icon) {
+    flex: 1;
+  }
+  .plan-page .stand-headline {
+    font-size: 24px;
+  }
+  .goals-empty-text {
+    padding: 20px 16px;
+  }
+
+  .goal-card header {
+    grid-template-columns: 40px minmax(0, 1fr);
+  }
+  .goal-card header .plan-pill {
+    grid-column: 2;
+    justify-self: start;
+  }
+  /* 44px touch targets. */
+  :is(.plan-page, .goal-drawer) :is(.primary-button, .secondary-button),
+  .plan-link,
+  .goal-templates button,
+  .not-counted summary {
+    min-height: 44px;
+  }
+  .plan-page .secondary-button.icon {
+    width: 44px;
+  }
+  .plan-actions .primary-button,
+  .plan-actions .secondary-button {
+    flex: 1 1 100%;
+  }
+  .goal-drawer {
+    width: 100%;
+    max-height: 92vh;
+  }
+  .goal-form {
+    padding: 16px;
+  }
+  .goal-field input,
+  .goal-money input {
+    font-size: 16px;
+  }
+}
+@media (max-width: 420px) {
+  .goal-field-row.three {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .nav-icon {
+    padding-inline: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .goal-track-fill {
+    animation: none;
+  }
+  .goal-card,
+  .plan-option {
+    transition: none;
+  }
+  .goal-card:has(.goal-open):hover {
+    translate: none;
+  }
+}
+
+/* ══ Second pass: motion that explains, one figure per card. Everything below is complete with
+   animations off: the keyframes only bring a finished state in. ══ */
+
+/* The hero: chart and stats on the left, the ways to cover (or the what-if) beside them. */
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+.hero-main {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+.hero-side {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  min-width: 0;
+}
+.hero-side.cover {
+  padding-top: 0;
+  border-top: 0;
+}
+.hero-side .plan-options {
+  grid-template-columns: minmax(0, 1fr);
+}
+.hero-side .plan-actions .primary-button,
+.hero-side > .primary-button {
+  flex: 1 1 100%;
+  height: 44px;
+}
+@media (min-width: 1180px) {
+  .goal-hero .hero-grid.with-side {
+    grid-template-columns: minmax(0, 1fr) 288px;
+  }
+  .goal-hero .hero-side {
+    padding-left: 24px;
+    border-left: 1px solid var(--line-inner);
+    align-self: stretch;
+  }
+  /* Month ahead: the ways to cover are a band over the figures and the chart (the problem, the
+     way out, then the month), so the chart has the card's width and no column stands empty. */
+  .month-ahead .hero-side.cover {
+    order: -1;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(200px, auto);
+    align-items: end;
+    gap: 12px 16px;
+  }
+  .month-ahead .cover .plan-options {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .month-ahead .cover :is(.plan-done, .plan-refused),
+  .month-ahead .cover:has(.plan-done) .plan-options {
+    grid-column: 1 / -1;
+  }
+}
+.plan-stats dd.stat-preview {
+  margin-top: 2px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--forest);
+  white-space: nowrap;
+}
+.month-ahead .plan-stats dd:not(.stat-preview) {
+  font-size: 24px;
+  letter-spacing: -0.7px;
+}
+
+/* The verdict lands when the line has drawn itself. */
+.month-ahead .verdict {
+  opacity: 0;
+  translate: 0 6px;
+  transition:
+    opacity 0.35s ease-out,
+    translate 0.35s ease-out,
+    background 0.4s ease,
+    border-color 0.4s ease;
+  border: 1px solid transparent;
+  min-height: 96px;
+}
+.month-ahead .verdict.landed {
+  opacity: 1;
+  translate: none;
+}
+.month-ahead .verdict.short {
+  border-color: var(--lime-wash-line);
+}
+.verdict-icon {
+  transition: background 0.4s ease;
+}
+.plan-page .verdict-headline {
+  font-size: 24px;
+  letter-spacing: -0.6px;
+}
+.check-draw path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1;
+  animation: plan-draw 0.45s 0.1s ease-out both;
+}
+@keyframes plan-draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+}
+
+/* Chart details shared by the two charts. */
+.chart-today line {
+  stroke-width: 1.5px;
+  stroke-dasharray: none;
+}
+.chart-today circle {
+  fill: var(--ink);
+  stroke: var(--surface);
+  stroke-width: 2px;
+}
+.chart-tick {
+  stroke: var(--sep);
+  stroke-width: 1;
+}
+.chart-ghost path {
+  fill: none;
+  stroke: var(--accent-dot);
+  stroke-width: 2.5px;
+  stroke-linejoin: round;
+  opacity: 0.75;
+  animation: plan-fade 0.2s ease-out both;
+}
+.plan-chart .chart-ghost text {
+  fill: var(--positive);
+  font-weight: 600;
+}
+.plan-chart .chart-event {
+  fill: var(--text-2);
+}
+.plan-chart .chart-event tspan {
+  fill: var(--ink);
+  font-weight: 600;
+}
+.chart-dot.added {
+  fill: var(--lime);
+  stroke: var(--forest);
+}
+.chart-short > g {
+  transform-box: fill-box;
+  transform-origin: center top;
+  animation: plan-pop 0.35s cubic-bezier(0.3, 1.4, 0.5, 1) both;
+}
+.chart-date line {
+  stroke: var(--sep);
+  stroke-width: 1;
+  stroke-dasharray: 2 4;
+}
+@keyframes plan-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+}
+@keyframes plan-fade {
+  from {
+    opacity: 0;
+  }
+}
+
+/* Coming up: the row that was short turns covered; the prepared row slides in. */
+.coming-up li {
+  grid-template-columns: 44px minmax(0, 1fr) 96px 190px;
+  transition: background 0.4s ease;
+}
+.coming-up li.fixed,
+.coming-up li.added {
+  background: var(--sage);
+}
+.coming-up li.added {
+  overflow: hidden;
+  animation: plan-row 0.45s ease-out both;
+}
+@keyframes plan-row {
+  from {
+    max-height: 0;
+    padding-block: 0;
+    opacity: 0;
+  }
+  /* Tall enough for a phone's row with its action and "balance after" under it. */
+  to {
+    max-height: 220px;
+  }
+}
+.plan-done.busy {
+  background: var(--chip);
+  color: var(--text-2);
+}
+.plan-done .spinner {
+  width: 14px;
+  height: 14px;
+  margin: 0;
+}
+
+/* Loading: the shape of the card. */
+.skeleton .sk {
+  display: block;
+  border-radius: 12px;
+  background: var(--chip);
+  animation: plan-pulse 1.2s ease-in-out infinite alternate;
+}
+@keyframes plan-pulse {
+  to {
+    opacity: 0.5;
+  }
+}
+.plan-page .load-error {
+  max-width: none;
+}
+.plan-page .load-error p {
+  margin-bottom: 16px;
+}
+
+/* ── The assistant's brief ── */
+.brief {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
+  gap: 16px;
+  padding: 20px 24px;
+  min-width: 0;
+}
+.brief-mark {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: var(--forest);
+  color: var(--lime);
+}
+.brief-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+.brief h2 {
+  margin: 0;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  color: var(--ink);
+  white-space: pre-wrap;
+}
+.brief-rest {
+  visibility: hidden;
+}
+.brief-caret {
+  width: 2px;
+  height: 22px;
+  margin: 0 -1px;
+  background: var(--forest);
+}
+.brief-findings {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.brief-findings li {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr);
+  align-items: center;
+  gap: 0 12px;
+  padding: 12px;
+  border: 1px solid var(--line-inner);
+  border-radius: 12px;
+  opacity: 0;
+  translate: 0 6px;
+  transition:
+    opacity 0.3s ease-out,
+    translate 0.3s ease-out;
+}
+.brief-findings li[data-on] {
+  opacity: 1;
+  translate: none;
+}
+.brief-icon {
+  grid-row: span 2;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: var(--lime-soft);
+  color: var(--ochre);
+}
+.brief-icon.ok {
+  background: var(--sage);
+  color: var(--forest);
+}
+.brief-text {
+  font-size: 14px;
+  line-height: 1.35;
+  color: var(--ink);
+}
+.brief-text b {
+  font-weight: 600;
+}
+.brief .plan-link {
+  min-height: 24px;
+}
+.brief .brief-source {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0 16px;
+  font-size: 12px;
+  color: var(--text-2);
+}
+
+/* ── Goal cards: one figure, a stronger identity ── */
+.goal-card {
+  gap: 20px;
+  padding: 24px 24px 0;
+}
+.goal-card header {
+  grid-template-columns: 48px minmax(0, 1fr) auto;
+  gap: 14px;
+}
+.goal-card .goal-tile {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+}
+.plan-page .goal-card-title h3 {
+  font-size: 17px;
+  letter-spacing: -0.3px;
+}
+.goal-figure {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+}
+.goal-amount strong {
+  font-size: 40px;
+  letter-spacing: -1.6px;
+}
+.goal-streak {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--positive);
+  white-space: nowrap;
+}
+.goal-plan h3 .goal-streak {
+  margin-left: 10px;
+}
+.goal-card footer {
+  margin: 0 -24px;
+  padding: 8px 24px;
+}
+.goal-card .goal-track {
+  margin-top: -8px;
+}
+.goal-track-bar {
+  height: 16px;
+}
+.goal-track.small .goal-track-bar {
+  height: 6px;
+}
+.goal-track-dot {
+  position: absolute;
+  top: 50%;
+  width: 4px;
+  height: 4px;
+  margin: -2px 0 0 -2px;
+  border-radius: 50%;
+  background: var(--forest);
+  opacity: 0.28;
+}
+.goal-track-dot[data-on] {
+  background: var(--surface);
+  opacity: 0.7;
+}
+/* The next prepared contribution: prepared, not saved. */
+.goal-track-next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-radius: var(--r-pill);
+  background: var(--sage-line);
+  transform-origin: left;
+  animation: plan-grow 0.7s 0.3s ease-out both;
+}
+.plan-pill.new {
+  padding-inline: 10px;
+  background: var(--lime);
+  color: var(--forest);
+}
+.goal-card.glow {
+  animation: plan-glow 1.8s 0.4s ease-out both;
+}
+@keyframes plan-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+  25% {
+    border-color: var(--lime-line);
+    box-shadow: 0 0 0 6px var(--lime-soft);
+  }
+}
+
+/* ── What if: the slider beside the path ── */
+.whatif h3 {
+  font-size: 13px;
+}
+.whatif-slider {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.whatif-amount {
+  font-size: 14px;
+  color: var(--text-2);
+}
+.whatif-amount strong {
+  display: inline-block;
+  min-width: 3.2ch;
+  margin-right: 2px;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: -1.6px;
+  line-height: 1;
+  color: var(--ink);
+}
+.whatif-slider input {
+  --p: 50%;
+  appearance: none;
+  width: 100%;
+  height: 28px;
+  margin: 0;
+  background: transparent;
+  cursor: pointer;
+  outline-offset: 2px;
+}
+.whatif-slider input::-webkit-slider-runnable-track {
+  height: 8px;
+  border-radius: var(--r-pill);
+  background: linear-gradient(to right, var(--forest) var(--p), var(--sage) var(--p));
+}
+.whatif-slider input::-moz-range-track {
+  height: 8px;
+  border-radius: var(--r-pill);
+  background: var(--sage);
+}
+.whatif-slider input::-moz-range-progress {
+  height: 8px;
+  border-radius: var(--r-pill);
+  background: var(--forest);
+}
+.whatif-slider input::-webkit-slider-thumb {
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  margin-top: -8px;
+  border: 3px solid var(--forest);
+  border-radius: 50%;
+  background: var(--surface);
+  box-shadow: var(--shadow-seg);
+}
+.whatif-slider input::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border: 3px solid var(--forest);
+  border-radius: 50%;
+  background: var(--surface);
+}
+.whatif-range {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -6px;
+  font-size: 11px;
+  color: var(--text-2);
+}
+.whatif-snaps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.whatif-snaps button {
+  min-height: 30px;
+  padding: 0 10px;
+  border: 1px solid var(--line-control);
+  border-radius: var(--r-pill);
+  background: var(--surface);
+  color: var(--text-2);
+  font-size: 12px;
+  font-weight: 500;
+}
+.whatif-snaps button[aria-pressed='true'] {
+  background: var(--sage);
+  border-color: var(--sage-line);
+  color: var(--forest);
+  font-weight: 600;
+}
+.plan-page .whatif-readout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0 8px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: var(--surface-sunk);
+  border: 1px solid var(--line-inner);
+}
+.whatif-readout small {
+  grid-column: 1 / -1;
+  font-size: 12px;
+  color: var(--text-2);
+}
+.whatif-readout strong {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.plan-page .goal-fits {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  min-height: 2.9em;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--forest);
+}
+.plan-page .goal-fits.over {
+  color: var(--ochre);
+}
+.goal-fits svg {
+  flex: none;
+  margin-top: 2px;
+}
+
+/* ── Reached: a ring draws around the check, a small burst plays once ── */
+.reached-badge {
+  position: relative;
+  width: 88px;
+  height: 88px;
+  display: block;
+}
+.reached-badge svg {
+  display: block;
+  width: 88px;
+  height: 88px;
+  rotate: -90deg;
+}
+.reached-ring {
+  fill: none;
+  stroke: var(--lime);
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-dasharray: 1;
+}
+.reached-disc {
+  fill: var(--forest);
+}
+.reached-check {
+  fill: none;
+  stroke: var(--surface);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1;
+  transform-origin: center;
+  transform-box: view-box;
+  rotate: 90deg;
+}
+.reached-badge.play .reached-ring {
+  animation: plan-draw 0.7s 0.5s ease-out both;
+}
+.reached-badge.play .reached-disc {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: plan-pop 0.4s 0.3s cubic-bezier(0.3, 1.4, 0.5, 1) both;
+}
+.reached-badge.play .reached-check {
+  animation: plan-draw 0.35s 1s ease-out both;
+}
+.reached-badge i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  margin: -3px;
+  border-radius: 50%;
+  background: var(--lime-line);
+  opacity: 0;
+  animation: plan-burst 0.9s 0.95s ease-out both;
+}
+.reached-badge i:nth-child(odd) {
+  width: 5px;
+  height: 5px;
+  background: var(--forest);
+}
+.reached-badge i:nth-child(3n) {
+  border-radius: 2px;
+  background: var(--lime);
+}
+@keyframes plan-burst {
+  0% {
+    opacity: 1;
+    transform: rotate(var(--a)) translateX(34px) scale(0.4);
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(var(--a)) translateX(var(--r)) scale(1);
+  }
+}
+.plan-stats.reached-strip {
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: var(--sage);
+}
+.plan-stats.reached-strip > div + div {
+  border-left-color: var(--sage-line);
+}
+.plan-stats.reached-strip dd {
+  font-size: 17px;
+}
+
+.goal-preview .goal-track-bar {
+  background: var(--surface);
+}
+.goal-preview .goal-fits {
+  align-items: flex-start;
+  min-height: 0;
+}
+
+/* ── The Overview's Plan card: the verdict with the month as a line, the top goal ── */
+.plan-mini {
+  gap: 16px;
+}
+.plan-mini-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 12px;
+}
+.plan-mini-cell {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
+  align-items: center;
+  gap: 14px;
+  min-height: 84px;
+  padding: 14px 16px;
+  border: 1px solid var(--line-inner);
+  border-radius: 14px;
+  background: transparent;
+}
+.plan-mini-cell.verdict {
+  grid-template-columns: 40px minmax(0, 1fr) auto;
+}
+.plan-mini-cell.verdict.short {
+  background: var(--lime-wash);
+  border-color: var(--lime-wash-line);
+}
+.plan-mini-cell :is(.verdict-icon, .goal-tile) {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+}
+.plan-mini-cell.covered .verdict-icon {
+  background: var(--sage);
+}
+.plan-mini-cell p {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px 8px;
+}
+.plan-mini-cell strong {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  color: var(--ink);
+}
+.plan-mini-cell small {
+  display: block;
+  flex-basis: 100%;
+  font-size: 13px;
+  color: var(--text-2);
+}
+.plan-mini-cell.goal small {
+  margin: 2px 0 10px;
+}
+.plan-spark line {
+  stroke: var(--sep);
+  stroke-width: 1;
+}
+.plan-spark path {
+  fill: none;
+  stroke: var(--forest);
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+.plan-spark circle {
+  fill: var(--forest);
+  stroke: var(--surface);
+  stroke-width: 1.5;
+}
+.short .plan-spark circle {
+  fill: var(--ochre);
+}
+@media (min-width: 1240px) {
+  .overview-top .plan-mini {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .brief {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+    padding: 16px;
+  }
+  .brief-mark {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+  }
+  .brief h2 {
+    min-height: 2.4em;
+    font-size: 20px;
+  }
+  .plan-page .verdict-headline {
+    font-size: 19px;
+  }
+  .month-ahead .plan-stats dd:not(.stat-preview) {
+    font-size: 17px;
+  }
+  .plan-stats dd.stat-preview {
+    font-size: 11px;
+    white-space: normal;
+  }
+  .coming-up li {
+    grid-template-columns: 36px minmax(0, 1fr) auto;
+  }
+  .goal-card {
+    padding: 20px 16px 0;
+  }
+  .goal-card header {
+    grid-template-columns: 48px minmax(0, 1fr);
+  }
+  .goal-card footer {
+    margin: 0 -16px;
+    padding: 8px 16px;
+  }
+  .goal-amount strong {
+    font-size: 36px;
+  }
+  .whatif-snaps button {
+    min-height: 44px;
+  }
+  .whatif-slider input {
+    height: 44px;
+  }
+  .plan-mini-cell.verdict {
+    grid-template-columns: 40px minmax(0, 1fr);
+  }
+  .plan-spark {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .month-ahead .verdict,
+  .brief-findings li,
+  .coming-up li {
+    transition: none;
+  }
+  .check-draw path,
+  .chart-ghost path,
+  .chart-short > g,
+  .coming-up li.added,
+  .skeleton .sk,
+  .goal-track-next,
+  .goal-card.glow,
+  .reached-badge.play *,
+  .reached-badge i {
+    animation: none;
+  }
+}
+
+.hero-side > * {
+  flex: none;
+}
+.whatif-slider input {
+  border-radius: var(--r-pill);
+}
+.hero-side > .primary-button {
+  flex: none;
+}
+.brief p {
+  margin: 0;
+}
+
+/* ── The real routes: a refusal in the server's words, an adjustment with its button, the
+   question before a delete. ── */
+:is(.plan-page, .goal-drawer) .plan-refused {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: var(--danger-bg);
+  color: var(--danger);
+  font-size: 13px;
+  line-height: 1.45;
+}
+.goal-adjustment {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 16px;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+}
+.plan-page .goal-adjustment p {
+  flex: 1 1 220px;
+  font-size: 14px;
+  color: var(--ink);
+}
+.goal-confirm {
+  align-items: center;
+  font-size: 13px;
+  color: var(--text-2);
+}
+.goal-confirm span {
+  flex: 1 1 240px;
+}
+.plan-page .secondary-button.danger {
+  border-color: var(--danger-dot);
+  color: var(--danger);
+}
+.plan-link.quiet {
+  color: var(--text-2);
+  font-weight: 500;
+}
+.goal-drawer .goal-form-note {
+  font-size: 13px;
+  line-height: 1.45;
+}
+.goals-section > .plan-done {
+  align-self: flex-start;
+}
+
+/* ── Forecast adjustments: a quiet action on a usual row, the inline form, its ghost dot. ── */
+.plan-link.row-action {
+  min-height: 24px;
+  margin-top: 2px;
+  font-size: 12px;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.coming-main strong,
+.not-counted li {
+  overflow-wrap: anywhere;
+}
+.chart-ghost circle {
+  fill: var(--surface);
+  stroke: var(--accent-dot);
+  stroke-width: 2px;
+}
+.plan-link.expect-open {
+  align-self: flex-start;
+  min-height: 40px;
+}
+.expect-form {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: start;
+  gap: 12px 16px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface-sunk);
+}
+.expect-form .goal-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+  font-size: 12px;
+  color: var(--text-2);
+}
+.expect-form .goal-field :is(input, .goal-money) {
+  width: 100%;
+}
+.expect-form .segmented button {
+  min-height: 40px;
+  white-space: nowrap;
+}
+.expect-form :is(.expect-note, .plan-refused, .expect-actions) {
+  grid-column: 1 / -1;
+}
+.plan-page .expect-note {
+  font-size: 12px;
+}
+.expect-actions {
+  display: flex;
+  gap: 8px;
+}
+.not-counted li .plan-link {
+  margin-left: 12px;
+  /* RG2c: "Remove" / "Count it again" stay on one line; the words beside them give way. */
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+@media (max-width: 900px) {
+  .expect-form {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+  .expect-form .goal-field:first-child {
+    grid-column: 1 / -1;
+  }
+}
+@media (max-width: 760px) {
+  .plan-link.row-action {
+    min-height: 44px;
+  }
+  .expect-form {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .expect-form :is(.primary-button, .secondary-button) {
+    flex: 1;
+    min-height: 44px;
+  }
+}
+/* The explanation names every estimated item before the shortfall: it wraps, never cut. */
+.plan-page .verdict-sub {
+  max-width: 78ch;
+  overflow-wrap: anywhere;
+}
+
+/* A goal's name is the customer's free text (1–60 characters): it wraps anywhere, never cut and
+   never wider than its box. */
+.plan-page bdi,
+.plan-mini bdi,
+.goal-drawer bdi {
+  overflow-wrap: anywhere;
+}
+.goal-card-title,
+.goal-detail-title,
+.goal-rail-row > span:last-child {
+  min-width: 0;
+}
+.goal-preview-late {
+  margin: 6px 0 0;
+  color: var(--text-2);
+  font-size: 12px;
+}
+
+/* FC2: the name of a charge the customer added is free text (zero-width or line-separator
+   characters included): one line, cut with an ellipsis where it would overflow. */
+.coming-up li[data-source='expected_by_you'] .coming-main strong,
+.not-counted li > span.adjustment-words {
+  display: block;
+  overflow: hidden;
+  overflow-wrap: normal;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.coming-up li[data-source='expected_by_you'] .coming-main,
+.not-counted li > span.adjustment-words {
+  min-width: 0;
+}
+
+/* RG2c: an added charge counted once with another regular item: the hint under its words,
+   Remove beside both lines. */
+.not-counted li:has(> .counted-with) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 16px;
+  row-gap: 2px;
+}
+.not-counted li > .counted-with {
+  grid-column: 1;
+  grid-row: 2;
+  font-size: 12px;
+  color: var(--text-2);
+}
+.not-counted li:has(> .counted-with) > .plan-link {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: start;
+}
+
+/* ══ Follow-up to UI1 ══ */
+
+/* The Overview: the brief's findings are the top part of the Plan card (no card of their own). */
+.plan-mini-brief {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+.plan-mini .plan-mini-lead {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  color: var(--ink);
+}
+.plan-mini-brief ul {
+  display: grid;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.plan-mini-brief li {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0 10px;
+  min-height: 36px;
+}
+.plan-mini-brief .brief-icon {
+  grid-row: auto;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+}
+.plan-mini-brief .plan-link {
+  white-space: nowrap;
+}
+
+/* A refusal the customer can close. */
+:is(.plan-page, .goal-drawer) .plan-refused.closable {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4px 16px;
+}
+.plan-refused.closable .plan-link {
+  flex: none;
+  min-height: 20px;
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.verdict-headline:focus-visible {
+  width: fit-content;
+  outline: 2px solid var(--focus);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+@media (max-width: 760px) {
+  .plan-mini-brief li {
+    grid-template-columns: 28px minmax(0, 1fr);
+    padding: 6px 0;
+  }
+  .plan-mini-brief .plan-link {
+    grid-column: 2;
+    justify-self: start;
+    min-height: 44px;
+  }
+  .plan-refused.closable .plan-link {
+    min-height: 44px;
+    align-items: flex-start;
+  }
+  /* "Coming up" on a phone: the label has the row's width; the amount stays on its line when
+     both fit, else it starts the next one, where "balance after" ends. Then the source and the
+     row's action. */
+  .coming-up li {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 2px 12px;
+    padding: 12px 12px 12px 60px;
+  }
+  .coming-date {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 36px;
+  }
+  .coming-main {
+    display: contents;
+  }
+  .coming-main strong {
+    order: 1;
+    flex: 1 1 auto;
+    max-width: 100%;
+  }
+  .coming-amount {
+    order: 2;
+  }
+  /* Wide enough never to share the label's line, narrow enough to share the amount's. */
+  .coming-after {
+    order: 3;
+    flex: 1 0 62%;
+    text-align: right;
+  }
+  .coming-main small {
+    order: 4;
+    flex: 1 1 100%;
+  }
+  .coming-main .row-action {
+    order: 5;
+  }
+}
+
+/* ── Regular money (RG2): after Month ahead, for the account chosen there. ── */
+.regular-money {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px;
+  min-width: 0;
+}
+.regular-money h2:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+.regular-lists {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+.regular-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+.regular-list-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 4px 12px;
+  flex-wrap: wrap;
+}
+.regular-list-head h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+.regular-total,
+.regular-amount {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.regular-total {
+  font-size: 13px;
+  color: var(--text-2);
+}
+/* TL2b (item 7): the monthly total and its "From next month" line share the right edge, also
+   when the heading wraps at phone width. */
+.regular-list-head .regular-total {
+  margin-left: auto;
+}
+.regular-next {
+  text-align: right;
+}
+.regular-list ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 1px solid var(--line-inner);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.regular-list li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 6px 12px;
+  padding: 12px 16px;
+}
+.regular-list li + li {
+  border-top: 1px solid var(--line-row);
+}
+.regular-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.regular-main strong {
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+.regular-main small {
+  font-size: 12px;
+  color: var(--text-2);
+}
+.regular-amount {
+  font-size: 14px;
+  text-align: right;
+}
+.regular-amount.credit {
+  color: var(--positive);
+}
+.regular-side {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.regular-side .row-action {
+  margin: 0 0 0 auto;
+}
+.plan-page .regular-empty,
+.plan-page .regular-irregular {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-2);
+}
+.regular-irregular {
+  padding-top: 12px;
+  border-top: 1px solid var(--line-inner);
+  font-variant-numeric: tabular-nums;
+}
+.regular-form {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+.regular-form .goal-field:first-child {
+  grid-column: 1 / -1;
+}
+@media (max-width: 900px) {
+  .regular-lists {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-width: 760px) {
+  .regular-money {
+    padding: 18px 16px;
+  }
+  .regular-list li {
+    padding: 10px 12px;
+  }
+  .plan-link.expect-open {
+    min-height: 44px;
+  }
+  .regular-form {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+/* RG1b: "Early next month", a short quiet list under Month ahead's rows. */
+.next-month {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.next-month ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.next-month li {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 12px;
+  padding: 6px 0;
+  font-size: 13px;
+}
+.next-month li + li {
+  border-top: 1px solid var(--line-row);
+}
+.next-month-date {
+  color: var(--text-2);
+}
+.next-month-label {
+  overflow-wrap: anywhere;
+}
+.next-month-amount {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.next-month-amount.credit {
+  color: var(--positive);
+}
+
+/* ── Balance timeline (TL2): the range control, the elapsed band, months, Today. ── */
+.balance-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+.timeline-range {
+  /* Overview's phone rule gives every .segmented `order: 3`: this one stays above the chart. */
+  order: 0;
+  align-self: flex-start;
+  max-width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.timeline-range button {
+  white-space: nowrap;
+}
+.timeline-body {
+  position: relative;
+  min-width: 0;
+  transition: opacity 0.2s;
+}
+.timeline-body.loading {
+  opacity: 0.55;
+}
+.timeline-wait {
+  height: 320px;
+}
+.timeline-wait .sk {
+  display: block;
+  height: 100%;
+}
+.timeline-elapsed {
+  fill: var(--sage);
+  opacity: 0.45;
+}
+.timeline-month line {
+  stroke: var(--line);
+  stroke-width: 1;
+  stroke-dasharray: 2 3;
+}
+.plan-chart .timeline-month text {
+  font-weight: 500;
+}
+.timeline-today line {
+  stroke-width: 2px;
+}
+.timeline-today rect {
+  fill: var(--ink);
+}
+.plan-chart .timeline-today text {
+  fill: var(--surface);
+}
+.timeline-under {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.plan-page .timeline-under p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-2);
+}
+.timeline-figures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+}
+.timeline-figures b {
+  color: var(--ink);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.timeline-figures b.short {
+  color: var(--danger);
+}
+.timeline-months {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+.timeline-months :is(th, td) {
+  padding: 6px 8px;
+  text-align: right;
+  border-top: 1px solid var(--line-row);
+  white-space: nowrap;
+}
+.timeline-months th {
+  color: var(--text-2);
+  font-weight: 500;
+}
+.timeline-months :is(th, td):first-child {
+  text-align: left;
+}
+.timeline-months tr[data-actual='none'] td {
+  color: var(--text-2);
+}
+.timeline-months-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+}
+@media (max-width: 760px) {
+  .timeline-wait {
+    height: 260px;
+  }
+  .timeline-range button {
+    min-height: 44px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .timeline-body {
+    transition: none;
+  }
+}
+/* TL2b item 6: the lowest point, a ring where "Lowest" under the chart is. */
+.timeline-lowest {
+  fill: var(--surface);
+  stroke: var(--ink);
+  stroke-width: 2px;
+}
+.timeline-lowest.short {
+  stroke: var(--danger);
+}
+/* TL2b: nine period buttons need about 880px; a narrower card gets the native select instead. */
+.balance-timeline {
+  container-type: inline-size;
+}
+.timeline-range-pick {
+  display: none;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--text-2);
+}
+.timeline-range-pick select {
+  flex: 1;
+  min-width: 0;
+  max-width: 280px;
+  min-height: 44px;
+  padding: 0 12px;
+  border: 1px solid var(--line-control);
+  border-radius: var(--r-tile);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 500;
+}
+@container (max-width: 899px) {
+  .timeline-range {
+    display: none;
+  }
+  .timeline-range-pick {
+    display: flex;
+  }
+}
+.timeline-months td .after-pending {
+  display: block;
+  font-size: 11px;
+  color: var(--text-2);
+}
+.timeline-events summary {
+  /* The browser's own disclosure triangle says it opens. */
+  width: fit-content;
+  padding: 6px 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--forest);
+  cursor: pointer;
+}
+.timeline-events table {
+  margin-top: 6px;
+}
+.timeline-events :is(th, td):nth-child(2) {
+  text-align: left;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 760px) {
+  .timeline-events summary {
+    padding: 12px 0;
+  }
+}
+.timeline-months th small {
+  margin-left: 4px;
+  font-size: 11px;
+  color: var(--text-2);
+  font-weight: 400;
+}
