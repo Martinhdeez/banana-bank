@@ -1,5 +1,7 @@
 # Banana Bank
 
+Video demo (5:28, Spanish, subtitles burned in): [demo/demo.mp4](demo/demo.mp4) · transcripts: [es](demo/transcript.vtt), [en](demo/transcript.en.vtt)
+
 **An assistant that helps you get to the end of the month, and never moves money without your yes.**
 
 1. It knows where the money goes: one of eleven categories on every movement ("Work & projects" among them), "estimated" until confirmed, and "Worth a look" ([Spend insights](#spend-insights), [Spending observations](#spending-observations)).

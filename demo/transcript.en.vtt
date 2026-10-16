@@ -1,0 +1,194 @@
+WEBVTT - Banana Bank: demo (English translation of the Spanish voice-over)
+
+1
+00:00:00.600 --> 00:00:07.400
+Banks show you what has happened to your money. Now I'm going to show you one that warns you about what is going to happen.
+
+2
+00:00:07.900 --> 00:00:14.900
+I'm Martín, and for this challenge we were given Banana Bank: a bank with an AI assistant that didn't work properly.
+
+3
+00:00:15.700 --> 00:00:18.800
+But before showing you the future, let's start with the present.
+
+4
+00:00:19.800 --> 00:00:26.700
+This was one of the 145 problems I found and fixed, each one with its own test. With the same bank failure…
+
+5
+00:00:26.700 --> 00:00:33.100
+…the app now charges once, and if it doesn't know what happened, it tells the customer instead of lying.
+
+6
+00:00:33.200 --> 00:00:42.200
+Same bank, same failure, same customer. But now Lucía prepares the transfer, and before anything is sent, the app shows her what will leave,
+
+7
+00:00:42.800 --> 00:00:52.000
+from where and to whom. She confirms. A single charge. And if the app didn't know what happened, it would tell Lucía instead of saying "completed".
+
+8
+00:00:52.000 --> 00:00:56.500
+If she didn't have enough money, the original app only said: "insufficient funds".
+
+9
+00:00:56.700 --> 00:01:04.200
+Now it warns you before sending, and explains how much you need, how much you have, and that not a single euro has moved.
+
+10
+00:01:04.500 --> 00:01:08.600
+When a customer asked for help, the bank only saw their last message.
+
+11
+00:01:08.800 --> 00:01:14.900
+Now it sees the whole conversation, every transfer attempt, and what the bank really says.
+
+12
+00:01:15.300 --> 00:01:23.600
+And so on, up to 145 fixes in 6 rounds: transfers, answers that made data up, security, the interface…
+
+13
+00:01:24.000 --> 00:01:27.200
+Each one with a test that failed before and passes after.
+
+14
+00:01:28.000 --> 00:01:36.200
+Once the app had a solid base, I started thinking about how to add more value: what feature I could add to it.
+
+15
+00:01:37.100 --> 00:01:43.600
+So I searched online and found many complaints about banks' spending classification.
+
+16
+00:01:44.100 --> 00:01:49.600
+That is, the system that tells you how much you spent on food, how much at the supermarket.
+
+17
+00:01:50.500 --> 00:01:53.100
+For most banks, this system doesn't work very well.
+
+18
+00:01:53.100 --> 00:01:59.500
+A new AI model came out recently that many of you will know. It's called Jev, and it's built to classify things.
+
+19
+00:02:00.000 --> 00:02:04.300
+I got to work and designed a system that classifies your spending with Jev.
+
+20
+00:02:05.500 --> 00:02:15.800
+It wasn't easy, because first the text had to be adapted: if you gave Jev the whole bank line, it got it wrong. You have to give it the merchant's name, for example Mercadona or Digi.
+
+21
+00:02:16.500 --> 00:02:25.400
+And we can't always tell which category a transaction belongs to; then it leaves it under "Other".
+
+22
+00:02:26.400 --> 00:02:33.800
+The good part is that the user can classify that transaction by hand and choose its category.
+
+23
+00:02:34.700 --> 00:02:41.200
+And the system learns from the user's decisions, so future transactions are classified automatically.
+
+24
+00:02:41.300 --> 00:02:45.000
+This is how Lucía sees it. A consultant in Madrid, earning €2,150 a month.
+
+25
+00:02:45.800 --> 00:02:50.300
+This is what has already happened to her money: in September, more than half went on her home.
+
+26
+00:02:50.900 --> 00:02:55.900
+She asks the assistant, and it explains it with her own movements: €1,927.
+
+27
+00:03:25.900 --> 00:03:32.800
+On the 20th, Lucía has to send €2,915 to Bruno, the deposit for the new flat. She has €2,937.
+
+28
+00:03:33.500 --> 00:03:40.300
+She thinks it's enough, but the bank sees what she doesn't: two charges due before the 20th. She'd be €28 short.
+
+29
+00:03:40.700 --> 00:03:45.900
+And it tells her in the same answer, with the fix: move €30 from her savings account on the 19th.
+
+30
+00:03:46.700 --> 00:03:50.000
+She says yes. And nothing is sent until she confirms it.
+
+31
+00:03:51.100 --> 00:03:55.600
+This is her month: what has already happened as a solid line; what is going to happen as a dashed line.
+
+32
+00:03:55.900 --> 00:04:00.900
+With the deposit, she goes into the red on the 20th. And with one click, it's covered.
+
+33
+00:04:00.900 --> 00:04:08.500
+To know what's going to happen, the bank combines three things: your last three months, what you have already prepared, and what you tell it is coming.
+
+34
+00:04:08.500 --> 00:04:15.100
+With fixed rules it finds what repeats every month: salary, rent, electricity, Spotify.
+
+35
+00:04:15.100 --> 00:04:21.400
+It makes sure nothing is counted twice. Then it works out her balance day by day and finds the lowest point.
+
+36
+00:04:21.400 --> 00:04:25.500
+If it goes into the red, it suggests how to cover it. And it moves nothing until you say yes.
+
+37
+00:04:25.500 --> 00:04:30.200
+The figures are calculated by the server. The AI only explains them.
+
+38
+00:04:30.200 --> 00:04:34.600
+With the flat sorted, Lucía wants to celebrate: Lisbon in March.
+
+39
+00:04:34.600 --> 00:04:41.900
+The bank works out how much she can set aside without running short: €200 a month, right after payday. It fits.
+
+40
+00:04:41.900 --> 00:04:44.600
+She says yes, and the goal is created.
+
+41
+00:04:44.600 --> 00:04:50.700
+Now she sees her next six months, month by month: what comes in, what goes out, and every goal payment.
+
+42
+00:04:50.700 --> 00:04:53.600
+Her regular income and charges, detected automatically.
+
+43
+00:04:53.600 --> 00:05:00.400
+And the bank also sees what is happening with its AI: what each conversation costs, per customer and per task.
+
+44
+00:05:00.400 --> 00:05:04.300
+Everything you've seen from Lucía today: less than one US cent.
+
+45
+00:05:04.300 --> 00:05:08.200
+To build it, I designed and directed. The agents executed.
+
+46
+00:05:08.200 --> 00:05:14.000
+Each change was built by one agent, reviewed by a different one, and merged only after passing every test.
+
+47
+00:05:14.000 --> 00:05:16.800
+220 changes and more than 1,300 tests.
+
+48
+00:05:16.800 --> 00:05:24.700
+Banks show you what has happened to your money. Lucía knew what was going to happen on the 20th… and fixed it before it happened.
+

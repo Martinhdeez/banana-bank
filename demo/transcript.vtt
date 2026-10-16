@@ -1,0 +1,194 @@
+WEBVTT - Banana Bank: demostración (voz en español)
+
+1
+00:00:00.600 --> 00:00:07.400
+Los bancos te enseñan lo que ha pasado con tu dinero. A continuación os voy a mostrar uno que te avisa de lo que va a pasar.
+
+2
+00:00:07.900 --> 00:00:14.900
+Yo soy Martín y para este reto nos han dado BananaBank, un banco con un asistente de IA que fallaba.
+
+3
+00:00:15.700 --> 00:00:18.800
+Pero antes de enseñaros el futuro, vamos con el presente.
+
+4
+00:00:19.800 --> 00:00:26.700
+Este fue uno de los 145 problemas que encontré y arreglé, cada uno con su prueba, con el mismo fallo de banco.
+
+5
+00:00:26.700 --> 00:00:33.100
+Ahora la app cobra una vez y, si no sabe qué ha pasado, se lo dice al cliente en vez de mentirle.
+
+6
+00:00:33.200 --> 00:00:42.200
+Mismo banco, mismo fallo, misma clienta. Pero ahora Lucía prepara la transferencia y, antes de enviar nada, la app le enseña qué va a salir,
+
+7
+00:00:42.800 --> 00:00:52.000
+de dónde y a quién. Ella confirma. Un solo cargo. Y si la app no supiera qué ha pasado, se lo diría a Lucía en vez de decirle «completada».
+
+8
+00:00:52.000 --> 00:00:56.500
+Si no tenía saldo, la app original solo decía: «fondos insuficientes».
+
+9
+00:00:56.700 --> 00:01:04.200
+Ahora te avisa antes de enviar y te explica cuánto necesitas, cuánto tienes y que no se ha movido ni un euro.
+
+10
+00:01:04.500 --> 00:01:08.600
+El banco, cuando un cliente pedía ayuda, solo veía su último mensaje.
+
+11
+00:01:08.800 --> 00:01:14.900
+Ahora ve toda la conversación, cada intento de transferencia y qué dice el banco de verdad.
+
+12
+00:01:15.300 --> 00:01:23.600
+Y así hasta 145 arreglos en 6 rondas: transferencias, respuestas que se inventaban datos, seguridad, interfaz…
+
+13
+00:01:24.000 --> 00:01:27.200
+Cada uno con una prueba que fallaba antes y pasa después.
+
+14
+00:01:28.000 --> 00:01:36.200
+Una vez conseguida una base sólida para la aplicación, me puse a pensar cómo aportar más valor: qué funcionalidad podía añadirle.
+
+15
+00:01:37.100 --> 00:01:43.600
+Entonces me puse a buscar en internet y encontré muchas quejas sobre el sistema de clasificación de gastos de los bancos.
+
+16
+00:01:44.100 --> 00:01:49.600
+Es decir, el sistema que te dice cuánto dinero has gastado en comida, cuánto en el supermercado.
+
+17
+00:01:50.500 --> 00:01:53.100
+A la mayoría de bancos no les funciona muy bien este sistema.
+
+18
+00:01:53.100 --> 00:01:59.500
+Hace poco salió un modelo de IA que muchos conoceréis. Se llama Jev y sirve para clasificar cosas.
+
+19
+00:02:00.000 --> 00:02:04.300
+Me puse con ello y diseñé un sistema que te clasifica los gastos con Jev.
+
+20
+00:02:05.500 --> 00:02:15.800
+No fue fácil, porque primero había que adaptarle el texto: si le dabas la transferencia completa, Jev lo hacía mal. Hay que darle el nombre del comercio, por ejemplo Mercadona o Digi.
+
+21
+00:02:16.500 --> 00:02:25.400
+Y no siempre podemos estimar en qué categoría está una transacción; entonces la deja en «Otros».
+
+22
+00:02:26.400 --> 00:02:33.800
+Lo bueno es que le da al usuario la opción de clasificar manualmente esa transacción y elegir su categoría.
+
+23
+00:02:34.700 --> 00:02:41.200
+Y el sistema aprende de las decisiones del usuario, para que las transacciones futuras ya las clasifique automáticamente.
+
+24
+00:02:41.300 --> 00:02:45.000
+Así lo ve Lucía. Consultora en Madrid. Cobra 2.150 euros al mes.
+
+25
+00:02:45.800 --> 00:02:50.300
+Esto es lo que ya ha pasado con su dinero: en septiembre, más de la mitad se le fue en la casa.
+
+26
+00:02:50.900 --> 00:02:55.900
+Se lo pregunta al asistente y se lo explica con sus propios movimientos: 1.927 euros.
+
+27
+00:03:25.900 --> 00:03:32.800
+El día 20, Lucía tiene que mandar 2.915 euros a Bruno, la fianza del piso nuevo. Tiene 2.937.
+
+28
+00:03:33.500 --> 00:03:40.300
+Cree que le llega, pero el banco ve lo que ella no ve: dos cargos que caen antes del 20. Le faltarían 28 euros.
+
+29
+00:03:40.700 --> 00:03:45.900
+Y se lo dice en la misma respuesta, con la solución: mover 30 euros de su cuenta de ahorros el día 19.
+
+30
+00:03:46.700 --> 00:03:50.000
+Ella dice que sí. Y nada se envía hasta que ella lo confirme.
+
+31
+00:03:51.100 --> 00:03:55.600
+Así se ve su mes: lo que ya ha pasado, en línea continua; lo que va a pasar, en discontinua.
+
+32
+00:03:55.900 --> 00:04:00.900
+Con la fianza, el día 20 se queda en números rojos. Y con un clic, cubierto.
+
+33
+00:04:00.900 --> 00:04:08.500
+Para saber qué va a pasar, el banco junta tres cosas: tus últimos tres meses, lo que ya tienes preparado y lo que tú le digas que viene.
+
+34
+00:04:08.500 --> 00:04:15.100
+Con reglas fijas encuentra lo que se repite cada mes: la nómina, el alquiler, la luz, Spotify.
+
+35
+00:04:15.100 --> 00:04:21.400
+Se asegura de no contar nada dos veces. Con eso calcula su saldo día a día y busca el punto más bajo.
+
+36
+00:04:21.400 --> 00:04:25.500
+Si se queda en rojo, te propone cómo cubrirlo. Y no mueve nada hasta que tú le dices que sí.
+
+37
+00:04:25.500 --> 00:04:30.200
+Las cifras las calcula el servidor. La IA solo te lo explica.
+
+38
+00:04:30.200 --> 00:04:34.600
+Con el piso resuelto, Lucía quiere celebrarlo: Lisboa en marzo.
+
+39
+00:04:34.600 --> 00:04:41.900
+El banco calcula cuánto puede apartar sin quedarse corta: 200 euros al mes, justo después de cobrar. Le cabe.
+
+40
+00:04:41.900 --> 00:04:44.600
+Ella dice sí. Y la meta queda creada.
+
+41
+00:04:44.600 --> 00:04:50.700
+Ahora ve sus próximos seis meses, mes a mes: cuánto cobra, cuánto paga y cada pago de la meta.
+
+42
+00:04:50.700 --> 00:04:53.600
+Sus ingresos y gastos fijos, detectados solos.
+
+43
+00:04:53.600 --> 00:05:00.400
+Y el banco también ve lo que va a pasar con su IA: cuánto cuesta cada conversación, por cliente y por tarea.
+
+44
+00:05:00.400 --> 00:05:04.300
+Todo lo que habéis visto de Lucía hoy: menos de un céntimo de dólar.
+
+45
+00:05:04.300 --> 00:05:08.200
+Para construirlo, yo diseñé y dirigí. Los agentes ejecutaron.
+
+46
+00:05:08.200 --> 00:05:14.000
+Cada cambio lo construyó un agente, lo revisó otro distinto, y no entró sin pasar todas las pruebas.
+
+47
+00:05:14.000 --> 00:05:16.800
+220 cambios y más de 1.300 pruebas.
+
+48
+00:05:16.800 --> 00:05:24.700
+Los bancos te enseñan qué ha pasado con tu dinero. Lucía supo lo que iba a pasar el día 20… y lo arregló antes de que pasara.
+
